@@ -27,9 +27,15 @@ add_library(raptor ${core_SOURCES} ${core_HEADERS}
         ${krylov_SOURCES} ${krylov_HEADERS} 
         ${profile_SOURCES} ${profile_HEADERS}
         ${external_SOURCES} ${external_HEADERS})
-
+# Set paths for SZ3
+# include_directories("/home/bigyan/main/Research/LossyMPI/SZ3/qsz/include")
+# set(SZ3_DIR "../SZ3/qsz/lib/cmake/SZ3")
+set(SZ3_DIR "${CMAKE_SOURCE_DIR}/../SZ3/qsz/lib/cmake/SZ3")
+find_package(SZ3 REQUIRED)
+find_package(PkgConfig REQUIRED)
+pkg_search_module(ZSTD IMPORTED_TARGET GLOBAL libzstd)  
 target_link_libraries(raptor PUBLIC ${MPI_C_LIBRARIES} ${MFEM_LIBRARIES} ${METIS_LIBRARIES} ${HYPRE_LIBRARIES}
-    ${MUELU_LIBRARIES} ${PETSC_LIBRARIES} ${PTSCOTCH_LIBRARIES} ${PARMETIS_LIBRARIES} ${EXTERNAL_LIBS})
+    ${MUELU_LIBRARIES} ${PETSC_LIBRARIES} ${PTSCOTCH_LIBRARIES} ${PARMETIS_LIBRARIES} ${EXTERNAL_LIBS} SZ3::SZ3 PkgConfig::ZSTD)
 
 target_include_directories(raptor
   PUBLIC

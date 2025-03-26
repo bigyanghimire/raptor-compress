@@ -3,6 +3,8 @@
 #ifndef RAPTOR_HPP
 #define RAPTOR_HPP
 
+// #include <SZ3/api/sz.hpp>
+
 // Define types such as int and double sizes
 #include "core/types.hpp"
 #include "core/utilities.hpp"
@@ -120,3 +122,9 @@
 
 #endif
 
+int helloworld(){
+    printf("Helloo>>>");
+     //SZ_compress();
+    // std:cout<<"Helllo"<<std::endl;
+    return 0;
+}

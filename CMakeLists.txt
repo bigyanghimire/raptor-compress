@@ -1,9 +1,12 @@
 cmake_minimum_required(VERSION 3.12...3.20)
 project(raptor)
+# include_directories("/home/bigyan/main/Research/LossyMPI/SZ3/qsz/include")
+# set(SZ3_DIR "/home/bigyan/main/Research/LossyMPI/SZ3/qsz/lib/cmake/SZ3/SZ3Config.cmake")
+# find_package(SZ3 REQUIRED)
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
 enable_language(CXX)
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wredundant-decls -Wcast-align -Wshadow")
 #SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -flto -funroll-loops")

@@ -119,6 +119,7 @@ namespace raptor
 
             void setup_helper(ParCSRMatrix* Af)
             {
+                // SZ_compress();
                 int rank, num_procs;
                 RAPtor_MPI_Comm_rank(RAPtor_MPI_COMM_WORLD, &rank);
                 RAPtor_MPI_Comm_size(RAPtor_MPI_COMM_WORLD, &num_procs);
