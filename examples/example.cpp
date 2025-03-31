@@ -19,9 +19,8 @@ int main(int argc, char *argv[])
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
-helloworld();
     // Create parallel matrix and vectors
-    ParCSRMatrix* A;
+    ParCSRMatrix *A;
     ParVector x;
     ParVector b;
 
@@ -40,12 +39,35 @@ helloworld();
     interp_t interp_type = ModClassical;
     relax_t relax_type = SOR;
     double eps = 0.001;
-    double theta = M_PI/8.0;
-    double* stencil = NULL;
+    double theta = M_PI / 8.0;
+    double *stencil = NULL;
     stencil = diffusion_stencil_2d(eps, theta);
     A = par_stencil_grid(stencil, grid.data(), dim);
     delete[] stencil;
+    // SZ
+    std::cout << "The grid size is" << grid.size() << std::endl;
+    if (rank == 1)
+    {
 
+        for (int i = 0; i < 10; i++)
+        {
+            std::cout
+                << "The data isss" << grid[i] << std::endl;
+        }
+        SZ3::Config conf(2655);
+        conf.loadcfg("/home/bigyan/main/Research/LossyMPI/raptor-compress/sz3.config");
+        char *buff = compress_data(conf, grid.data());
+        std::vector<float> dec_data(conf.num);
+        auto dec_data_p = dec_data.data();
+        decompress_data(conf, buff, dec_data_p);
+        for (int i = 0; i < 10; i++)
+        {
+            std::cout
+                << "The dec data isss" << dec_data_p[i] << std::endl;
+        }
+    }
+
+    // SZ ends
     x = ParVector(A->global_num_cols, A->on_proc_num_cols);
     b = ParVector(A->global_num_rows, A->local_num_rows);
 
@@ -57,7 +79,7 @@ helloworld();
     double strong_threshold = 0.25;
 
     // Create a multilevel object
-    ParMultilevel* ml;
+    ParMultilevel *ml;
 
     // Setup Raptor Hierarchy
     MPI_Barrier(MPI_COMM_WORLD);
@@ -70,14 +92,17 @@ helloworld();
     int64_t lcl_nnz;
     int64_t nnz;
 
-    if (rank == 0) std::cout << "Level\tNumRows\tNNZ" << std::endl;
-    if (rank == 0) std::cout << "-----\t-------\t---" << std::endl;
+    if (rank == 0)
+        std::cout << "Level\tNumRows\tNNZ" << std::endl;
+    if (rank == 0)
+        std::cout << "-----\t-------\t---" << std::endl;
     for (int64_t i = 0; i < ml->num_levels; i++)
     {
-        ParCSRMatrix* Al = ml->levels[i]->A;
+        ParCSRMatrix *Al = ml->levels[i]->A;
         lcl_nnz = Al->local_nnz;
         MPI_Reduce(&lcl_nnz, &nnz, 1, MPI_LONG, MPI_SUM, 0, MPI_COMM_WORLD);
-        if (rank == 0) std::cout << i << "\t" << Al->global_num_rows << "\t" << nnz << std::endl;
+        if (rank == 0)
+            std::cout << i << "\t" << Al->global_num_rows << "\t" << nnz << std::endl;
     }
 
     // Solve Raptor Hierarchy
@@ -87,9 +112,11 @@ helloworld();
     time_solve = MPI_Wtime() - time_base;
 
     MPI_Reduce(&time_setup, &time_base, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
-    if (rank == 0) printf("Raptor AMG Setup Time: %e\n", time_base);
+    if (rank == 0)
+        printf("Raptor AMG Setup Time: %e\n", time_base);
     MPI_Reduce(&time_solve, &time_base, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
-    if (rank == 0) printf("Raptor AMG Solve Time: %e\n", time_base);
+    if (rank == 0)
+        printf("Raptor AMG Solve Time: %e\n", time_base);
 
     // Delete AMG hierarchy
     delete ml;
@@ -98,4 +125,3 @@ helloworld();
 
     return 0;
 }
-

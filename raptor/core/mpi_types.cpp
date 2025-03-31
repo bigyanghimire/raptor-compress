@@ -9,6 +9,8 @@ double new_comm_t = 0.0;
 
 #include <mpi.h>
 #include "mpi_types.hpp"
+#include <iostream>
+#include <typeinfo>
 
 void init_profile()
 {
@@ -158,6 +160,28 @@ int RAPtor_MPI_Isend(const void *buf, int count, RAPtor_MPI_Datatype datatype, i
     if (profile) current_t = &p2p_t;
     return val;
 }
+// Compressed I send
+int RAPtor_MPI_Isend_C(const void *buf, int count, RAPtor_MPI_Datatype datatype, int dest, int tag,
+        RAPtor_MPI_Comm comm, RAPtor_MPI_Request * request)
+{
+    if (profile) p2p_t -= RAPtor_MPI_Wtime();
+    //   if (typeInfo == typeid(double)) {
+
+    //   }
+    const double *intBuf = static_cast<const double*>(buf);
+
+    for (int i = 0; i < count; i++)
+        {
+            std::cout
+                << "The val" << intBuf[i] << std::endl;
+        }
+        
+    int val = MPI_Isend(buf, count, datatype, dest, tag, comm, request);
+    if (profile) p2p_t += RAPtor_MPI_Wtime();
+    if (profile) current_t = &p2p_t;
+    return val;
+}
+
 int RAPtor_MPI_Issend(const void *buf, int count, RAPtor_MPI_Datatype datatype, int dest, int tag,
         RAPtor_MPI_Comm comm, RAPtor_MPI_Request * request)
 {

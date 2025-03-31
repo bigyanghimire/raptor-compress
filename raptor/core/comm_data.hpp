@@ -430,7 +430,7 @@ public:
             proc = procs[i];
             start = indptr[i];
             end = indptr[i+1];
-            RAPtor_MPI_Isend(&(values[start*block_size]), (end - start) * block_size,
+            RAPtor_MPI_Isend_C(&(values[start*block_size]), (end - start) * block_size,
                     datatype, proc, key, mpi_comm, &(requests[i]));
         }
     }

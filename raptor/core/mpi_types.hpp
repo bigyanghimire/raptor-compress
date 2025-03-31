@@ -83,6 +83,11 @@ extern int RAPtor_MPI_Send(const void *buf, int count,
 extern int RAPtor_MPI_Isend(const void *buf, int count, 
         RAPtor_MPI_Datatype datatype, int dest, int tag, RAPtor_MPI_Comm comm,
         RAPtor_MPI_Request * request);
+
+extern int RAPtor_MPI_Isend_C(const void *buf, int count, 
+        RAPtor_MPI_Datatype datatype, int dest, int tag, RAPtor_MPI_Comm comm,
+        RAPtor_MPI_Request * request);
+        
 extern int RAPtor_MPI_Issend(const void *buf, int count, 
         RAPtor_MPI_Datatype datatype, int dest, int tag, RAPtor_MPI_Comm comm,
         RAPtor_MPI_Request * request);
