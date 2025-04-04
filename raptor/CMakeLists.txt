@@ -1,3 +1,4 @@
+enable_language(CUDA)
 add_subdirectory(core)
 add_subdirectory(gallery)
 add_subdirectory(util)
@@ -7,6 +8,7 @@ add_subdirectory(multilevel)
 add_subdirectory(krylov)
 add_subdirectory(profiling)
 add_subdirectory(external)
+add_subdirectory(kernels)
 
 if (WITH_MPI)
     set(par_SOURCES
@@ -22,6 +24,7 @@ add_library(raptor ${core_SOURCES} ${core_HEADERS}
 	${util_SOURCES} ${util_HEADERS}
 	${par_SOURCES} strength.cpp 
 	${ruge_stuben_SOURCES} ${ruge_stuben_HEADERS}
+  ${kernels_SOURCES} ${kernels_HEADERS}
         ${aggregation_SOURCES} ${aggregation_HEADERS}
         ${multilevel_SOURCES} ${multilevel_HEADERS} 
         ${krylov_SOURCES} ${krylov_HEADERS} 
@@ -47,6 +50,7 @@ install(FILES ${gallery_HEADERS}  DESTINATION "include/raptor/gallery")
 install(FILES ${ext_gallery_HEADERS} DESTINATION "include/raptor/gallery/external")
 install(FILES ${util_HEADERS} DESTINATION "include/raptor/util/linalg")
 install(FILES ${ext_util_HEADERS} DESTINATION "include/raptor/util/linalg/external")
+install(FILES ${kernels_HEADERS} DESTINATION "include/raptor/kernels")
 install(FILES ${ruge_stuben_HEADERS} DESTINATION "include/raptor/ruge_stuben")
 install(FILES ${aggregation_HEADERS} DESTINATION "include/raptor/aggregation")
 install(FILES ${multilevel_HEADERS} DESTINATION "include/raptor/multilevel")

@@ -2,7 +2,7 @@
 // License: Simplified BSD, http://opensource.org/licenses/BSD-2-Clause
 
 #include "raptor/core/matrix.hpp"
-
+#include "raptor/kernels/kernel.cuh"
 using namespace raptor;
 
 // Declare Private Methods
@@ -58,6 +58,7 @@ void COO_append_neg_T(const COOMatrix* A, const std::vector<T>& vals,
 // Optimized CSR and BSR standard SpMVs
 void CSR_spmv(const CSRMatrix* A, const double* x, double* b)
 {
+     int c=wrap_test_print();
     int start, end;
     double val;
     for (int i = 0; i < A->n_rows; i++)

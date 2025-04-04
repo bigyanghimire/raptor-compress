@@ -16,6 +16,7 @@
 
 // Matrix and vector classes
 #include "core/matrix.hpp"
+// #include "kernels/kernel.hpp"
 #include "core/vector.hpp"
 #ifndef NO_MPI
     #include "core/par_matrix.hpp"
