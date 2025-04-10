@@ -10,7 +10,7 @@
 #include "raptor/util/linalg/par_relax.hpp"
 #include "raptor/ruge_stuben/par_interpolation.hpp"
 #include "raptor/ruge_stuben/par_cf_splitting.hpp"
-
+#include <iostream>
 #ifdef USING_HYPRE
 #include "_hypre_utilities.h"
 #include "HYPRE.h"
@@ -357,6 +357,9 @@ namespace raptor
                         int info; // result
 
                         std::vector<double> b_data(coarse_n);
+                        // for(int i=0;i<b.local_n;i++){
+                        //     std::cout<<"The b data is"<<b.local[i]<<std::endl;
+                        // }
                         RAPtor_MPI_Allgatherv(b.local.data(), b.local_n, RAPtor_MPI_DOUBLE, b_data.data(), 
                                 coarse_sizes.data(), coarse_displs.data(), 
                                 RAPtor_MPI_DOUBLE, coarse_comm);
@@ -477,6 +480,10 @@ namespace raptor
                 }
 
                 // Iterate until convergence or max iterations
+                std::cout<<"rhs global n"<<rhs.global_n<<std::endl;
+                std::cout<<"rhs local value"<<sol.local[0]<<std::endl;
+                std::cout<<"rhs local n"<<rhs.local_n<<std::endl;
+
                 ParVector resid(rhs.global_n, rhs.local_n);
                 levels[0]->A->residual(sol, rhs, resid);
                 if (fabs(b_norm) > zero_tol)

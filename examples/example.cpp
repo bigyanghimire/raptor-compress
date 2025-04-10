@@ -45,27 +45,17 @@ int main(int argc, char *argv[])
     A = par_stencil_grid(stencil, grid.data(), dim);
     delete[] stencil;
     // SZ
-    std::cout << "The grid size is" << grid.size() << std::endl;
-    if (rank == 1)
-    {
+    // std::cout << "The grid size is" << grid.size() << std::endl;
+    // if (rank == 1)
+    // {
 
-        for (int i = 0; i < 10; i++)
-        {
-            std::cout
-                << "The data isss" << grid[i] << std::endl;
-        }
-        SZ3::Config conf(2655);
-        conf.loadcfg("/home/bigyan/main/Research/LossyMPI/raptor-compress/sz3.config");
-        char *buff = compress_data(conf, grid.data());
-        std::vector<float> dec_data(conf.num);
-        auto dec_data_p = dec_data.data();
-        decompress_data(conf, buff, dec_data_p);
-        for (int i = 0; i < 10; i++)
-        {
-            std::cout
-                << "The dec data isss" << dec_data_p[i] << std::endl;
-        }
-    }
+    //     SZ3::Config conf(2655);
+    //     conf.loadcfg("/home/bigyan/main/Research/LossyMPI/raptor-compress/sz3.config");
+    //     char *buff = compress_data(conf, grid.data());
+    //     std::vector<float> dec_data(conf.num);
+    //     auto dec_data_p = dec_data.data();
+    //     decompress_data(conf, buff, dec_data_p);
+    // }
 
     // SZ ends
     x = ParVector(A->global_num_cols, A->on_proc_num_cols);

@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
     MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
 
     int n = 5;
-    int system = 0;
+    int system = 3;
     double strong_threshold = 0.25;
     int iter;
     int num_variables = 1;
@@ -136,8 +136,8 @@ int main(int argc, char* argv[])
 #endif
     else if (system == 3)
     {
-        const char* file = "../../examples/LFAT5.pm";
-        A = readParMatrix(file);
+        const char* file = "examples/LFAT5.mtx";
+        A = read_par_mm(file);
     }
 
     if (system != 2)

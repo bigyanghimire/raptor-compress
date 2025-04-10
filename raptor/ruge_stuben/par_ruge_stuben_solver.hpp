@@ -70,7 +70,7 @@ namespace raptor
             S = A->strength(strength_type, strong_threshold, tap_level, 
                     num_variables, variables);
 
-            // Form CF Splitting
+            // Form CF Splitting, this is for interpolation ot determine coarse and fine points from A for interpolation operator
             switch (coarsen_type)
             {
                 case RS:
@@ -142,7 +142,7 @@ namespace raptor
 
             // Form coarse grid operator
             levels.emplace_back(new ParLevel());
-
+// The interpolation P is applied to A of new level(one level up ) as per the algorithm 
             AP = A->mult(levels[level_ctr]->P, tap_level);
             A = AP->mult_T(P, tap_level);
 
@@ -151,6 +151,7 @@ namespace raptor
 
             level_ctr++;
             levels[level_ctr]->A = A;
+            // This is just for later on during solve because X and B depend on size of A 
             A->comm = new ParComm(A->partition, A->off_proc_column_map,
                     A->on_proc_column_map, levels[level_ctr-1]->A->comm->key,
                     levels[level_ctr-1]->A->comm->mpi_comm);

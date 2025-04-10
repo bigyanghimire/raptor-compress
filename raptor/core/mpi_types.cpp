@@ -11,7 +11,7 @@ double new_comm_t = 0.0;
 #include "mpi_types.hpp"
 #include <iostream>
 #include <typeinfo>
-
+#include "raptor/raptor.hpp"
 void init_profile()
 {
     profile = true;
@@ -107,6 +107,7 @@ int RAPtor_MPI_Allgatherv(const void* sendbuf, int sendcount, RAPtor_MPI_Datatyp
     if (profile) collective_t += RAPtor_MPI_Wtime();
     return val;
 }
+// Used in extended interpolation which is a special case
 int RAPtor_MPI_Iallreduce(const void *sendbuf, void *recvbuf, int count,
         RAPtor_MPI_Datatype datatype, RAPtor_MPI_Op op, RAPtor_MPI_Comm comm, RAPtor_MPI_Request* request)
 {
@@ -162,23 +163,33 @@ int RAPtor_MPI_Isend(const void *buf, int count, RAPtor_MPI_Datatype datatype, i
 }
 // Compressed I send
 int RAPtor_MPI_Isend_C(const void *buf, int count, RAPtor_MPI_Datatype datatype, int dest, int tag,
-        RAPtor_MPI_Comm comm, RAPtor_MPI_Request * request)
+                       RAPtor_MPI_Comm comm, RAPtor_MPI_Request *request)
 {
-    if (profile) p2p_t -= RAPtor_MPI_Wtime();
+    if (profile)
+        p2p_t -= RAPtor_MPI_Wtime();
     //   if (typeInfo == typeid(double)) {
 
     //   }
-    const double *intBuf = static_cast<const double*>(buf);
+    // const double *intBuf = static_cast<const double *>(buf);
+    // std::cout
+    //     << "Start of values" << std::endl;
+    // for (int i = 0; i < count; i++)
+    // {
 
-    for (int i = 0; i < count; i++)
-        {
-            std::cout
-                << "The val" << intBuf[i] << std::endl;
-        }
-        
+    //     // std::cout
+    //     //     << std::fixed<<"The val" << intBuf[i] << std::endl;
+    //          std::cout<<"The val" << intBuf[i] << std::endl;
+    // }
+    // std::cout
+    //     << "End of values" << std::endl;
+    // SZ3::Config conf(2655);
+    // conf.loadcfg("/home/bigyan/main/Research/LossyMPI/raptor-compress/sz3.config");
+    // char *buff = compress_data(conf, intBuf);
     int val = MPI_Isend(buf, count, datatype, dest, tag, comm, request);
-    if (profile) p2p_t += RAPtor_MPI_Wtime();
-    if (profile) current_t = &p2p_t;
+    if (profile)
+        p2p_t += RAPtor_MPI_Wtime();
+    if (profile)
+        current_t = &p2p_t;
     return val;
 }
 
