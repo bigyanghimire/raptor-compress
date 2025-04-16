@@ -78,7 +78,9 @@ target_link_libraries(
          ${PARMETIS_LIBRARIES}
          ${EXTERNAL_LIBS}
          ${NCCL_LIBRARIES}
-         CUDA::cusparse)
+         CUDA::cusparse
+         CUDA::cudart
+         )
 
 target_include_directories(
   raptor
