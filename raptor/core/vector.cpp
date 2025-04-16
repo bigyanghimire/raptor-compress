@@ -30,7 +30,7 @@ void Vector::set_const_value(data_t alpha)
 **************************************************************/
 void Vector::set_rand_values()
 {
-    srand(time(NULL));
+    srand(10);
     for (index_t i = 0; i < size(); i++)
     {
         values[i] = ((double)rand()) / RAND_MAX;

@@ -10,7 +10,45 @@
 #include "raptor/raptor.hpp"
 
 using namespace raptor;
+void print_vector(const double *hB, int num_elements)
+{
+    std::cout << "[";
+    for (int i = 0; i < num_elements; ++i)
+    {
+        std::cout << hB[i];
+        if (i != num_elements - 1)
+            std::cout << ", ";
+    }
+    std::cout << "]" << std::endl;
+}
 
+void check_solution_accuracy(const ParVector &b, const ParVector &c, int rank, int local_nrows, double tol)
+{
+    std::vector<int> bad_indices;
+
+    for (int i = 0; i < local_nrows; ++i)
+    {
+        double diff = std::abs(b.local.values[i] - c.local.values[i]);
+        if (diff > tol || std::isnan(diff) || std::isinf(diff))
+        {
+            bad_indices.push_back(i);
+        }
+    }
+
+    if (bad_indices.empty())
+    {
+        std::cout << "Rank " << rank << ": ✅ Solution correct (within tolerance " << tol << ")\n";
+    }
+    else
+    {
+        std::cout << "Rank " << rank << ": ❌ Solution incorrect at positions: ";
+        for (int i : bad_indices)
+        {
+            std::cout << i << " ";
+        }
+        std::cout << std::endl;
+    }
+}
 // This is a basic use case.
 int main(int argc, char *argv[])
 {
@@ -21,7 +59,7 @@ int main(int argc, char *argv[])
     MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
 
     // Create parallel matrix and vectors
-    ParCSRMatrix* A;
+    ParCSRMatrix *A;
     ParVector x;
     ParVector b;
 
@@ -92,6 +130,12 @@ int main(int argc, char *argv[])
     if (rank == 0) printf("Raptor AMG Solve Time: %e\n", time_base);
 
     // Delete AMG hierarchy
+    ParVector c = ParVector(A->global_num_rows, A->local_num_rows);
+    A->mult(x, c);
+    // print_vector(b.local.values.data(), A->local_num_rows);
+    // print_vector(c.local.values.data(), A->local_num_rows);
+    double tolerance = 1e-7;
+    check_solution_accuracy(b, c, rank, A->local_num_rows, tolerance);
     delete ml;
     delete A;
     MPI_Finalize();

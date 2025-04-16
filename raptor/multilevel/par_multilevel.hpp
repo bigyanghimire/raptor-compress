@@ -10,7 +10,8 @@
 #include "raptor/util/linalg/par_relax.hpp"
 #include "raptor/ruge_stuben/par_interpolation.hpp"
 #include "raptor/ruge_stuben/par_cf_splitting.hpp"
-
+#include "nccl.h"
+#include "cuda_runtime.h"
 #ifdef USING_HYPRE
 #include "_hypre_utilities.h"
 #include "HYPRE.h"

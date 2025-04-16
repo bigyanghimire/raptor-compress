@@ -3,6 +3,8 @@
 
 #include "raptor/core/matrix.hpp"
 #include "raptor/kernels/kernel.cuh"
+#include <iostream>
+#include <mpi.h>
 using namespace raptor;
 
 // Declare Private Methods
@@ -56,24 +58,64 @@ void COO_append_neg_T(const COOMatrix* A, const std::vector<T>& vals,
 
 // CSRMatrix SpMV Methods (or BSR)
 // Optimized CSR and BSR standard SpMVs
-void CSR_spmv(const CSRMatrix* A, const double* x, double* b)
+
+void print_vector(const double *hB, int num_elements)
 {
-     int c=wrap_test_print();
-    int start, end;
-    double val;
-    for (int i = 0; i < A->n_rows; i++)
+    std::cout << "[";
+    for (int i = 0; i < num_elements; ++i)
     {
-        start = A->idx1[i];
-        end = A->idx1[i+1];
-        val = 0;
-        for (int j = start; j < end; j++)
-        {
-            val += A->vals[j] * x[A->idx2[j]];
-        }
-        b[i] = val;
+        std::cout << hB[i];
+        if (i != num_elements - 1)
+            std::cout << ", ";
     }
+    std::cout << "]" << std::endl;
 }
 
+void print_error(const double *hB, const double *hC, int num_elements)
+{
+    std::cout << "[";
+    for (int i = 0; i < num_elements; ++i)
+    {
+        std::cout << hB[i] - hC[i];
+        if (i != num_elements - 1)
+            std::cout << ", ";
+    }
+    std::cout << "]" << std::endl;
+}
+
+// CSRMatrix SpMV Methods (or BSR)
+// Optimized CSR and BSR standard SpMVs
+void CSR_spmv(const CSRMatrix *A, const double *x, double *b)
+{
+    char *compute_type = "gpu";
+    int rank, num_procs;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
+
+    if (compute_type == "gpu")
+    {
+        printf("in gpu\n");
+        spmv_gpu2(A, x, b);
+    }
+    else
+    {
+
+        int start, end;
+        double val;
+        for (int i = 0; i < A->n_rows; i++)
+        {
+            start = A->idx1[i];
+            end = A->idx1[i + 1];
+            val = 0;
+            for (int j = start; j < end; j++)
+            {
+                val += A->vals[j] * x[A->idx2[j]];
+            }
+            b[i] = val;
+        }
+    }
+
+}
 void CSR_residual(const CSRMatrix* A, const double* x, 
         const double* b, double* r)
 {
