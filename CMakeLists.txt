@@ -22,6 +22,7 @@ option(WITH_PETSC "Add Petsc" OFF)
 option(WITH_AMPI "Using AMPI" OFF)
 option(WITH_MPI "Using MPI" ON)
 option(WITH_HOSTFILE "Use a Hostfile with MPI" OFF)
+option(WITH_CUDA "Using CUDA" OFF)
 
 add_feature_info(hypre WITH_HYPRE "Hypre preconditioner")
 add_feature_info(ml WITH_MUELU "Trilinos MueLu preconditioner")
@@ -184,6 +185,11 @@ endif(WITH_PETSC)
 if (WITH_AMPI)
 	add_definitions(-DUSE_AMPI)
 endif(WITH_AMPI)
+
+# Todo check if CUDA is present
+if (WITH_CUDA)
+    add_definitions (-DUSING_CUDA)
+endif (WITH_MPI)
 
 add_subdirectory(raptor)
 

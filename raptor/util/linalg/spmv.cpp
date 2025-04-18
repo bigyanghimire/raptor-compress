@@ -87,19 +87,10 @@ void print_error(const double *hB, const double *hC, int num_elements)
 // Optimized CSR and BSR standard SpMVs
 void CSR_spmv(const CSRMatrix *A, const double *x, double *b)
 {
-    char *compute_type = "gpu";
-    int rank, num_procs;
-    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
-
-    if (compute_type == "gpu")
-    {
-        printf("in gpu\n");
+    #if defined(USING_CUDA)
         spmv_gpu2(A, x, b);
-    }
-    else
+    #endif
     {
-
         int start, end;
         double val;
         for (int i = 0; i < A->n_rows; i++)
@@ -114,6 +105,21 @@ void CSR_spmv(const CSRMatrix *A, const double *x, double *b)
             b[i] = val;
         }
     }
+    // char *compute_type = "gpu";
+    // int rank, num_procs;
+    // MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    // MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
+
+    // if (compute_type == "gpu")
+    // {
+    //     printf("in gpu\n");
+        
+    // }
+    // else
+    // {
+
+
+    // }
 
 }
 void CSR_residual(const CSRMatrix* A, const double* x, 

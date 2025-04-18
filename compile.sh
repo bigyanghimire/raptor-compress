@@ -1,6 +1,6 @@
     $mode=$1
     #cmake -B build -Werror=dev --warn-uninitialized  -DWITH_MPI=ON && \
-    cmake -B build -DWITH_MPI=ON -DCLUSTER_MODE=$1 && \
+    cmake -B build -DWITH_MPI=ON -DCLUSTER_MODE=$1 -DWITH_CUDA=ON && \
     cmake --build build --parallel $(nproc) -- VERBOSE=1 &&
     clear && \
    mpirun -n 2  build/examples/example

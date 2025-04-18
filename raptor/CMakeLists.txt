@@ -64,7 +64,10 @@ add_library(
   ${profile_SOURCES}
   ${profile_HEADERS}
   ${external_SOURCES}
-  ${external_HEADERS})
+  ${external_HEADERS}
+  ${multilevel_cuda_HEADERS}
+  ${multilevel_cuda_SOURCES}
+  )
 
 target_link_libraries(
   raptor
@@ -105,6 +108,7 @@ install(FILES ${kernels_HEADERS} DESTINATION "include/raptor/kernels")
 install(FILES ${ruge_stuben_HEADERS} DESTINATION "include/raptor/ruge_stuben")
 install(FILES ${aggregation_HEADERS} DESTINATION "include/raptor/aggregation")
 install(FILES ${multilevel_HEADERS} DESTINATION "include/raptor/multilevel")
+install(FILES ${multilevel_cuda_HEADERS} DESTINATION "include/raptor/multilevel/cuda")
 install(FILES ${krylov_HEADERS} DESTINATION "include/raptor/krylov")
 install(FILES ${profile_HEADERS} DESTINATION "include/raptor/profiling")
 install(FILES ${external_HEADERS} DESTINATION "include/raptor/external")

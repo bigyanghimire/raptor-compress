@@ -343,53 +343,6 @@ namespace raptor
                         coarse_sizes[i] *= coarse_n;
                         coarse_displs[i+1] *= coarse_n;
                     }
-                    // -----------------------NCCL/////////////////////////////////////--------------->>>>>>>>>>
-                    int myRank, nRanks, localRank = 0;
-                    MPICHECK(MPI_Comm_rank(MPI_COMM_WORLD, &myRank));
-                    MPICHECK(MPI_Comm_size(MPI_COMM_WORLD, &nRanks));
-                    //MPICHECK(MPI_Allgather(MPI_IN_PLACE, 0, MPI_DATATYPE_NULL, hostHashs, sizeof(uint64_t), MPI_BYTE, MPI_COMM_WORLD));
-
-                    ncclUniqueId id;
-                    ncclComm_t comm;
-                    float *sendbuff, *recvbuff;
-                    cudaStream_t s;
-
-                    // get NCCL unique ID at rank 0 and broadcast it to all others
-                    if (myRank == 0)
-                        ncclGetUniqueId(&id);
-                    MPICHECK(MPI_Bcast((void *)&id, sizeof(id), MPI_BYTE, 0, MPI_COMM_WORLD));
-
-                    // picking a GPU based on localRank, allocate device buffers
-                    CUDACHECK(cudaSetDevice(localRank));
-                    int deviceCount;
-                    cudaGetDeviceCount(&deviceCount);   
-                    printf("the total device count is : %d\n",deviceCount);
-
-                    // CUDACHECK(cudaMalloc(&sendbuff, size * sizeof(float)));
-                    // CUDACHECK(cudaMalloc(&recvbuff, size * sizeof(float)));
-                    // CUDACHECK(cudaStreamCreate(&s));
-
-                    // // initializing NCCL
-                    // NCCLCHECK(ncclCommInitRank(&comm, nRanks, id, myRank));
-
-                    // // communicating using NCCL
-                    // NCCLCHECK(ncclAllReduce((const void *)sendbuff, (void *)recvbuff, size, ncclFloat, ncclSum,
-                    //                         comm, s));
-                    // //completing NCCL operation by synchronizing on the CUDA stream
-                    // CUDACHECK(cudaStreamSynchronize(s));
-
-
-                    // //free device buffers
-                    // CUDACHECK(cudaFree(sendbuff));
-                    // CUDACHECK(cudaFree(recvbuff));
-
-
-                    // //finalizing NCCL
-                    // ncclCommDestroy(comm);
-
-                    //<----------------------NCCL ends------------------------------->
-                    //finalizing MPI
-                    //MPICHECK(MPI_Finalize());
 
                     RAPtor_MPI_Allgatherv(A_coarse_lcl.data(), A_coarse_lcl.size(), RAPtor_MPI_DOUBLE,
                             A_coarse.data(), coarse_sizes.data(), coarse_displs.data(), 
@@ -432,6 +385,49 @@ namespace raptor
                         int info; // result
 
                         std::vector<double> b_data(coarse_n);
+                                        // -----------------------NCCL/////////////////////////////////////--------------->>>>>>>>>>
+                    int myRank, nRanks, localRank = 0;
+                    MPICHECK(MPI_Comm_rank(MPI_COMM_WORLD, &myRank));
+                    MPICHECK(MPI_Comm_size(MPI_COMM_WORLD, &nRanks));
+                    // MPICHECK(MPI_Allgather(MPI_IN_PLACE, 0, MPI_DATATYPE_NULL, hostHashs, sizeof(uint64_t), MPI_BYTE, MPI_COMM_WORLD));
+
+                    ncclUniqueId id;
+                    ncclComm_t comm;
+                    float *sendbuff, *recvbuff;
+                    cudaStream_t s;
+
+                    // get NCCL unique ID at rank 0 and broadcast it to all others
+                    if (myRank == 0)
+                        ncclGetUniqueId(&id);
+                    MPICHECK(MPI_Bcast((void *)&id, sizeof(id), MPI_BYTE, 0, MPI_COMM_WORLD));
+
+                    // picking a GPU based on localRank, allocate device buffers
+                    CUDACHECK(cudaSetDevice(localRank));
+                    int deviceCount;
+                    cudaGetDeviceCount(&deviceCount);
+                    printf("the total device count is : %d\n", deviceCount);
+
+                    // CUDACHECK(cudaMalloc(&sendbuff, size * sizeof(float)));
+                    // CUDACHECK(cudaMalloc(&recvbuff, size * sizeof(float)));
+                    // CUDACHECK(cudaStreamCreate(&s));
+
+                    // // initializing NCCL
+                    // NCCLCHECK(ncclCommInitRank(&comm, nRanks, id, myRank));
+
+                    // // communicating using NCCL
+                    // NCCLCHECK(ncclAllReduce((const void *)sendbuff, (void *)recvbuff, size, ncclFloat, ncclSum,
+                    //                         comm, s));
+                    // //completing NCCL operation by synchronizing on the CUDA stream
+                    // CUDACHECK(cudaStreamSynchronize(s));
+
+                    // //free device buffers
+                    // CUDACHECK(cudaFree(sendbuff));
+                    // CUDACHECK(cudaFree(recvbuff));
+
+                    // //finalizing NCCL
+                    // ncclCommDestroy(comm);
+
+                    //<----------------------NCCL ends------------------------------->
                         RAPtor_MPI_Allgatherv(b.local.data(), b.local_n, RAPtor_MPI_DOUBLE, b_data.data(), 
                                 coarse_sizes.data(), coarse_displs.data(), 
                                 RAPtor_MPI_DOUBLE, coarse_comm);
