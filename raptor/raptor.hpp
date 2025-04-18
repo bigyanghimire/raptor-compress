@@ -85,9 +85,9 @@
 // AMG multilevel classes
 #include "multilevel/multilevel.hpp"
 #include "multilevel/level.hpp"
-#ifdef USING_CUDA
-#include "multilevel/cuda/par_multilevel_cuda.cuh"
-#endif
+// #ifdef USING_CUDA
+// #include "multilevel/cuda/par_multilevel_cuda.cuh"
+// #endif
 #ifndef NO_MPI
     #include "multilevel/par_multilevel.hpp"
     #include "multilevel/par_level.hpp"
