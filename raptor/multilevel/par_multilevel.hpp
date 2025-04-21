@@ -308,8 +308,9 @@ namespace raptor
                      ncclCommDestroy(comm);
 
                     //<----------------------NCCL ends------------------------------->
-                  {
-                   std::cout<<"Proc sizes gpu"<<proc_sizes[i]<<std::endl;
+    for (int i = 0; i < num_procs; i++)
+                {
+                   std::cout<<"Proc sizes"<<proc_sizes[i]<<std::endl;
                 }
                 RAPtor_MPI_Allgather(&(Ac->local_num_rows), 1, RAPtor_MPI_INT, proc_sizes.data(),
                         1, RAPtor_MPI_INT, RAPtor_MPI_COMM_WORLD);
