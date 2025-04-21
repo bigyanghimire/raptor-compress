@@ -294,21 +294,23 @@ namespace raptor
                     // // initializing NCCL
                      NCCLCHECK(ncclCommInitRank(&comm, nRanks, id, myRank));
 
-                //     // // communicating using NCCL
-                //     NCCLCHECK(ncclAllGather((const void *)sendbuff, (void *)recvbuff, 1, ncclInt,
-                //                           comm, s));
-                //     // //completing NCCL operation by synchronizing on the CUDA stream
-                //     CUDACHECK(cudaStreamSynchronize(s));
+                    // // communicating using NCCL
+                    NCCLCHECK(ncclAllGather((const void *)sendbuff, (void *)recvbuff, 1, ncclInt,
+                                          comm, s));
+                    // //completing NCCL operation by synchronizing on the CUDA stream
+                    CUDACHECK(cudaStreamSynchronize(s));
 
-                // //     // //free device buffers
-                //      CUDACHECK(cudaFree(sendbuff));
-                //       CUDACHECK(cudaFree(recvbuff));
+                //     // //free device buffers
+                     CUDACHECK(cudaFree(sendbuff));
+                      CUDACHECK(cudaFree(recvbuff));
 
-                // //     // //finalizing NCCL
-                //      ncclCommDestroy(comm);
+                //     // //finalizing NCCL
+                     ncclCommDestroy(comm);
 
                     //<----------------------NCCL ends------------------------------->
-                
+                  {
+                   std::cout<<"Proc sizes gpu"<<proc_sizes[i]<<std::endl;
+                }
                 RAPtor_MPI_Allgather(&(Ac->local_num_rows), 1, RAPtor_MPI_INT, proc_sizes.data(),
                         1, RAPtor_MPI_INT, RAPtor_MPI_COMM_WORLD);
                               for (int i = 0; i < num_procs; i++)
