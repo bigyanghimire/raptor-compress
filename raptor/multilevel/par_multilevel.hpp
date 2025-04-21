@@ -12,6 +12,7 @@
 #include "raptor/ruge_stuben/par_cf_splitting.hpp"
 #include "nccl.h"
 #include "cuda_runtime.h"
+#include <iostream>
 #ifdef USING_HYPRE
 #include "_hypre_utilities.h"
 #include "HYPRE.h"
@@ -259,8 +260,61 @@ namespace raptor
                 ParCSRMatrix* Ac = levels[last_level]->A;
                 std::vector<int> proc_sizes(num_procs);
                 std::vector<int> active_procs;
+                   for (int i = 0; i < num_procs; i++)
+                {
+                   std::cout<<"Proc sizes"<<proc_sizes[i]<<std::endl;
+                }
+                                                        // -----------------------NCCL/////////////////////////////////////--------------->>>>>>>>>>
+                    int myRank, nRanks, localRank = 0;
+                    int size = 32*1024*1024;
+                    MPICHECK(MPI_Comm_rank(MPI_COMM_WORLD, &myRank));
+                    MPICHECK(MPI_Comm_size(MPI_COMM_WORLD, &nRanks));
+                    // MPICHECK(MPI_Allgather(MPI_IN_PLACE, 0, MPI_DATATYPE_NULL, hostHashs, sizeof(uint64_t), MPI_BYTE, MPI_COMM_WORLD));
+
+                    ncclUniqueId id;
+                    ncclComm_t comm;
+                    float *sendbuff, *recvbuff;
+                    cudaStream_t s;
+
+                    // get NCCL unique ID at rank 0 and broadcast it to all others
+                    if (myRank == 0)
+                        ncclGetUniqueId(&id);
+                    MPICHECK(MPI_Bcast((void *)&id, sizeof(id), MPI_BYTE, 0, MPI_COMM_WORLD));
+
+                    // picking a GPU based on localRank, allocate device buffers
+                    CUDACHECK(cudaSetDevice(localRank));
+                    int deviceCount;
+                    cudaGetDeviceCount(&deviceCount);
+                    printf("the total device count is : %d\n", deviceCount);
+                    CUDACHECK(cudaSetDevice(localRank));
+                    CUDACHECK(cudaMalloc(&sendbuff, size * sizeof(float)));
+                    CUDACHECK(cudaMalloc(&recvbuff, size * sizeof(float)));
+                    CUDACHECK(cudaStreamCreate(&s));
+
+                    // // initializing NCCL
+                     NCCLCHECK(ncclCommInitRank(&comm, nRanks, id, myRank));
+
+                //     // // communicating using NCCL
+                //     NCCLCHECK(ncclAllGather((const void *)sendbuff, (void *)recvbuff, 1, ncclInt,
+                //                           comm, s));
+                //     // //completing NCCL operation by synchronizing on the CUDA stream
+                //     CUDACHECK(cudaStreamSynchronize(s));
+
+                // //     // //free device buffers
+                //      CUDACHECK(cudaFree(sendbuff));
+                //       CUDACHECK(cudaFree(recvbuff));
+
+                // //     // //finalizing NCCL
+                //      ncclCommDestroy(comm);
+
+                    //<----------------------NCCL ends------------------------------->
+                
                 RAPtor_MPI_Allgather(&(Ac->local_num_rows), 1, RAPtor_MPI_INT, proc_sizes.data(),
                         1, RAPtor_MPI_INT, RAPtor_MPI_COMM_WORLD);
+                              for (int i = 0; i < num_procs; i++)
+                {
+                   std::cout<<"Proc sizes"<<proc_sizes[i]<<std::endl;
+                }
                 for (int i = 0; i < num_procs; i++)
                 {
                     if (proc_sizes[i])
@@ -385,50 +439,7 @@ namespace raptor
                         int info; // result
 
                         std::vector<double> b_data(coarse_n);
-                                        // -----------------------NCCL/////////////////////////////////////--------------->>>>>>>>>>
-                    int myRank, nRanks, localRank = 0;
-                    int size = 32*1024*1024;
-                    MPICHECK(MPI_Comm_rank(MPI_COMM_WORLD, &myRank));
-                    MPICHECK(MPI_Comm_size(MPI_COMM_WORLD, &nRanks));
-                    // MPICHECK(MPI_Allgather(MPI_IN_PLACE, 0, MPI_DATATYPE_NULL, hostHashs, sizeof(uint64_t), MPI_BYTE, MPI_COMM_WORLD));
 
-                    ncclUniqueId id;
-                    ncclComm_t comm;
-                    float *sendbuff, *recvbuff;
-                    cudaStream_t s;
-
-                    // get NCCL unique ID at rank 0 and broadcast it to all others
-                    if (myRank == 0)
-                        ncclGetUniqueId(&id);
-                    MPICHECK(MPI_Bcast((void *)&id, sizeof(id), MPI_BYTE, 0, MPI_COMM_WORLD));
-
-                    // picking a GPU based on localRank, allocate device buffers
-                    CUDACHECK(cudaSetDevice(localRank));
-                    int deviceCount;
-                    cudaGetDeviceCount(&deviceCount);
-                    printf("the total device count is : %d\n", deviceCount);
-                    CUDACHECK(cudaSetDevice(localRank));
-                    CUDACHECK(cudaMalloc(&sendbuff, size * sizeof(float)));
-                    CUDACHECK(cudaMalloc(&recvbuff, size * sizeof(float)));
-                    CUDACHECK(cudaStreamCreate(&s));
-
-                    // // initializing NCCL
-                     NCCLCHECK(ncclCommInitRank(&comm, nRanks, id, myRank));
-
-                    // // communicating using NCCL
-                    NCCLCHECK(ncclAllReduce((const void *)sendbuff, (void *)recvbuff, size, ncclFloat, ncclSum,
-                                          comm, s));
-                    // //completing NCCL operation by synchronizing on the CUDA stream
-                   CUDACHECK(cudaStreamSynchronize(s));
-
-                    // //free device buffers
-                     CUDACHECK(cudaFree(sendbuff));
-                     CUDACHECK(cudaFree(recvbuff));
-
-                    // //finalizing NCCL
-                    ncclCommDestroy(comm);
-
-                    //<----------------------NCCL ends------------------------------->
                         RAPtor_MPI_Allgatherv(b.local.data(), b.local_n, RAPtor_MPI_DOUBLE, b_data.data(), 
                                 coarse_sizes.data(), coarse_displs.data(), 
                                 RAPtor_MPI_DOUBLE, coarse_comm);
