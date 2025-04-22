@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
 
     // Problems size and type
     int dim = 2;
-    int n = 100;
+    int n = 200;
 
     std::vector<int> grid;
     grid.resize(dim, n);
@@ -78,8 +78,8 @@ int main(int argc, char *argv[])
     interp_t interp_type = ModClassical;
     relax_t relax_type = SOR;
     double eps = 0.001;
-    double theta = M_PI/8.0;
-    double* stencil = NULL;
+    double theta = M_PI / 8.0;
+    double *stencil = NULL;
     stencil = diffusion_stencil_2d(eps, theta);
     A = par_stencil_grid(stencil, grid.data(), dim);
     delete[] stencil;
@@ -95,7 +95,7 @@ int main(int argc, char *argv[])
     double strong_threshold = 0.25;
 
     // Create a multilevel object
-    ParMultilevel* ml;
+    ParMultilevel *ml;
 
     // Setup Raptor Hierarchy
     MPI_Barrier(MPI_COMM_WORLD);
@@ -108,14 +108,17 @@ int main(int argc, char *argv[])
     int64_t lcl_nnz;
     int64_t nnz;
 
-    if (rank == 0) std::cout << "Level\tNumRows\tNNZ" << std::endl;
-    if (rank == 0) std::cout << "-----\t-------\t---" << std::endl;
+    if (rank == 0)
+        std::cout << "Level\tNumRows\tNNZ" << std::endl;
+    if (rank == 0)
+        std::cout << "-----\t-------\t---" << std::endl;
     for (int64_t i = 0; i < ml->num_levels; i++)
     {
-        ParCSRMatrix* Al = ml->levels[i]->A;
+        ParCSRMatrix *Al = ml->levels[i]->A;
         lcl_nnz = Al->local_nnz;
         MPI_Reduce(&lcl_nnz, &nnz, 1, MPI_LONG, MPI_SUM, 0, MPI_COMM_WORLD);
-        if (rank == 0) std::cout << i << "\t" << Al->global_num_rows << "\t" << nnz << std::endl;
+        if (rank == 0)
+            std::cout << i << "\t" << Al->global_num_rows << "\t" << nnz << std::endl;
     }
 
     // Solve Raptor Hierarchy
@@ -125,10 +128,11 @@ int main(int argc, char *argv[])
     time_solve = MPI_Wtime() - time_base;
 
     MPI_Reduce(&time_setup, &time_base, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
-    if (rank == 0) printf("Raptor AMG Setup Time: %e\n", time_base);
+    if (rank == 0)
+        printf("Raptor AMG Setup Time: %e\n", time_base);
     MPI_Reduce(&time_solve, &time_base, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
-    if (rank == 0) printf("Raptor AMG Solve Time: %e\n", time_base);
-
+    if (rank == 0)
+        printf("Raptor AMG Solve Timess: %e\n", time_base);
     // Delete AMG hierarchy
     ParVector c = ParVector(A->global_num_rows, A->local_num_rows);
     A->mult(x, c);
@@ -142,4 +146,3 @@ int main(int argc, char *argv[])
 
     return 0;
 }
-

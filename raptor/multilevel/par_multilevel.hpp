@@ -262,10 +262,10 @@ namespace raptor
                 std::vector<int> proc_sizes(num_procs);
                 std::vector<int> active_procs;
                 printf("the number of pricess is %d\n",num_procs);
-                   for (int i = 0; i < num_procs; i++)
-                {
-                   std::cout<<"Proc sizes"<<proc_sizes[i]<<std::endl;
-                }
+                //    for (int i = 0; i < num_procs; i++)
+                // {
+                //    std::cout<<"Proc sizes"<<proc_sizes[i]<<std::endl;
+                // }
                     //                                     // -----------------------NCCL/////////////////////////////////////--------------->>>>>>>>>>
                     // int myRank, nRanks, localRank = 0;
                     // int size = 32*1024*1024;
@@ -325,18 +325,18 @@ namespace raptor
 
                     cleanup_nccl(stream, comm);
                     printf("AllGather result:\n");
-                    for (int i = 0; i < num_procs; i++)
-                    {
-                        std::cout << "Proc sizes actual" << proc_sizes[i] << std::endl;
-                    }
+                    // for (int i = 0; i < num_procs; i++)
+                    // {
+                    //     std::cout << "Proc sizes actual" << proc_sizes[i] << std::endl;
+                    // }
                 # else
                     RAPtor_MPI_Allgather(&(Ac->local_num_rows), 1, RAPtor_MPI_INT, proc_sizes.data(),
                         1, RAPtor_MPI_INT, RAPtor_MPI_COMM_WORLD);
                     printf("AllGather result cpu:\n");
-                    for (int i = 0; i < num_procs; i++)
-                    {
-                        std::cout << "Proc sizes actual" << proc_sizes[i] << std::endl;
-                    }
+                    // for (int i = 0; i < num_procs; i++)
+                    // {
+                    //     std::cout << "Proc sizes actual" << proc_sizes[i] << std::endl;
+                    // }
                 # endif
                 // for (int i = 0; i < num_procs; ++i)
                 // {
