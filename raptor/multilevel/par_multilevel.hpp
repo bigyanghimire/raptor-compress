@@ -317,24 +317,34 @@ namespace raptor
                     // //<----------------------NCCL ends------------------------------->
 
                     // <----------NCCL funcs----->
+                #if defined(USING_CUDA)
+                    cudaStream_t stream;
+                    setup_cuda(0, &stream);
+                    ncclComm_t comm = init_nccl_comm(MPI_COMM_WORLD, rank, num_procs);
+                    nccl_allgather_int(Ac->local_num_rows, proc_sizes, comm, stream, num_procs);
 
-                cudaStream_t stream;
-                setup_cuda(0, &stream);
-                ncclComm_t comm = init_nccl_comm(MPI_COMM_WORLD, rank, num_procs);
-                nccl_allgather_int(Ac->local_num_rows, proc_sizes, comm, stream, num_procs);
-
-                cleanup_nccl(stream, comm);
-                printf("AllGather result:\n");
+                    cleanup_nccl(stream, comm);
+                    printf("AllGather result:\n");
+                    for (int i = 0; i < num_procs; i++)
+                    {
+                        std::cout << "Proc sizes actual" << proc_sizes[i] << std::endl;
+                    }
+                # else
+                    RAPtor_MPI_Allgather(&(Ac->local_num_rows), 1, RAPtor_MPI_INT, proc_sizes.data(),
+                        1, RAPtor_MPI_INT, RAPtor_MPI_COMM_WORLD);
+                    printf("AllGather result cpu:\n");
+                    for (int i = 0; i < num_procs; i++)
+                    {
+                        std::cout << "Proc sizes actual" << proc_sizes[i] << std::endl;
+                    }
+                # endif
                 // for (int i = 0; i < num_procs; ++i)
                 // {
                 //     printf("Rank %d value: %d\n", i, h_recvbuff[i]);
                 // }
                 // RAPtor_MPI_Allgather(&(Ac->local_num_rows), 1, RAPtor_MPI_INT, proc_sizes.data(),
                 //         1, RAPtor_MPI_INT, RAPtor_MPI_COMM_WORLD);
-                              for (int i = 0; i < num_procs; i++)
-                {
-                   std::cout<<"Proc sizes actual"<<proc_sizes[i]<<std::endl;
-                }
+
                 for (int i = 0; i < num_procs; i++)
                 {
                     if (proc_sizes[i])
