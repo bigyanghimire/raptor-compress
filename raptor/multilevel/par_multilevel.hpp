@@ -303,7 +303,7 @@ namespace raptor
                     // //completing NCCL operation by synchronizing on the CUDA stream
                     CUDACHECK(cudaStreamSynchronize(s));
                     int *h_recvbuff = (int *)malloc(sizeof(int) * num_procs);
-                    cudaMemcpy(h_recvbuff, recvbuff, sizeof(int) * num_procs, cudaMemcpyDeviceToHost);
+                    cudaMemcpy(proc_sizes.data(), recvbuff, sizeof(int) * num_procs, cudaMemcpyDeviceToHost);
                     CUDACHECK(cudaStreamSynchronize(s));
                     //     // //free device buffers
                     CUDACHECK(cudaFree(sendbuff));
@@ -318,11 +318,11 @@ namespace raptor
                     {
                         printf("Rank %d value: %d\n", i, h_recvbuff[i]);
                     }
-                RAPtor_MPI_Allgather(&(Ac->local_num_rows), 1, RAPtor_MPI_INT, proc_sizes.data(),
-                        1, RAPtor_MPI_INT, RAPtor_MPI_COMM_WORLD);
+                // RAPtor_MPI_Allgather(&(Ac->local_num_rows), 1, RAPtor_MPI_INT, proc_sizes.data(),
+                //         1, RAPtor_MPI_INT, RAPtor_MPI_COMM_WORLD);
                               for (int i = 0; i < num_procs; i++)
                 {
-                   std::cout<<"Proc sizes"<<proc_sizes[i]<<std::endl;
+                   std::cout<<"Proc sizes actual"<<proc_sizes[i]<<std::endl;
                 }
                 for (int i = 0; i < num_procs; i++)
                 {
