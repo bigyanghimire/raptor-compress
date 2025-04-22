@@ -273,7 +273,7 @@ namespace raptor
 
                     ncclUniqueId id;
                     ncclComm_t comm;
-                    float *sendbuff, *recvbuff;
+                    int *sendbuff, *recvbuff;
                     cudaStream_t s;
 
                     // get NCCL unique ID at rank 0 and broadcast it to all others
@@ -287,33 +287,37 @@ namespace raptor
                     cudaGetDeviceCount(&deviceCount);
                     printf("the total device count is : %d\n", deviceCount);
                     CUDACHECK(cudaSetDevice(localRank));
-                    CUDACHECK(cudaMalloc(&sendbuff, size * sizeof(float)));
-                    CUDACHECK(cudaMalloc(&recvbuff, size * sizeof(float)));
+                    CUDACHECK(cudaMalloc(&sendbuff, 1 * sizeof(int)));
+                    CUDACHECK(cudaMalloc(&recvbuff, num_procs * sizeof(int)));
                     CUDACHECK(cudaStreamCreate(&s));
 
-                    // // initializing NCCL
-                     NCCLCHECK(ncclCommInitRank(&comm, nRanks, id, myRank));
+                    cudaMemcpy(sendbuff, &(Ac->local_num_rows), sizeof(int), cudaMemcpyHostToDevice);
+                    CUDACHECK(cudaStreamSynchronize(s));
+
+                    // // // initializing NCCL
+                    NCCLCHECK(ncclCommInitRank(&comm, nRanks, id, myRank));
 
                     // // communicating using NCCL
                     NCCLCHECK(ncclAllGather((const void *)sendbuff, (void *)recvbuff, 1, ncclInt,
-                                          comm, s));
+                                            comm, s));
                     // //completing NCCL operation by synchronizing on the CUDA stream
-                   CUDACHECK(cudaStreamSynchronize(s));
-                    int* h_recvbuff = (int*)malloc(sizeof(int) * num_procs);
-                    cudaMemcpy(h_recvbuff, recvbuff, sizeof(int) * num_procs, cudaMemcpyDeviceToHost);   
-   CUDACHECK(cudaStreamSynchronize(s));
-                //     // //free device buffers
-                     CUDACHECK(cudaFree(sendbuff));
-                      CUDACHECK(cudaFree(recvbuff));
+                    CUDACHECK(cudaStreamSynchronize(s));
+                    int *h_recvbuff = (int *)malloc(sizeof(int) * num_procs);
+                    cudaMemcpy(h_recvbuff, recvbuff, sizeof(int) * num_procs, cudaMemcpyDeviceToHost);
+                    CUDACHECK(cudaStreamSynchronize(s));
+                    //     // //free device buffers
+                    CUDACHECK(cudaFree(sendbuff));
+                    CUDACHECK(cudaFree(recvbuff));
 
-                //     // //finalizing NCCL
-                     ncclCommDestroy(comm);
+                    //     // //finalizing NCCL
+                    ncclCommDestroy(comm);
 
                     //<----------------------NCCL ends------------------------------->
-printf("AllGather result:\n");
-for (int i = 0; i < num_procs; ++i) {
-    printf("Rank %d value: %d\n", i, h_recvbuff[i]);
-}
+                    printf("AllGather result:\n");
+                    for (int i = 0; i < num_procs; ++i)
+                    {
+                        printf("Rank %d value: %d\n", i, h_recvbuff[i]);
+                    }
                 RAPtor_MPI_Allgather(&(Ac->local_num_rows), 1, RAPtor_MPI_INT, proc_sizes.data(),
                         1, RAPtor_MPI_INT, RAPtor_MPI_COMM_WORLD);
                               for (int i = 0; i < num_procs; i++)
