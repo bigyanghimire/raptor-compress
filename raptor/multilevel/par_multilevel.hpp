@@ -261,6 +261,7 @@ namespace raptor
                 ParCSRMatrix* Ac = levels[last_level]->A;
                 std::vector<int> proc_sizes(num_procs);
                 std::vector<int> active_procs;
+                printf("the number of pricess is %d\n",num_procs);
                    for (int i = 0; i < num_procs; i++)
                 {
                    std::cout<<"Proc sizes"<<proc_sizes[i]<<std::endl;
