@@ -108,7 +108,7 @@ int main(int argc, char *argv[])
 
     // Create a multilevel object
     ParMultilevel *ml;
-
+    double total_time = MPI_Wtime();
     // Setup Raptor Hierarchy
     MPI_Barrier(MPI_COMM_WORLD);
     time_base = MPI_Wtime();
@@ -137,6 +137,13 @@ int main(int argc, char *argv[])
     MPI_Barrier(MPI_COMM_WORLD);
     time_base = MPI_Wtime();
     ml->solve(x, b);
+    double total_time_end = MPI_Wtime();
+    double total_elapsed = total_time_end - total_time;
+    double total_max_time = 0.0;
+    MPI_Reduce(&total_elapsed, &total_max_time, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
+
+    if (rank == 0)
+        printf("Total AMG Setup + Solve Time: %e seconds\n", total_max_time);
     time_solve = MPI_Wtime() - time_base;
 
     MPI_Reduce(&time_setup, &time_base, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
