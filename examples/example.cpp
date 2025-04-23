@@ -69,6 +69,18 @@ int main(int argc, char *argv[])
     // Problems size and type
     int dim = 2;
     int n = 50;
+    if (argc > 1)
+    {
+        n = atoi(argv[1]); // Convert first argument to int
+        if (rank == 0)
+        {
+            printf("Using n = %d from command line\n", n);
+        }
+    }
+    else if (rank == 0)
+    {
+        printf("No n specified in command line. Using default n = %d\n", n);
+    }
 
     std::vector<int> grid;
     grid.resize(dim, n);

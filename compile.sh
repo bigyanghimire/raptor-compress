@@ -3,5 +3,5 @@
     cmake -B build -DWITH_MPI=ON -DCLUSTER_MODE=$1 -DWITH_CUDA=ON && \
     cmake --build build --parallel $(nproc) -- VERBOSE=1 &&
     clear && \
-   mpirun -n 1  build/examples/examples
+   mpirun -n 1  build/examples/example
 #mpirun -n 5  build/examples/benchmark_amg
