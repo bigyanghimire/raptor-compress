@@ -1,14 +1,10 @@
 # In progress
 
-in par multivele we are checking cudagetdevicecount and cudasetdevice
+time only all gather
 
 # To do
 
-write kernels after nccl communication
 write this project in ieee project format
-benchmark_amg correctness check returns nan for rss_sol
-check correctness of the solver
-be able to time spmv
 
 # Done
 
