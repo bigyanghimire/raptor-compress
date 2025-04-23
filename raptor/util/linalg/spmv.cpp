@@ -88,9 +88,10 @@ void print_error(const double *hB, const double *hC, int num_elements)
 void CSR_spmv(const CSRMatrix *A, const double *x, double *b)
 {
     #if defined(USING_CUDA)
+    printf("on GPU>>>>\n");
         spmv_gpu2(A, x, b);
-    #endif
-    {
+    # else
+    printf("on CPU>>>>\n");
         int start, end;
         double val;
         for (int i = 0; i < A->n_rows; i++)
@@ -104,7 +105,8 @@ void CSR_spmv(const CSRMatrix *A, const double *x, double *b)
             }
             b[i] = val;
         }
-    }
+    #endif
+
     // char *compute_type = "gpu";
     // int rank, num_procs;
     // MPI_Comm_rank(MPI_COMM_WORLD, &rank);
