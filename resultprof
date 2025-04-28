@@ -1,0 +1,83 @@
+==1093090== NVPROF is profiling process 1093090, command: ./build/examples/example
+==1093090== Profiling application: ./build/examples/example
+==1093090== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   99.10%  10.427ms         1  10.427ms  10.427ms  10.427ms  ncclDevKernel_AllGather_RING_LL(ncclDevKernelArgsStorage<unsigned long=4096>)
+                    0.54%  56.927us        23  2.4750us     735ns  10.368us  [CUDA memcpy HtoD]
+                    0.12%  13.088us         2  6.5440us  5.3120us  7.7760us  void cusparse::csrmv_v3_kernel<std::integral_constant<bool, bool=0>, int, int, double, double, double, double, void>(cusparse::KernelCoeffs<double>, std::integral_constant<bool, bool=0> const *, bool=0 const *, std::integral_constant<bool, bool=0> const , int const *, std::integral_constant<bool, bool=0> const *, int, int, int const *, double*, cusparse::KernelCoeffs<double>*, cusparse::KernelCoeffs*)
+                    0.09%  9.8560us         8  1.2320us     960ns  2.6560us  [CUDA memset]
+                    0.08%  8.3520us         2  4.1760us  4.0000us  4.3520us  void cusparse::csrmv_v3_partition_kernel<std::integral_constant<bool, bool=0>, int=256, cusparse::VectorScalarMultiplyPolicy, int, int, double, double, double>(cusparse::VectorScalarMultiplyPolicy const *, int=256, cusparse::csrmv_v3_partition_kernel<std::integral_constant<bool, bool=0>, int=256, cusparse::VectorScalarMultiplyPolicy, int, int, double, double, double>, int, cusparse::VectorScalarMultiplyPolicy const **, cusparse::KernelCoeff<double>, cusparse::VectorScalarMultiplyPolicy const *, int*)
+                    0.06%  6.4960us         3  2.1650us  1.9840us  2.3040us  [CUDA memcpy DtoH]
+      API calls:   42.66%  138.99ms        41  3.3900ms  3.2740us  138.64ms  cudaFuncGetAttributes
+                   38.02%  123.89ms        14  8.8495ms  2.9400us  123.39ms  cudaMalloc
+                    6.78%  22.079ms         9  2.4533ms  3.6090us  5.2042ms  cudaHostAlloc
+                    3.20%  10.420ms         6  1.7367ms  1.6930us  10.382ms  cudaStreamSynchronize
+                    3.11%  10.117ms         9  1.1242ms  4.4840us  2.3981ms  cudaFreeHost
+                    2.99%  9.7473ms         4  2.4368ms  6.9020us  9.7032ms  cudaLaunchKernel
+                    1.05%  3.4097ms        17  200.57us  1.4440us  2.6760ms  cudaFree
+                    0.92%  3.0013ms         1  3.0013ms  3.0013ms  3.0013ms  cuLaunchKernelEx
+                    0.17%  567.10us       347  1.6340us      99ns  81.539us  cuDeviceGetAttribute
+                    0.16%  535.15us         8  66.893us  47.287us  154.57us  cuMemUnmap
+                    0.15%  493.98us         8  61.748us  52.283us  114.01us  cuMemSetAccess
+                    0.11%  368.43us        14  26.316us  10.185us  40.479us  cudaMemcpy
+                    0.10%  332.82us         2  166.41us  165.37us  167.45us  cudaGetDeviceProperties
+                    0.10%  326.51us         8  40.813us  19.482us  173.47us  cuMemCreate
+                    0.09%  304.87us        16  19.054us     146ns  64.563us  cuMemRelease
+                    0.06%  210.95us       824     256ns     107ns  5.3340us  cuGetProcAddress
+                    0.05%  163.47us         8  20.433us  16.282us  34.765us  cuMemMap
+                    0.04%  138.21us        12  11.517us  2.8320us  43.851us  cudaMemcpyAsync
+                    0.02%  76.502us         8  9.5620us  3.6530us  27.240us  cudaMemsetAsync
+                    0.02%  64.450us         1  64.450us  64.450us  64.450us  cudaMemPoolDestroy
+                    0.02%  64.027us        76     842ns     212ns  5.1890us  cudaThreadExchangeStreamCaptureMode
+                    0.02%  57.184us         3  19.061us  10.395us  24.238us  cuDeviceGetName
+                    0.02%  54.168us         4  13.542us  4.8970us  22.981us  cudaStreamDestroy
+                    0.02%  51.942us        15  3.4620us     310ns  9.7970us  cudaSetDevice
+                    0.02%  49.102us         1  49.102us  49.102us  49.102us  cudaMemPoolCreate
+                    0.01%  47.169us        23  2.0500us     222ns  8.3270us  cudaGetDevice
+                    0.01%  33.112us         1  33.112us  33.112us  33.112us  cudaStreamCreate
+                    0.01%  32.162us         3  10.720us  3.4090us  23.169us  cudaStreamCreateWithFlags
+                    0.01%  19.088us         2  9.5440us  8.5900us  10.498us  cudaDeviceSynchronize
+                    0.01%  18.908us        39     484ns     324ns  5.1740us  cudaFuncSetAttribute
+                    0.01%  17.856us         8  2.2320us  1.4600us  4.3830us  cuMemAddressFree
+                    0.01%  16.707us         8  2.0880us     521ns  3.1290us  cudaStreamWaitEvent
+                    0.01%  16.587us         8  2.0730us  1.0850us  5.3930us  cuMemAddressReserve
+                    0.01%  16.570us        32     517ns     225ns  7.0310us  cudaGetDriverEntryPoint
+                    0.00%  16.136us         3  5.3780us  4.5360us  6.8740us  cudaEventRecord
+                    0.00%  12.677us         1  12.677us  12.677us  12.677us  cuDeviceGetPCIBusId
+                    0.00%  12.360us         8  1.5450us     662ns  4.6900us  cuMemRetainAllocationHandle
+                    0.00%  11.714us         8  1.4640us     516ns  4.3700us  cuMemGetAddressRange
+                    0.00%  10.242us         8  1.2800us     227ns  3.7630us  cudaDeviceGetAttribute
+                    0.00%  6.1240us         5  1.2240us     560ns  2.9840us  cudaEventCreateWithFlags
+                    0.00%  5.4200us         2  2.7100us  2.5860us  2.8340us  cuInit
+                    0.00%  5.2530us         8     656ns      89ns  4.0610us  cudaDriverGetVersion
+                    0.00%  4.1700us         5     834ns     417ns  1.7090us  cudaEventDestroy
+                    0.00%  3.1890us        15     212ns     118ns     549ns  cuDeviceGet
+                    0.00%  3.0950us         1  3.0950us  3.0950us  3.0950us  cudaDeviceGetPCIBusId
+                    0.00%  2.0950us         1  2.0950us  2.0950us  2.0950us  cudaStreamGetCaptureInfo
+                    0.00%  2.0810us         2  1.0400us     955ns  1.1260us  cudaGetLastError
+                    0.00%  1.7980us         5     359ns     125ns  1.1630us  cuDeviceGetCount
+                    0.00%  1.5340us         1  1.5340us  1.5340us  1.5340us  cudaGetFuncBySymbol
+                    0.00%  1.4310us         8     178ns     127ns     380ns  cuMemGetAllocationGranularity
+                    0.00%  1.2220us         1  1.2220us  1.2220us  1.2220us  cudaMemPoolSetAttribute
+                    0.00%  1.1480us         3     382ns     286ns     471ns  cuDeviceTotalMem
+                    0.00%     876ns         3     292ns     236ns     320ns  cuModuleGetLoadingMode
+                    0.00%     505ns         3     168ns     151ns     190ns  cuDeviceGetUuid
+                    0.00%     410ns         1     410ns     410ns     410ns  cuCtxGetCurrent
+                    0.00%     400ns         2     200ns     157ns     243ns  cuDriverGetVersion
+
+==1093090== NVTX result:
+==1093090== Warning: Found 1 invalid range marker(s)
+==1093090==   Thread "<unnamed>" (id = 1846517760)
+==1093090==     Domain "NCCL"
+==1093090==       Range "ncclAllGather"
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+          Range:  100.00%  67.074ms         1  67.074ms  67.074ms  67.074ms  ncclAllGather
+ GPU activities:  100.00%  10.427ms         1  10.427ms  10.427ms  10.427ms  ncclDevKernel_AllGather_RING_LL(ncclDevKernelArgsStorage<unsigned long=4096>)
+      API calls:  100.00%  3.0013ms         1  3.0013ms  3.0013ms  3.0013ms  cuLaunchKernelEx
+
+==1093090==       Range "ncclCommDestroy"
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+          Range:  100.00%  423.04ms         1  423.04ms  423.04ms  423.04ms  ncclCommDestroy
+No kernels were profiled in this range.
+No API activities were profiled in this range.
+
