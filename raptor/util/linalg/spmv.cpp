@@ -87,9 +87,9 @@ void print_error(const double *hB, const double *hC, int num_elements)
 // Optimized CSR and BSR standard SpMVs
 void CSR_spmv(const CSRMatrix *A, const double *x, double *b)
 {
-    #if defined(USING_CUDA)
+    #if defined(USING_CUDAR)
     printf("on GPU>>>>\n");
-        spmv_gpu2(A, x, b);
+        spmv_gpu(A, x, b);
     # else
     printf("on CPU>>>>\n");
         int start, end;
