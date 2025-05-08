@@ -42,24 +42,6 @@
         }                                                      \
     } while (0)
 
-// void get_unique_id(ncclUniqueId& id) {
-// #ifdef USE_NCCL
-//   using namespace torch::cuda::nccl::detail;
-//   NCCL_CHECK(ncclGetUniqueId(to_nccl_unique_id(&id)));
-// #else
-//   TORCH_CHECK(false, "PyTorch built without NCCL support");
-// #endif
-// }
-
-// ncclComm_t comm_init_rank(int nranks, const ncclUniqueId &comm_id, int rank)
-// {
-
-//     ncclComm_t comm = nullptr;
-//     ncclUniqueId id = comm_id;
-//     NCCLCHECK(ncclCommInitRank(&comm, nranks, *(&id), rank));
-//     return comm;
-// }
-
 ncclComm_t init_nccl_comm(MPI_Comm mpi_comm, int myRank, int nRanks)
 {
     ncclUniqueId id;
