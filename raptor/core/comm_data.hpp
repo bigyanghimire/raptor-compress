@@ -10,7 +10,7 @@
 #include "vector.hpp"
 #include "matrix.hpp"
 #include "utilities.hpp"
-
+#include <iostream>
 /**************************************************************
  *****   CommData Class
  **************************************************************

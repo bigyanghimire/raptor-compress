@@ -8,7 +8,7 @@
 #include "matrix.hpp"
 #include "partition.hpp"
 #include "par_vector.hpp"
-
+#include <iostream>
 #define STANDARD_PPN 4
 #define STANDARD_PROC_LAYOUT 1
 
@@ -434,6 +434,7 @@ namespace raptor
                 int _key, RAPtor_MPI_Comm comm,
                 CommData* r_data = NULL)
         {
+            printf("init par comm\n");
             // Get RAPtor_MPI Information
             int rank, num_procs;
             RAPtor_MPI_Comm_rank(comm, &rank);
@@ -630,6 +631,14 @@ namespace raptor
         template<typename T>
         void initialize(const T* values, const int block_size = 1)
         {
+            int rank, num_procs;
+            RAPtor_MPI_Comm_rank(RAPtor_MPI_COMM_WORLD, &rank);
+            RAPtor_MPI_Comm_size(RAPtor_MPI_COMM_WORLD, &num_procs);
+            // if (rank == 1)
+            // {
+            //     std::cout << "In initialize commpkg>>>>" << std::endl;
+            // }
+            std::cout << "In initialize commpkg>>>>" << std::endl;
             if (profile) vec_t -= RAPtor_MPI_Wtime();
             send_data->send(values, key, mpi_comm, block_size);
             recv_data->recv<T>(key, mpi_comm, block_size);
@@ -1328,7 +1337,7 @@ namespace raptor
         void init_tap_comm(Partition* partition,
                 const std::vector<int>& off_proc_column_map,
                 RAPtor_MPI_Comm comm)
-        {
+        {   printf("init tap comm\n");
             // Get RAPtor_MPI Information
             int rank, num_procs;
             RAPtor_MPI_Comm_rank(comm, &rank);

@@ -30,7 +30,7 @@ add_library(raptor ${core_SOURCES} ${core_HEADERS}
 # Set paths for SZ3
 # include_directories("/home/bigyan/main/Research/LossyMPI/SZ3/qsz/include")
 # set(SZ3_DIR "../SZ3/qsz/lib/cmake/SZ3")
-set(SZ3_DIR "${CMAKE_SOURCE_DIR}/../SZ3/qsz/lib/cmake/SZ3")
+set(SZ3_DIR "${CMAKE_SOURCE_DIR}/../SZ3/qsz/lib64/cmake/SZ3")
 #set(SZ3_DIR "${CMAKE_SOURCE_DIR}/../SZ3/qsz/lib64/cmake/SZ3")
 find_package(SZ3 REQUIRED)
 find_package(PkgConfig REQUIRED)

@@ -4,7 +4,7 @@
 #include "raptor/core/types.hpp"
 #include "raptor/core/par_matrix.hpp"
 #include "raptor/core/par_vector.hpp"
-
+#include <iostream>
 #include "assert.h"
 
 using namespace raptor;
@@ -22,6 +22,14 @@ using namespace raptor;
  ***** b : ParVector*
  *****    Parallel vector result is returned in
  **************************************************************/
+template <typename T>
+void printVector(const std::vector<T>& vec, const std::string& name = "vec", int nnz=0) {
+    std::cout << name << " = { ";
+   for(int i=0;i<nnz;i++){
+        std::cout<<vec[i]<<" ";
+   }
+    std::cout << "}\n";
+}
 void ParMatrix::mult(ParVector& x, ParVector& b, bool tap)
 {
     if (tap)

@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include <assert.h>
-
+#include <cstdlib>
 #include "clear_cache.hpp"
 
 #include "raptor/raptor.hpp"

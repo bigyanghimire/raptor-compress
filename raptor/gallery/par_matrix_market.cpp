@@ -18,7 +18,14 @@ namespace raptor {
 // Declare Private Methods
 void write_par_data(FILE* f, int n, int* rowptr, int* col_idx,
         double* vals, int first_row, int* col_map);
-
+template <typename T>
+void printVector(const std::vector<T>& vec, const std::string& name = "vec", int nnz=0) {
+    std::cout << name << " = { ";
+   for(int i=0;i<nnz;i++){
+        std::cout<<vec[i]<<" ";
+   }
+    std::cout << "}\n";
+}
 ParCSRMatrix* read_par_mm(const char *fname)
 {
     FILE *f;
@@ -126,8 +133,25 @@ ParCSRMatrix* read_par_mm(const char *fname)
             }
         }
     }
+    int rank, num_procs;
+    RAPtor_MPI_Comm_rank(RAPtor_MPI_COMM_WORLD, &rank);
+    RAPtor_MPI_Comm_size(RAPtor_MPI_COMM_WORLD, &num_procs);
+//     if (rank == 0)
+//     {
+//             //     std::cout<<"The number of nnzs"<<A->on_proc->nnz<<std::endl;;
+//             printVector(A->off_proc->idx1, "vals rows", A->off_proc->nnz);
+//             printVector(A->off_proc->idx2, "vals cols", A->off_proc->nnz); // idx1 = { 0 1 2 }
+
+//         }
 
     A->finalize();
+//     std::cout<<"The number of nnzs after is"<<A->off_proc->nnz;
+//    if (rank == 0)
+//     {
+//             printVector(A->off_proc->idx1, "vals rows final", A->off_proc->nnz);
+//               printVector(A->off_proc->idx2, "vals cols final", A->off_proc->nnz); // idx1 = { 0 1 2 }
+
+//     }
     ParCSRMatrix* A_csr = A->to_ParCSR();
     delete A;
 

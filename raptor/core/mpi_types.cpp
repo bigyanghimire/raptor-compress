@@ -12,6 +12,16 @@ double new_comm_t = 0.0;
 #include <iostream>
 #include <typeinfo>
 #include "raptor/raptor.hpp"
+#include <execinfo.h>
+void print_stacktrace() {
+    void *callstack[128];
+    int frames = backtrace(callstack, 128);
+    char **symbols = backtrace_symbols(callstack, frames);
+    for (int i = 0; i < frames; ++i) {
+        std::cout << symbols[i] << std::endl;
+    }
+    free(symbols);
+}
 void init_profile()
 {
     profile = true;
@@ -155,6 +165,12 @@ int RAPtor_MPI_Send(const void *buf, int count, RAPtor_MPI_Datatype datatype, in
 int RAPtor_MPI_Isend(const void *buf, int count, RAPtor_MPI_Datatype datatype, int dest, int tag,
         RAPtor_MPI_Comm comm, RAPtor_MPI_Request * request)
 {
+    int rank, num_procs;
+    RAPtor_MPI_Comm_rank(RAPtor_MPI_COMM_WORLD, &rank);
+    RAPtor_MPI_Comm_size(RAPtor_MPI_COMM_WORLD, &num_procs);
+ 
+    std::cout<<"Called >>>>>>>>"<<datatype<<std::endl;
+    // print_stacktrace();
     if (profile) p2p_t -= RAPtor_MPI_Wtime();
     int val = MPI_Isend(buf, count, datatype, dest, tag, comm, request);
     if (profile) p2p_t += RAPtor_MPI_Wtime();

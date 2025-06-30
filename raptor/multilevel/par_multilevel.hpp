@@ -480,9 +480,9 @@ namespace raptor
                 }
 
                 // Iterate until convergence or max iterations
-                std::cout<<"rhs global n"<<rhs.global_n<<std::endl;
-                std::cout<<"rhs local value"<<sol.local[0]<<std::endl;
-                std::cout<<"rhs local n"<<rhs.local_n<<std::endl;
+                // std::cout<<"rhs global n"<<rhs.global_n<<std::endl;
+                // std::cout<<"rhs local value"<<sol.local[0]<<std::endl;
+                // std::cout<<"rhs local n"<<rhs.local_n<<std::endl;
 
                 ParVector resid(rhs.global_n, rhs.local_n);
                 levels[0]->A->residual(sol, rhs, resid);

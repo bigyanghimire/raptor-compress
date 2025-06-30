@@ -1,4 +1,10 @@
-cmake -B build -DWITH_MPI=ON && \
-cmake --build build --parallel $(nproc) -- VERBOSE=1 &&
+cmake -B build -DCMAKE_BUILD_TYPE=Debug -DWITH_MPI=ON && \
+cmake --build build --parallel $(nproc) &&
 clear && \
-mpirun -n 5  build/examples/benchmark_amg
+mpirun -n 2  build/examples/benchmark_amg
+
+
+# cd build
+# cmake .. -DWITH_MPI=ON  # Only if you changed config
+# cmake --build . --parallel $(nproc)
+# mpirun -n 2  build/examples/benchmark_amg
