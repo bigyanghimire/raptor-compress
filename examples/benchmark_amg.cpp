@@ -179,30 +179,30 @@ int main(int argc, char* argv[])
     ml->print_solve_times();
     delete ml;
 
-    // Smoothed Aggregation AMG
-    if (rank == 0) printf("\n\nSmoothed Aggregation Solver:\n");
-    ml = new ParSmoothedAggregationSolver(strong_threshold, MIS, JacobiProlongation, 
-            Symmetric, SOR);
-    ml->max_iterations = 1000;
-    ml->solve_tol = 1e-05;
-    ml->track_times = true;
-    t0 = MPI_Wtime();
-    ml->setup(A);
-    tfinal = MPI_Wtime() - t0;
-    MPI_Reduce(&tfinal, &t0, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
-    if (rank == 0) printf("Total Setup Time: %e\n", t0);
-    ml->print_hierarchy();
-    ml->print_setup_times();
+    // // Smoothed Aggregation AMG
+    // if (rank == 0) printf("\n\nSmoothed Aggregation Solver:\n");
+    // ml = new ParSmoothedAggregationSolver(strong_threshold, MIS, JacobiProlongation, 
+    //         Symmetric, SOR);
+    // ml->max_iterations = 1000;
+    // ml->solve_tol = 1e-05;
+    // ml->track_times = true;
+    // t0 = MPI_Wtime();
+    // ml->setup(A);
+    // tfinal = MPI_Wtime() - t0;
+    // MPI_Reduce(&tfinal, &t0, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
+    // if (rank == 0) printf("Total Setup Time: %e\n", t0);
+    // ml->print_hierarchy();
+    // ml->print_setup_times();
 
-    ParVector sas_sol = ParVector(x);
-    t0 = MPI_Wtime();
-    iter = ml->solve(sas_sol, b);
-    tfinal = MPI_Wtime() - t0;
-    MPI_Reduce(&tfinal, &t0, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
-    if (rank == 0) printf("Total Solve Time: %e\n", t0);
-    ml->print_residuals(iter);
-    ml->print_solve_times();
-    delete ml;
+    // ParVector sas_sol = ParVector(x);
+    // t0 = MPI_Wtime();
+    // iter = ml->solve(sas_sol, b);
+    // tfinal = MPI_Wtime() - t0;
+    // MPI_Reduce(&tfinal, &t0, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
+    // if (rank == 0) printf("Total Solve Time: %e\n", t0);
+    // ml->print_residuals(iter);
+    // ml->print_solve_times();
+    // delete ml;
 
     delete A;
 
