@@ -635,11 +635,11 @@ namespace raptor
             int rank, num_procs;
             RAPtor_MPI_Comm_rank(RAPtor_MPI_COMM_WORLD, &rank);
             RAPtor_MPI_Comm_size(RAPtor_MPI_COMM_WORLD, &num_procs);
-            for (size_t i = 0; i < n; ++i)
-            {
-                std::cout << values[i] << " ";
-            }
-            std::cout << std::endl;
+            // for (size_t i = 0; i < n; ++i)
+            // {
+            //     std::cout << values[i] << " ";
+            // }
+            // std::cout << std::endl;
             // if (rank == 1)
             // {
             //     std::cout << "In initialize commpkg>>>>" << std::endl;
