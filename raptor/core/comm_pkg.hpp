@@ -492,7 +492,7 @@ void printVector(std::vector<int>& off_proc_column_map, char *disp) {
                 recv_data->add_msg(prev_proc, off_proc_num_cols - prev_idx);
                 recv_data->finalize();
             }
-            printVector(recv_data->procs,"prev_proc");
+            printVector(recv_data->indptr,"indptr");
 
             // For each process I recv from, send the global column indices
             // for which I must recv corresponding rows
