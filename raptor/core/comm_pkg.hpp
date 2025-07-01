@@ -361,6 +361,7 @@ namespace raptor
             std::vector<int> off_proc_col_to_proc(off_proc_column_map.size());
             partition->form_col_to_proc(off_proc_column_map, off_proc_col_to_proc);
             init_par_comm(off_proc_column_map, off_proc_col_to_proc, _key, comm, r_data);
+            std::cout<<"Partition first local col">>partition->first_local_col<<std::endl;
             for (int i = 0; i < send_data->size_msgs; i++)
             {
                 send_data->indices[i] -= partition->first_local_col;
@@ -602,7 +603,7 @@ namespace raptor
         // Standard Communication
         void init_double_comm(const double* values, const int block_size = 1)
         {
-            initialize(values, block_size);
+            initialize(values, block_size); 
         }
         void init_int_comm(const int* values, const int block_size = 1)
         {
@@ -634,6 +635,11 @@ namespace raptor
             int rank, num_procs;
             RAPtor_MPI_Comm_rank(RAPtor_MPI_COMM_WORLD, &rank);
             RAPtor_MPI_Comm_size(RAPtor_MPI_COMM_WORLD, &num_procs);
+            for (size_t i = 0; i < n; ++i)
+            {
+                std::cout << values[i] << " ";
+            }
+            std::cout << std::endl;
             // if (rank == 1)
             // {
             //     std::cout << "In initialize commpkg>>>>" << std::endl;

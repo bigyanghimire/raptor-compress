@@ -799,7 +799,7 @@ public:
             T init_result_func_val = 0)
     {
 	if (num_msgs == 0) return;
-
+        printf("Sends called>>>>>>\n");
 
         int start, end;
         int proc, idx, pos;

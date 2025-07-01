@@ -193,13 +193,11 @@ using namespace raptor;
 
 std::vector<double>& CommPkg::communicate(ParVector& v, const int block_size)
 {
-    printf("communicate>>>>>\n");
     init_double_comm(v.local.data(), block_size);
     return complete_double_comm(block_size);
 }
 
 void CommPkg::init_comm(ParVector& v, const int block_size)
 {
-    printf("init comm double comm>>>>>\n");
     init_double_comm(v.local.data(), block_size);
 }
