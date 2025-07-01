@@ -435,7 +435,13 @@ namespace raptor
             }
 
         }
-
+void printVector(std::vector<int>& off_proc_column_map, char *disp) {
+    std::cout << disp;
+    for (int val : off_proc_column_map) {
+        std::cout << val << " ";
+    }
+    std::cout << std::endl;
+}
         void init_par_comm(const std::vector<int>& off_proc_column_map,
                 const std::vector<int>& off_proc_col_to_proc,
                 int _key, RAPtor_MPI_Comm comm,
@@ -486,6 +492,7 @@ namespace raptor
                 recv_data->add_msg(prev_proc, off_proc_num_cols - prev_idx);
                 recv_data->finalize();
             }
+            printVector(recv_data->prev_proc,"prev_proc");
 
             // For each process I recv from, send the global column indices
             // for which I must recv corresponding rows
