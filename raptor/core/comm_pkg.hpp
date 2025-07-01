@@ -357,15 +357,16 @@ namespace raptor
                 RAPtor_MPI_Comm comm = RAPtor_MPI_COMM_WORLD,
                 CommData* r_data = NULL) : CommPkg(partition)
         {
-            std::cout << "off_proc_column_map: ";
-            for (int val : off_proc_column_map)
+
+            mpi_comm = comm;
+            std::vector<int> off_proc_col_to_proc(off_proc_column_map.size());
+            partition->form_col_to_proc(off_proc_column_map, off_proc_col_to_proc);
+            std::cout << "off_proc_col_to_proc: ";
+            for (int val : off_proc_col_to_proc)
             {
                 std::cout << val << " ";
             }
             std::cout << std::endl;
-            mpi_comm = comm;
-            std::vector<int> off_proc_col_to_proc(off_proc_column_map.size());
-            partition->form_col_to_proc(off_proc_column_map, off_proc_col_to_proc);
             init_par_comm(off_proc_column_map, off_proc_col_to_proc, _key, comm, r_data);
             for (int i = 0; i < send_data->size_msgs; i++)
             {
