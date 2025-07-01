@@ -418,6 +418,7 @@ public:
             std::function<T(T, T)> init_result_func = &sum_func<T, T>,
             T init_result_func_val = 0)
     {
+        std::cout<<"send two times"<<std::endl;
         if (num_msgs == 0) return;
 
         int start, end;
