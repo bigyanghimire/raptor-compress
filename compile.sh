@@ -1,3 +1,4 @@
+clear
 cmake -B build -DCMAKE_BUILD_TYPE=Debug -DWITH_MPI=ON -DWITH_DOXYGEN=OFF && \
 cmake --build build --parallel $(nproc) &&
 clear && \

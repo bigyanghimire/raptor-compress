@@ -365,6 +365,7 @@ namespace raptor
             for (int i = 0; i < send_data->size_msgs; i++)
             {
                 send_data->indices[i] -= partition->first_local_col;
+                  std::cout<<"indices are"<<indices[i]<<std::endl;
             }
         }
 
