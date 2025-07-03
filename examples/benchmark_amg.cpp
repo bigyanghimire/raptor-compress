@@ -146,7 +146,7 @@ int main(int argc, char* argv[])
                 A->on_proc_column_map);
         x = ParVector(A->global_num_cols, A->on_proc_num_cols);
         b = ParVector(A->global_num_rows, A->local_num_rows);
-        x.set_const_value(2);
+        x.set_const_value(3);
         A->mult(x, b);
         x.set_const_value(0.0);
     }
