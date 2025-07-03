@@ -41,6 +41,7 @@ void ParMatrix::mult(ParVector& x, ParVector& b, bool tap)
     // Check that communication package has been initialized
     if (comm == NULL)
     {
+        std::cout<<"Is null???"<<std::endl;
         comm = new ParComm(partition, off_proc_column_map, on_proc_column_map);
     }
 
