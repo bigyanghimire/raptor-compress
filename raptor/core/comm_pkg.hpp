@@ -372,6 +372,7 @@ namespace raptor
             {
                 send_data->indices[i] -= partition->first_local_col;
             }
+            printVector(send_data->indices,"send data indices");
         }
 
         ParComm(Partition* partition,
