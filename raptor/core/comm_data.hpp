@@ -838,7 +838,7 @@ public:
         {
             printVector(procs, "process in send");
             printVector(indptr, "process in send");
-            // print_values(values,)
+            print_values(values,7);
         }
 
         for (int i = 0; i < num_msgs; i++)
