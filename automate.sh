@@ -17,5 +17,5 @@ sleep 1
 # Send git pull and compile.sh commands
 xdotool type 'git pull'
 xdotool key Return
-xdotool type './compile.sh'
+xdotool type 'sh ./compile.sh'
 xdotool key Return
