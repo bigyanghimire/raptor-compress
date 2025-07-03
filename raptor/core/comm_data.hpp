@@ -453,7 +453,7 @@ public:
             proc = procs[i];
             start = indptr[i];
             end = indptr[i+1];
-            RAPtor_MPI_Isend_C(&(values[start*block_size]), (end - start) * block_size,
+            RAPtor_MPI_Isend(&(values[start*block_size]), (end - start) * block_size,
                     datatype, proc, key, mpi_comm, &(requests[i]));
         }
     }
@@ -822,7 +822,6 @@ public:
             T init_result_func_val = 0)
     {
 	if (num_msgs == 0) return;
-        printf("Sends called from mult>>>>>>\n");
 
         int start, end;
         int proc, idx, pos;
@@ -855,6 +854,7 @@ public:
                     buf[pos + k] = values[idx + k];
                 }
             }
+                    printf("Sends called from mult>>>>>>\n");
             RAPtor_MPI_Isend(&(buf[start*block_size]), (end - start) * block_size,
                     datatype, proc, key, mpi_comm, &(requests[i]));
         }
