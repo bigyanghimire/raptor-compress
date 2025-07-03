@@ -856,7 +856,8 @@ public:
                     buf[pos + k] = values[idx + k];
                 }
             }
-                    printf("Sends called from mult>>>>>>\n");
+                      std::cout<<"Sends called from mult>>>>>>"<<std::endl;
+
             RAPtor_MPI_Isend(&(buf[start*block_size]), (end - start) * block_size,
                     datatype, proc, key, mpi_comm, &(requests[i]));
         }
