@@ -438,7 +438,7 @@ void print_values(const T* values, size_t size) {
         int proc;
         printVector(procs,"procs");
         printVector(indptr,"indptr");
-        print_values(values,off_proc_column_map.size());
+        // print_values(values,off_proc_column_map.size());
 
         RAPtor_MPI_Datatype datatype = get_type<T>();
 
