@@ -136,13 +136,14 @@ ParCSRMatrix* read_par_mm(const char *fname)
     int rank, num_procs;
     RAPtor_MPI_Comm_rank(RAPtor_MPI_COMM_WORLD, &rank);
     RAPtor_MPI_Comm_size(RAPtor_MPI_COMM_WORLD, &num_procs);
-//     if (rank == 0)
-//     {
-//             //     std::cout<<"The number of nnzs"<<A->on_proc->nnz<<std::endl;;
-//             printVector(A->off_proc->idx1, "vals rows", A->off_proc->nnz);
-//             printVector(A->off_proc->idx2, "vals cols", A->off_proc->nnz); // idx1 = { 0 1 2 }
+    // if (rank == 0)
+    // {
+    //              std::cout<<"The number of off oprocess num cols for rank 0 is"<<A->on_proc->nnz<<std::endl;;
 
-//         }
+    //         printVector(A->off_proc->idx1, "vals rows", A->off_proc->nnz);
+    //         printVector(A->off_proc->idx2, "vals cols", A->off_proc->nnz); // idx1 = { 0 1 2 }
+
+    //     }
 
     A->finalize();
 //     std::cout<<"The number of nnzs after is"<<A->off_proc->nnz;
@@ -153,6 +154,12 @@ ParCSRMatrix* read_par_mm(const char *fname)
 
 //     }
     ParCSRMatrix* A_csr = A->to_ParCSR();
+        if (rank == 0)
+    {
+                 std::cout<<"The number of off oprocess num cols for rank 0 is"<<A->off_proc_num_cols<<std::endl;;
+
+
+        }
     delete A;
 
     fclose(f);
