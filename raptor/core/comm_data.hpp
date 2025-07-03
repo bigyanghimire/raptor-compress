@@ -440,8 +440,8 @@ public:
         MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
         if (rank == 0)
         {
-            printVector(procs, "process in recv");
-            printVector(indptr, "process in recv");
+            // printVector(procs, "process in recv");
+            // printVector(indptr, "process in recv");
         }
         // print_values(values,off_proc_column_map.size());
 
@@ -449,7 +449,7 @@ public:
 
         for (int i = 0; i < num_msgs; i++)
         {
-            std::cout<<"send from contig"<<std::endl;
+            // std::cout<<"send from contig"<<std::endl;
 
             proc = procs[i];
             start = indptr[i];
@@ -836,11 +836,11 @@ public:
         MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
         if (rank == 0)
         {
-            printVector(procs, "process in send");
-            printVector(indptr, "process in send");
-            std::cout<<"Num msgs"<<num_msgs<<std::endl;
+            // printVector(procs, "process in send");
+            // printVector(indptr, "process in send");
+            // std::cout<<"Num msgs"<<num_msgs<<std::endl;
 
-            print_values(values,7);
+            // print_values(values,7);
         }
         for (int i = 0; i < num_msgs; i++)
         {
@@ -856,7 +856,7 @@ public:
                     buf[pos + k] = values[idx + k];
                 }
             }
-                      std::cout<<"Sends called from mult>>>>>>"<<std::endl;
+                    //   std::cout<<"Sends called from mult>>>>>>"<<std::endl;
                       std::cout<<"buffer size"<<(end - start) * block_size<<std::endl;
 
             RAPtor_MPI_Isend(&(buf[start*block_size]), (end - start) * block_size,

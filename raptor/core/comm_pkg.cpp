@@ -199,6 +199,5 @@ std::vector<double>& CommPkg::communicate(ParVector& v, const int block_size)
 
 void CommPkg::init_comm(ParVector& v, const int block_size)
 {
-    std::cout<<"the size is"<<v.local.size()<<std::endl;
     init_double_comm(v.local.data(), block_size);
 }
