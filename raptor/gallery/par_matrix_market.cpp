@@ -144,7 +144,12 @@ ParCSRMatrix* read_par_mm(const char *fname)
     //         printVector(A->off_proc->idx2, "vals cols", A->off_proc->nnz); // idx1 = { 0 1 2 }
 
     //     }
+        if (rank == 0)
+    {
+                 std::cout<<"The number of off oprocess num cols for rank 0 is"<<A->off_proc_num_cols<<std::endl;;
 
+
+        }
     A->finalize();
 //     std::cout<<"The number of nnzs after is"<<A->off_proc->nnz;
 //    if (rank == 0)
@@ -154,12 +159,7 @@ ParCSRMatrix* read_par_mm(const char *fname)
 
 //     }
     ParCSRMatrix* A_csr = A->to_ParCSR();
-        if (rank == 0)
-    {
-                 std::cout<<"The number of off oprocess num cols for rank 0 is"<<A->off_proc_num_cols<<std::endl;;
 
-
-        }
     delete A;
 
     fclose(f);
