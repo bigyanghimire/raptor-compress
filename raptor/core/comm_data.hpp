@@ -838,9 +838,10 @@ public:
         {
             printVector(procs, "process in send");
             printVector(indptr, "process in send");
+            std::cout<<"Num msgs"<<num_msgs<<std::endl;
+
             print_values(values,7);
         }
-
         for (int i = 0; i < num_msgs; i++)
         {
             proc = procs[i];
