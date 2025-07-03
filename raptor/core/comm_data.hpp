@@ -431,7 +431,6 @@ public:
             std::function<T(T, T)> init_result_func = &sum_func<T, T>,
             T init_result_func_val = 0)
     {
-        std::cout<<"send two times"<<std::endl;
         if (num_msgs == 0) return;
 
         int start, end;
@@ -450,6 +449,8 @@ public:
 
         for (int i = 0; i < num_msgs; i++)
         {
+            std::cout<<"send from contig"<<std::endl;
+
             proc = procs[i];
             start = indptr[i];
             end = indptr[i+1];
