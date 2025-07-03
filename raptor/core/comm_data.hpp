@@ -436,8 +436,15 @@ void print_values(const T* values, size_t size) {
 
         int start, end;
         int proc;
-        printVector(procs,"procs");
-        printVector(indptr,"indptr");
+        int rank, num_procs;
+        MPI_Init(&argc, &argv);
+        MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+        MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
+        if (rank == 0)
+        {
+            printVector(procs, "process in recv");
+            printVector(indptr, "process in recv");
+        }
         // print_values(values,off_proc_column_map.size());
 
         RAPtor_MPI_Datatype datatype = get_type<T>();
@@ -816,7 +823,7 @@ public:
             T init_result_func_val = 0)
     {
 	if (num_msgs == 0) return;
-        printf("Sends called>>>>>>\n");
+        printf("Sends called from mult>>>>>>\n");
 
         int start, end;
         int proc, idx, pos;
@@ -825,6 +832,15 @@ public:
         RAPtor_MPI_Datatype datatype = get_type<T>();
         std::vector<T>& buf = get_buffer<T>();
         if ((int)buf.size() < size) buf.resize(size);
+        int rank, num_procs;
+        MPI_Init(&argc, &argv);
+        MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+        MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
+        if (rank == 0)
+        {
+            printVector(procs, "process in send");
+            printVector(indptr, "process in send");
+        }
 
         for (int i = 0; i < num_msgs; i++)
         {
