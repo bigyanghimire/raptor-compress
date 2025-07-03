@@ -857,6 +857,7 @@ public:
                 }
             }
                       std::cout<<"Sends called from mult>>>>>>"<<std::endl;
+                      std::cout<<"buffer size"<<(end - start) * block_size<<std::endl;
 
             RAPtor_MPI_Isend(&(buf[start*block_size]), (end - start) * block_size,
                     datatype, proc, key, mpi_comm, &(requests[i]));

@@ -1033,7 +1033,6 @@ void TAPComm::form_simple_R_par_comm(std::vector<int>& off_node_column_map,
     // Communicate local_R recv_data so send_data can be formed
     RAPtor_MPI_Allreduce(RAPtor_MPI_IN_PLACE, local_proc_sizes.data(), topology->PPN, RAPtor_MPI_INT,
             RAPtor_MPI_SUM, topology->local_comm);
-    std::cout<<"in tap comm"<<std::endl;
     local_R_par_comm->recv_data->send(off_node_column_map.data(), 6543, topology->local_comm);
     local_R_par_comm->send_data->probe(local_proc_sizes[local_rank], 6543, topology->local_comm);
     local_R_par_comm->recv_data->waitall();
