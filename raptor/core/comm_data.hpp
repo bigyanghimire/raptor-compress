@@ -437,7 +437,6 @@ void print_values(const T* values, size_t size) {
         int start, end;
         int proc;
         int rank, num_procs;
-        MPI_Init(&argc, &argv);
         MPI_Comm_rank(MPI_COMM_WORLD, &rank);
         MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
         if (rank == 0)
@@ -833,7 +832,6 @@ public:
         std::vector<T>& buf = get_buffer<T>();
         if ((int)buf.size() < size) buf.resize(size);
         int rank, num_procs;
-        MPI_Init(&argc, &argv);
         MPI_Comm_rank(MPI_COMM_WORLD, &rank);
         MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
         if (rank == 0)
