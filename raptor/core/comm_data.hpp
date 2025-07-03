@@ -836,8 +836,8 @@ public:
         MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
         if (rank == 0)
         {
-            printVector(procs, "process in send");
-            printVector(indptr, "process in send");
+            // printVector(procs, "process in send");
+            // printVector(indptr, "process in send");
         }
 
         for (int i = 0; i < num_msgs; i++)
