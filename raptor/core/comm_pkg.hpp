@@ -435,7 +435,7 @@ namespace raptor
             }
 
         }
-void printVector(std::vector<int>& off_proc_column_map, char *disp) {
+void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
     std::cout << disp;
     for (int val : off_proc_column_map) {
         std::cout << val << " ";
