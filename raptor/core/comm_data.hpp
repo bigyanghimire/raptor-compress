@@ -419,6 +419,13 @@ void printVector(std::vector<int>& off_proc_column_map, char *disp) {
     }
     std::cout << std::endl;
 }
+
+template <typename T>
+void print_values(const T* values, size_t size) {
+    for (size_t i = 0; i < size; ++i) {
+        std::cout << "values[" << i << "] = " << values[i] << std::endl;
+    }
+}
     template <typename T>
     void send(const T* values, int key, RAPtor_MPI_Comm mpi_comm, const int block_size = 1,
             std::function<T(T, T)> init_result_func = &sum_func<T, T>,
@@ -431,6 +438,7 @@ void printVector(std::vector<int>& off_proc_column_map, char *disp) {
         int proc;
         printVector(procs,"procs");
         printVector(indptr,"indptr");
+        print_values(values,off_proc_column_map.size());
 
         RAPtor_MPI_Datatype datatype = get_type<T>();
 
