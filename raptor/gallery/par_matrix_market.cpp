@@ -120,7 +120,7 @@ ParCSRMatrix* read_par_mm(const char *fname)
 
         if (symmetric)
         {
-            if (col_local)
+            if (col_local && row!=col)
             {
                 if (row_local)
                 {
