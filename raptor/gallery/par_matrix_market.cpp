@@ -28,6 +28,7 @@ void printVector(const std::vector<T>& vec, const std::string& name = "vec", int
 }
 ParCSRMatrix* read_par_mm(const char *fname)
 {
+    std::vector<int> off_proc_column_map2; 
     FILE *f;
     MM_typecode matcode;
     int M, N, nz;
@@ -80,6 +81,7 @@ ParCSRMatrix* read_par_mm(const char *fname)
     for (i=0; i<nz; i++)
     {
         n_items_read = fscanf(f, "%d %d %lg\n", &row, &col, &val);
+        int temp_col=col;
         if (n_items_read == EOF) printf("EOF reading code\n");
         row--;
         col--;
@@ -111,10 +113,12 @@ ParCSRMatrix* read_par_mm(const char *fname)
             if (col_local)
             {
                 A->on_proc->add_value(row, col, val);
+                
             }
             else
             {
                 A->off_proc->add_value(row, col, val);
+                 off_proc_column_map2.emplace_back(temp_col);
             }
         }
 
@@ -129,6 +133,7 @@ ParCSRMatrix* read_par_mm(const char *fname)
                 else
                 {
                     A->off_proc->add_value(col, row, val);
+                     off_proc_column_map2.emplace_back(temp_col);
                 }
             }
         }
@@ -139,10 +144,10 @@ ParCSRMatrix* read_par_mm(const char *fname)
     if (rank == 0)
     {
                 //  std::cout<<"The number of off oprocess num cols for rank 0 is"<<A->on_proc->nnz<<std::endl;;
-  printVector(A->on_proc->vals, "vals actual", A->on_proc->nnz);
-            printVector(A->on_proc->idx1, "vals rows", A->on_proc->nnz);
-            printVector(A->on_proc->idx2, "vals cols", A->on_proc->nnz); // idx1 = { 0 1 2 }
-
+  printVector(A->off_proc->vals, "vals actual", A->off_proc->nnz);
+            printVector(A->off_proc->idx1, "vals rows", A->off_proc->nnz);
+            printVector(A->off_proc->idx2, "vals cols", A->off_proc->nnz); // idx1 = { 0 1 2 }
+ printVector(off_proc_column_map2->idx2, "off proc col map", off_proc_column_map2.size());
         }
     //     if (rank == 0)
     // {
