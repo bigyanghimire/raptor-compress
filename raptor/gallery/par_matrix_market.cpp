@@ -147,7 +147,7 @@ ParCSRMatrix* read_par_mm(const char *fname)
   printVector(A->off_proc->vals, "vals actual", A->off_proc->nnz);
             printVector(A->off_proc->idx1, "vals rows", A->off_proc->nnz);
             printVector(A->off_proc->idx2, "vals cols", A->off_proc->nnz); // idx1 = { 0 1 2 }
- printVector(off_proc_column_map2->idx2, "off proc col map", off_proc_column_map2.size());
+ printVector(off_proc_column_map2, "off proc col map", off_proc_column_map2.size());
         }
     //     if (rank == 0)
     // {
