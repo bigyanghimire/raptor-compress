@@ -29,7 +29,7 @@ def print_nonzero_submatrix(matrix, row_start, row_end, col_start, col_end):
 
 np.set_printoptions(threshold=np.inf)
 # Read the MatrixMarket file
-sparse_matrix = mmread('examples/LFAT5000.mtx')
+sparse_matrix = mmread('examples/LFAT5.mtx')
 
 # Convert to a dense NumPy array
 dense_matrix = sparse_matrix.toarray()
@@ -40,5 +40,5 @@ np.set_printoptions(
     formatter={'float_kind': lambda x: f"{x:10g}"},  # 10 chars per number
     linewidth=200
 )
-print_nonzero_submatrix(dense_matrix, 9997,19999, 0, 9997)
-#print(dense_matrix)
+#print_nonzero_submatrix(dense_matrix, 9997,19999, 0, 9997)
+print(dense_matrix)

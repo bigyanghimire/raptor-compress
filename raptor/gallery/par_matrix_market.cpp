@@ -139,7 +139,7 @@ ParCSRMatrix* read_par_mm(const char *fname)
     if (rank == 0)
     {
                 //  std::cout<<"The number of off oprocess num cols for rank 0 is"<<A->on_proc->nnz<<std::endl;;
-
+  printVector(A->on_proc->vals, "vals actual", A->on_proc->nnz);
             printVector(A->on_proc->idx1, "vals rows", A->on_proc->nnz);
             printVector(A->on_proc->idx2, "vals cols", A->on_proc->nnz); // idx1 = { 0 1 2 }
 
