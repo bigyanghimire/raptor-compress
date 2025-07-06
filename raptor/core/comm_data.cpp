@@ -2,7 +2,7 @@
 // License: Simplified BSD, http://opensource.org/licenses/BSD-2-Clause
 
 #include "comm_data.hpp"
-
+#include "raptor/raptor.hpp"
 namespace raptor 
 {
 template<>

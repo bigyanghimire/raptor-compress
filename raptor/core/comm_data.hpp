@@ -11,7 +11,7 @@
 #include "matrix.hpp"
 #include "utilities.hpp"
 #include <iostream>
-#include "raptor/raptor.hpp"
+// #include "raptor/raptor.hpp"
 //  #include <SZ3/api/sz.hpp>
 /**************************************************************
  *****   CommData Class
