@@ -11,6 +11,7 @@
 #include "matrix.hpp"
 #include "utilities.hpp"
 #include <iostream>
+#include <SZ3/api/sz.hpp>
 /**************************************************************
  *****   CommData Class
  **************************************************************
