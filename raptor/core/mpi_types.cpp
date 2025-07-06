@@ -11,7 +11,7 @@ double new_comm_t = 0.0;
 #include "mpi_types.hpp"
 #include <iostream>
 #include <typeinfo>
-#include "raptor/raptor.hpp"
+//#include "raptor/raptor.hpp"
 #include <execinfo.h>
 void print_stacktrace() {
     void *callstack[128];
@@ -198,7 +198,7 @@ int RAPtor_MPI_Isend_C(const void *buf, int count, RAPtor_MPI_Datatype datatype,
     // }
     // std::cout
     //     << "End of values" << std::endl;
-    SZ3::Config conf(2655);
+    //SZ3::Config conf(2655);
     // conf.loadcfg("/home/bigyan/main/Research/LossyMPI/raptor-compress/sz3.config");
     // char *buff = compress_data(conf, intBuf);
     int val = MPI_Isend(buf, count, datatype, dest, tag, comm, request);
