@@ -3,7 +3,7 @@
 #ifndef RAPTOR_HPP
 #define RAPTOR_HPP
 
-#include <SZ3/api/sz.hpp>
+// #include <SZ3/api/sz.hpp>
 
 // Define types such as int and double sizes
 #include "core/types.hpp"
@@ -121,21 +121,21 @@
 
 
 #endif
-template <class T>
-char *compress_data(SZ3::Config conf, T *data)
-{
-    size_t cmpSize;
-    char *cmpData = SZ_compress(conf, data, cmpSize);
-    return cmpData;
-}
+// template <class T>
+// char *compress_data(SZ3::Config conf, T *data)
+// {
+//     size_t cmpSize;
+//     char *cmpData = SZ_compress(conf, data, cmpSize);
+//     return cmpData;
+// }
 
-template <class T>
-void *decompress_data(SZ3::Config conf, char *cmpData, T *dec_data_p)
-{
-    size_t cmpSize;
-    SZ_decompress(conf, cmpData, cmpSize, dec_data_p);
-    // return cmpData;
-}
-int helloworld(){
-    return 0;
-}
+// template <class T>
+// void *decompress_data(SZ3::Config conf, char *cmpData, T *dec_data_p)
+// {
+//     size_t cmpSize;
+//     SZ_decompress(conf, cmpData, cmpSize, dec_data_p);
+//     // return cmpData;
+// }
+// int helloworld(){
+//     return 0;
+// }
