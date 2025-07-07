@@ -31,6 +31,7 @@ namespace raptor
         return cmpData;
     }
 template char* compress_data<float>(float* data, size_t size);
+template char* compress_data<double>(double* data, size_t size);
     // template <class T>
     // void *decompress_data(SZ3::Config conf, char *cmpData, T *dec_data_p)
     // {
