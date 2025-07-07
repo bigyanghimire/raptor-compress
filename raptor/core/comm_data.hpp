@@ -859,6 +859,7 @@ public:
                 }
             }
              // SZ3::Config conf(2655);
+            compress_data();
                     //   std::cout<<"Sends called from mult>>>>>>"<<std::endl;
                       std::cout<<"buffer size"<<(end - start) * block_size<<std::endl;
 

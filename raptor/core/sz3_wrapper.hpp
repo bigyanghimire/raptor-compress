@@ -3,7 +3,7 @@
 #include <vector>
 
 namespace SZ3Wrapper {
-   int compress_data();
+   void compress_data();
 }
 
 #endif
