@@ -23,8 +23,8 @@ namespace raptor
     //     // return cmpData;
     // }
 
-    template CompressedResult<float>(float *data, size_t size);
-    template CompressedResult<double>(double *data, size_t size);
-    template CompressedResult<int>(int *data, size_t size);
+    template CompressedResult<float> compress_data<float>(float *data, size_t size);
+    template CompressedResult<double> compress_data<double>(double *data, size_t size);
+    template CompressedResult<int> compress_data<int>(int *data, size_t size);
 
 }
