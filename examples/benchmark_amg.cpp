@@ -136,7 +136,7 @@ int main(int argc, char* argv[])
 #endif
     else if (system == 3)
     {
-        const char* file = "examples/LFAT5.mtx";
+        const char* file = "examples/LFAT5000.mtx";
         A = read_par_mm(file);
     }
 
@@ -177,6 +177,7 @@ int main(int argc, char* argv[])
     if (rank == 0) printf("Total Solve Time: %e\n", t0);
     ml->print_residuals(iter);
     ml->print_solve_times();
+    std::cout<<"total residual iteraiotns is"<<ml->residuals.size()<<std::endl;
     delete ml;
 
     // // Smoothed Aggregation AMG
