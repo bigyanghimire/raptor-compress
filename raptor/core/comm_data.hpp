@@ -870,7 +870,7 @@ public:
             // auto dec_data_p = dec_data.data();
             // decompress_data(&buf[start * block_size], datasize, cmpSize, cmpData, dec_data_p);
 
-            std::vector<float> input_data = {1.1, 2.6, 3.2, 4.5};
+            std::vector<float> input_data = {1.123456, 2.6123456, 3.2123456, 4.5123456};
             size_t cmpSize;
             size_t datasize=4;
             auto cmpData = compress_data(input_data.data(), datasize, cmpSize);
