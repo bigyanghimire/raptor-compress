@@ -7,7 +7,7 @@ namespace raptor
     template <typename T>
     char *compress_data(T *uncompressedData, size_t size);
     template <typename T>
-    void *decompress_data(T *uncompressedData, size_t size, char *cmpData, T *dec_data_p)
+    void *decompress_data(T *uncompressedData, size_t size, char *cmpData, T *dec_data_p);
 }
 
 #endif
