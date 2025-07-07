@@ -860,12 +860,15 @@ public:
             }
             // SZ3::Config conf(2655);
             //   std::cout<<"Sends called from mult>>>>>>"<<std::endl;
+            size_t cmpSize;
             size_t datasize=(end - start) * block_size;
-            auto cmpData = compress_data(&buf[start * block_size], datasize);
+            auto cmpData = compress_data(&buf[start * block_size], datasize, cmpSize);
+            std::cout << "compress data size is" << cmpSize<< std::endl;
+
             std::cout << "buffer size" << (end - start) * block_size << std::endl;
-            std::vector<T> dec_data(datasize);
-            auto dec_data_p = dec_data.data();
-            decompress_data(&buf[start * block_size], datasize, cmpData, dec_data_p);
+            // std::vector<T> dec_data(datasize);
+            // auto dec_data_p = dec_data.data();
+            // decompress_data(&buf[start * block_size], datasize, cmpData, dec_data_p);
             RAPtor_MPI_Isend(&(buf[start * block_size]), (end - start) * block_size,
                              datatype, proc, key, mpi_comm, &(requests[i]));
         }

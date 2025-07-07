@@ -4,13 +4,12 @@
 namespace raptor
 {
     template <typename T>
-    char *compress_data(T *uncompressedData, size_t size)
+    char *compress_data(T *uncompressedData, size_t size,size_t cmpSize)
     {
         SZ3::Config conf({size});
         conf.cmprAlgo = SZ3::ALGO_INTERP_LORENZO;
         conf.errorBoundMode = SZ3::EB_ABS;
         conf.absErrorBound = 1e-3;
-        size_t cmpSize;
         char *cmpData = SZ_compress(conf, uncompressedData, cmpSize);
         return cmpData;
     }
@@ -26,9 +25,9 @@ namespace raptor
         // return cmpData;
     }
 
-    template char *compress_data<float>(float *uncompressedData, size_t size);
-    template char *compress_data<double>(double *uncompressedData, size_t size);
-    template char *compress_data<int>(int *uncompressedData, size_t size);
+    template char *compress_data<float>(float *uncompressedData, size_t size, size_t cmpSize);
+    template char *compress_data<double>(double *uncompressedData, size_t size, size_t cmpSize);
+    template char *compress_data<int>(int *uncompressedData, size_t size, size_t cmpSize);
 
     template char *decompress_data<float>(float *uncompressedData, size_t size, char *cmpData, float *dec_data_p);
     template char *decompress_data<double>(double *uncompressedData, size_t size, char *cmpData, double *dec_data_p);
