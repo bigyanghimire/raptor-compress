@@ -3,7 +3,7 @@
 #ifndef RAPTOR_HPP
 #define RAPTOR_HPP
 
- #include <SZ3/api/sz.hpp>
+// #include <SZ3/api/sz.hpp>
 
 // Define types such as int and double sizes
 #include "core/types.hpp"
