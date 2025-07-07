@@ -29,8 +29,8 @@ namespace raptor
     template char *compress_data<double>(double *uncompressedData, size_t size, size_t cmpSize);
     template char *compress_data<int>(int *uncompressedData, size_t size, size_t cmpSize);
 
-    template void decompress_data<float>(float *uncompressedData, size_t size, char *cmpData, size_t cmpSize, float *dec_data_p);
-    template void decompress_data<double>(double *uncompressedData, size_t size, char *cmpData, size_t cmpSize, double *dec_data_p);
-    template void decompress_data<int>(int *uncompressedData, size_t size, char *cmpData, size_t cmpSize, int *dec_data_p);
+    template void decompress_data<float>(float *uncompressedData, size_t size, size_t cmpSize, char *cmpData, , float *dec_data_p);
+    template void decompress_data<double>(double *uncompressedData, size_t size, size_t cmpSize, char *cmpData , double *dec_data_p);
+    template void decompress_data<int>(int *uncompressedData, size_t size, size_t cmpSize, char *cmpData, int *dec_data_p);
 
 }
