@@ -12,7 +12,7 @@
 #include "utilities.hpp"
 #include <iostream>
 // #include "raptor/raptor.hpp"
-#include <SZ3/api/sz.hpp>
+#include "sz3_wrapper.hpp"
 /**************************************************************
  *****   CommData Class
  **************************************************************

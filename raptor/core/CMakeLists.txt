@@ -11,6 +11,7 @@ if (WITH_MPI)
         core/comm_pkg.hpp
         core/par_vector.hpp
         core/par_matrix.hpp
+        core/sz3_wrapper.hpp
         )
     set(par_core_SOURCES
         core/mpi_types.cpp
@@ -20,6 +21,7 @@ if (WITH_MPI)
         core/comm_mat.cpp
         core/par_vector.cpp
         core/par_matrix.cpp
+        core/sz3_wrapper.cpp
         )
 else ()
     set(par_core_HEADERS
