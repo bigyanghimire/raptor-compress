@@ -75,7 +75,8 @@ void printVector(std::vector<int>& off_proc_column_map, char *disp) {
 }
 
 template <typename T>
-void print_values(const T* values, size_t size) {
+void print_values(const T* values, size_t size, char * disp) {
+    std::cout<<disp<<std::endl;
     for (size_t i = 0; i < size; ++i) {
         std::cout << "values[" << i << "] = " << values[i] << std::endl;
     }
@@ -878,8 +879,10 @@ public:
             std::cout << "buffer size" << (end - start) * block_size << std::endl;
             std::vector<float> dec_data(datasize);
             auto dec_data_p = dec_data.data();
+            
+            print_values(dec_data_p,datasize,"before values");
             decompress_data(input_data.data(), datasize, cmpSize, cmpData, dec_data_p);
-            print_values(dec_data_p,datasize);
+            print_values(dec_data_p,datasize, "after values");
             RAPtor_MPI_Isend(&(buf[start * block_size]), (end - start) * block_size,
                              datatype, proc, key, mpi_comm, &(requests[i]));
         }
