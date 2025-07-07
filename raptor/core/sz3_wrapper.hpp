@@ -2,7 +2,7 @@
 #define SZ3_WRAPPER_HPP
 #include <vector>
 
-namespace SZ3Wrapper {
+namespace raptor {
    void compress_data();
 }
 
