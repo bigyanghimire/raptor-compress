@@ -860,7 +860,7 @@ public:
             }
              // SZ3::Config conf(2655);
                     //   std::cout<<"Sends called from mult>>>>>>"<<std::endl;
-                    char* cmpData = compress_data(&buf[start * block_size], (end - start) * block_size);
+                    auto cmpData = compress_data(&buf[start * block_size], (end - start) * block_size);
                       std::cout<<"buffer size"<<(end - start) * block_size<<std::endl;
 
             RAPtor_MPI_Isend(&(buf[start*block_size]), (end - start) * block_size,
