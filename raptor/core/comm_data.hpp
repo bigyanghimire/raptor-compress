@@ -869,14 +869,14 @@ public:
             // auto dec_data_p = dec_data.data();
             // decompress_data(&buf[start * block_size], datasize, cmpSize, cmpData, dec_data_p);
 
-            std::vector<int> input_data={1,2,3,4};
+            std::vector<float> input_data = {1.1, 2.6, 3.2, 4.5};
             size_t cmpSize;
             size_t datasize=4;
             auto cmpData = compress_data(input_data.data(), datasize, cmpSize);
             std::cout << "compress data size is" << cmpSize<< std::endl;
 
             std::cout << "buffer size" << (end - start) * block_size << std::endl;
-            std::vector<int> dec_data(datasize);
+            std::vector<float> dec_data(datasize);
             auto dec_data_p = dec_data.data();
             decompress_data(input_data.data(), datasize, cmpSize, cmpData, dec_data_p);
             print_values(dec_data_p,datasize);
