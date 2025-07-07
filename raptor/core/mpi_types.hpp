@@ -36,6 +36,7 @@ extern void average_profile(int n_iter);
 #define RAPtor_MPI_DOUBLE_INT        MPI_DOUBLE_INT
 #define RAPtor_MPI_LONG              MPI_LONG
 #define RAPtor_MPI_PACKED            MPI_PACKED
+#define RAPtor_MPI_CHAR              MPI_CHAR
 
 #define RAPtor_MPI_STATUS_IGNORE     MPI_STATUS_IGNORE
 #define RAPtor_MPI_STATUSES_IGNORE   MPI_STATUSES_IGNORE
