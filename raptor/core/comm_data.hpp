@@ -863,7 +863,7 @@ public:
             size_t datasize=(end - start) * block_size;
             auto cmpData = compress_data(&buf[start * block_size], datasize);
             std::cout << "buffer size" << (end - start) * block_size << std::endl;
-            std::vector<double> dec_data(datasize);
+            std::vector<T> dec_data(datasize);
             auto dec_data_p = dec_data.data();
             decompress_data(&buf[start * block_size], datasize, cmpData, dec_data_p);
             RAPtor_MPI_Isend(&(buf[start * block_size]), (end - start) * block_size,
