@@ -2,6 +2,8 @@
 // License: Simplified BSD, http://opensource.org/licenses/BSD-2-Clause
 
 #include "comm_data.hpp"
+#include <SZ3/api/sz.hpp>
+
 // #include "raptor/raptor.hpp"
 namespace raptor 
 {
