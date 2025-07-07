@@ -146,7 +146,7 @@ int main(int argc, char* argv[])
                 A->on_proc_column_map);
         x = ParVector(A->global_num_cols, A->on_proc_num_cols);
         b = ParVector(A->global_num_rows, A->local_num_rows);
-        x.set_const_value(3);
+        x.set_rand_values();
         A->mult(x, b);
         x.set_const_value(0.0);
     }
@@ -177,6 +177,7 @@ int main(int argc, char* argv[])
     if (rank == 0) printf("Total Solve Time: %e\n", t0);
     ml->print_residuals(iter);
     ml->print_solve_times();
+    std::cout<<"Total iteraitons is"<<ml->max_iterations<<std::endl;
     delete ml;
 
     // // Smoothed Aggregation AMG
