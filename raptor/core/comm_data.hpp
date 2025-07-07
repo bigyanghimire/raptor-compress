@@ -858,7 +858,7 @@ public:
                     buf[pos + k] = values[idx + k];
                 }
             }
-              SZ3::Config conf(2655);
+             // SZ3::Config conf(2655);
                     //   std::cout<<"Sends called from mult>>>>>>"<<std::endl;
                       std::cout<<"buffer size"<<(end - start) * block_size<<std::endl;
 
