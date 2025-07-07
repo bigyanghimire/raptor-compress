@@ -177,7 +177,6 @@ int main(int argc, char* argv[])
     if (rank == 0) printf("Total Solve Time: %e\n", t0);
     ml->print_residuals(iter);
     ml->print_solve_times();
-    std::cout<<"Total iteraitons is"<<ml->max_iterations<<std::endl;
     delete ml;
 
     // // Smoothed Aggregation AMG
