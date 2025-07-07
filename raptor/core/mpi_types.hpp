@@ -5,7 +5,7 @@
 
 #include "types.hpp"
 #include <mpi.h>
-
+ #include <SZ3/api/sz.hpp>
 // Global Timing Variables
 extern bool profile;
 extern double collective_t;
