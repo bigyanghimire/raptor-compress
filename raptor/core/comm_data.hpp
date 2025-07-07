@@ -858,13 +858,16 @@ public:
                     buf[pos + k] = values[idx + k];
                 }
             }
-             // SZ3::Config conf(2655);
-                    //   std::cout<<"Sends called from mult>>>>>>"<<std::endl;
-                    auto cmpData = compress_data(&buf[start * block_size], (end - start) * block_size);
-                      std::cout<<"buffer size"<<(end - start) * block_size<<std::endl;
-
-            RAPtor_MPI_Isend(&(buf[start*block_size]), (end - start) * block_size,
-                    datatype, proc, key, mpi_comm, &(requests[i]));
+            // SZ3::Config conf(2655);
+            //   std::cout<<"Sends called from mult>>>>>>"<<std::endl;
+            size_t datasize=(end - start) * block_size;
+            auto cmpData = compress_data(&buf[start * block_size], datasize);
+            std::cout << "buffer size" << (end - start) * block_size << std::endl;
+            std::vector<double> dec_data(datasize);
+            auto dec_data_p = dec_data.data();
+            SZ_decompress(&buf[start * block_size], datasize, cmpData, dec_data_p);
+            RAPtor_MPI_Isend(&(buf[start * block_size]), (end - start) * block_size,
+                             datatype, proc, key, mpi_comm, &(requests[i]));
         }
     }
 

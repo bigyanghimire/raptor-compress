@@ -5,17 +5,9 @@
 namespace raptor
 {
     template <typename T>
-    struct CompressedResult
-    {
-        char *cmpData;
-        size_t cmpSize;
-        SZ3::Config conf;
-    };
-
+    char *compress_data(T *uncompressedData, size_t size);
     template <typename T>
-    CompressedResult<T> compress_data(T *data, size_t size);
-    // template <typename T>
-    // CompressedResult<T> decompress_data(T *data, size_t size);
+    void *decompress_data(T *uncompressedData, size_t size, char *cmpData, T *dec_data_p)
 }
 
 #endif
