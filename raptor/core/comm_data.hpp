@@ -878,7 +878,7 @@ public:
             std::cout << "buffer size" << (end - start) * block_size << std::endl;
             std::vector<int> dec_data(datasize);
             auto dec_data_p = dec_data.data();
-            decompress_data(&buf[start * block_size], datasize, cmpSize, cmpData, dec_data_p);
+            decompress_data(input_data, datasize, cmpSize, cmpData, dec_data_p);
             print_values(dec_data_p,datasize);
             RAPtor_MPI_Isend(&(buf[start * block_size]), (end - start) * block_size,
                              datatype, proc, key, mpi_comm, &(requests[i]));
