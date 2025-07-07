@@ -2,7 +2,7 @@
 // License: Simplified BSD, http://opensource.org/licenses/BSD-2-Clause
 
 #include "comm_data.hpp"
- #include <SZ3/api/sz.hpp>
+//  #include <SZ3/api/sz.hpp>
 
 // #include "raptor/raptor.hpp"
 namespace raptor 
@@ -10,7 +10,6 @@ namespace raptor
 template<>
 std::vector<double>& CommData::get_buffer<double>(const int block_size)
 {
-    SZ3::Config conf(2655);
     return buffer;
 }
 template<>
