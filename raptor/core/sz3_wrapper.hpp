@@ -2,9 +2,10 @@
 #define SZ3_WRAPPER_HPP
 #include <vector>
 
-namespace raptor {
-   void compress_data();
+namespace raptor
+{
+    template <class T>
+    char *compress_data(T *data, size_t size);
 }
 
 #endif
-
