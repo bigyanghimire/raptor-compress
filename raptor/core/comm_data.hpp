@@ -859,16 +859,21 @@ public:
                     buf[pos + k] = values[idx + k];
                 }
             }
+            /*
+            * Compression and Decompression
+            */
+            // size_t cmpSize;
+            // size_t datasize=(end - start) * block_size;
+            // auto cmpData = compress_data(&buf[start * block_size], datasize, cmpSize);
+            // std::cout << "compress data size is" << cmpSize<< std::endl;
 
-            size_t cmpSize;
-            size_t datasize=(end - start) * block_size;
-            auto cmpData = compress_data(&buf[start * block_size], datasize, cmpSize);
-            std::cout << "compress data size is" << cmpSize<< std::endl;
-
-            std::cout << "buffer size" << (end - start) * block_size << std::endl;
-            std::vector<T> dec_data(datasize);
-            auto dec_data_p = dec_data.data();
-            decompress_data(&buf[start * block_size], datasize, cmpSize, cmpData, dec_data_p);
+            // std::cout << "buffer size" << (end - start) * block_size << std::endl;
+            // std::vector<T> dec_data(datasize);
+            // auto dec_data_p = dec_data.data();
+            // decompress_data(&buf[start * block_size], datasize, cmpSize, cmpData, dec_data_p);
+            /*
+            * Compression and Decompression ends
+            */
 
             // std::vector<float> input_data = {1.123456, 2.6123456, 3.2123456, 4.5123456};
             // size_t cmpSize;
@@ -882,7 +887,7 @@ public:
             
             // print_values(dec_data_p,datasize,"before values");
             // decompress_data(input_data.data(), datasize, cmpSize, cmpData, dec_data_p);
-            RAPtor_MPI_Isend(cmpData, cmpSize,
+            RAPtor_MPI_Isend(&(buf[start * block_size]), (end - start) * block_size,
                              RAPtor_MPI_CHAR, proc, key, mpi_comm, &(requests[i]));
         }
     }
