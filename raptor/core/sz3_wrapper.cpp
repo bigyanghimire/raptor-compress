@@ -4,7 +4,7 @@
 namespace raptor
 {
     template <typename T>
-    char *compress_data(T *uncompressedData, size_t size, size_t cmpSize)
+    char *compress_data(T *uncompressedData, size_t size, size_t& cmpSize)
     {
         SZ3::Config conf({size});
         conf.cmprAlgo = SZ3::ALGO_INTERP_LORENZO;
