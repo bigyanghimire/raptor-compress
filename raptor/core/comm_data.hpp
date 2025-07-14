@@ -871,6 +871,7 @@ public:
             std::vector<T> dec_data(datasize);
             auto dec_data_p = dec_data.data();
             decompress_data(&buf[start * block_size], datasize, cmpSize, cmpData, dec_data_p);
+            delete[] cmpData;
             /*
             * Compression and Decompression ends
             */
