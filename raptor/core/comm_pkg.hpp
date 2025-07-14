@@ -361,18 +361,12 @@ namespace raptor
             mpi_comm = comm;
             std::vector<int> off_proc_col_to_proc(off_proc_column_map.size());
             partition->form_col_to_proc(off_proc_column_map, off_proc_col_to_proc);
-            std::cout << "off_proc_col_to_proc: ";
-            for (int val : off_proc_col_to_proc)
-            {
-                std::cout << val << " ";
-            }
-            std::cout << std::endl;
+
             init_par_comm(off_proc_column_map, off_proc_col_to_proc, _key, comm, r_data);
             for (int i = 0; i < send_data->size_msgs; i++)
             {
                 send_data->indices[i] -= partition->first_local_col;
             }
-            printVector(send_data->indices,"send data indices");
         }
 
         ParComm(Partition* partition,

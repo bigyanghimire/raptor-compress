@@ -882,7 +882,6 @@ public:
             
             // print_values(dec_data_p,datasize,"before values");
             // decompress_data(input_data.data(), datasize, cmpSize, cmpData, dec_data_p);
-            print_values(dec_data_p,(end - start) * block_size, "buff values");
             RAPtor_MPI_Isend(cmpData, cmpSize,
                              RAPtor_MPI_CHAR, proc, key, mpi_comm, &(requests[i]));
         }

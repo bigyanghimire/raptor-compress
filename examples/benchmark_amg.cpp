@@ -136,7 +136,7 @@ int main(int argc, char* argv[])
 #endif
     else if (system == 3)
     {
-        const char* file = "examples/LFAT5000.mtx";
+        const char* file = "/home/bigyang/mtx_data/boneS10/boneS10.mtx";
         A = read_par_mm(file);
     }
 

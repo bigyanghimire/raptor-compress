@@ -170,7 +170,6 @@ int RAPtor_MPI_Isend(const void *buf, int count, RAPtor_MPI_Datatype datatype, i
     RAPtor_MPI_Comm_rank(RAPtor_MPI_COMM_WORLD, &rank);
     RAPtor_MPI_Comm_size(RAPtor_MPI_COMM_WORLD, &num_procs);
  
-    std::cout<<"MPI Send"<<std::endl;
     // print_stacktrace();
     if (profile) p2p_t -= RAPtor_MPI_Wtime();
     int val = MPI_Isend(buf, count, datatype, dest, tag, comm, request);
