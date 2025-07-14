@@ -498,7 +498,6 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
             RAPtor_MPI_Allreduce(RAPtor_MPI_IN_PLACE, recv_sizes.data(), num_procs, RAPtor_MPI_INT,
                     RAPtor_MPI_SUM, RAPtor_MPI_COMM_WORLD);
             if (profile) vec_t -= RAPtor_MPI_Wtime();
-             printVector(off_proc_column_map,"off_proc_colmn_map");
             recv_data->send(off_proc_column_map.data(), tag, comm);
             send_data->probe(recv_sizes[rank], tag, comm);
             recv_data->waitall();

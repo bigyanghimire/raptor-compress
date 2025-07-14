@@ -136,7 +136,7 @@ int main(int argc, char* argv[])
 #endif
     else if (system == 3)
     {
-        const char* file = "/home/bigyang/mtx_data/shallow_water1/shallow_water1.mtx";
+        const char* file = "/home/bigyang/mtx_data/ex9/ex9.mtx";
         A = read_par_mm(file);
     }
 
