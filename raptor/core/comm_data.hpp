@@ -878,11 +878,16 @@ public:
             * Compression and Decompression ends
             */
 
-            // std::vector<float> input_data = {1.123456, 2.6123456, 3.2123456, 4.5123456};
-            // size_t cmpSize;
-            // size_t datasize=4;
-            // auto cmpData = compress_data(input_data.data(), datasize, cmpSize);
-            // std::cout << "compress data size is" << cmpSize<< std::endl;
+            std::vector<float> input_data = {1.123456, 2.6123456, 3.2123456, 4.5123456,
+            1.123456, 2.6123456, 3.2123456, 4.5123456,
+            1.123456, 2.6123456, 3.2123456, 4.5123456,
+            1.123456, 2.6123456, 3.2123456, 4.5123456,
+            1.123456, 2.6123456, 3.2123456, 4.5123456,
+        };
+            size_t cmpSize;
+            size_t datasize=20;
+            char* cmpData = compress_data(input_data.data(), datasize, cmpSize);
+            std::cout << "compress data size is" << cmpSize<< std::endl;
 
             // std::cout << "buffer size" << (end - start) * block_size << std::endl;
             // std::vector<float> dec_data(datasize);
