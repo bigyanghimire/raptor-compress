@@ -138,9 +138,7 @@ ParCSRMatrix* read_par_mm(const char *fname)
             }
         }
     }
-    int rank, num_procs;
-    RAPtor_MPI_Comm_rank(RAPtor_MPI_COMM_WORLD, &rank);
-    RAPtor_MPI_Comm_size(RAPtor_MPI_COMM_WORLD, &num_procs);
+
     //     if (rank == 0)
     // {
     //              std::cout<<"The number of off oprocess num cols for rank 0 is"<<A->off_proc_num_cols<<std::endl;;
