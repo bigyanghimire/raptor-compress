@@ -864,7 +864,7 @@ public:
             */
             size_t cmpSize;
             size_t datasize=(end - start) * block_size;
-            char* cmpData = compress_data<double>(&buf[start * block_size], datasize, cmpSize);
+            char* cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
             std::cout << "compress data size is" << cmpSize<< std::endl;
             if(cmpData==nullptr){
                 std::cout<<"Nyull ptr"<<std::endl;
