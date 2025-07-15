@@ -865,25 +865,31 @@ public:
                          int total_elements = (end - start) * block_size;
              int offset = start * block_size;
              std::cout << "Sending buffer values from rank " <<start * block_size<< std::endl;
-
+            bool ulongstat=false;
              for (int j = 0; j < total_elements; ++j)
              {
                  std::cout << buf[offset + j] << " ";
                  if(buf[offset+j]==-1){
                     std::cout<<"-1 encountered"<<std::endl;
+                    ulongstat=true
                  }
              }
              std::cout << std::endl;
             /*
             * Compression and Decompression
             */
-            // size_t cmpSize;
-            // size_t datasize=(end - start) * block_size;
-            // char* cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
-            // std::cout << "compress data size is" << cmpSize<< std::endl;
-            // if(cmpData==nullptr){
-            //     std::cout<<"Nyull ptr"<<std::endl;
-            // }
+             if (ulongstat==false)
+             {
+                 size_t cmpSize;
+                 size_t datasize = (end - start) * block_size;
+                 char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
+                 std::cout << "compress data size is" << cmpSize << std::endl;
+                 if (cmpData == nullptr)
+                 {
+                     std::cout << "Nyull ptr" << std::endl;
+                 }
+             }
+
             //  std::cout << "buffer size" << datasize << std::endl;
             // std::vector<T> dec_data(datasize);
             // auto dec_data_p = dec_data.data();
