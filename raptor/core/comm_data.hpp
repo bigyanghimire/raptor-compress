@@ -6,6 +6,7 @@
 #define WITH_RAPtor_MPI 1
 #include <typeinfo>
 #include <mpi.h>
+#include <type_traits>
 #include "mpi_types.hpp"
 #include "vector.hpp"
 #include "matrix.hpp"
@@ -873,10 +874,10 @@ public:
             /*
             * Compression and Decompression
             */
-            size_t cmpSize;
-            size_t datasize=(end - start) * block_size;
-            char* cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
-            std::cout << "compress data size is" << cmpSize<< std::endl;
+            // size_t cmpSize;
+            // size_t datasize=(end - start) * block_size;
+            // char* cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
+            // std::cout << "compress data size is" << cmpSize<< std::endl;
             // if(cmpData==nullptr){
             //     std::cout<<"Nyull ptr"<<std::endl;
             // }
@@ -888,6 +889,15 @@ public:
             /*
             * Compression and Decompression ends
             */
+             if constexpr (std::is_same_v<T, unsigned long>) {
+        std::cout << "❌ compress_data: unsigned long is not supported by SZ\n";
+    } else {
+        // Actual SZ compression
+      size_t cmpSize;
+            size_t datasize=(end - start) * block_size;
+            char* cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
+            std::cout << "compress data size is" << cmpSize<< std::endl;
+    }
  std::cout << "Template= " << typeid(T).name() << std::endl;
         //     std::vector<float> input_data = {1.123456, 2.6123456, 3.2123456, 4.5123456,
         //     1.123456, 2.6123456, 3.2123456, 4.5123456,
