@@ -862,16 +862,18 @@ public:
             /*
             * Compression and Decompression
             */
-            // size_t cmpSize;
-            // size_t datasize=(end - start) * block_size;
-            // auto cmpData = compress_data(&buf[start * block_size], datasize, cmpSize);
-            // std::cout << "compress data size is" << cmpSize<< std::endl;
-
-            //  std::cout << "buffer size" << (end - start) * block_size << std::endl;
+            size_t cmpSize;
+            size_t datasize=(end - start) * block_size;
+            char* cmpData = compress_data(&buf[start * block_size], datasize, cmpSize);
+            std::cout << "compress data size is" << cmpSize<< std::endl;
+            if(cmpData==nullptr){
+                std::cout<<"Nyull ptr"<<std::endl;
+            }
+             std::cout << "buffer size" << datasize << std::endl;
             // std::vector<T> dec_data(datasize);
             // auto dec_data_p = dec_data.data();
             // decompress_data(&buf[start * block_size], datasize, cmpSize, cmpData, dec_data_p);
-            // delete[] cmpData;
+            delete[] cmpData;
             /*
             * Compression and Decompression ends
             */
