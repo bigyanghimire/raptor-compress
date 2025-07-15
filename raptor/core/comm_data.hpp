@@ -864,11 +864,11 @@ public:
             */
             size_t cmpSize;
             size_t datasize=(end - start) * block_size;
-            char* cmpData = compress_data(&buf[start * block_size], datasize, cmpSize);
-            std::cout << "compress data size is" << cmpSize<< std::endl;
-            if(cmpData==nullptr){
-                std::cout<<"Nyull ptr"<<std::endl;
-            }
+            // char* cmpData = compress_data(&buf[start * block_size], datasize, cmpSize);
+            // std::cout << "compress data size is" << cmpSize<< std::endl;
+            // if(cmpData==nullptr){
+            //     std::cout<<"Nyull ptr"<<std::endl;
+            // }
              std::cout << "buffer size" << datasize << std::endl;
             // std::vector<T> dec_data(datasize);
             // auto dec_data_p = dec_data.data();
