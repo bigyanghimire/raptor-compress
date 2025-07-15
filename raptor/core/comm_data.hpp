@@ -869,6 +869,9 @@ public:
              for (int j = 0; j < total_elements; ++j)
              {
                  std::cout << buf[offset + j] << " ";
+                 if(buf[offset+j]==-1){
+                    std::cout<<"-1 encountered"<<std::endl;
+                 }
              }
              std::cout << std::endl;
             /*
