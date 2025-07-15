@@ -898,7 +898,7 @@ public:
         };
             size_t cmpSize=0;
             size_t datasize=60;
-            char* cmpData = compress_data(input_data.data(), datasize, cmpSize);
+            char* cmpData = compress_data<float>(input_data.data(), datasize, cmpSize);
             std::cout << "compress data size is" << cmpSize<< std::endl;
 
             // std::cout << "buffer size" << (end - start) * block_size << std::endl;
