@@ -4,7 +4,7 @@
 #define RAPTOR_CORE_COMMDATA_HPP
 
 #define WITH_RAPtor_MPI 1
-
+#include <typeinfo>
 #include <mpi.h>
 #include "mpi_types.hpp"
 #include "vector.hpp"
@@ -877,8 +877,7 @@ public:
             /*
             * Compression and Decompression ends
             */
- std::string tname = typeid(T).name();
- std::cout<<"Type name is"<<tname<<std::endl;
+ std::cout << "Template= " << typeid(T).name() << std::endl;
         //     std::vector<float> input_data = {1.123456, 2.6123456, 3.2123456, 4.5123456,
         //     1.123456, 2.6123456, 3.2123456, 4.5123456,
         //     1.123456, 2.6123456, 3.2123456, 4.5123456,
