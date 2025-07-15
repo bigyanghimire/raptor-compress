@@ -584,7 +584,6 @@ void init_comm_helper(char* send_buffer, const int* rowptr,
         const int b_rows, const int b_cols)
 {
     int block_size = b_rows * b_cols;
-    printf("in init comm helper>>>>>\n");
     if (profile) mat_t -= RAPtor_MPI_Wtime();
     send_comm->send(send_buffer, rowptr, col_indices, values,
             key, mpi_comm, block_size);

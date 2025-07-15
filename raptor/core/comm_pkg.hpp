@@ -442,7 +442,6 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
                 int _key, RAPtor_MPI_Comm comm,
                 CommData* r_data = NULL)
         {
-            printf("init par comm\n");
             // Get RAPtor_MPI Information
             int rank, num_procs;
             RAPtor_MPI_Comm_rank(comm, &rank);
@@ -1350,7 +1349,7 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
         void init_tap_comm(Partition* partition,
                 const std::vector<int>& off_proc_column_map,
                 RAPtor_MPI_Comm comm)
-        {   printf("init tap comm\n");
+        {   
             // Get RAPtor_MPI Information
             int rank, num_procs;
             RAPtor_MPI_Comm_rank(comm, &rank);

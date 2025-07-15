@@ -47,7 +47,6 @@ void ParMatrix::mult(ParVector& x, ParVector& b, bool tap)
 
     // Initialize Isends and Irecvs to communicate
     // values of x
-    std::cout<<"Off proc b cols"<<off_proc->b_cols<<std::endl;
     comm->init_comm(x, off_proc->b_cols);
 
     // Multiply the diagonal portion of the matrix,
