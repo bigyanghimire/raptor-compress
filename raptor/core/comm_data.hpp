@@ -862,18 +862,18 @@ public:
             /*
             * Compression and Decompression
             */
-            // size_t cmpSize;
-            // size_t datasize=(end - start) * block_size;
-            // char* cmpData = compress_data(&buf[start * block_size], datasize, cmpSize);
-            // std::cout << "compress data size is" << cmpSize<< std::endl;
-            // if(cmpData==nullptr){
-            //     std::cout<<"Nyull ptr"<<std::endl;
-            // }
-            //  std::cout << "buffer size" << datasize << std::endl;
+            size_t cmpSize;
+            size_t datasize=(end - start) * block_size;
+            char* cmpData = compress_data<double>(&buf[start * block_size], datasize, cmpSize);
+            std::cout << "compress data size is" << cmpSize<< std::endl;
+            if(cmpData==nullptr){
+                std::cout<<"Nyull ptr"<<std::endl;
+            }
+             std::cout << "buffer size" << datasize << std::endl;
             // std::vector<T> dec_data(datasize);
             // auto dec_data_p = dec_data.data();
             // decompress_data(&buf[start * block_size], datasize, cmpSize, cmpData, dec_data_p);
-            //delete[] cmpData;
+            // delete[] cmpData;
             /*
             * Compression and Decompression ends
             */
@@ -895,26 +895,26 @@ public:
         //     1.123456, 2.6123456, 3.2123456, 4.5123456,
         // };
 
-             std::vector<float> input_data = {1.123456, 2.6123456, 3.2123456, 4.5123456,
-            1.123456, 2.6123456, 3.2123456, 4.5123456,
-            1.123456, 2.6123456, 3.2123456, 4.5123456,
-            1.123456, 2.6123456, 3.2123456, 4.5123456,
-            1.123456, 2.6123456, 3.2123456, 4.5123456,
-            1.123456, 2.6123456, 3.2123456, 4.5123456,
-            1.123456, 2.6123456, 3.2123456, 4.5123456,
-            1.123456, 2.6123456, 3.2123456, 4.5123456,
-            1.123456, 2.6123456, 3.2123456, 4.5123456,
-            1.123456, 2.6123456, 3.2123456, 4.5123456,
-            1.123456, 2.6123456, 3.2123456, 4.5123456,
-            1.123456, 2.6123456, 3.2123456, 4.5123456,
-            1.123456, 2.6123456, 3.2123456, 4.5123456,
-            1.123456, 2.6123456, 3.2123456, 4.5123456,
-            1.123456, 2.6123456, 3.2123456, 4.5123456,
-        };
-            size_t cmpSize=0;
-            size_t datasize=60;
-            char* cmpData = compress_data(input_data.data(), datasize, cmpSize);
-            std::cout << "compress data size is" << cmpSize<< std::endl;
+        //      std::vector<float> input_data = {1.123456, 2.6123456, 3.2123456, 4.5123456,
+        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
+        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
+        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
+        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
+        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
+        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
+        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
+        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
+        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
+        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
+        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
+        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
+        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
+        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
+        // };
+        //     size_t cmpSize=0;
+        //     size_t datasize=60;
+        //     char* cmpData = compress_data(input_data.data(), datasize, cmpSize);
+        //     std::cout << "compress data size is" << cmpSize<< std::endl;
 
             // std::cout << "buffer size" << (end - start) * block_size << std::endl;
             // std::vector<float> dec_data(datasize);
