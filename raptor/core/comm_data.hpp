@@ -871,7 +871,7 @@ public:
                  std::cout << buf[offset + j] << " ";
                  if(buf[offset+j]==-1){
                     std::cout<<"-1 encountered"<<std::endl;
-                    ulongstat=true
+                    ulongstat=true;
                  }
              }
              std::cout << std::endl;
