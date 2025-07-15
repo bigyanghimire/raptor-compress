@@ -859,13 +859,24 @@ public:
                     buf[pos + k] = values[idx + k];
                 }
             }
+
+
+                         int total_elements = (end - start) * block_size;
+             int offset = start * block_size;
+             std::cout << "Sending buffer values from rank " <<start * block_size<< std::endl;
+
+             for (int j = 0; j < total_elements; ++j)
+             {
+                 std::cout << buf[offset + j] << " ";
+             }
+             std::cout << std::endl;
             /*
             * Compression and Decompression
             */
-            // size_t cmpSize;
-            // size_t datasize=(end - start) * block_size;
-            // char* cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
-            // std::cout << "compress data size is" << cmpSize<< std::endl;
+            size_t cmpSize;
+            size_t datasize=(end - start) * block_size;
+            char* cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
+            std::cout << "compress data size is" << cmpSize<< std::endl;
             // if(cmpData==nullptr){
             //     std::cout<<"Nyull ptr"<<std::endl;
             // }
@@ -922,15 +933,7 @@ public:
             
             // print_values(dec_data_p,datasize,"before values");
             // decompress_data(input_data.data(), datasize, cmpSize, cmpData, dec_data_p);
-            //  int total_elements = (end - start) * block_size;
-            //  int offset = start * block_size;
-            //  std::cout << "Sending buffer values from rank " <<start * block_size<< std::endl;
 
-            //  for (int j = 0; j < total_elements; ++j)
-            //  {
-            //      std::cout << buf[offset + j] << " ";
-            //  }
-            //  std::cout << std::endl;
              RAPtor_MPI_Isend(&(buf[start * block_size]), (end - start) * block_size,
                               datatype, proc, key, mpi_comm, &(requests[i]));
              // RAPtor_MPI_Isend(dec_data.data(), (end - start) * block_size,
