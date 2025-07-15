@@ -10,6 +10,7 @@ namespace raptor
         SZ3::Config conf({size});
         std::cout<<"COnf num is"<<conf.num<<std::endl;
         size_t bufferLen = SZ3::SZ_compress_size_bound<T>(conf);
+        std::cout<<"Bufferlens size"<<bufferLen<<std::endl;
         conf.cmprAlgo = SZ3::ALGO_INTERP_LORENZO;
         conf.errorBoundMode = SZ3::EB_ABS;
         conf.absErrorBound = 1e-3;
