@@ -888,6 +888,7 @@ public:
                  {
                      std::cout << "Nyull ptr" << std::endl;
                  }
+                 delete[] cmpData;
              }
 
             //  std::cout << "buffer size" << datasize << std::endl;
