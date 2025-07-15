@@ -896,7 +896,7 @@ public:
 
 
         };
-            size_t cmpSize;
+            size_t cmpSize=0;
             size_t datasize=60;
             char* cmpData = compress_data(input_data.data(), datasize, cmpSize);
             std::cout << "compress data size is" << cmpSize<< std::endl;
