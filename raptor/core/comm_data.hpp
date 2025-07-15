@@ -862,13 +862,13 @@ public:
             /*
             * Compression and Decompression
             */
-            size_t cmpSize;
-            size_t datasize=(end - start) * block_size;
-            char* cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
-            std::cout << "compress data size is" << cmpSize<< std::endl;
-            if(cmpData==nullptr){
-                std::cout<<"Nyull ptr"<<std::endl;
-            }
+            // size_t cmpSize;
+            // size_t datasize=(end - start) * block_size;
+            // char* cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
+            // std::cout << "compress data size is" << cmpSize<< std::endl;
+            // if(cmpData==nullptr){
+            //     std::cout<<"Nyull ptr"<<std::endl;
+            // }
             //  std::cout << "buffer size" << datasize << std::endl;
             // std::vector<T> dec_data(datasize);
             // auto dec_data_p = dec_data.data();
@@ -877,7 +877,8 @@ public:
             /*
             * Compression and Decompression ends
             */
-
+ std::string tname = typeid(T).name();
+ std::cout<<"Type name is"<<tname<<std::endl;
         //     std::vector<float> input_data = {1.123456, 2.6123456, 3.2123456, 4.5123456,
         //     1.123456, 2.6123456, 3.2123456, 4.5123456,
         //     1.123456, 2.6123456, 3.2123456, 4.5123456,
