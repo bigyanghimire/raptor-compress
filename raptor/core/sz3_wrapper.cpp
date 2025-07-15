@@ -1,4 +1,5 @@
 #include <SZ3/api/sz.hpp> // <-- include SZ3 only in .cpp!
+#include <SZ3/api/impl/SZImpl.hpp>
 #include "sz3_wrapper.hpp"
 #include <iostream>
 namespace raptor
@@ -8,6 +9,7 @@ namespace raptor
     {
         SZ3::Config conf({size});
         std::cout<<"COnf num is"<<conf.num<<std::endl;
+        size_t bufferLen = SZ_compress_size_bound<T>(conf);
         conf.cmprAlgo = SZ3::ALGO_INTERP_LORENZO;
         conf.errorBoundMode = SZ3::EB_ABS;
         conf.absErrorBound = 1e-3;
