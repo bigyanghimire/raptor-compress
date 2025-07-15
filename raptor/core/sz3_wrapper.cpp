@@ -7,6 +7,7 @@ namespace raptor
     char *compress_data(T *uncompressedData, size_t size, size_t& cmpSize)
     {
         SZ3::Config conf({size});
+        std::cout<<"COnf num is"<<conf.num<<std::endl;
         conf.cmprAlgo = SZ3::ALGO_INTERP_LORENZO;
         conf.errorBoundMode = SZ3::EB_ABS;
         conf.absErrorBound = 1e-3;
