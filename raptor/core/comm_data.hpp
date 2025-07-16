@@ -880,6 +880,7 @@ public:
             */
              if (ulongstat==false)
              {
+                std::cout<<"ulong"<<ulongstat<<std::endl;
                  size_t cmpSize;
                  size_t datasize = (end - start) * block_size;
                  char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
