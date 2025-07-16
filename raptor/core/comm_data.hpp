@@ -864,7 +864,7 @@ public:
 
                          int total_elements = (end - start) * block_size;
              int offset = start * block_size;
-             std::cout << "Sending buffer values from rank " <<start * block_size<< std::endl;
+             std::cout << "Sending buffer values from ranks " <<start * block_size<< std::endl;
             bool ulongstat=false;
              for (int j = 0; j < total_elements; ++j)
              {
