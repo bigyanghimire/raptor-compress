@@ -14,6 +14,8 @@
 #include <iostream>
 // #include "raptor/raptor.hpp"
 #include "sz3_wrapper.hpp"
+#include <unistd.h>
+#include <cstdio>
 /**************************************************************
  *****   CommData Class
  **************************************************************
