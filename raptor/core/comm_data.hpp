@@ -821,8 +821,19 @@ public:
             int* n_send_ptr, const int block_size)
     {
         send(values, key, mpi_comm, states, compare_func, n_send_ptr, block_size);
-    }     
-
+    }
+    void wait_for_pid()
+    {
+        volatile int gdbi = 0;
+        char hostname[256];
+        gethostname(hostname, sizeof(hostname));
+        printf("PID %d on %s  ready for attach\n", getpid(), hostname);
+        fflush(stdout);
+        while (gdbi == 0)
+        {
+            sleep(5); // so CPU isn't pegged
+        }
+    }
     template <typename T>
     void send(const T* values, int key, RAPtor_MPI_Comm mpi_comm, const int block_size = 1,
             std::function<T(T, T)> init_result_func = &sum_func<T, T>,
@@ -884,15 +895,7 @@ public:
             MPI_Comm_rank(MPI_COMM_WORLD, &rank);
             if (rank == 1)
             {
-                volatile int gdbi = 0;
-                char hostname[256];
-                gethostname(hostname, sizeof(hostname));
-                printf("PID %d on %s (rank %d) ready for attach\n", getpid(), hostname, rank);
-                fflush(stdout);
-                while (gdbi == 0)
-                {
-                    sleep(5); // so CPU isn't pegged
-                }
+                wait_for_pid();
             }
             size_t cmpSize;
             size_t datasize = (end - start) * block_size;
