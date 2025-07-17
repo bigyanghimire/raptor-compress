@@ -10,7 +10,7 @@ namespace raptor
         SZ3::Config conf({size});
         std::vector<char> cmpDatadum(conf.num);
         size_t cmpSizedum = cmpDatadum.size();
-        conf.cmprAlgo = SZ3::ALGO_INTERP_LORENZO;
+        conf.cmprAlgo = SZ3::ALGO_LORENZO_REG;
         conf.errorBoundMode = SZ3::EB_ABS;
         conf.absErrorBound = 1e-3;
         assert(conf.num == size); 
@@ -22,7 +22,7 @@ namespace raptor
     void decompress_data(T *uncompressedData, size_t size, size_t cmpSize, char *cmpData, T *dec_data_p)
     {
         SZ3::Config conf({size});
-        conf.cmprAlgo = SZ3::ALGO_INTERP_LORENZO;
+        conf.cmprAlgo = SZ3::ALGO_LORENZO_REG;
         conf.errorBoundMode = SZ3::EB_ABS;
         conf.absErrorBound = 1e-3;
         SZ_decompress(conf, cmpData, cmpSize, dec_data_p);
