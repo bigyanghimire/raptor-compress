@@ -10,12 +10,10 @@ namespace raptor
         SZ3::Config conf({size});
         std::vector<char> cmpDatadum(conf.num);
         size_t cmpSizedum = cmpDatadum.size();
-        std::cout << "COnf num is" << conf.num << std::endl;
-        size_t bufferLen = SZ3::SZ_compress_size_bound<T>(conf);
-        std::cout << "Bufferlens size" << bufferLen <<"cmp size"<<cmpSizedum<< std::endl;
         conf.cmprAlgo = SZ3::ALGO_INTERP_LORENZO;
         conf.errorBoundMode = SZ3::EB_ABS;
         conf.absErrorBound = 1e-3;
+        assert(conf.num == size); 
         char *cmpData = SZ_compress(conf, uncompressedData, cmpSize);
         return cmpData;
     }
