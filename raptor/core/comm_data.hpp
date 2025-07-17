@@ -862,35 +862,58 @@ public:
             }
 
 
-                         int total_elements = (end - start) * block_size;
-             int offset = start * block_size;
-             std::cout << "Sending buffer values from ranks " <<start * block_size<< std::endl;
-            bool ulongstat=false;
-             for (int j = 0; j < total_elements; ++j)
-             {
-                 std::cout << buf[offset + j] << " ";
-                 if(buf[offset+j]==-1){
-                    std::cout<<"-1 encountered"<<std::endl;
-                    ulongstat=true;
-                 }
-             }
-             std::cout << std::endl;
+            // int total_elements = (end - start) * block_size;
+            //  int offset = start * block_size;
+            //  std::cout << "Sending buffer values from ranks " <<start * block_size<< std::endl;
+            // bool ulongstat=false;
+            //  for (int j = 0; j < total_elements; ++j)
+            //  {
+            //      std::cout << buf[offset + j] << " ";
+            //      if(buf[offset+j]==-1){
+            //         std::cout<<"-1 encountered"<<std::endl;
+            //         ulongstat=true;
+            //      }
+            //  }
+            //  std::cout << std::endl;
             /*
             * Compression and Decompression
             */
-             if (ulongstat==false)
-             {
-                std::cout<<"ulong"<<ulongstat<<std::endl;
-                 size_t cmpSize;
-                 size_t datasize = (end - start) * block_size;
-                 char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
-                 std::cout << "compress data size is" << cmpSize << std::endl;
-                 if (cmpData == nullptr)
-                 {
-                     std::cout << "Nyull ptr" << std::endl;
-                 }
-                 delete[] cmpData;
-             }
+            int rank;
+            MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+            if (rank == 1)
+            {
+                volatile int i = 0;
+                char hostname[256];
+                gethostname(hostname, sizeof(hostname));
+                printf("PID %d on %s (rank %d) ready for attach\n", getpid(), hostname, rank);
+                fflush(stdout);
+                while (i == 0)
+                {
+                    sleep(5); // so CPU isn't pegged
+                }
+            }
+            size_t cmpSize;
+            size_t datasize = (end - start) * block_size;
+            char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
+            std::cout << "compress data size is" << cmpSize << std::endl;
+            if (cmpData == nullptr)
+            {
+                std::cout << "Nyull ptr" << std::endl;
+            }
+            delete[] cmpData;
+            //  if (ulongstat==false)
+            //  {
+            //     std::cout<<"ulong"<<ulongstat<<std::endl;
+            //      size_t cmpSize;
+            //      size_t datasize = (end - start) * block_size;
+            //      char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
+            //      std::cout << "compress data size is" << cmpSize << std::endl;
+            //      if (cmpData == nullptr)
+            //      {
+            //          std::cout << "Nyull ptr" << std::endl;
+            //      }
+            //      delete[] cmpData;
+            //  }
 
             //  std::cout << "buffer size" << datasize << std::endl;
             // std::vector<T> dec_data(datasize);
