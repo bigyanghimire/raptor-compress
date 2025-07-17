@@ -891,12 +891,12 @@ public:
             /*
             * Compression and Decompression
             */
-            int rank;
-            MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-            if (rank == 1)
-            {
-                wait_for_pid();
-            }
+            // int rank;
+            // MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+            // if (rank == 1)
+            // {
+            //     wait_for_pid();
+            // }
             size_t cmpSize;
             size_t datasize = (end - start) * block_size;
             char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
