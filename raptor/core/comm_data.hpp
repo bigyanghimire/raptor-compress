@@ -905,7 +905,7 @@ bool is_all_zero(const T* data, size_t size) {
             //     wait_for_pid();
             // }
             size_t datasize = (end - start) * block_size;
-            if (datasize!=41)
+            if (datasize>50)
             {
             int total_elements = datasize;
              int offset = start * block_size;
