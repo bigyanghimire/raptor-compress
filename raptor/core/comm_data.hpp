@@ -834,6 +834,13 @@ public:
             sleep(5); // so CPU isn't pegged
         }
     }
+    template<typename T>
+bool is_all_zero(const T* data, size_t size) {
+    for (size_t i = 0; i < size; ++i) {
+        if (data[i] != 0) return false;
+    }
+    return true;
+}
     template <typename T>
     void send(const T* values, int key, RAPtor_MPI_Comm mpi_comm, const int block_size = 1,
             std::function<T(T, T)> init_result_func = &sum_func<T, T>,
@@ -898,7 +905,7 @@ public:
             //     wait_for_pid();
             // }
             size_t datasize = (end - start) * block_size;
-            if (datasize==41)
+            if (datasize==41 && !is_all_zero(&buf[start * block_size], datasize))
             {
             int total_elements = datasize;
              int offset = start * block_size;
