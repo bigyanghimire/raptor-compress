@@ -897,15 +897,19 @@ public:
             // {
             //     wait_for_pid();
             // }
-            size_t cmpSize;
             size_t datasize = (end - start) * block_size;
-            char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
-            std::cout << "compress data size is" << cmpSize << std::endl;
-            if (cmpData == nullptr)
+            if (datasize > 20)
             {
-                std::cout << "Nyull ptr" << std::endl;
+
+                size_t cmpSize;
+                char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
+                std::cout << "compress data size is" << cmpSize << std::endl;
+                if (cmpData == nullptr)
+                {
+                    std::cout << "Nyull ptr" << std::endl;
+                }
+                delete[] cmpData;
             }
-            delete[] cmpData;
             //  if (ulongstat==false)
             //  {
             //     std::cout<<"ulong"<<ulongstat<<std::endl;
