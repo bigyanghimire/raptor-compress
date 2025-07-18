@@ -900,7 +900,7 @@ public:
             size_t datasize = (end - start) * block_size;
             if (datasize >30)
             {
-
+                std::cout<<"datasioze is"<<datasize<<std::endl;
                 size_t cmpSize;
                 char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
                 std::cout << "compress data size is" << cmpSize << std::endl;
