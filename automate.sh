@@ -18,5 +18,5 @@ sleep 1
 xdotool type 'git pull'
 xdotool key Return
 sleep 1
-xdotool type 'sh ./compile.sh'
+xdotool type 'sh ./only_compile.sh'
 xdotool key Return
