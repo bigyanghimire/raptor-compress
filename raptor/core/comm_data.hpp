@@ -898,7 +898,7 @@ public:
             //     wait_for_pid();
             // }
             size_t datasize = (end - start) * block_size;
-            if (datasize < 50)
+            if (datasize > 50)
             {
 
                 size_t cmpSize;
