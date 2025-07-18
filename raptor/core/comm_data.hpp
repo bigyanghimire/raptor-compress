@@ -898,9 +898,17 @@ public:
             //     wait_for_pid();
             // }
             size_t datasize = (end - start) * block_size;
-            if (datasize!=41)
+            if (datasize==41)
             {
-                std::cout<<"datasioze is"<<datasize<<std::endl;
+            int total_elements = datasize;
+             int offset = start * block_size;
+             std::cout << "Sending buffer values from ranks " <<start * block_size<< std::endl;
+             for (int j = 0; j < total_elements; ++j)
+             {
+                 std::cout << buf[offset + j] << " ";
+             }
+             std::cout << std::endl;
+            std::cout<<"datasioze is"<<datasize<<std::endl;
                 size_t cmpSize;
                 char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
                 std::cout << "compress data size is" << cmpSize << std::endl;
