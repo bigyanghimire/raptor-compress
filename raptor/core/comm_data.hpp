@@ -907,8 +907,8 @@ bool is_all_zero(const T* data, size_t size) {
             size_t datasize = (end - start) * block_size;
             double target = -0.000557246;
             // if (datasize != 41)
-            // if (datasize == 41 && std::abs(buf[0] - target) < 1e-9)
-            if (1==1)
+            if (datasize == 41 && std::abs(buf[0] - target) < 1e-9)
+            // if (1==1)
             {
                 int total_elements = datasize;
                 int offset = start * block_size;
@@ -925,6 +925,15 @@ bool is_all_zero(const T* data, size_t size) {
                 if (cmpData == nullptr)
                 {
                     std::cout << "Nyull ptr" << std::endl;
+                }
+
+                std::vector<T> dec_data(datasize);
+                auto dec_data_p = dec_data.data();
+                decompress_data(&buf[start * block_size], datasize, cmpSize, cmpData, dec_data_p);
+
+                for (size_t i = 0; i < datasize; i++)
+                {
+                    std::cout << "dec" << dec_data[i] << std::endl;
                 }
                 delete[] cmpData;
             }
