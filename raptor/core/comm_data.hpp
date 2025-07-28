@@ -881,20 +881,6 @@ bool is_all_zero(const T* data, size_t size) {
                 }
             }
 
-
-            // int total_elements = (end - start) * block_size;
-            //  int offset = start * block_size;
-            //  std::cout << "Sending buffer values from ranks " <<start * block_size<< std::endl;
-            // bool ulongstat=false;
-            //  for (int j = 0; j < total_elements; ++j)
-            //  {
-            //      std::cout << buf[offset + j] << " ";
-            //      if(buf[offset+j]==-1){
-            //         std::cout<<"-1 encountered"<<std::endl;
-            //         ulongstat=true;
-            //      }
-            //  }
-            //  std::cout << std::endl;
             /*
             * Compression and Decompression
             */
@@ -943,62 +929,12 @@ bool is_all_zero(const T* data, size_t size) {
                 printf("Smoke test %s", max_err <= 1e-3 ? "passed" : "failed");
                 delete[] cmpData;
             }
-            //  if (ulongstat==false)
-            //  {
-            //     std::cout<<"ulong"<<ulongstat<<std::endl;
-            //      size_t cmpSize;
-            //      size_t datasize = (end - start) * block_size;
-            //      char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
-            //      std::cout << "compress data size is" << cmpSize << std::endl;
-            //      if (cmpData == nullptr)
-            //      {
-            //          std::cout << "Nyull ptr" << std::endl;
-            //      }
-            //      delete[] cmpData;
-            //  }
 
-            //  std::cout << "buffer size" << datasize << std::endl;
-            // std::vector<T> dec_data(datasize);
-            // auto dec_data_p = dec_data.data();
-            // decompress_data(&buf[start * block_size], datasize, cmpSize, cmpData, dec_data_p);
-            // delete[] cmpData;
             /*
             * Compression and Decompression ends
             */
      
-        //     std::vector<float> input_data = {1.123456, 2.6123456, 3.2123456, 4.5123456,
-        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
-        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
-        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
-        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
-        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
-        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
-        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
-        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
-        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
-        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
-        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
-        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
-        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
-        //     1.123456, 2.6123456, 3.2123456, 4.5123456,
-        // };
 
-        //      std::vector<int> input_data = {1, -1, 1, -1,
-        //     1, -1, 1, -1,
-        //     1, -1, 1, -1,
-        //     1, -1, 1, -1,
-        //     1, -1, 1, -1,
-        //     1, -1, 1, -1,
-        //     1, -1, 1, -1,
-        //     1, -1, 1, -1,
-        //     1, -1, 1, -1,
-        //     1, -1, 1, -1,
-        //     1, -1, 1, -1,
-        //     1, -1, 1, -1,
-        //     1, -1, 1, -1,
-        //     1, -1, 1, -1,
-        //     1, -1, 1, -1
-        // };
         //     size_t cmpSize=0;
         //     size_t datasize=60;
         //     char* cmpData = compress_data(input_data.data(), datasize, cmpSize);
@@ -1011,7 +947,7 @@ bool is_all_zero(const T* data, size_t size) {
             // print_values(dec_data_p,datasize,"before values");
             // decompress_data(input_data.data(), datasize, cmpSize, cmpData, dec_data_p);
 
-             RAPtor_MPI_Isend(&(buf[start * block_size]), (end - start) * block_size,
+             RAPtor_MPI_Isend(dec_data.data(), (end - start) * block_size,
                               datatype, proc, key, mpi_comm, &(requests[i]));
              // RAPtor_MPI_Isend(dec_data.data(), (end - start) * block_size,
              //                               datatype, proc, key, mpi_comm, &(requests[i]));
