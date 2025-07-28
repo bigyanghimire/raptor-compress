@@ -930,11 +930,17 @@ bool is_all_zero(const T* data, size_t size) {
                 std::vector<T> dec_data(datasize);
                 auto dec_data_p = dec_data.data();
                 decompress_data(&buf[start * block_size], datasize, cmpSize, cmpData, dec_data_p);
-
+                double max_err = 0.0;
                 for (size_t i = 0; i < datasize; i++)
                 {
-                    std::cout << "dec" << dec_data[i] << std::endl;
+                    std::cout << "dec_data[i]" << dec_data[i] << "input data copy" << input_data_copy[i] << std::endl;
+                    if (fabs(dec_data[i] - input_data[i]) > max_err)
+                    {
+                        max_err = fabs(dec_data[i] - input_data_copy[i]);
+                    }
                 }
+                std::cout << "max error is" << max_err << std::endl;
+                printf("Smoke test %s", max_err <= 1e-3 ? "passed" : "failed");
                 delete[] cmpData;
             }
             //  if (ulongstat==false)
