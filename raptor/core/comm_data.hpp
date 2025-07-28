@@ -933,7 +933,7 @@ bool is_all_zero(const T* data, size_t size) {
                 double max_err = 0.0;
                 for (size_t i = 0; i < datasize; i++)
                 {
-                    std::cout << "dec_data[i]" << dec_data[i] << "input data copy" << input_data_copy[i] << std::endl;
+                    std::cout << "dec_data[i]" << dec_data[i] << "input data copy" << input_data[i] << std::endl;
                     if (fabs(dec_data[i] - input_data[i]) > max_err)
                     {
                         max_err = fabs(dec_data[i] - input_data[i]);
