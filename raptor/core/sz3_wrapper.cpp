@@ -14,7 +14,7 @@ namespace raptor
         // conf.cmprAlgo = SZ3::ALGO_INTERP_LORENZO;
         conf.errorBoundMode = SZ3::EB_ABS;
         conf.absErrorBound = ext_solve_tol;
-        std::cout<<"Error bound is"<<conf.absErrorBound<<std::endl;
+        // std::cout<<"Error bound is"<<conf.absErrorBound<<std::endl;
         assert(conf.num == size); 
         char *cmpData = SZ_compress(conf, uncompressedData, cmpSize);
         return cmpData;
