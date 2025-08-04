@@ -99,7 +99,7 @@ int main(int argc, char *argv[])
     // Solve Raptor Hierarchy
     MPI_Barrier(MPI_COMM_WORLD);
     time_base = MPI_Wtime();
-    compression_on=1;
+    compression_on=81;
     std::cout<<"Compression on is"<<compression_on<<std::endl;
     int total_iter=ml->solve(x, b);
     compression_on=81;
