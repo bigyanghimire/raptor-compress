@@ -6,6 +6,7 @@
 #include "types.hpp"
 #include <mpi.h>
 //  #include <SZ3/api/sz.hpp>
+extern int compression_on;
 // Global Timing Variables
 extern bool profile;
 extern double collective_t;
