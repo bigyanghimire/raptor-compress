@@ -890,26 +890,10 @@ bool is_all_zero(const T* data, size_t size) {
             // {
             //     wait_for_pid();
             // }
-            size_t datasize = (end - start) * block_size;
-            double target = -0.000557246;
-            // if (datasize != 41)
 
-                int total_elements = datasize;
-                int offset = start * block_size;
-                std::cout << "Sending buffer values from ranks " << start * block_size << std::endl;
-                for (int j = 0; j < total_elements; ++j)
-                {
-                    std::cout << buf[offset + j] << " ";
-                }
-                std::cout << std::endl;
-                std::cout << "datasioze is" << datasize << std::endl;
+            // if (datasize != 41)
                 size_t cmpSize;
                 char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
-                std::cout << "compress data size is" << cmpSize << std::endl;
-                if (cmpData == nullptr)
-                {
-                    std::cout << "Nyull ptr" << std::endl;
-                }
 
                 std::vector<T> dec_data(datasize);
                 auto dec_data_p = dec_data.data();
@@ -917,13 +901,11 @@ bool is_all_zero(const T* data, size_t size) {
                 double max_err = 0.0;
                 for (size_t i = 0; i < datasize; i++)
                 {
-                    std::cout << "dec_data[i]" << dec_data[i] << "input data copy" << buf[start*block_size+i] << std::endl;
                     if (fabs(dec_data[i] - buf[start*block_size+i]) > max_err)
                     {
                         max_err = fabs(dec_data[i] - buf[start*block_size+i]);
                     }
                 }
-                std::cout << "max error is" << max_err << std::endl;
                 printf("Smoke test %s", max_err <= 1e-3 ? "passed" : "failed");
                 delete[] cmpData;
 
