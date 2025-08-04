@@ -892,6 +892,7 @@ bool is_all_zero(const T* data, size_t size) {
             // }
 
             // if (datasize != 41)
+                 size_t datasize = (end - start) * block_size;
                 size_t cmpSize;
                 char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
 
