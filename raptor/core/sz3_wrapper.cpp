@@ -1,6 +1,7 @@
 #include <SZ3/api/sz.hpp> // <-- include SZ3 only in .cpp!
 #include <SZ3/api/impl/SZImpl.hpp>
 #include "sz3_wrapper.hpp"
+#include "mpi_types.hpp"
 #include <iostream>
 namespace raptor
 {
