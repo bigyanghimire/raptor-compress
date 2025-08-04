@@ -543,7 +543,6 @@ namespace raptor
                     }
                 }
 
-                std::cout<<"iterations is total"<<iter<<std::endl;
                 return iter;
             }
 

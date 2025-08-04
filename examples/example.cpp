@@ -98,7 +98,8 @@ int main(int argc, char *argv[])
     // Solve Raptor Hierarchy
     MPI_Barrier(MPI_COMM_WORLD);
     time_base = MPI_Wtime();
-    ml->solve(x, b);
+    int total_iter=ml->solve(x, b);
+    std::cout<<"Total iterations is: "<<total_iter<<std::endl;
     time_solve = MPI_Wtime() - time_base;
 
     MPI_Reduce(&time_setup, &time_base, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
