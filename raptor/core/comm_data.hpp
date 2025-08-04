@@ -891,7 +891,7 @@ bool is_all_zero(const T* data, size_t size) {
             //     wait_for_pid();
             // }
             if(compression_on==1){
-                std::cout<<"Compression on>>"<<compression_on<<std::endl;
+                // std::cout<<"Compression on>>"<<compression_on<<std::endl;
                  size_t datasize = (end - start) * block_size;
                 size_t cmpSize;
                 char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
@@ -903,9 +903,9 @@ bool is_all_zero(const T* data, size_t size) {
                     if (fabs(dec_data[i] - buf[start*block_size+i]) > max_err)
                     {
                         max_err = fabs(dec_data[i] - buf[start*block_size+i]);
-                                            std::cout<<"dec data"<<dec_data[i]<<"and"<<buf[start*block_size+i]<<std::endl;
+                        //                     std::cout<<"dec data"<<dec_data[i]<<"and"<<buf[start*block_size+i]<<std::endl;
 
-                        std::cout<<"max error"<<max_err<<std::endl;
+                        // std::cout<<"max error"<<max_err<<std::endl;
 
                     }
                 }
