@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <iostream>
-
+#include <string>
 // Include raptor
 #include "raptor/raptor.hpp"
 
@@ -104,7 +104,7 @@ int main(int argc, char *argv[])
     // Solve Raptor Hierarchy
     MPI_Barrier(MPI_COMM_WORLD);
     time_base = MPI_Wtime();
-    compression_on=argv[2];
+    compression_on=std::stoi(argv[2]);
     int total_iter=ml->solve(x, b);
     compression_on=81;
     std::cout<<"Total iterations is: "<<total_iter<<std::endl;
