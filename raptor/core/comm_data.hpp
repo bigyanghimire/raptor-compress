@@ -891,7 +891,7 @@ bool is_all_zero(const T* data, size_t size) {
             //     wait_for_pid();
             // }
             if(compression_on==1){
-                // std::cout<<"Compression on>>"<<compression_on<<std::endl;
+                std::cout<<"Compression is on>>"<<std::endl;
                  size_t datasize = (end - start) * block_size;
                 size_t cmpSize;
                 char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
