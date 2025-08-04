@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
     MPI_Barrier(MPI_COMM_WORLD);
     time_base = MPI_Wtime();
     ml = new ParRugeStubenSolver(strong_threshold, coarsen_type, interp_type, Classical, relax_type);
-    std::cout<<"Compression on is"<<compression_on<<std::endl;
+   
     ml->setup(A);
     time_setup = MPI_Wtime() - time_base;
 
@@ -99,6 +99,8 @@ int main(int argc, char *argv[])
     // Solve Raptor Hierarchy
     MPI_Barrier(MPI_COMM_WORLD);
     time_base = MPI_Wtime();
+    compression_on=45;
+    std::cout<<"Compression on is"<<compression_on<<std::endl;
     int total_iter=ml->solve(x, b);
     std::cout<<"Total iterations is: "<<total_iter<<std::endl;
     time_solve = MPI_Wtime() - time_base;
