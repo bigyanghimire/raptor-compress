@@ -7,6 +7,8 @@
 #include <mpi.h>
 //  #include <SZ3/api/sz.hpp>
 extern int compression_on;
+extern double sz3_eb;
+extern double ext_solve_tol;
 // Global Timing Variables
 extern bool profile;
 extern double collective_t;

@@ -7,6 +7,8 @@ double vec_t = 0.0;
 double total_t = 0.0;
 double new_comm_t = 0.0;
 int compression_on=81;
+double sz3_eb=1e-5;
+double ext_solve_tol=1e-5;
 #include <mpi.h>
 #include "mpi_types.hpp"
 #include <iostream>

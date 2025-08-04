@@ -14,6 +14,10 @@ using namespace raptor;
 // This is a basic use case.
 int main(int argc, char *argv[])
 {
+
+    for (int i = 1; i < argc; ++i) {
+        std::cout << "  argv[" << i << "] = " << argv[i] << std::endl;
+    }
     // set rank and number of processors
     int rank, num_procs;
     MPI_Init(&argc, &argv);
