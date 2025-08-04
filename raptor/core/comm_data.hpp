@@ -909,7 +909,7 @@ bool is_all_zero(const T* data, size_t size) {
 
                     }
                 }
-                if (max_err > 1e-3)
+                if (max_err > ext_solve_tol)
                 {
                     std::cout << "Smoke test failed" << std::endl;
                 }
