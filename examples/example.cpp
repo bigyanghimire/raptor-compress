@@ -75,6 +75,7 @@ int main(int argc, char *argv[])
     MPI_Barrier(MPI_COMM_WORLD);
     time_base = MPI_Wtime();
     ml = new ParRugeStubenSolver(strong_threshold, coarsen_type, interp_type, Classical, relax_type);
+    std::cout<<"Compression on is"<<compression_on<<std::endl;
     ml->setup(A);
     time_setup = MPI_Wtime() - time_base;
 
