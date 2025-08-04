@@ -106,7 +106,7 @@ int main(int argc, char *argv[])
     MPI_Barrier(MPI_COMM_WORLD);
     time_base = MPI_Wtime();
     // compression_on=std::stoi(argv[2]);
-    compression_on=81;
+    compression_on=1;
     int total_iter=ml->solve(x, b);
     compression_on=81;
     std::cout<<"Total iterations is: "<<total_iter<<std::endl;
