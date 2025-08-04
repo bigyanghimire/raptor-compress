@@ -511,6 +511,7 @@ namespace raptor
 
                 while (r_norm > solve_tol && iter < max_iterations)
                 {
+                    ext_solve_tol=r_norm;
                     cycle(sol, rhs, 0);
 
                     if (track_times)
@@ -542,7 +543,7 @@ namespace raptor
                         solve_times[4] += mat_t;
                     }
                 }
-                ext_solve_tol=r_norm;
+                
                 return iter;
             }
 
