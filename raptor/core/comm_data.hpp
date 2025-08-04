@@ -902,10 +902,12 @@ bool is_all_zero(const T* data, size_t size) {
                 double max_err = 0.0;
                 for (size_t i = 0; i < datasize; i++)
                 {
-                    std::cout<<"dec data"<<dec_data[i]<<"and"<<buf[start*block_size+i]<<std::endl;
+                    // std::cout<<"dec data"<<dec_data[i]<<"and"<<buf[start*block_size+i]<<std::endl;
                     if (fabs(dec_data[i] - buf[start*block_size+i]) > max_err)
                     {
                         max_err = fabs(dec_data[i] - buf[start*block_size+i]);
+                        std::cout<<"max error"<<max_err<<std::endl;
+
                     }
                 }
                 if (max_err > 1e-3)
