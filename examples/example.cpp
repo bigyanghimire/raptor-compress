@@ -101,10 +101,10 @@ int main(int argc, char *argv[])
     MPI_Barrier(MPI_COMM_WORLD);
     time_base = MPI_Wtime();
     compression_on=1;
-    std::cout<<"Compression on is"<<compression_on<<std::endl;
     int total_iter=ml->solve(x, b);
     compression_on=81;
     std::cout<<"Total iterations is: "<<total_iter<<std::endl;
+    ml->print_residuals(total_iter);
     time_solve = MPI_Wtime() - time_base;
 
     MPI_Reduce(&time_setup, &time_base, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
