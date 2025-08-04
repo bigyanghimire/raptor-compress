@@ -907,7 +907,10 @@ bool is_all_zero(const T* data, size_t size) {
                         max_err = fabs(dec_data[i] - buf[start*block_size+i]);
                     }
                 }
-                printf("Smoke test %s", max_err <= 1e-3 ? "passed" : "failed");
+                if (max_err > 1e-3)
+                {
+                    std::cout << "Smoke test failed" << std::endl;
+                }
                 delete[] cmpData;
 
             /*
