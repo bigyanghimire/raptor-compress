@@ -929,7 +929,7 @@ bool is_all_zero(const T* data, size_t size) {
             
             // print_values(dec_data_p,datasize,"before values");
             // decompress_data(input_data.data(), datasize, cmpSize, cmpData, dec_data_p);
-
+            assert(dec_data.size() >= (end - start) * block_size);
              RAPtor_MPI_Isend(dec_data.data(), (end - start) * block_size,
                               datatype, proc, key, mpi_comm, &(requests[i]));
           
