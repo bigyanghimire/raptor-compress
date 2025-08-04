@@ -517,7 +517,7 @@ namespace raptor
                     {
                         init_profile();
                     }
-
+                    ext_solve_tol=r_norm;
                     iter++;
                     levels[0]->A->residual(sol, rhs, resid);
                     if (fabs(b_norm) > zero_tol)
