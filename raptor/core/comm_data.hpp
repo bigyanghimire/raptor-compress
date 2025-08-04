@@ -898,7 +898,7 @@ bool is_all_zero(const T* data, size_t size) {
 
                 // std::vector<T> dec_data(datasize);
                 // auto dec_data_p = dec_data.data();
-                T* dec_data=decompress_data(&buf[start * block_size], datasize, cmpSize, cmpData);
+                T* dec_data=decompress_data( datasize, cmpSize, cmpData);
                 double max_err = 0.0;
                 for (size_t i = 0; i < datasize; i++)
                 {
@@ -934,11 +934,11 @@ bool is_all_zero(const T* data, size_t size) {
             
             // print_values(dec_data_p,datasize,"before values");
             // decompress_data(input_data.data(), datasize, cmpSize, cmpData, dec_data_p);
-             RAPtor_MPI_Isend(dec_data.data(), (end - start) * block_size,
-                              datatype, proc, key, mpi_comm, &(requests[i]));
+            //  RAPtor_MPI_Isend(dec_data.data(), (end - start) * block_size,
+            //                   datatype, proc, key, mpi_comm, &(requests[i]));
           
-                            //   RAPtor_MPI_Isend(&(buf[start * block_size]), (end - start) * block_size,
-                            //                datatype, proc, key, mpi_comm, &(requests[i]));
+                              RAPtor_MPI_Isend(&(buf[start * block_size]), (end - start) * block_size,
+                                           datatype, proc, key, mpi_comm, &(requests[i]));
 
         }
     }
