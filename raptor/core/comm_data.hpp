@@ -897,8 +897,8 @@ bool is_all_zero(const T* data, size_t size) {
                 char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
 
                 std::vector<T> dec_data(datasize);
-                auto dec_data_p = dec_data.data();
-                decompress_data(&buf[start * block_size], datasize, cmpSize, cmpData, dec_data_p);
+                // auto dec_data_p = dec_data.data();
+                decompress_data(&buf[start * block_size], datasize, cmpSize, cmpData, dec_data.data());
                 double max_err = 0.0;
                 for (size_t i = 0; i < datasize; i++)
                 {
