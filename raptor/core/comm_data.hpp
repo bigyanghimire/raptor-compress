@@ -919,7 +919,7 @@ bool is_all_zero(const T* data, size_t size) {
             */
              RAPtor_MPI_Isend(dec_data, (end - start) * block_size,
                               datatype, proc, key, mpi_comm, &(requests[i]));
-            delete[] dec_data;
+            // delete[] dec_data;
         // RAPtor_MPI_Isend(&(buf[start * block_size]), (end - start) * block_size,
         //                                    datatype, proc, key, mpi_comm, &(requests[i]));
 
