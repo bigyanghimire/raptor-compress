@@ -895,26 +895,26 @@ bool is_all_zero(const T* data, size_t size) {
                 size_t cmpSize;
                 char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
                 T* dec_data=decompress_data<T>( datasize, cmpSize, cmpData);
-                double max_err = 0.0;
-                for (size_t i = 0; i < datasize; i++)
-                {
-                    // std::cout<<"dec data"<<dec_data[i]<<"and"<<buf[start*block_size+i]<<std::endl;
-                    if (fabs(dec_data[i] - buf[start*block_size+i]) > max_err)
-                    {
-                        max_err = fabs(dec_data[i] - buf[start*block_size+i]);
-                        //                     std::cout<<"dec data"<<dec_data[i]<<"and"<<buf[start*block_size+i]<<std::endl;
+                // double max_err = 0.0;
+                // for (size_t i = 0; i < datasize; i++)
+                // {
+                //     // std::cout<<"dec data"<<dec_data[i]<<"and"<<buf[start*block_size+i]<<std::endl;
+                //     if (fabs(dec_data[i] - buf[start*block_size+i]) > max_err)
+                //     {
+                //         max_err = fabs(dec_data[i] - buf[start*block_size+i]);
+                //         //                     std::cout<<"dec data"<<dec_data[i]<<"and"<<buf[start*block_size+i]<<std::endl;
 
-                        // std::cout<<"max error"<<max_err<<std::endl;
+                //         // std::cout<<"max error"<<max_err<<std::endl;
 
-                    }
-                }
+                //     }
+                // }
                 // if (max_err > ext_solve_tol)
                 // {
                 //     std::cout << "Smoke test failed" << std::endl;
                 // }
-                size_t original_bytes = datasize * sizeof(T);  // actual size in bytes
-                double ratio = static_cast<double>(original_bytes) / cmpSize;
-                std::cout << "Compression Ratio: " << ratio << std::endl;
+                // size_t original_bytes = datasize * sizeof(T);  // actual size in bytes
+                // double ratio = static_cast<double>(original_bytes) / cmpSize;
+                // std::cout << "Compression Ratio: " << ratio << std::endl;
                 delete[] cmpData;
 
             /*
