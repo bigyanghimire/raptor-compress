@@ -105,6 +105,7 @@ int main(int argc, char *argv[])
     // Solve Raptor Hierarchy
     MPI_Barrier(MPI_COMM_WORLD);
     time_base = MPI_Wtime();
+    ext_solve_tol=std::stod(argv[2]);
     compression_on=std::stoi(argv[3]);
     //compression_on=1;
     int total_iter=ml->solve(x, b);
