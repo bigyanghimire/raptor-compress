@@ -913,6 +913,9 @@ bool is_all_zero(const T* data, size_t size) {
                 {
                     std::cout << "Smoke test failed" << std::endl;
                 }
+                size_t original_bytes = datasize * sizeof(T);  // actual size in bytes
+                double ratio = static_cast<double>(original_bytes) / cmpSize;
+                std::cout << "Compression Ratio: " << ratio << std::endl;
                 delete[] cmpData;
 
             /*
