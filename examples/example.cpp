@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
     // Anisotropic diffusion
     coarsen_t coarsen_type = CLJP;
     interp_t interp_type = ModClassical;
-    relax_t relax_type = Jacobi;
+    relax_t relax_type = SOR;
     double eps = 0.001;
     double theta = M_PI / 8.0;
     double *stencil = NULL;
