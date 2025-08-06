@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
     // Problems size and type
     int dim = 2;
-    int n = 100;
+    int n = 700;
 
     std::vector<int> grid;
     grid.resize(dim, n);
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
     // Anisotropic diffusion
     coarsen_t coarsen_type = CLJP;
     interp_t interp_type = ModClassical;
-    relax_t relax_type = SOR;
+    relax_t relax_type = Jacobi;
     double eps = 0.001;
     double theta = M_PI / 8.0;
     double *stencil = NULL;
