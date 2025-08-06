@@ -652,6 +652,7 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
             //     std::cout << "In initialize commpkg>>>>" << std::endl;
             // }
             if (profile) vec_t -= RAPtor_MPI_Wtime();
+            std::cout<<"value is initlaize"<<values[3]<<std::endl;
             send_data->send(values, key, mpi_comm, block_size);
             recv_data->recv<T>(key, mpi_comm, block_size);
             if (profile) vec_t += RAPtor_MPI_Wtime();

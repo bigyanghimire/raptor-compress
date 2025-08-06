@@ -47,6 +47,7 @@ void ParMatrix::mult(ParVector& x, ParVector& b, bool tap)
 
     // Initialize Isends and Irecvs to communicate
     // values of x
+    std::cout<<"value is par spmv"<<x.local.data()[3]<<std::endl;
     comm->init_comm(x, off_proc->b_cols);
 
     // Multiply the diagonal portion of the matrix,
@@ -233,6 +234,7 @@ void ParMatrix::residual(ParVector& x, ParVector& b, ParVector& r, bool tap)
 
     // Initialize Isends and Irecvs to communicate
     // values of x
+    // Ends up at comm_pkg.hpp: 640
     comm->init_comm(x, off_proc->b_cols);
 
     std::copy(b.local.values.begin(), b.local.values.end(), 
