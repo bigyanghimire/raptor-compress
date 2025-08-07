@@ -958,7 +958,7 @@ bool is_all_zero(const T* data, size_t size) {
             MPI_Pack(&cmp_size, 1, MPI_INT, buff, total_buffer_size, &position, MPI_COMM_WORLD);
            
            int unpacked_val;
-           int position = 0;
+            position = 0;
            MPI_Unpack(buff, 1000, &position, &unpacked_val, 1, MPI_INT, MPI_COMM_WORLD);
            std::cout << "Unpacked cmp size is" << unpacked_val << std::endl;
            MPI_Pack(cmpData, cmp_size, MPI_CHAR, buff, total_buffer_size, &position, MPI_COMM_WORLD);
