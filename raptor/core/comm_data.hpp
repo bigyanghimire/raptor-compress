@@ -176,6 +176,7 @@ void print_values(const T* values, size_t size, char * disp) {
                 int msg_size_probe;
                 int recv_position=0;
                 MPI_Get_count(&statusProbe, MPI_PACKED, &msg_size_probe);
+                std::cout<<"recv Message size probe is"<<msg_size_probe<<std::endl;
                 char recv_buff[msg_size_probe];
                 std::cout << "Here comes the status" << std::endl;
                 char* cmp_data[msg_size_probe-4];
@@ -183,7 +184,7 @@ void print_values(const T* values, size_t size, char * disp) {
                                  proc, 9999123, mpi_comm, &(requests[i]));
                 MPI_Unpack(recv_buff, msg_size_probe, &recv_position, &cmp_size, 1, MPI_INT, MPI_COMM_WORLD);
                 MPI_Unpack(recv_buff, msg_size_probe, &recv_position, cmp_data, cmp_size, MPI_CHAR, MPI_COMM_WORLD);
-                std::cout<<"on recv side cmp size was"<<cmp_size<<"position:"<<recv_position<<"total_buffer_size: "<<msg_size_probe<<std::endl;
+                // std::cout<<"on recv side cmp size was"<<cmp_size<<"position:"<<recv_position<<"total_buffer_size: "<<msg_size_probe<<std::endl;
                 T* dec_data=decompress_data<T>((end - start) * block_size, cmp_size, cmp_data[0]);
                 // buf[start * block_size]=dec_data
                 for (int i = 0; i < (end - start) * block_size; ++i){
