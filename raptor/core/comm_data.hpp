@@ -922,12 +922,13 @@ bool is_all_zero(const T* data, size_t size) {
             */
             // RAPtor_MPI_Isend(cmpData, cmpSize,
             //                   datatype, proc, key, mpi_comm, &(requests[i]));
-            char buff[cmpSize+1000];
+            int total_buffer_size=cmpSize+8;
+            char buff[total_buffer_size];
             int position=0;
-            MPI_Pack(&datasize, 1, MPI_INT, buff, 1000, &position, MPI_COMM_WORLD);
-            MPI_Pack(&cmpSize, 1, MPI_INT, buff, 1000, &position, MPI_COMM_WORLD);
-            MPI_Pack(cmpData, cmpSize, MPI_CHAR, buff, cmpSize+1000, &position, MPI_COMM_WORLD);
-            
+            MPI_Pack(&datasize, 1, MPI_INT, buff, total_buffer_size, &position, MPI_COMM_WORLD);
+            MPI_Pack(&cmpSize, 1, MPI_INT, buff, total_buffer_size, &position, MPI_COMM_WORLD);
+            MPI_Pack(cmpData, cmpSize, MPI_CHAR, buff, total_buffer_size, &position, MPI_COMM_WORLD);
+            std::cout<<"Position is at"<<position<<"with cmpsize"<<cmpSize<<std::endl;
             RAPtor_MPI_Isend(dec_data, (end - start) * block_size,
                               datatype, proc, key, mpi_comm, &(requests[i]));
             }else{
