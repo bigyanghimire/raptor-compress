@@ -183,6 +183,7 @@ void print_values(const T* values, size_t size, char * disp) {
                                  proc, 9999123, mpi_comm, &(requests[i]));
                 MPI_Unpack(recv_buff, msg_size_probe, &recv_position, &cmp_size, 1, MPI_INT, MPI_COMM_WORLD);
                 MPI_Unpack(recv_buff, msg_size_probe, &recv_position, cmp_data, cmp_size, MPI_CHAR, MPI_COMM_WORLD);
+                std::cout<<"on recv side cmp size was"<<cmp_size<<"position:"<<recv_position<<"total_buffer_size: "<<msg_size_probe<<std::endl;
                 T* dec_data=decompress_data<T>((end - start) * block_size, cmp_size, cmp_data[0]);
                 // buf[start * block_size]=dec_data
                 for (int i = 0; i < (end - start) * block_size; ++i){
@@ -953,6 +954,7 @@ bool is_all_zero(const T* data, size_t size) {
             int position=0;
             MPI_Pack(&cmpSize, 1, MPI_INT, buff, total_buffer_size, &position, MPI_COMM_WORLD);
             MPI_Pack(cmpData, cmpSize, MPI_CHAR, buff, total_buffer_size, &position, MPI_COMM_WORLD);
+            std::cout<<"cmp size was"<<cmpSize<<"position:"<<position<<"total_buffer_size: "<<total_buffer_size<<std::endl;
             // RAPtor_MPI_Isend(dec_data, (end - start) * block_size,
             //       datatype, proc, 9999123, mpi_comm, &(requests[i]));
             RAPtor_MPI_Isend(buff, position,
