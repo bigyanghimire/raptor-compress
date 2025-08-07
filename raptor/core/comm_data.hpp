@@ -167,6 +167,10 @@ void print_values(const T* values, size_t size, char * disp) {
             proc = procs[i];
             start = indptr[i];
             end = indptr[i+1];
+            // Check for compressed buffer
+            MPI_Status statusProbe;
+            MPI_Probe(proc, MPI_ANY_TAG, mpi_comm, &statusProbe);
+            std::cout<<"MPI Tag is"<<statusProbe.MPI_TAG<<std::endl;
             RAPtor_MPI_Irecv(&(buf[start*block_size]), (end - start) * block_size, datatype,
                     proc, key, mpi_comm, &(requests[i]));
         }
