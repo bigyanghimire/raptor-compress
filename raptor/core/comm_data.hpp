@@ -170,7 +170,10 @@ void print_values(const T* values, size_t size, char * disp) {
             // Check for compressed buffer
             MPI_Status statusProbe;
             MPI_Probe(proc, MPI_ANY_TAG, mpi_comm, &statusProbe);
-            std::cout<<"MPI Tag is"<<statusProbe.MPI_TAG<<std::endl;
+            if(statusProbe.MPI_TAG==9999123){
+                std::cout<<"Here comes the status"<<std::endl;
+            }
+
             RAPtor_MPI_Irecv(&(buf[start*block_size]), (end - start) * block_size, datatype,
                     proc, key, mpi_comm, &(requests[i]));
         }
@@ -932,9 +935,8 @@ bool is_all_zero(const T* data, size_t size) {
             MPI_Pack(&datasize, 1, MPI_INT, buff, total_buffer_size, &position, MPI_COMM_WORLD);
             MPI_Pack(&cmpSize, 1, MPI_INT, buff, total_buffer_size, &position, MPI_COMM_WORLD);
             MPI_Pack(cmpData, cmpSize, MPI_CHAR, buff, total_buffer_size, &position, MPI_COMM_WORLD);
-            std::cout<<"Position is at"<<position<<"with cmpsize"<<cmpSize<<std::endl;
             RAPtor_MPI_Isend(dec_data, (end - start) * block_size,
-                              datatype, proc, key, mpi_comm, &(requests[i]));
+                              datatype, proc, 9999123, mpi_comm, &(requests[i]));
             }else{
                 RAPtor_MPI_Isend(&(buf[start * block_size]), (end - start) * block_size,
                                                         datatype, proc, key, mpi_comm, &(requests[i]));
