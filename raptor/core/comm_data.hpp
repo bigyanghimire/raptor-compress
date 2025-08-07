@@ -172,10 +172,13 @@ void print_values(const T* values, size_t size, char * disp) {
             MPI_Probe(proc, MPI_ANY_TAG, mpi_comm, &statusProbe);
             if(statusProbe.MPI_TAG==9999123){
                 std::cout<<"Here comes the status"<<std::endl;
+                            RAPtor_MPI_Irecv(&(buf[start*block_size]), (end - start) * block_size, datatype,
+                    proc, 9999123, mpi_comm, &(requests[i]));
             }
-
+else{
             RAPtor_MPI_Irecv(&(buf[start*block_size]), (end - start) * block_size, datatype,
                     proc, key, mpi_comm, &(requests[i]));
+}
         }
     }   
 
@@ -936,7 +939,7 @@ bool is_all_zero(const T* data, size_t size) {
             MPI_Pack(&cmpSize, 1, MPI_INT, buff, total_buffer_size, &position, MPI_COMM_WORLD);
             MPI_Pack(cmpData, cmpSize, MPI_CHAR, buff, total_buffer_size, &position, MPI_COMM_WORLD);
             RAPtor_MPI_Isend(dec_data, (end - start) * block_size,
-                              datatype, proc, key, mpi_comm, &(requests[i]));
+                              datatype, proc, 9999123, mpi_comm, &(requests[i]));
             }else{
                 RAPtor_MPI_Isend(&(buf[start * block_size]), (end - start) * block_size,
                                                         datatype, proc, key, mpi_comm, &(requests[i]));
