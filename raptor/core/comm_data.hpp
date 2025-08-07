@@ -185,7 +185,9 @@ void print_values(const T* values, size_t size, char * disp) {
                 MPI_Unpack(recv_buff, msg_size_probe, &recv_position, cmp_data, cmp_size, MPI_CHAR, MPI_COMM_WORLD);
                 T* dec_data=decompress_data<T>((end - start) * block_size, cmp_size, cmp_data);
                 // buf[start * block_size]=dec_data
-                memcpy(&buf[start * block_size], dec_data, sizeof(T) * (end - start) * block_size);
+                for (int i = 0; i < (end - start) * block_size; ++i)
+                    buf[start * block_size + i] = dec_data[i];
+                // memcpy(&buf[start * block_size], dec_data, sizeof(T) * (end - start) * block_size);
             }
             else
             {
