@@ -673,6 +673,7 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
                 for(int i=0;i<10;i++){
                     std::cout<<"Msg size buffer is"<<msg_size_buf[i]<<std::endl;
                 }
+                std::vector<T>& buf = recv_data->get_buffer<T>();
             }else{
                 std::vector<T>& buf = recv_data->get_buffer<T>();
             }
