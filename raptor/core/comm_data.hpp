@@ -110,7 +110,9 @@ void print_values(const T* values, size_t size, char * disp) {
 
     template <typename T>
     std::vector<T>& get_buffer(const int block_size = 1);
-
+    std::vector<int>& get_msg_size_buffer(){
+        return msg_size_prob_buffer;
+    }
     template <typename T>
     void send(const T* values, int key, RAPtor_MPI_Comm mpi_comm, const int block_size = 1,
             std::function<T(T, T)> init_result_func = &sum_func<T, T>,
@@ -160,6 +162,9 @@ void print_values(const T* values, size_t size, char * disp) {
         int size = size_msgs * block_size;
         RAPtor_MPI_Datatype datatype = get_type<T>();
         std::vector<T>& buf = get_buffer<T>();
+        std::vector<char>& charbuf = get_buffer<char>();
+        std::vector<int>& msg_size_buf=get_msg_size_buffer();
+        if ((int) charbuf.size() < size) charbuf.resize(size);
         if ((int) buf.size() < size) buf.resize(size);
 
         for (int i = 0; i < num_msgs; i++)
@@ -182,15 +187,17 @@ void print_values(const T* values, size_t size, char * disp) {
                 char* cmp_data[msg_size_probe-sizeof(int)];
                 RAPtor_MPI_Irecv(recv_buff, msg_size_probe, MPI_PACKED,
                                  proc, 9999123, mpi_comm, &(requests[i]));
-                MPI_Unpack(recv_buff, msg_size_probe, &recv_position, &cmp_size, 1, MPI_INT, MPI_COMM_WORLD);
-                std::cout<<"Recv cmp size"<<cmp_size<<std::endl;
-                MPI_Unpack(recv_buff, msg_size_probe, &recv_position, cmp_data, cmp_size, MPI_CHAR, MPI_COMM_WORLD);
-                // std::cout<<"on recv side cmp size was"<<cmp_size<<"position:"<<recv_position<<"total_buffer_size: "<<msg_size_probe<<std::endl;
-                T* dec_data=decompress_data<T>((end - start) * block_size, cmp_size, cmp_data[0]);
-                // buf[start * block_size]=dec_data
-                for (int i = 0; i < (end - start) * block_size; ++i){
-                    buf[start * block_size + i] = dec_data[i];
-                }
+                msg_size_buf.push_back(msg_size_probe);
+               // charbuff.push_back(recv_buff);
+                // MPI_Unpack(recv_buff, msg_size_probe, &recv_position, &cmp_size, 1, MPI_INT, MPI_COMM_WORLD);
+                // std::cout<<"Recv cmp size"<<cmp_size<<std::endl;
+                // MPI_Unpack(recv_buff, msg_size_probe, &recv_position, cmp_data, cmp_size, MPI_CHAR, MPI_COMM_WORLD);
+                // // std::cout<<"on recv side cmp size was"<<cmp_size<<"position:"<<recv_position<<"total_buffer_size: "<<msg_size_probe<<std::endl;
+                // T* dec_data=decompress_data<T>((end - start) * block_size, cmp_size, cmp_data[0]);
+                // // buf[start * block_size]=dec_data
+                // for (int i = 0; i < (end - start) * block_size; ++i){
+                //     buf[start * block_size + i] = dec_data[i];
+                // }
                 // memcpy(&buf[start * block_size], dec_data, sizeof(T) * (end - start) * block_size);
             }
             else
@@ -344,6 +351,7 @@ void print_values(const T* values, size_t size, char * disp) {
     std::vector<double> buffer;
     std::vector<int> int_buffer;
     std::vector<char> pack_buffer;
+    std::vector<int> msg_size_prob_buffer;
 
 };
 
