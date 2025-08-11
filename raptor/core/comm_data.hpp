@@ -114,7 +114,7 @@ void print_values(const T* values, size_t size, char * disp) {
     std::vector<int>& get_msg_size_buffer(){
         return msg_size_prob_buffer;
     }
-    std::vector<char>& get_cmp_buffer(){
+     std::vector<std::vector<char>>& get_cmp_buffer(){
         return all_recv_buffs;
     }
     template <typename T>
