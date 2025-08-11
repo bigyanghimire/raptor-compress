@@ -188,6 +188,9 @@ void print_values(const T* values, size_t size, char * disp) {
                 RAPtor_MPI_Irecv(recv_buff, msg_size_probe, MPI_PACKED,
                                  proc, 9999123, mpi_comm, &(requests[i]));
                 msg_size_buf.push_back(msg_size_probe);
+                for(int i=0;i<10;i++){
+                    std::cout<<"Msg size buffer is comm data"<<msg_size_buf[i]<<std::endl;
+                }
                // charbuff.push_back(recv_buff);
                 // MPI_Unpack(recv_buff, msg_size_probe, &recv_position, &cmp_size, 1, MPI_INT, MPI_COMM_WORLD);
                 // std::cout<<"Recv cmp size"<<cmp_size<<std::endl;
