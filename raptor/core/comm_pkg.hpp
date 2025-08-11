@@ -668,14 +668,15 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
             
             std::vector<T>& buf = recv_data->get_buffer<T>();
             // Extract packed data to appropriate buffer
-            // if(compression_on){
-            //     std::vector<char>& tempbuf = recv_data->get_buffer<char>();
-            //     std::vector<int>& msg_size_buf=recv_data->get_msg_size_buffer();
-            //     for(int i=0;i<10;i++){
-            //         std::cout<<"Msg size buffer is"<<msg_size_buf[i]<<std::endl;
-            //     }
-            //     std::vector<T>& buf = recv_data->get_buffer<T>();
-            // }else{
+            if(compression_on){
+                // std::vector<char>& tempbuf = recv_data->get_buffer<char>();
+                std::vector<int>& msg_size_buf=recv_data->get_msg_size_buffer();
+                for(int i=0;i<10;i++){
+                    std::cout<<"Msg size buffer is"<<msg_size_buf[i]<<std::endl;
+                }
+                // std::vector<T>& buf = recv_data->get_buffer<T>();
+            }
+            // else{
             //     std::vector<T>& buf = recv_data->get_buffer<T>();
             // }
 
