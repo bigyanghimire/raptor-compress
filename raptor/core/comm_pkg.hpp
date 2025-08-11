@@ -665,7 +665,8 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
             recv_data->waitall();
             if (profile) vec_t += RAPtor_MPI_Wtime();
             key++;
-
+            
+            std::vector<T>& buf = recv_data->get_buffer<T>();
             // Extract packed data to appropriate buffer
             if(compression_on){
                 std::vector<char>& tempbuf = recv_data->get_buffer<char>();
