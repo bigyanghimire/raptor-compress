@@ -943,18 +943,10 @@ bool is_all_zero(const T* data, size_t size) {
                 char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
                 T* dec_data=decompress_data<T>( datasize, cmpSize, cmpData);
                 // double max_err = 0.0;
-                // for (size_t i = 0; i < datasize; i++)
-                // {
-                //     // std::cout<<"dec data"<<dec_data[i]<<"and"<<buf[start*block_size+i]<<std::endl;
-                //     if (fabs(dec_data[i] - buf[start*block_size+i]) > max_err)
-                //     {
-                //         max_err = fabs(dec_data[i] - buf[start*block_size+i]);
-                //         //                     std::cout<<"dec data"<<dec_data[i]<<"and"<<buf[start*block_size+i]<<std::endl;
-
-                //         // std::cout<<"max error"<<max_err<<std::endl;
-
-                //     }
-                // }
+                for (size_t j = 0; j < datasize; j++)
+                {
+                    std::cout<<"sent element is"<<buf[start*block_size+j]<<std::endl;
+                }
                 // if (max_err > ext_solve_tol)
                 // {
                 //     std::cout << "Smoke test failed" << std::endl;
