@@ -186,8 +186,8 @@ void print_values(const T* values, size_t size, char * disp) {
                 std::cout << "Here comes the status" << std::endl;
                 char* cmp_data[msg_size_probe-sizeof(int)];
                 char recv_buff[msg_size_probe];
-                all_recv_buffs[i].resize(msg_size_probe);
-                RAPtor_MPI_Irecv(all_recv_buffs[i].data(), msg_size_probe, MPI_PACKED,
+                tmp_cmp_buf[i].resize(msg_size_probe);
+                RAPtor_MPI_Irecv(tmp_cmp_buf[i].data(), msg_size_probe, MPI_PACKED,
                                  proc, 9999123, mpi_comm, &(requests[i]));
                 // for(int i=0;i<10;i++){
                 //     std::cout<<"Msg size buffer is comm data"<<msg_size_buf[i]<<std::endl;
