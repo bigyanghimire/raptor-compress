@@ -668,6 +668,7 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
             key++;
             
             std::vector<T>& buf = recv_data->get_buffer<T>();
+            //std::vector<T> newbuf;
             // Extract packed data to appropriate buffer
             if(compression_on==1){
                 // std::vector<char>& tempbuf = recv_data->get_buffer<char>();
@@ -685,7 +686,7 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
                     std::vector<char> cmp_data(cmp_size);
                     MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, cmp_data.data(), cmp_size, MPI_CHAR, MPI_COMM_WORLD);
                     T* dec_data=decompress_data<T>(recv_data_size, cmp_size, cmp_data.data());
-                    buf.assign(dec_data, dec_data + recv_data_size);
+                    buf.insert(buf.end(), dec_data, dec_data + recv_data_size);
                 }
                 // std::vector<T>& buf = recv_data->get_buffer<T>();
             }
