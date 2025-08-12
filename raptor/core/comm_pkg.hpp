@@ -677,12 +677,12 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
                     int recv_position=0;
                     int cmp_size;
                     int recv_data_size;
-                    char* cmp_data[tmp_cmp_buf.size()-sizeof(int)];
+                    char* cmp_data[tmp_cmp_buf[i].size()-sizeof(int)-sizeof(int)];
                     MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, &cmp_size, 1, MPI_INT, MPI_COMM_WORLD);
                     MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, &recv_data_size, 1, MPI_INT, MPI_COMM_WORLD);
                     // MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, cmp_data, cmp_size, MPI_CHAR, MPI_COMM_WORLD);
                     std::cout<<"Final recv cmp size"<<cmp_size<<std::endl;
-                    // MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, cmp_data, cmp_size, MPI_CHAR, MPI_COMM_WORLD);
+                    MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, cmp_data, cmp_size, MPI_CHAR, MPI_COMM_WORLD);
                     
                 }
                 // std::vector<T>& buf = recv_data->get_buffer<T>();
