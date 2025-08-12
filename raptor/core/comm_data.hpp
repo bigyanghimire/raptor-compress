@@ -168,6 +168,7 @@ void print_values(const T* values, size_t size, char * disp) {
         std::vector<T>& buf = get_buffer<T>();
         std::vector<std::vector<char>>& tmp_cmp_buf = get_cmp_buffer();
         if ((int) buf.size() < size) buf.resize(size);
+        std::cout<<"NUm messages is"<<num_msgs<<std::endl;
         if ((int) tmp_cmp_buf.size() < size) tmp_cmp_buf.resize(size);
 
         for (int i = 0; i < num_msgs; i++)
