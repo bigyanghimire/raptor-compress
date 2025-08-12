@@ -690,9 +690,9 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
                     for (int j=0;j<recv_data_size;j++){
                         std::cout<<"element is"<<dec_data[j]<<std::endl;
                     }
-                    newbuf.insert(newbuf.end(), dec_data, dec_data + recv_data_size);
+                    // newbuf.insert(newbuf.end(), dec_data, dec_data + recv_data_size);
                 }
-                return newbuf;
+                return buf;
                 // std::vector<T>& buf = recv_data->get_buffer<T>();
             }
             else{
