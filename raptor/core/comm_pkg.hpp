@@ -675,7 +675,6 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
                     int recv_position=0;
                     int cmp_size;
                     char* cmp_data[tmp_cmp_buf.size()-sizeof(int)];
-                    std::cout<<"Msg size buffer is"<<msg_size_buf[i]<<std::endl;
                     MPI_Unpack(tmp_cmp_buf[i], tmp_cmp_buf[i].size(), &recv_position, &cmp_size, 1, MPI_INT, MPI_COMM_WORLD);
                     std::cout<<"Recv cmp size"<<cmp_size<<std::endl;
                     MPI_Unpack(tmp_cmp_buf[i], tmp_cmp_buf[i].size(), &recv_position, cmp_data, cmp_size, MPI_CHAR, MPI_COMM_WORLD);
