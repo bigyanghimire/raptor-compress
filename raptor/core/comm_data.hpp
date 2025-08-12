@@ -168,6 +168,7 @@ void print_values(const T* values, size_t size, char * disp) {
         std::vector<T>& buf = get_buffer<T>();
         if ((int) buf.size() < size) buf.resize(size);
         std::vector<std::vector<char>>& tmp_cmp_buf = get_cmp_buffer();
+        std::cout<<"NUm messages is"<<num_msgs<<std::endl;
         for (int i = 0; i < num_msgs; i++)
         {
             proc = procs[i];
@@ -186,6 +187,7 @@ void print_values(const T* values, size_t size, char * disp) {
                 std::cout << "Here comes the status" << std::endl;
                 char* cmp_data[msg_size_probe-sizeof(int)];
                 char recv_buff[msg_size_probe];
+                std::cout<<"Tmp cmp buf size is"<<tmp_cmp_buf.size()<<std::endl;
                 tmp_cmp_buf[i].resize(msg_size_probe);
                 RAPtor_MPI_Irecv(tmp_cmp_buf[i].data(), msg_size_probe, MPI_PACKED,
                                  proc, 9999123, mpi_comm, &(requests[i]));
