@@ -671,7 +671,7 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
             if(compression_on==1){
                 // std::vector<char>& tempbuf = recv_data->get_buffer<char>();
                 std::vector<std::vector<char>>& tmp_cmp_buf = recv_data-> get_cmp_buffer();
-                std::cout<"Num messages is>>"<<recv_data->num_msgs<<"tmp buf size"<<tmp_cmp_buf.size()<<std::endl;
+                std::cout<<"Num messages is>>"<<recv_data->num_msgs<<"tmp buf size"<<tmp_cmp_buf.size()<<std::endl;
 
                 for(int i=0;i<tmp_cmp_buf.size();i++){
                     int recv_position=0;
