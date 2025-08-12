@@ -193,9 +193,9 @@ void print_values(const T* values, size_t size, char * disp) {
                 tmp_cmp_buf[i].resize(msg_size_probe);
                 RAPtor_MPI_Irecv(tmp_cmp_buf[i].data(), msg_size_probe, MPI_PACKED,
                                  proc, 9999123, mpi_comm, &(requests[i]));
-                MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, &cmp_size, 1, MPI_INT, MPI_COMM_WORLD);
-                std::cout<<"comm data recv cmp size"<<cmp_size<<std::endl;
-                // for(int i=0;i<10;i++){
+                // MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, &cmp_size, 1, MPI_INT, MPI_COMM_WORLD);
+                // std::cout<<"comm data recv cmp size"<<cmp_size<<std::endl;
+                // // for(int i=0;i<10;i++){
                 //     std::cout<<"Msg size buffer is comm data"<<msg_size_buf[i]<<std::endl;
                 // }
                 // MPI_Unpack(recv_buff, msg_size_probe, &recv_position, &cmp_size, 1, MPI_INT, MPI_COMM_WORLD);
