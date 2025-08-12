@@ -678,12 +678,12 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
                     int recv_position=0;
                     int cmp_size;
                     int recv_data_size;
-                    char* cmp_data[tmp_cmp_buf[i].size()-sizeof(int)-sizeof(int)];
                     MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, &cmp_size, 1, MPI_INT, MPI_COMM_WORLD);
                     MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, &recv_data_size, 1, MPI_INT, MPI_COMM_WORLD);
                     // MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, cmp_data, cmp_size, MPI_CHAR, MPI_COMM_WORLD);
                     std::cout<<"Final recv cmp size"<<cmp_size<<std::endl;
-                    MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, cmp_data, cmp_size, MPI_CHAR, MPI_COMM_WORLD);
+                    std::vector<char> cmp_data(cmp_size);
+                    MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, cmp_data.data(), cmp_size, MPI_CHAR, MPI_COMM_WORLD);
                     T* dec_data=decompress_data<T>(recv_data_size, cmp_size, cmp_data);
                     buf.assign(dec_data, dec_data + recv_data_size);
                 }
