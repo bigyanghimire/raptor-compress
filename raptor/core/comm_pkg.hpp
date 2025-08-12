@@ -9,6 +9,7 @@
 #include "partition.hpp"
 #include "par_vector.hpp"
 #include <iostream>
+#include "sz3_wrapper.hpp"
 #define STANDARD_PPN 4
 #define STANDARD_PROC_LAYOUT 1
 
@@ -683,7 +684,8 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
                     // MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, cmp_data, cmp_size, MPI_CHAR, MPI_COMM_WORLD);
                     std::cout<<"Final recv cmp size"<<cmp_size<<std::endl;
                     MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, cmp_data, cmp_size, MPI_CHAR, MPI_COMM_WORLD);
-                    
+                    T* dec_data=decompress_data<T>(recv_data_size, cmp_size, cmp_data);
+                    buf.assign(dec_data, dec_data + recv_data_size);
                 }
                 // std::vector<T>& buf = recv_data->get_buffer<T>();
             }
