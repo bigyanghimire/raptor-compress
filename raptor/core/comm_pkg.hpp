@@ -658,69 +658,21 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
             if (profile) vec_t += RAPtor_MPI_Wtime();
         }
 
-        template<typename T>
-        std::vector<T>& complete(const int block_size = 1)
+        template <typename T>
+        std::vector<T> &complete(const int block_size = 1)
         {
-            if (profile) vec_t -= RAPtor_MPI_Wtime();
+            if (profile)
+                vec_t -= RAPtor_MPI_Wtime();
             send_data->waitall();
             recv_data->waitall();
-            if (profile) vec_t += RAPtor_MPI_Wtime();
+            if (profile)
+                vec_t += RAPtor_MPI_Wtime();
             key++;
-            
-            std::vector<T>& buf = recv_data->get_buffer<T>();
-            std::vector<T> newbuf;
-            //std::vector<T> newbuf;
-            // Extract packed data to appropriate buffer
-            if(compression_on==1){
-                // std::vector<char>& tempbuf = recv_data->get_buffer<char>();
-                std::vector<std::vector<char>>& tmp_cmp_buf = recv_data-> get_cmp_buffer();
-                std::cout<<"Num messages is>>"<<recv_data->num_msgs<<"tmp buf size"<<tmp_cmp_buf.size()<<std::endl;
 
-                for(int i=0;i<tmp_cmp_buf.size();i++){
-                    int recv_position=0;
-                    int cmp_size;
-                    int recv_data_size;
-                    MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, &cmp_size, 1, MPI_INT, MPI_COMM_WORLD);
-                    MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, &recv_data_size, 1, MPI_INT, MPI_COMM_WORLD);
-                    // MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, cmp_data, cmp_size, MPI_CHAR, MPI_COMM_WORLD);
-                    std::cout<<"Final recv cmp size"<<cmp_size<<std::endl;
-                    std::vector<char> cmp_data(cmp_size);
-                    std::vector<double> recv_array(recv_data_size);
-                    // MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, cmp_data.data(), cmp_size, MPI_CHAR, MPI_COMM_WORLD);
-                    MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, recv_array.data(), recv_data_size, MPI_DOUBLE, MPI_COMM_WORLD);
+            std::vector<T> &buf = recv_data->get_buffer<T>();
+            return buf;
+        }
 
-                    // std::cout<<"the text is"<<cmp_data.data()<<std::endl;
-                    // T* dec_data=decompress_data<T>(recv_data_size, cmp_size, cmp_data.data());
-                    for (int j=0;j<recv_data_size;j++){
-                        std::cout<<"decomp recv element is"<<recv_array[j]<<std::endl;
-                        newbuf.push_back(recv_array[j]);
-                    }
-                    // delete[] dec_data;
-                    // newbuf.insert(newbuf.end(), dec_data, dec_data + recv_data_size);
-                }
-                // for (int x=0;x<newbuf.size();x++){
-                //         std::cout<<"decomp recv element is"<<newbuf[x]<<std::endl;
-                //         // newbuf.push_back(recv_array[x]);
-                // }
-                return newbuf;
-                // std::vector<T>& buf = recv_data->get_buffer<T>();
-            }
-            else{
-            //      int myrank, num_procs;
-            //     MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
-            //     MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
-            //     std::vector<T>& buf = recv_data->get_buffer<T>();
-            //     for (int rank = 0; rank < num_procs; rank++) {
-            //     if (myrank == rank) {
-            //         for (int x = 0; x < buf.size(); x++)
-            //             std::cout << "orig recv element is " << buf[x] << "from rank"<<rank<<std::endl;
-            //     }
-            //     MPI_Barrier(MPI_COMM_WORLD);  // wait for this rank to finish
-            // } 
-                return buf;
-            }
-
-           
         }
 
         // Transpose Communication

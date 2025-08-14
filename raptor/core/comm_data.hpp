@@ -166,55 +166,15 @@ void print_values(const T* values, size_t size, char * disp) {
         int size = size_msgs * block_size;
         RAPtor_MPI_Datatype datatype = get_type<T>();
         std::vector<T>& buf = get_buffer<T>();
-        std::vector<std::vector<char>>& tmp_cmp_buf = get_cmp_buffer();
         if ((int) buf.size() < size) buf.resize(size);
-        std::cout<<"NUm messages is"<<num_msgs<<std::endl;
-        tmp_cmp_buf.resize(num_msgs);
 
         for (int i = 0; i < num_msgs; i++)
         {
             proc = procs[i];
             start = indptr[i];
             end = indptr[i+1];
-            // Check for compressed buffer
-            MPI_Status statusProbe;
-            MPI_Probe(proc, MPI_ANY_TAG, mpi_comm, &statusProbe);
-            if (statusProbe.MPI_TAG == 9999123)
-            {
-                int cmp_size;
-                int msg_size_probe;
-                int recv_position=0;
-                MPI_Get_count(&statusProbe, MPI_PACKED, &msg_size_probe);
-                // std::cout<<"recv Message size probe is"<<msg_size_probe<<std::endl;
-                // std::cout << "Here comes the status" << std::endl;
-                char* cmp_data[msg_size_probe-sizeof(int)];
-                char recv_buff[msg_size_probe];
-                // std::cout<<"Tmp cmp buf size is"<<tmp_cmp_buf.size()<<std::endl;
-                tmp_cmp_buf[i].resize(msg_size_probe);
-                RAPtor_MPI_Irecv(tmp_cmp_buf[i].data(), msg_size_probe, MPI_PACKED,
-                                 proc, 9999123, mpi_comm, &(requests[i]));
-                // MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, &cmp_size, 1, MPI_INT, MPI_COMM_WORLD);
-                // std::cout<<"comm data recv cmp size"<<cmp_size<<std::endl;
-                // // for(int i=0;i<10;i++){
-                //     std::cout<<"Msg size buffer is comm data"<<msg_size_buf[i]<<std::endl;
-                // }
-                // MPI_Unpack(recv_buff, msg_size_probe, &recv_position, &cmp_size, 1, MPI_INT, MPI_COMM_WORLD);
-                // std::cout<<"Recv cmp size"<<cmp_size<<std::endl;
-                // MPI_Unpack(recv_buff, msg_size_probe, &recv_position, cmp_data, cmp_size, MPI_CHAR, MPI_COMM_WORLD);
-                // // std::cout<<"on recv side cmp size was"<<cmp_size<<"position:"<<recv_position<<"total_buffer_size: "<<msg_size_probe<<std::endl;
-                // T* dec_data=decompress_data<T>((end - start) * block_size, cmp_size, cmp_data[0]);
-                // // buf[start * block_size]=dec_data
-                // for (int i = 0; i < (end - start) * block_size; ++i){
-                //     buf[start * block_size + i] = dec_data[i];
-                // }
-                // memcpy(&buf[start * block_size], dec_data, sizeof(T) * (end - start) * block_size);
-            }
-            else
-            {
-
-                RAPtor_MPI_Irecv(&(buf[start * block_size]), (end - start) * block_size, datatype,
+            RAPtor_MPI_Irecv(&(buf[start * block_size]), (end - start) * block_size, datatype,
                                  proc, key, mpi_comm, &(requests[i]));
-            }
         }
     }
 
@@ -906,17 +866,7 @@ bool is_all_zero(const T* data, size_t size) {
         int rank, num_procs;
         MPI_Comm_rank(MPI_COMM_WORLD, &rank);
         MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
-        if (rank == 0)
-        {
-            // printVector(procs, "process in send");
-            // printVector(indptr, "process in send");
-            // std::cout<<"Num msgs"<<num_msgs<<std::endl;
 
-            // print_values(values,7);
-        }
-           for (int k = 0; k < buf.size(); k++) {
-                std::cout<<"before in buff"<<buf[k]<<std::endl;
-            }
         for (int i = 0; i < num_msgs; i++)
         {
             proc = procs[i];
@@ -946,11 +896,6 @@ bool is_all_zero(const T* data, size_t size) {
                 size_t cmpSize;
                 char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
                 T* dec_data=decompress_data<T>( datasize, cmpSize, cmpData);
-                // double max_err = 0.0;
-                // if (max_err > ext_solve_tol)
-                // {
-                //     std::cout << "Smoke test failed" << std::endl;
-                // }
                 size_t original_bytes = datasize * sizeof(T);  // actual size in bytes
                 double ratio = static_cast<double>(original_bytes) / cmpSize;
                 std::cout << "Compression Ratio: " << ratio << std::endl;
@@ -959,56 +904,13 @@ bool is_all_zero(const T* data, size_t size) {
             /*
             * Compression and Decompression ends
             */
-            // RAPtor_MPI_Isend(cmpData, cmpSize,
-            //                   datatype, proc, key, mpi_comm, &(requests[i]));
-            int cmp_size=static_cast<int>(cmpSize);
-            // int cmp_size=10;
-            int sent_data_size=static_cast<int>(datasize);
-            std::cout<<"orig data size is"<<datasize<<"and new is"<<sent_data_size<<std::endl;
-                std::cout<<"datatype is"<<datatype<<std::endl;
 
-            // int total_buffer_size=cmp_size+sizeof(int)+sizeof(int);
-            
-            int total_buffer_size=sent_data_size+sizeof(int)+sizeof(int);
-            char buff[total_buffer_size];
-            int position=0;
-            char* cmpData2="helloworld";
-            std::vector<double> temp(sent_data_size);
-            for (int k = 0; k < sent_data_size; k++) {
-                temp[k] = static_cast<double>(buf[start * block_size + k]);
-                std::cout<<"in temp it is"<<temp[k]<<"and originial is"<<buf[start*block_size+k]<<std::endl;
-            }
-            MPI_Pack(&cmp_size, 1, MPI_INT, buff, total_buffer_size, &position, MPI_COMM_WORLD);
-            MPI_Pack(&sent_data_size, 1, MPI_INT, buff, total_buffer_size, &position, MPI_COMM_WORLD);
-            // MPI_Pack(cmpData, cmp_size, MPI_CHAR, buff, total_buffer_size, &position, MPI_COMM_WORLD);
-            MPI_Pack(temp.data(), sent_data_size, MPI_DOUBLE, buff, total_buffer_size, &position, MPI_COMM_WORLD);
-            std::cout << "Sent cmp size was" << cmp_size << std::endl;
-           // RAPtor_MPI_Isend(dec_data, (end - start) * block_size,
-           //       datatype, proc, 9999123, mpi_comm, &(requests[i]));
-        //   int unpacked_val;
-        //   int new_position = 0;
-        //   MPI_Unpack(buff, 1000, &new_position, &unpacked_val, 1, MPI_INT, MPI_COMM_WORLD);
-           std::cout << "Position: " << position << std::endl;
-
-
-           RAPtor_MPI_Isend(buff, position,
-                            MPI_PACKED, proc, 9999123, mpi_comm, &(requests[i]));
+           RAPtor_MPI_Isend(dec_data, (end - start) * block_size,
+                 datatype, proc, key, mpi_comm, &(requests[i]));
             }else{
-                                int myrank, num_procs;
-                MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
-                MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
-                for (int rank = 0; rank < num_procs; rank++) {
-                if (myrank == rank) {
-                    for (int x = 0; x < buf.size(); x++)
-                        std::cout << "sent buf element is " << buf[start * block_size+x] << "from rank"<<rank<<std::endl;
-                }
-                MPI_Barrier(MPI_COMM_WORLD);  // wait for this rank to finish
-            } 
-            std::cout<<"start * block_size"<<start * block_size<< "and end is"<<(end - start) * block_size<<std::endl;
                 RAPtor_MPI_Isend(&(buf[start * block_size]), (end - start) * block_size,
                                                         datatype, proc, key, mpi_comm, &(requests[i]));
             }
-            // delete[] dec_data;
 
         }
     }
