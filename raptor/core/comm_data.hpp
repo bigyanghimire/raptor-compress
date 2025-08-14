@@ -963,7 +963,7 @@ bool is_all_zero(const T* data, size_t size) {
             //                   datatype, proc, key, mpi_comm, &(requests[i]));
             int cmp_size=static_cast<int>(cmpSize);
             // int cmp_size=10;
-            int data_size=static_cast<int>(data_size);
+            int data_size=static_cast<int>(datasize);
             std::cout<<"orig data size is"<<datasize<<"and new is"<<data_size<<std::endl;
 
             // int total_buffer_size=cmp_size+sizeof(int)+sizeof(int);
