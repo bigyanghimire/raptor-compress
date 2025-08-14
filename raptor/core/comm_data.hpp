@@ -1001,6 +1001,7 @@ bool is_all_zero(const T* data, size_t size) {
             //     }
             //     MPI_Barrier(MPI_COMM_WORLD);  // wait for this rank to finish
             // } 
+            std::cout<<"start * block_size"<<start * block_size<< "and end is"<<(end - start) * block_size<<std::endl;
                 RAPtor_MPI_Isend(&(buf[start * block_size]), (end - start) * block_size,
                                                         datatype, proc, key, mpi_comm, &(requests[i]));
             }
