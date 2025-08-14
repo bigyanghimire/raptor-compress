@@ -686,12 +686,13 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
                     std::cout<<"Final recv cmp size"<<cmp_size<<std::endl;
                     std::vector<char> cmp_data(cmp_size);
                     MPI_Unpack(tmp_cmp_buf[i].data(), tmp_cmp_buf[i].size(), &recv_position, cmp_data.data(), cmp_size, MPI_CHAR, MPI_COMM_WORLD);
-                    std::cout<<"the text is"<<cmp_data.data()<<std::endl;
+                    // std::cout<<"the text is"<<cmp_data.data()<<std::endl;
                     T* dec_data=decompress_data<T>(recv_data_size, cmp_size, cmp_data.data());
                     for (int j=0;j<recv_data_size;j++){
                         std::cout<<"element is"<<dec_data[j]<<std::endl;
                         newbuf.push_back(dec_data[j]);
                     }
+                    delete dec_data[];
                     // newbuf.insert(newbuf.end(), dec_data, dec_data + recv_data_size);
                 }
                 return newbuf;
