@@ -914,7 +914,7 @@ bool is_all_zero(const T* data, size_t size) {
                 // }
                 size_t original_bytes = datasize * sizeof(T);  // actual size in bytes
                 double ratio = static_cast<double>(original_bytes) / cmpSize;
-                std::cout << "Compression Ratio: " << ratio<<"Amg iter: "<<c_info.amg_iter<<"Amg level: "<<c_info.amg_level<< std::endl;
+                std::cout << "Compression Ratio: " << ratio<<" Amg iter: "<<c_info.amg_iter<<" Amg level: "<<c_info.amg_level<<" Rank:"<<rank<<" Datasize: "<<datasize<< std::endl;
                 delete[] cmpData;
 
             /*
