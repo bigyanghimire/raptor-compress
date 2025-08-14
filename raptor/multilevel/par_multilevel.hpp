@@ -388,6 +388,7 @@ namespace raptor
                     levels[level+1]->x.set_const_value(0.0);
                     
                     // Relax
+                    c_info.op="Smoothing";
                     switch (relax_type)
                     {
                         case Jacobi:
@@ -407,9 +408,11 @@ namespace raptor
                                     tap_level);
                             break;
                     }
+                    c_info.op="Residual";
 
 
                     A->residual(x, b, tmp, tap_level);
+                    c_info.op="Restriction";
 
                     P->mult_T(tmp, levels[level+1]->b, tap_level);
 
@@ -429,8 +432,10 @@ namespace raptor
                         init_profile();
                     }
 
+                    c_info.op="Interpolation";
 
                     P->mult_append(levels[level+1]->x, x, tap_level);
+                    c_info.op="Post smoothing";
 
                     switch (relax_type)
                     {
@@ -522,6 +527,7 @@ namespace raptor
                     }
                   
                     iter++;
+                    c_info.op="Residual";
                     levels[0]->A->residual(sol, rhs, resid);
                     if (fabs(b_norm) > zero_tol)
                     {
