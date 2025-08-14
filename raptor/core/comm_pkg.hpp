@@ -689,10 +689,11 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
                     T* dec_data=decompress_data<T>(recv_data_size, cmp_size, cmp_data.data());
                     for (int j=0;j<recv_data_size;j++){
                         std::cout<<"element is"<<dec_data[j]<<std::endl;
+                        newbuf.push_back(dec_data[j]);
                     }
                     // newbuf.insert(newbuf.end(), dec_data, dec_data + recv_data_size);
                 }
-                return buf;
+                return newbuf;
                 // std::vector<T>& buf = recv_data->get_buffer<T>();
             }
             else{
