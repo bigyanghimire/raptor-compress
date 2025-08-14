@@ -953,10 +953,6 @@ bool is_all_zero(const T* data, size_t size) {
                 char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
                 T* dec_data=decompress_data<T>( datasize, cmpSize, cmpData);
                 // double max_err = 0.0;
-                for (size_t j = 0; j < datasize; j++)
-                {
-                    std::cout<<"sent element is"<<buf[start*block_size+j]<<std::endl;
-                }
                 // if (max_err > ext_solve_tol)
                 // {
                 //     std::cout << "Smoke test failed" << std::endl;
@@ -986,7 +982,7 @@ bool is_all_zero(const T* data, size_t size) {
             std::vector<double> temp(sent_data_size);
             for (int k = 0; k < sent_data_size; k++) {
                 temp[k] = static_cast<double>(buf[start * block_size + k]);
-                std::cout<<"in temp it is"<<temp[k]<<std::endl;
+                std::cout<<"in temp it is"<<temp[k]<<"and originial is"<<buf[start*block_size+k]<<std::endl;
             }
             MPI_Pack(&cmp_size, 1, MPI_INT, buff, total_buffer_size, &position, MPI_COMM_WORLD);
             MPI_Pack(&sent_data_size, 1, MPI_INT, buff, total_buffer_size, &position, MPI_COMM_WORLD);
