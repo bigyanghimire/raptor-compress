@@ -706,8 +706,8 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
                 // std::vector<T>& buf = recv_data->get_buffer<T>();
             }
             else{
-                 int rank, num_procs;
-                MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+                 int myrank, num_procs;
+                MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
                 MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
                 std::vector<T>& buf = recv_data->get_buffer<T>();
                 for (int rank = 0; rank < num_procs; rank++) {
