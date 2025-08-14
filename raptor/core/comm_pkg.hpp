@@ -668,7 +668,7 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
             key++;
             
             std::vector<T>& buf = recv_data->get_buffer<T>();
-            std::vector<T> newbuf;
+            std::vector<double> newbuf;
             //std::vector<T> newbuf;
             // Extract packed data to appropriate buffer
             if(compression_on==1){
