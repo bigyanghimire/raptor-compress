@@ -699,7 +699,7 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
                     // newbuf.insert(newbuf.end(), dec_data, dec_data + recv_data_size);
                 }
                 for (int x=0;x<newbuf.size();x++){
-                        std::cout<<"newbuf element is"<<newbuf[x]<<std::endl;
+                        std::cout<<"decomp recv element is"<<newbuf[x]<<std::endl;
                         // newbuf.push_back(recv_array[x]);
                 }
                 return newbuf;
@@ -713,7 +713,7 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
                 for (int rank = 0; rank < num_procs; rank++) {
                 if (myrank == rank) {
                     for (int x = 0; x < buf.size(); x++)
-                        std::cout << "buf element is " << buf[x] << "from rank"<<rank<<std::endl;
+                        std::cout << "orig recv element is " << buf[x] << "from rank"<<rank<<std::endl;
                 }
                 MPI_Barrier(MPI_COMM_WORLD);  // wait for this rank to finish
             } 
