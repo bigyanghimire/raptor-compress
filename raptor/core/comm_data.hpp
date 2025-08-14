@@ -211,16 +211,7 @@ void print_values(const T* values, size_t size, char * disp) {
             }
             else
             {
-                int myrank, num_procs;
-                MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
-                MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
-                for (int rank = 0; rank < num_procs; rank++) {
-                if (myrank == rank) {
-                    for (int x = 0; x < buf.size(); x++)
-                        std::cout << "sent buf element is " << buf[start * block_size+x] << "from rank"<<rank<<std::endl;
-                }
-                MPI_Barrier(MPI_COMM_WORLD);  // wait for this rank to finish
-            } 
+
                 RAPtor_MPI_Irecv(&(buf[start * block_size]), (end - start) * block_size, datatype,
                                  proc, key, mpi_comm, &(requests[i]));
             }
@@ -1000,6 +991,16 @@ bool is_all_zero(const T* data, size_t size) {
            RAPtor_MPI_Isend(buff, position,
                             MPI_PACKED, proc, 9999123, mpi_comm, &(requests[i]));
             }else{
+            //                     int myrank, num_procs;
+            //     MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
+            //     MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
+            //     for (int rank = 0; rank < num_procs; rank++) {
+            //     if (myrank == rank) {
+            //         for (int x = 0; x < buf.size(); x++)
+            //             std::cout << "sent buf element is " << buf[start * block_size+x] << "from rank"<<rank<<std::endl;
+            //     }
+            //     MPI_Barrier(MPI_COMM_WORLD);  // wait for this rank to finish
+            // } 
                 RAPtor_MPI_Isend(&(buf[start * block_size]), (end - start) * block_size,
                                                         datatype, proc, key, mpi_comm, &(requests[i]));
             }
