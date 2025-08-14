@@ -964,7 +964,8 @@ bool is_all_zero(const T* data, size_t size) {
             int cmp_size=static_cast<int>(cmpSize);
             // int cmp_size=10;
             int data_size=static_cast<int>(data_size);
-            int total_buffer_size=cmp_size+sizeof(int)+sizeof(int);
+            // int total_buffer_size=cmp_size+sizeof(int)+sizeof(int);
+            int total_buffer_size=data_size+sizeof(int)+sizeof(int);
             char buff[total_buffer_size];
             int position=0;
             char* cmpData2="helloworld";
