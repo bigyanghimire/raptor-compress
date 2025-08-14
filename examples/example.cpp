@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 
     x.set_rand_values();
     A->mult(x, b);
-    x.set_const_value(0.0);
+    x.set_const_value(1.0);
 
     // AMG parameters
     double strong_threshold = 0.25;
