@@ -965,7 +965,7 @@ bool is_all_zero(const T* data, size_t size) {
             // int cmp_size=10;
             int data_size=static_cast<int>(data_size);
             // int total_buffer_size=cmp_size+sizeof(int)+sizeof(int);
-            std::cout<<"data size is"<<data_size<<std:endl;
+            std::cout<<"data size is"<<data_size<<std::endl;
             int total_buffer_size=data_size+sizeof(int)+sizeof(int);
             char buff[total_buffer_size];
             int position=0;
