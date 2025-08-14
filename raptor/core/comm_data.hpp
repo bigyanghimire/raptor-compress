@@ -961,14 +961,16 @@ bool is_all_zero(const T* data, size_t size) {
             */
             // RAPtor_MPI_Isend(cmpData, cmpSize,
             //                   datatype, proc, key, mpi_comm, &(requests[i]));
-            int cmp_size=static_cast<int>(cmpSize);
+            // int cmp_size=static_cast<int>(cmpSize);
+            int cmp_size=10;
             int data_size=static_cast<int>(data_size);
             int total_buffer_size=cmp_size+sizeof(int)+sizeof(int);
             char buff[total_buffer_size];
             int position=0;
+            char* cmpData2="helloworld";
             MPI_Pack(&cmp_size, 1, MPI_INT, buff, total_buffer_size, &position, MPI_COMM_WORLD);
             MPI_Pack(&data_size, 1, MPI_INT, buff, total_buffer_size, &position, MPI_COMM_WORLD);
-            MPI_Pack(cmpData, cmp_size, MPI_CHAR, buff, total_buffer_size, &position, MPI_COMM_WORLD);
+            MPI_Pack(cmpData2, cmp_size, MPI_CHAR, buff, total_buffer_size, &position, MPI_COMM_WORLD);
             std::cout << "Sent cmp size was" << cmp_size << std::endl;
            // RAPtor_MPI_Isend(dec_data, (end - start) * block_size,
            //       datatype, proc, 9999123, mpi_comm, &(requests[i]));
