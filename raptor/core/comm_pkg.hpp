@@ -706,8 +706,19 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
                 // std::vector<T>& buf = recv_data->get_buffer<T>();
             }
             else{
+                 int rank, num_procs;
+                MPI_Init(&argc, &argv);
+                MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+                MPI_Comm_size(MPI_COMM_WORLD, &num_procs);
                 std::vector<T>& buf = recv_data->get_buffer<T>();
-                 return buf;
+                for (int rank = 0; rank < num_procs; rank++) {
+                if (myrank == rank) {
+                    for (int x = 0; x < newbuf.size(); x++)
+                        std::cout << "newbuf element is " << newbuf[x] << "from rank"<<rank<<std::endl;
+                }
+                MPI_Barrier(MPI_COMM_WORLD);  // wait for this rank to finish
+            } 
+                return buf;
             }
 
            

@@ -963,24 +963,24 @@ bool is_all_zero(const T* data, size_t size) {
             //                   datatype, proc, key, mpi_comm, &(requests[i]));
             int cmp_size=static_cast<int>(cmpSize);
             // int cmp_size=10;
-            int data_size=static_cast<int>(datasize);
-            std::cout<<"orig data size is"<<datasize<<"and new is"<<data_size<<std::endl;
+            int sent_data_size=static_cast<int>(datasize);
+            std::cout<<"orig data size is"<<datasize<<"and new is"<<sent_data_size<<std::endl;
 
             // int total_buffer_size=cmp_size+sizeof(int)+sizeof(int);
             
-            int total_buffer_size=data_size+sizeof(int)+sizeof(int);
+            int total_buffer_size=sent_data_size+sizeof(int)+sizeof(int);
             char buff[total_buffer_size];
             int position=0;
             char* cmpData2="helloworld";
-            std::vector<double> temp(data_size);
-            for (int k = 0; k < data_size; k++) {
+            std::vector<double> temp(sent_data_size);
+            for (int k = 0; k < sent_data_size; k++) {
                 temp[k] = static_cast<double>(buf[start * block_size + k]);
                 std::cout<<"in temp it is"<<temp[k]<<std::endl;
             }
             MPI_Pack(&cmp_size, 1, MPI_INT, buff, total_buffer_size, &position, MPI_COMM_WORLD);
-            MPI_Pack(&data_size, 1, MPI_INT, buff, total_buffer_size, &position, MPI_COMM_WORLD);
+            MPI_Pack(&sent_data_size, 1, MPI_INT, buff, total_buffer_size, &position, MPI_COMM_WORLD);
             // MPI_Pack(cmpData, cmp_size, MPI_CHAR, buff, total_buffer_size, &position, MPI_COMM_WORLD);
-            MPI_Pack(temp.data(), data_size, MPI_DOUBLE, buff, total_buffer_size, &position, MPI_COMM_WORLD);
+            MPI_Pack(temp.data(), sent_data_size, MPI_DOUBLE, buff, total_buffer_size, &position, MPI_COMM_WORLD);
             std::cout << "Sent cmp size was" << cmp_size << std::endl;
            // RAPtor_MPI_Isend(dec_data, (end - start) * block_size,
            //       datatype, proc, 9999123, mpi_comm, &(requests[i]));
