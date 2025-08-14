@@ -692,7 +692,7 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
                         std::cout<<"element is"<<dec_data[j]<<std::endl;
                         newbuf.push_back(dec_data[j]);
                     }
-                    delete dec_data[];
+                    delete[] dec_data;
                     // newbuf.insert(newbuf.end(), dec_data, dec_data + recv_data_size);
                 }
                 return newbuf;
