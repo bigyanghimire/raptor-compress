@@ -335,6 +335,7 @@ namespace raptor
 
             void cycle(ParVector& x, ParVector& b, int level = 0)
             {
+                c_info.amg_level=level;
                 if (solve_times)
                 {
                     init_profile();
@@ -511,6 +512,8 @@ namespace raptor
 
                 while (r_norm > solve_tol && iter < max_iterations)
                 {
+                    c_info.amg_iter=iter;
+                    
                     cycle(sol, rhs, 0);
 
                     if (track_times)
@@ -543,6 +546,7 @@ namespace raptor
                     }
                 }
                 ext_solve_tol=r_norm;
+
                 return iter;
             }
 

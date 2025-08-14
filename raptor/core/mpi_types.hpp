@@ -6,7 +6,13 @@
 #include "types.hpp"
 #include <mpi.h>
 //  #include <SZ3/api/sz.hpp>
-extern int compression_on;
+struct compression_info{
+int amg_level;
+int compression_on;
+int amg_iter;
+std::string op;
+};
+extern struct compression_info c_info;
 extern double sz3_eb;
 extern double ext_solve_tol;
 // Global Timing Variables

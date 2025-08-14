@@ -6,7 +6,7 @@ double mat_t = 0.0;
 double vec_t = 0.0;
 double total_t = 0.0;
 double new_comm_t = 0.0;
-int compression_on=81;
+struct compression_info c_info;
 double sz3_eb=1e-5;
 double ext_solve_tol=2;
 #include <mpi.h>
