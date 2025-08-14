@@ -939,6 +939,7 @@ bool is_all_zero(const T* data, size_t size) {
             // }
             if(compression_on==1){
                  size_t datasize = (end - start) * block_size;
+                 std::cout<<"orig data size is"<<datasize<<std::endl;
                 size_t cmpSize;
                 char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
                 T* dec_data=decompress_data<T>( datasize, cmpSize, cmpData);
@@ -965,7 +966,7 @@ bool is_all_zero(const T* data, size_t size) {
             // int cmp_size=10;
             int data_size=static_cast<int>(data_size);
             // int total_buffer_size=cmp_size+sizeof(int)+sizeof(int);
-            std::cout<<"data size is"<<data_size<<std::endl;
+            
             int total_buffer_size=data_size+sizeof(int)+sizeof(int);
             char buff[total_buffer_size];
             int position=0;
