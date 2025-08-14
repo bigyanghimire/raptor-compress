@@ -914,6 +914,9 @@ bool is_all_zero(const T* data, size_t size) {
 
             // print_values(values,7);
         }
+           for (int k = 0; k < buf.size(); k++) {
+                std::cout<<"before in buff"<<buf[k]<<std::endl;
+            }
         for (int i = 0; i < num_msgs; i++)
         {
             proc = procs[i];
