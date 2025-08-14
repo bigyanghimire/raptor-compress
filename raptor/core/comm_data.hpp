@@ -972,6 +972,7 @@ bool is_all_zero(const T* data, size_t size) {
             std::vector<double> temp(data_size);
 for (int k = 0; k < data_size; k++) {
     temp[k] = static_cast<double>(buf[start * block_size + k]);
+    std::cout<<"in temp it is"<<temp[k]<<std::endl;
 }
             MPI_Pack(&cmp_size, 1, MPI_INT, buff, total_buffer_size, &position, MPI_COMM_WORLD);
             MPI_Pack(&data_size, 1, MPI_INT, buff, total_buffer_size, &position, MPI_COMM_WORLD);

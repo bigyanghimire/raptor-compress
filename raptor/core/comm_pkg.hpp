@@ -668,7 +668,7 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
             key++;
             
             std::vector<T>& buf = recv_data->get_buffer<T>();
-            std::vector<double> newbuf;
+            std::vector<T> newbuf;
             //std::vector<T> newbuf;
             // Extract packed data to appropriate buffer
             if(compression_on==1){
@@ -697,6 +697,10 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
                     }
                     // delete[] dec_data;
                     // newbuf.insert(newbuf.end(), dec_data, dec_data + recv_data_size);
+                }
+                for (int x=0;j<newbuf.size();x++){
+                        std::cout<<"newbuf element is"<<newbuf[x]<<std::endl;
+                        // newbuf.push_back(recv_array[x]);
                 }
                 return newbuf;
                 // std::vector<T>& buf = recv_data->get_buffer<T>();
