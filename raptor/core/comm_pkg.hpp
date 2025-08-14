@@ -692,16 +692,16 @@ void printVector(const std::vector<int>& off_proc_column_map, char *disp) {
                     // std::cout<<"the text is"<<cmp_data.data()<<std::endl;
                     // T* dec_data=decompress_data<T>(recv_data_size, cmp_size, cmp_data.data());
                     for (int j=0;j<recv_data_size;j++){
-                        // std::cout<<"element is"<<dec_data[j]<<std::endl;
+                        std::cout<<"decomp recv element is"<<recv_array[j]<<std::endl;
                         newbuf.push_back(recv_array[j]);
                     }
                     // delete[] dec_data;
                     // newbuf.insert(newbuf.end(), dec_data, dec_data + recv_data_size);
                 }
-                for (int x=0;x<newbuf.size();x++){
-                        std::cout<<"decomp recv element is"<<newbuf[x]<<std::endl;
-                        // newbuf.push_back(recv_array[x]);
-                }
+                // for (int x=0;x<newbuf.size();x++){
+                //         std::cout<<"decomp recv element is"<<newbuf[x]<<std::endl;
+                //         // newbuf.push_back(recv_array[x]);
+                // }
                 return newbuf;
                 // std::vector<T>& buf = recv_data->get_buffer<T>();
             }
