@@ -6,7 +6,6 @@ double mat_t = 0.0;
 double vec_t = 0.0;
 double total_t = 0.0;
 double new_comm_t = 0.0;
-struct compression_info c_info;
 double sz3_eb=1e-5;
 double ext_solve_tol=2;
 #include <mpi.h>
@@ -16,6 +15,8 @@ double ext_solve_tol=2;
 //  #include <SZ3/api/sz.hpp>
 //#include "raptor/raptor.hpp"
 #include <execinfo.h>
+struct compression_info c_info;
+
 void print_stacktrace() {
     void *callstack[128];
     int frames = backtrace(callstack, 128);
