@@ -385,8 +385,8 @@ namespace raptor
                 }
                 else
                 {
-                    levels[level+1]->x.set_const_value(0.0);
-                    // levels[level+1]->x.set_rand_values();
+                    //levels[level+1]->x.set_const_value(0.0);
+                    levels[level+1]->x.set_rand_values();
                     
                     // Relax
                     c_info.op="Smoothing";
