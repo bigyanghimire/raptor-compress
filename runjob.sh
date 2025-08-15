@@ -24,4 +24,4 @@ cmake --build build --parallel $(nproc)
 ulimit -c unlimited
 
 # Run your application
-mpirun -n 2 build/examples/example 1e-5 1e-5 1
+mpirun -n 2 build/examples/example 1e-5 1e-5 81
