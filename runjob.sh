@@ -5,7 +5,7 @@
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=32G
 #SBATCH --time=03:00:00
-#SBATCH --output=slurm-%j.out
+#SBATCH --output=slurm-%j.output
 #SBATCH --error=slurm-%j.err
 
 # Optional: load modules or activate environment
