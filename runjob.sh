@@ -15,4 +15,4 @@ module load gcc openmpi
 ulimit -c unlimited
 
 # Run your application
-srun build/examples/examples 1e-5 1e-5 1
+srun build/examples/example 1e-5 1e-5 1
