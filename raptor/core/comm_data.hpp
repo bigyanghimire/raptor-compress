@@ -917,22 +917,24 @@ bool is_all_zero(const T* data, size_t size) {
                 double ratio = static_cast<double>(original_bytes) / cmpSize;
                 // std::cout<<"size of cmpdata is"<<sizeof(cmpData)<<"and cmpsize is"<<cmpSize<<std::endl;
                 if(rank==0){
-                    std::ofstream out("rank0.txt");
-                    std::streambuf *coutbuf1 = std::cout.rdbuf(); // save old buf
-                    std::cout.rdbuf(out.rdbuf());                 // redirect std::cout to out.txt!
-                    std::cout << "Compression Ratio rank 0: " << ratio << " Amg iter: " << c_info.amg_iter << " Amg level: " << c_info.amg_level << " Rank:" << rank << " Datasize: " << datasize << " Operation: " << c_info.op << std::endl;
-                   std::cout.flush(); // important!
-                    std::cout.rdbuf(coutbuf1);
+                std::cout << "Compression Ratio rank 0: " << ratio << " Amg iter: " << c_info.amg_iter << " Amg level: " << c_info.amg_level << " Rank:" << rank << " Datasize: " << datasize << " Operation: " << c_info.op << std::endl;
+
+                //     std::ofstream out("rank0.txt",std::ios::app);
+                //     std::streambuf *coutbuf1 = std::cout.rdbuf(); // save old buf
+                //     std::cout.rdbuf(out.rdbuf());                 // redirect std::cout to out.txt!
+                //     std::cout << "Compression Ratio rank 0: " << ratio << " Amg iter: " << c_info.amg_iter << " Amg level: " << c_info.amg_level << " Rank:" << rank << " Datasize: " << datasize << " Operation: " << c_info.op << std::endl;
+                //    std::cout.flush(); // important!
+                //     std::cout.rdbuf(coutbuf1);
                 }
-                if (rank == 1)
-                {
-                    std::ofstream out("rank1.txt");
-                    std::streambuf *coutbuf2 = std::cout.rdbuf(); // save old buf
-                    std::cout.rdbuf(out.rdbuf());
-                    std::cout << "Compression Ratio Rank 1: " << ratio << " Amg iter: " << c_info.amg_iter << " Amg level: " << c_info.amg_level << " Rank:" << rank << " Datasize: " << datasize << " Operation: " << c_info.op << std::endl;
-                    std::cout.flush();
-                    std::cout.rdbuf(coutbuf2);
-                }
+                // if (rank == 1)
+                // {
+                //     std::ofstream out("rank1.txt",std::ios::app);
+                //     std::streambuf *coutbuf2 = std::cout.rdbuf(); // save old buf
+                //     std::cout.rdbuf(out.rdbuf());
+                //     std::cout << "Compression Ratio Rank 1: " << ratio << " Amg iter: " << c_info.amg_iter << " Amg level: " << c_info.amg_level << " Rank:" << rank << " Datasize: " << datasize << " Operation: " << c_info.op << std::endl;
+                //     std::cout.flush();
+                //     std::cout.rdbuf(coutbuf2);
+                // }
                 delete[] cmpData;
 
             /*
