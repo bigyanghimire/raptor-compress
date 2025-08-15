@@ -2,6 +2,7 @@
 #SBATCH --job-name=amg_job
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=32
 #SBATCH --mem=32G
 #SBATCH --time=03:00:00
 #SBATCH --output=slurm-%j.out
@@ -15,6 +16,8 @@ module load openmpi/5.0.1
 module load anaconda3
 module load cmake/3.27.9
 
+cmake -B build -DCMAKE_BUILD_TYPE=Debug -DWITH_MPI=ON -DWITH_DOXYGEN=OFF -DCMAKE_BUILD_TYPE=Debug && \
+cmake --build build --parallel $(nproc) 
 
 # Recommended: enable core dumps for debugging
 ulimit -c unlimited
