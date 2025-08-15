@@ -9,6 +9,7 @@
 #SBATCH --error=slurm-%j.err
 
 # Optional: load modules or activate environment
+rm -fr *.err *.out
 module load spack
 module load cuda/12.3.0
 module load gcc/12.3.0
