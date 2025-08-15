@@ -1,9 +1,18 @@
 #!/bin/bash
-#
-#SBATCH --job-name=amg_rank_0
+#SBATCH --job-name=amg_job
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=32
 #SBATCH --mem=32G
-#SBATCH --time=2:00:00
-#SBATCH --output=%x_%j.out
-#SBATCH --error=%x_%j.err
+#SBATCH --time=03:00:00
+#SBATCH --output=slurm-%j.out
+#SBATCH --error=slurm-%j.err
+
+# Optional: load modules or activate environment
+# module load gcc openmpi
+
+# Recommended: enable core dumps for debugging
+ulimit -c unlimited
+
+# Run your application
+mpirun -n 2 build/examples/benchmark_amg
