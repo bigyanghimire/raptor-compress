@@ -3,7 +3,7 @@
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=32
-#SBATCH --mem=32G
+#SBATCH --mem=64G
 #SBATCH --time=03:00:00
 #SBATCH --output=slurm-%j.output
 #SBATCH --error=slurm-%j.err
@@ -24,4 +24,4 @@ cmake --build build --parallel $(nproc)
 ulimit -c unlimited
 
 # Run your application
-mpirun -n 2 build/examples/example 1e-5 1e-5 81
+mpirun -n 2 build/examples/example 1e-5 1e-5 1
