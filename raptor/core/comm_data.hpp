@@ -16,6 +16,7 @@
 #include "sz3_wrapper.hpp"
 #include <unistd.h>
 #include <cstdio>
+#include <fstream>
 /**************************************************************
  *****   CommData Class
  **************************************************************
