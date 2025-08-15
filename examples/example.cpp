@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
     // Problems size and type
     int dim = 2;
-    int n = 20,000;
+    int n = 20000;
     std::cout<<"N is>>>>>"<<n<<std::endl;
     std::vector<int> grid;
     grid.resize(dim, n);
