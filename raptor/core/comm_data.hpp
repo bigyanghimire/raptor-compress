@@ -925,7 +925,7 @@ bool is_all_zero(const T* data, size_t size) {
                 }
                 if (rank == 1)
                 {
-                    std::ofstream out("rank0.txt");
+                    std::ofstream out("rank1.txt");
                     std::streambuf *coutbuf2 = std::cout.rdbuf(); // save old buf
                     std::cout.rdbuf(out.rdbuf());
                     std::cout << "Compression Ratio Rank 1: " << ratio << " Amg iter: " << c_info.amg_iter << " Amg level: " << c_info.amg_level << " Rank:" << rank << " Datasize: " << datasize << " Operation: " << c_info.op << std::endl;
