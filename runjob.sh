@@ -9,7 +9,7 @@
 #SBATCH --error=slurm-%j.err
 
 # Optional: load modules or activate environment
-# module load gcc openmpi
+module load gcc openmpi
 
 # Recommended: enable core dumps for debugging
 ulimit -c unlimited
