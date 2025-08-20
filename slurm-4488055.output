@@ -1,0 +1,1566 @@
+-- Configuring done (2.7s)
+-- Generating done (4.9s)
+-- Build files have been written to: /home/bigyang/amg-compress/raptor-compress/build
+[  1%] Built target gtest
+[  1%] Built target gmock
+[  3%] Built target gtest_main
+[ 17%] Built target gmock_main
+[ 26%] Built target raptor
+[ 51%] Built target test_par_vector
+[ 51%] Built target test_tap_rap
+[ 51%] Built target test_par_spmv_random
+[ 57%] Built target test_rap
+[ 57%] Built target test_ruge_stuben
+[ 57%] Built target test_par_interpolation
+[ 57%] Built target test_matrix
+[ 51%] Built target test_par_block_conversion
+[ 51%] Built target test_splitting
+[ 51%] Built target test_par_block_matrix
+[ 57%] Built target test_par_splitting
+[ 51%] Built target test_par_matrix
+[ 57%] Built target test_repartition
+[ 51%] Built target test_tap_splitting
+[ 51%] Built target test_tap_spmv_laplacian
+[ 57%] Built target test_par_scale_aniso
+[ 51%] Built target test_strength
+[ 51%] Built target test_tap_spmv_random
+[ 51%] Built target test_par_spmv_aniso
+[ 51%] Built target test_par_spmv_laplacian
+[ 51%] Built target test_transpose
+[ 51%] Built target test_spmv_aniso
+[ 51%] Built target test_par_add
+[ 51%] Built target test_par_transpose
+[ 51%] Built target test_spmv_laplacian
+[ 51%] Built target test_tap_spmv_aniso
+[ 51%] Built target test_spmv_random
+[ 51%] Built target test_tap_comm
+[ 51%] Built target test_interpolation
+[ 51%] Built target test_par_comm
+[ 51%] Built target test_par_rap
+[ 51%] Built target test_par_strength
+[ 58%] Built target test_tap_interpolation
+[ 60%] Built target test_prolongation
+[ 63%] Built target test_tap_ruge_stuben
+[ 63%] Built target test_candidates
+[ 63%] Built target test_mis
+[ 63%] Built target test_par_ruge_stuben
+[ 63%] Building CXX object examples/CMakeFiles/example.dir/example.cpp.o
+[ 63%] Built target test_par_bicgstab
+[ 63%] Built target test_par_candidates
+[ 63%] Built target test_tap_candidates
+[ 87%] Built target test_par_aggregate
+[ 87%] Built target matop_example
+[ 87%] Built target coo_example
+[ 87%] Built target benchmark_setup
+[ 84%] Built target test_smoothed_aggregation
+[ 84%] Built target test_par_aniso
+[ 84%] Built target test_tap_aggregate
+[ 84%] Built target test_bicgstab
+[ 84%] Built target test_tap_mis
+[ 84%] Built target test_laplacian
+[ 84%] Built target test_par_mis
+[ 84%] Built target test_stencil
+[ 84%] Built target test_par_prolongation
+[ 84%] Built target test_par_cg
+[ 84%] Built target test_cg
+[ 84%] Built target test_par_laplacian
+[ 84%] Built target test_par_smoothed_aggregation
+[ 84%] Built target test_aniso
+[ 84%] Built target test_matrix_market
+[ 84%] Built target test_par_amg
+[ 84%] Built target test_aggregate
+[ 84%] Built target test_tap_prolongation
+[ 84%] Built target test_amg
+[ 84%] Built target test_par_matrix_market
+[ 84%] Built target benchmark_spmv
+[ 90%] Built target profile_tap_spgemm
+[ 90%] Built target benchmark_reader
+[ 93%] Built target benchmark_solve
+[ 93%] Built target csr_example
+[ 93%] Built target benchmark_tap_spmv
+[ 96%] Built target profile_tap_rss
+[ 96%] Built target benchmark_amg
+[ 96%] Built target profile_tap_steps
+[ 96%] Built target model_tap_steps
+[ 98%] Built target profile_tap_amg
+[ 99%] Built target profile_tap_sas
+[ 99%] Built target benchmark_tap_spgemm
+[ 98%] Built target benchmark_setup_sweeps
+[100%] Linking CXX executable example
+[100%] Built target example
+  argv[1] = 1e-5
+  argv[2] = 1e-5
+  argv[3] = 1
+  argv[1] = 1e-5
+  argv[2] = 1e-5
+  argv[3] = 1
+N is>>>>>6000
+N is>>>>>6000
+Level	NumRows	NNZ
+-----	-------	---
+0	36000000	323928004
+1	21905678	327835170
+2	12893178	322418528
+3	6203698	208357498
+4	3002844	116888032
+5	1426076	60539484
+6	671945	29976553
+7	313532	14381790
+8	143736	6655098
+9	63806	2924682
+10	26932	1189684
+11	10729	446559
+12	4073	155416
+13	1468	49344
+14	512	14437
+15	174	3824
+16	56	778
+17	17	105
+Compression Ratio rank 0: 377.953 Amg iter: 0 Amg level: 0 Rank:0 Datasize: 6000 Operation: 
+Compression Ratio rank 0: 377.953 Amg iter: 0 Amg level: 0 Rank:0 Datasize: 6000 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.0468 Amg iter: 0 Amg level: 0 Rank:0 Datasize: 6000 Operation: Residual
+Compression Ratio rank 0: 464.554 Amg iter: 0 Amg level: 1 Rank:0 Datasize: 7549 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.0462 Amg iter: 0 Amg level: 1 Rank:0 Datasize: 7549 Operation: Residual
+Compression Ratio rank 0: 581.908 Amg iter: 0 Amg level: 2 Rank:0 Datasize: 9456 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.04592 Amg iter: 0 Amg level: 2 Rank:0 Datasize: 9456 Operation: Residual
+Compression Ratio rank 0: 637.008 Amg iter: 0 Amg level: 3 Rank:0 Datasize: 10431 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.0452 Amg iter: 0 Amg level: 3 Rank:0 Datasize: 10431 Operation: Residual
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 561.231 Amg iter: 0 Amg level: 4 Rank:0 Datasize: 9120 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.04518 Amg iter: 0 Amg level: 4 Rank:0 Datasize: 9120 Operation: Residual
+Compression Ratio rank 0: 453.846 Amg iter: 0 Amg level: 5 Rank:0 Datasize: 7375 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.04521 Amg iter: 0 Amg level: 5 Rank:0 Datasize: 7375 Operation: Residual
+Compression Ratio rank 0: 365.75 Amg iter: 0 Amg level: 6 Rank:0 Datasize: 5852 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.04458 Amg iter: 0 Amg level: 6 Rank:0 Datasize: 5852 Operation: Residual
+Compression Ratio rank 0: 278.438 Amg iter: 0 Amg level: 7 Rank:0 Datasize: 4455 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.044 Amg iter: 0 Amg level: 7 Rank:0 Datasize: 4455 Operation: Residual
+Compression Ratio rank 0: 242.692 Amg iter: 0 Amg level: 8 Rank:0 Datasize: 3246 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.04327 Amg iter: 0 Amg level: 8 Rank:0 Datasize: 3246 Operation: Residual
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 173.234 Amg iter: 0 Amg level: 9 Rank:0 Datasize: 2317 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.0417 Amg iter: 0 Amg level: 9 Rank:0 Datasize: 2317 Operation: Residual
+Compression Ratio rank 0: 115.439 Amg iter: 0 Amg level: 10 Rank:0 Datasize: 1544 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.03894 Amg iter: 0 Amg level: 10 Rank:0 Datasize: 1544 Operation: Residual
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 74.9907 Amg iter: 0 Amg level: 11 Rank:0 Datasize: 1003 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.03402 Amg iter: 0 Amg level: 11 Rank:0 Datasize: 1003 Operation: Residual
+Compression Ratio rank 0: 45.2336 Amg iter: 0 Amg level: 12 Rank:0 Datasize: 605 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.02782 Amg iter: 0 Amg level: 12 Rank:0 Datasize: 605 Operation: Residual
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 27.3398 Amg iter: 0 Amg level: 13 Rank:0 Datasize: 352 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.01697 Amg iter: 0 Amg level: 13 Rank:0 Datasize: 352 Operation: Residual
+Compression Ratio rank 0: 14.2476 Amg iter: 0 Amg level: 14 Rank:0 Datasize: 187 Operation: Pre-Smoothing
+Compression Ratio rank 0: 0.992701 Amg iter: 0 Amg level: 14 Rank:0 Datasize: 187 Operation: Residual
+Compression Ratio rank 0: 6.03636 Amg iter: 0 Amg level: 15 Rank:0 Datasize: 83 Operation: Pre-Smoothing
+Compression Ratio rank 0: 0.919668 Amg iter: 0 Amg level: 15 Rank:0 Datasize: 83 Operation: Residual
+Compression Ratio rank 0: 1.96364 Amg iter: 0 Amg level: 16 Rank:0 Datasize: 27 Operation: Pre-Smoothing
+Compression Ratio rank 0: 0.791209 Amg iter: 0 Amg level: 16 Rank:0 Datasize: 27 Operation: Residual
+Compression Ratio rank 0: 0.457143 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 6 Operation: Interpolation
+Compression Ratio rank 0: 0.791209 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 27 Operation: Post-smoothing
+Compression Ratio rank 0: 0.662722 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 14 Operation: Interpolation
+Compression Ratio rank 0: 0.924791 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 83 Operation: Post-smoothing
+Compression Ratio rank 0: 0.791209 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 27 Operation: Interpolation
+Compression Ratio rank 0: 1.01355 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 187 Operation: Post-smoothing
+Compression Ratio rank 0: 0.852792 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 42 Operation: Interpolation
+Compression Ratio rank 0: 1.05745 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 352 Operation: Post-smoothing
+Compression Ratio rank 0: 0.912913 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 76 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.07365 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 605 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 0.974943 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 107 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.07966 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 1003 Operation: Post-smoothing
+Compression Ratio rank 0: 1.02424 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 206 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.08398 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 1544 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.03792 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 284 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.08284 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 2317 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05346 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 404 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.08146 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 3246 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05948 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 570 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.07957 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 4455 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06721 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 784 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.07754 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 5852 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06727 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 1061 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.07445 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 7375 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06732 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 1419 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.07207 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 9120 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.0661 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 1889 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06859 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 10431 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06562 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 2511 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06632 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 9456 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06401 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 3154 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06089 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 7549 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05899 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 2879 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05072 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 6000 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05106 Amg iter: 0 Amg level: 17 Rank:0 Datasize: 6000 Operation: Residual-Norm
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05106 Amg iter: 1 Amg level: 0 Rank:0 Datasize: 6000 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.04996 Amg iter: 1 Amg level: 0 Rank:0 Datasize: 6000 Operation: Residual
+Compression Ratio rank 0: 464.554 Amg iter: 1 Amg level: 1 Rank:0 Datasize: 7549 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.04474 Amg iter: 1 Amg level: 1 Rank:0 Datasize: 7549 Operation: Residual
+Compression Ratio rank 0: 581.908 Amg iter: 1 Amg level: 2 Rank:0 Datasize: 9456 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.0453 Amg iter: 1 Amg level: 2 Rank:0 Datasize: 9456 Operation: Residual
+Compression Ratio rank 0: 637.008 Amg iter: 1 Amg level: 3 Rank:0 Datasize: 10431 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.90199 Amg iter: 1 Amg level: 3 Rank:0 Datasize: 10431 Operation: Residual
+Compression Ratio rank 0: 561.231 Amg iter: 1 Amg level: 4 Rank:0 Datasize: 9120 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.09595 Amg iter: 1 Amg level: 4 Rank:0 Datasize: 9120 Operation: Residual
+Compression Ratio rank 0: 453.846 Amg iter: 1 Amg level: 5 Rank:0 Datasize: 7375 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.92565 Amg iter: 1 Amg level: 5 Rank:0 Datasize: 7375 Operation: Residual
+Compression Ratio rank 0: 365.75 Amg iter: 1 Amg level: 6 Rank:0 Datasize: 5852 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.9802 Amg iter: 1 Amg level: 6 Rank:0 Datasize: 5852 Operation: Residual
+Compression Ratio rank 0: 278.438 Amg iter: 1 Amg level: 7 Rank:0 Datasize: 4455 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.23982 Amg iter: 1 Amg level: 7 Rank:0 Datasize: 4455 Operation: Residual
+Compression Ratio rank 0: 242.692 Amg iter: 1 Amg level: 8 Rank:0 Datasize: 3246 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.04344 Amg iter: 1 Amg level: 8 Rank:0 Datasize: 3246 Operation: Residual
+Compression Ratio rank 0: 173.234 Amg iter: 1 Amg level: 9 Rank:0 Datasize: 2317 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.88623 Amg iter: 1 Amg level: 9 Rank:0 Datasize: 2317 Operation: Residual
+Compression Ratio rank 0: 115.439 Amg iter: 1 Amg level: 10 Rank:0 Datasize: 1544 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.55273 Amg iter: 1 Amg level: 10 Rank:0 Datasize: 1544 Operation: Residual
+Compression Ratio rank 0: 74.9907 Amg iter: 1 Amg level: 11 Rank:0 Datasize: 1003 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.03402 Amg iter: 1 Amg level: 11 Rank:0 Datasize: 1003 Operation: Residual
+Compression Ratio rank 0: 45.2336 Amg iter: 1 Amg level: 12 Rank:0 Datasize: 605 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.22408 Amg iter: 1 Amg level: 12 Rank:0 Datasize: 605 Operation: Residual
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 27.3398 Amg iter: 1 Amg level: 13 Rank:0 Datasize: 352 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.03264 Amg iter: 1 Amg level: 13 Rank:0 Datasize: 352 Operation: Residual
+Compression Ratio rank 0: 14.2476 Amg iter: 1 Amg level: 14 Rank:0 Datasize: 187 Operation: Pre-Smoothing
+Compression Ratio rank 0: 0.99336 Amg iter: 1 Amg level: 14 Rank:0 Datasize: 187 Operation: Residual
+Compression Ratio rank 0: 6.03636 Amg iter: 1 Amg level: 15 Rank:0 Datasize: 83 Operation: Pre-Smoothing
+Compression Ratio rank 0: 0.943182 Amg iter: 1 Amg level: 15 Rank:0 Datasize: 83 Operation: Residual
+Compression Ratio rank 0: 1.96364 Amg iter: 1 Amg level: 16 Rank:0 Datasize: 27 Operation: Pre-Smoothing
+Compression Ratio rank 0: 0.791209 Amg iter: 1 Amg level: 16 Rank:0 Datasize: 27 Operation: Residual
+Compression Ratio rank 0: 0.457143 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 6 Operation: Interpolation
+Compression Ratio rank 0: 0.791209 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 27 Operation: Post-smoothing
+Compression Ratio rank 0: 0.662722 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 14 Operation: Interpolation
+Compression Ratio rank 0: 0.928671 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 83 Operation: Post-smoothing
+Compression Ratio rank 0: 0.791209 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 27 Operation: Interpolation
+Compression Ratio rank 0: 1.00268 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 187 Operation: Post-smoothing
+Compression Ratio rank 0: 0.852792 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 42 Operation: Interpolation
+Compression Ratio rank 0: 1.04335 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 352 Operation: Post-smoothing
+Compression Ratio rank 0: 0.912913 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 76 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.0628 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 605 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 0.989595 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 107 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06802 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 1003 Operation: Post-smoothing
+Compression Ratio rank 0: 1.01917 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 206 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.07502 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 1544 Operation: Post-smoothing
+Compression Ratio rank 0: 1.02759 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 284 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.07474SZ is downgraded to lossless mode.
+ Amg iter: 1 Amg level: 17 Rank:0 Datasize: 2317 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.04528 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 404 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.07399 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 3246 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.0558 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 570 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.07311 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 4455 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 784 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.07126 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 5852 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06339 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 1061 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06993 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 7375 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06432 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 1419 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06942 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 9120 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06468 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 1889 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06764 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 10431 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06432 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 2511 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06608 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 9456 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06374 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 3154 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06337 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 7549 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06109 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 2879 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: SZ is downgraded to lossless mode.
+1.05562 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 6000 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.0558 Amg iter: 1 Amg level: 17 Rank:0 Datasize: 6000 Operation: Residual-Norm
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.0558 Amg iter: 2 Amg level: 0 Rank:0 Datasize: 6000 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05543 Amg iter: 2 Amg level: 0 Rank:0 Datasize: 6000 Operation: Residual
+Compression Ratio rank 0: 464.554 Amg iter: 2 Amg level: 1 Rank:0 Datasize: 7549 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.28749 Amg iter: 2 Amg level: 1 Rank:0 Datasize: 7549 Operation: Residual
+Compression Ratio rank 0: 581.908 Amg iter: 2 Amg level: 2 Rank:0 Datasize: 9456 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.68008 Amg iter: 2 Amg level: 2 Rank:0 Datasize: 9456 Operation: Residual
+Compression Ratio rank 0: 637.008 Amg iter: 2 Amg level: 3 Rank:0 Datasize: 10431 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.71111 Amg iter: 2 Amg level: 3 Rank:0 Datasize: 10431 Operation: Residual
+Compression Ratio rank 0: 561.231 Amg iter: 2 Amg level: 4 Rank:0 Datasize: 9120 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.02751 Amg iter: 2 Amg level: 4 Rank:0 Datasize: 9120 Operation: Residual
+Compression Ratio rank 0: 453.846 Amg iter: 2 Amg level: 5 Rank:0 Datasize: 7375 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.60474 Amg iter: 2 Amg level: 5 Rank:0 Datasize: 7375 Operation: Residual
+Compression Ratio rank 0: 365.75 Amg iter: 2 Amg level: 6 Rank:0 Datasize: 5852 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.58438 Amg iter: 2 Amg level: 6 Rank:0 Datasize: 5852 Operation: Residual
+Compression Ratio rank 0: 278.438 Amg iter: 2 Amg level: 7 Rank:0 Datasize: 4455 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.54426 Amg iter: 2 Amg level: 7 Rank:0 Datasize: 4455 Operation: Residual
+Compression Ratio rank 0: 242.692 Amg iter: 2 Amg level: 8 Rank:0 Datasize: 3246 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.4715 Amg iter: 2 Amg level: 8 Rank:0 Datasize: 3246 Operation: Residual
+Compression Ratio rank 0: 173.234 Amg iter: 2 Amg level: 9 Rank:0 Datasize: 2317 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.41197 Amg iter: 2 Amg level: 9 Rank:0 Datasize: 2317 Operation: Residual
+Compression Ratio rank 0: 115.439 Amg iter: 2 Amg level: 10 Rank:0 Datasize: 1544 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.17159 Amg iter: 2 Amg level: 10 Rank:0 Datasize: 1544 Operation: Residual
+Compression Ratio rank 0: 74.9907 Amg iter: 2 Amg level: 11 Rank:0 Datasize: 1003 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.85956 Amg iter: 2 Amg level: 11 Rank:0 Datasize: 1003 Operation: Residual
+Compression Ratio rank 0: 45.2336 Amg iter: 2 Amg level: 12 Rank:0 Datasize: 605 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.48649 Amg iter: 2 Amg level: 12 Rank:0 Datasize: 605 Operation: Residual
+Compression Ratio rank 0: 27.3398 Amg iter: 2 Amg level: 13 Rank:0 Datasize: 352 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.22595 Amg iter: 2 Amg level: 13 Rank:0 Datasize: 352 Operation: Residual
+Compression Ratio rank 0: 14.2476 Amg iter: 2 Amg level: 14 Rank:0 Datasize: 187 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.02959 Amg iter: 2 Amg level: 14 Rank:0 Datasize: 187 Operation: Residual
+Compression Ratio rank 0: 6.03636 Amg iter: 2 Amg level: 15 Rank:0 Datasize: 83 Operation: Pre-Smoothing
+Compression Ratio rank 0: 0.992526 Amg iter: 2 Amg level: 15 Rank:0 Datasize: 83 Operation: Residual
+Compression Ratio rank 0: 1.96364 Amg iter: 2 Amg level: 16 Rank:0 Datasize: 27 Operation: Pre-Smoothing
+Compression Ratio rank 0: 0.791209 Amg iter: 2 Amg level: 16 Rank:0 Datasize: 27 Operation: Residual
+Compression Ratio rank 0: 0.457143 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 6 Operation: Interpolation
+Compression Ratio rank 0: 0.791209 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 27 Operation: Post-smoothing
+Compression Ratio rank 0: 0.662722 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 14 Operation: Interpolation
+Compression Ratio rank 0: 0.951289 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 83 Operation: Post-smoothing
+Compression Ratio rank 0: 0.791209 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 27 Operation: Interpolation
+Compression Ratio rank 0: 1.00335 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 187 Operation: Post-smoothing
+Compression Ratio rank 0: 0.852792 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 42 Operation: Interpolation
+Compression Ratio rank 0: 1.05389 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 352 Operation: Post-smoothing
+Compression Ratio rank 0: 0.948518 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 76 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.0628 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 605 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.04518 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 107 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.07172 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 1003 Operation: Post-smoothing
+Compression Ratio rank 0: 1.01666 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 206 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.07232 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 1544 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.02759 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 284 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.07424 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 2317 Operation: Post-smoothing
+Compression Ratio rank 0: 1.04258 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 404 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.07341 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 3246 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05629 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 570 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.07117 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 4455 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06107 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 784 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06984 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 5852 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05901 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 1061 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06743 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 7375 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06113 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 1419 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06626 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 9120 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06146 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 1889 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06424 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 10431 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06117 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 2511 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06222 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 9456 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05857 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 3154 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.0599 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 7549 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05782 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 2879 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05871 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 6000 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05827 Amg iter: 2 Amg level: 17 Rank:0 Datasize: 6000 Operation: Residual-Norm
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05827 Amg iter: 3 Amg level: 0 Rank:0 Datasize: 6000 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05864 Amg iter: 3 Amg level: 0 Rank:0 Datasize: 6000 Operation: Residual
+Compression Ratio rank 0: 464.554 Amg iter: 3 Amg level: 1 Rank:0 Datasize: 7549 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.96533 Amg iter: 3 Amg level: 1 Rank:0 Datasize: 7549 Operation: Residual
+Compression Ratio rank 0: 581.908 Amg iter: 3 Amg level: 2 Rank:0 Datasize: 9456 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.70569 Amg iter: 3 Amg level: 2 Rank:0 Datasize: 9456 Operation: Residual
+Compression Ratio rank 0: 637.008 Amg iter: 3 Amg level: 3 Rank:0 Datasize: 10431 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.66998 Amg iter: 3 Amg level: 3 Rank:0 Datasize: 10431 Operation: Residual
+Compression Ratio rank 0: 561.231 Amg iter: 3 Amg level: 4 Rank:0 Datasize: 9120 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.96694 Amg iter: 3 Amg level: 4 Rank:0 Datasize: 9120 Operation: Residual
+Compression Ratio rank 0: 453.846 Amg iter: 3 Amg level: 5 Rank:0 Datasize: 7375 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.34619 Amg iter: 3 Amg level: 5 Rank:0 Datasize: 7375 Operation: Residual
+Compression Ratio rank 0: 365.75 Amg iter: 3 Amg level: 6 Rank:0 Datasize: 5852 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.17698 Amg iter: 3 Amg level: 6 Rank:0 Datasize: 5852 Operation: Residual
+Compression Ratio rank 0: 278.438 Amg iter: 3 Amg level: 7 Rank:0 Datasize: 4455 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.10724 Amg iter: 3 Amg level: 7 Rank:0 Datasize: 4455 Operation: Residual
+Compression Ratio rank 0: 242.692 Amg iter: 3 Amg level: 8 Rank:0 Datasize: 3246 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.02164 Amg iter: 3 Amg level: 8 Rank:0 Datasize: 3246 Operation: Residual
+Compression Ratio rank 0: 173.234 Amg iter: 3 Amg level: 9 Rank:0 Datasize: 2317 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.03919 Amg iter: 3 Amg level: 9 Rank:0 Datasize: 2317 Operation: Residual
+Compression Ratio rank 0: 115.439 Amg iter: 3 Amg level: 10 Rank:0 Datasize: 1544 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.11447 Amg iter: 3 Amg level: 10 Rank:0 Datasize: 1544 Operation: Residual
+Compression Ratio rank 0: 74.9907 Amg iter: 3 Amg level: 11 Rank:0 Datasize: 1003 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.32109 Amg iter: 3 Amg level: 11 Rank:0 Datasize: 1003 Operation: Residual
+Compression Ratio rank 0: 45.2336 Amg iter: 3 Amg level: 12 Rank:0 Datasize: 605 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.94144 Amg iter: 3 Amg level: 12 Rank:0 Datasize: 605 Operation: Residual
+Compression Ratio rank 0: 27.3398 Amg iter: 3 Amg level: 13 Rank:0 Datasize: 352 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.47977 Amg iter: 3 Amg level: 13 Rank:0 Datasize: 352 Operation: Residual
+Compression Ratio rank 0: 14.2476 Amg iter: 3 Amg level: 14 Rank:0 Datasize: 187 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.25084 Amg iter: 3 Amg level: 14 Rank:0 Datasize: 187 Operation: Residual
+Compression Ratio rank 0: 6.03636 Amg iter: 3 Amg level: 15 Rank:0 Datasize: 83 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.09934 Amg iter: 3 Amg level: 15 Rank:0 Datasize: 83 Operation: Residual
+Compression Ratio rank 0: 1.96364 Amg iter: 3 Amg level: 16 Rank:0 Datasize: 27 Operation: Pre-Smoothing
+Compression Ratio rank 0: 0.791209 Amg iter: 3 Amg level: 16 Rank:0 Datasize: 27 Operation: Residual
+Compression Ratio rank 0: 0.457143 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 6 Operation: Interpolation
+Compression Ratio rank 0: 0.791209 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 27 Operation: Post-smoothing
+Compression Ratio rank 0: 0.662722 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 14 Operation: Interpolation
+Compression Ratio rank 0: 0.985163 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 83 Operation: Post-smoothing
+Compression Ratio rank 0: 0.791209 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 27 Operation: Interpolation
+Compression Ratio rank 0: 1.00877 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 187 Operation: Post-smoothing
+Compression Ratio rank 0: 0.852792 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 42 Operation: Interpolation
+Compression Ratio rank 0: 1.11924 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 352 Operation: Post-smoothing
+Compression Ratio rank 0: 0.939722 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 76 Operation: Interpolation
+Compression Ratio rank 0: 1.21212 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 605 Operation: Post-smoothing
+Compression Ratio rank 0: 1.03883 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 107 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06802 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 1003 Operation: Post-smoothing
+Compression Ratio rank 0: 1.02743 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 206 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.52437 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 1544 Operation: Post-smoothing
+Compression Ratio rank 0: 1.02527 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 284 Operation: Interpolation
+Compression Ratio rank 0: 1.70981 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 2317 Operation: Post-smoothing
+Compression Ratio rank 0: 1.07233 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 404 Operation: Interpolation
+Compression Ratio rank 0: 1.82719 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 3246 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.04852 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 570 Operation: Interpolation
+Compression Ratio rank 0: 2.20476 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 4455 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05412 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 784 Operation: Interpolation
+Compression Ratio rank 0: 1.96211 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 5852 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05664 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 1061 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 2.02055 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 7375 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05629 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 1419 Operation: Interpolation
+Compression Ratio rank 0: 2.04869 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 9120 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05789 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 1889 Operation: Interpolation
+Compression Ratio rank 0: 2.00505 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 10431 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05682 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 2511 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.92415 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 9456 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05419 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 3154 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05621 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 7549 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05395 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 2879 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06007 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 6000 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06016 Amg iter: 3 Amg level: 17 Rank:0 Datasize: 6000 Operation: Residual-Norm
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06016 Amg iter: 4 Amg level: 0 Rank:0 Datasize: 6000 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06063 Amg iter: 4 Amg level: 0 Rank:0 Datasize: 6000 Operation: Residual
+Compression Ratio rank 0: 464.554 Amg iter: 4 Amg level: 1 Rank:0 Datasize: 7549 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.02346 Amg iter: 4 Amg level: 1 Rank:0 Datasize: 7549 Operation: Residual
+Compression Ratio rank 0: 581.908 Amg iter: 4 Amg level: 2 Rank:0 Datasize: 9456 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.72614 Amg iter: 4 Amg level: 2 Rank:0 Datasize: 9456 Operation: Residual
+Compression Ratio rank 0: 637.008 Amg iter: 4 Amg level: 3 Rank:0 Datasize: 10431 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.31516 Amg iter: 4 Amg level: 3 Rank:0 Datasize: 10431 Operation: Residual
+Compression Ratio rank 0: 561.231 Amg iter: 4 Amg level: 4 Rank:0 Datasize: 9120 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.26343 Amg iter: 4 Amg level: 4 Rank:0 Datasize: 9120 Operation: Residual
+Compression Ratio rank 0: 453.846 Amg iter: 4 Amg level: 5 Rank:0 Datasize: 7375 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.4925 Amg iter: 4 Amg level: 5 Rank:0 Datasize: 7375 Operation: Residual
+Compression Ratio rank 0: 365.75 Amg iter: 4 Amg level: 6 Rank:0 Datasize: 5852 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.86813 Amg iter: 4 Amg level: 6 Rank:0 Datasize: 5852 Operation: Residual
+Compression Ratio rank 0: 278.438 Amg iter: 4 Amg level: 7 Rank:0 Datasize: 4455 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.24538 Amg iter: 4 Amg level: 7 Rank:0 Datasize: 4455 Operation: Residual
+Compression Ratio rank 0: 242.692 Amg iter: 4 Amg level: 8 Rank:0 Datasize: 3246 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.13965 Amg iter: 4 Amg level: 8 Rank:0 Datasize: 3246 Operation: Residual
+Compression Ratio rank 0: 173.234 Amg iter: 4 Amg level: 9 Rank:0 Datasize: 2317 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.20526 Amg iter: 4 Amg level: 9 Rank:0 Datasize: 2317 Operation: Residual
+Compression Ratio rank 0: 115.439 Amg iter: 4 Amg level: 10 Rank:0 Datasize: 1544 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.88428 Amg iter: 4 Amg level: 10 Rank:0 Datasize: 1544 Operation: Residual
+Compression Ratio rank 0: 74.9907 Amg iter: 4 Amg level: 11 Rank:0 Datasize: 1003 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.5473 Amg iter: 4 Amg level: 11 Rank:0 Datasize: 1003 Operation: Residual
+Compression Ratio rank 0: 45.2336 Amg iter: 4 Amg level: 12 Rank:0 Datasize: 605 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.13687 Amg iter: 4 Amg level: 12 Rank:0 Datasize: 605 Operation: Residual
+Compression Ratio rank 0: 27.3398 Amg iter: 4 Amg level: 13 Rank:0 Datasize: 352 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.90915 Amg iter: 4 Amg level: 13 Rank:0 Datasize: 352 Operation: Residual
+Compression Ratio rank 0: 14.2476 Amg iter: 4 Amg level: 14 Rank:0 Datasize: 187 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.65487 Amg iter: 4 Amg level: 14 Rank:0 Datasize: 187 Operation: Residual
+Compression Ratio rank 0: 6.03636 Amg iter: 4 Amg level: 15 Rank:0 Datasize: 83 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.16084 Amg iter: 4 Amg level: 15 Rank:0 Datasize: 83 Operation: Residual
+Compression Ratio rank 0: 1.96364 Amg iter: 4 Amg level: 16 Rank:0 Datasize: 27 Operation: Pre-Smoothing
+Compression Ratio rank 0: 0.791209 Amg iter: 4 Amg level: 16 Rank:0 Datasize: 27 Operation: Residual
+Compression Ratio rank 0: 0.457143 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 6 Operation: Interpolation
+Compression Ratio rank 0: 0.791209 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 27 Operation: Post-smoothing
+Compression Ratio rank 0: 0.662722 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 14 Operation: Interpolation
+Compression Ratio rank 0: 1 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 83 Operation: Post-smoothing
+Compression Ratio rank 0: 0.791209 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 27 Operation: Interpolation
+Compression Ratio rank 0: 1.09437 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 187 Operation: Post-smoothing
+Compression Ratio rank 0: 0.852792 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 42 Operation: Interpolation
+Compression Ratio rank 0: 1.32956 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 352 Operation: Post-smoothing
+Compression Ratio rank 0: 0.990228 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 76 Operation: Interpolation
+Compression Ratio rank 0: 1.40412 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 605 Operation: Post-smoothing
+Compression Ratio rank 0: 1.09323 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 107 Operation: Interpolation
+Compression Ratio rank 0: 1.5755 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 1003 Operation: Post-smoothing
+Compression Ratio rank 0: 1.06736 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 206 Operation: Interpolation
+Compression Ratio rank 0: 1.82776 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 1544 Operation: Post-smoothing
+Compression Ratio rank 0: 1.09021 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 284 Operation: Interpolation
+Compression Ratio rank 0: 2.03223 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 2317 Operation: Post-smoothing
+Compression Ratio rank 0: 1.13843 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 404 Operation: Interpolation
+Compression Ratio rank 0: 2.20479 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 3246 Operation: Post-smoothing
+Compression Ratio rank 0: 1.14487 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 570 Operation: Interpolation
+Compression Ratio rank 0: 2.28872 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 4455 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.04918 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 784 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 2.38723 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 5852 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05154 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 1061 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 2.48672 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 7375 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05433 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 1419 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 2.48045 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 9120 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05303 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 1889 Operation: Interpolation
+Compression Ratio rank 0: 2.92872 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 10431 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05233 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 2511 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 2.44357 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 9456 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05203 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 3154 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 2.53556 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 7549 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.05083 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 2879 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06127 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 6000 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06101 Amg iter: 4 Amg level: 17 Rank:0 Datasize: 6000 Operation: Residual-Norm
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06101 Amg iter: 5 Amg level: 0 Rank:0 Datasize: 6000 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06115 Amg iter: 5 Amg level: 0 Rank:0 Datasize: 6000 Operation: Residual
+Compression Ratio rank 0: 464.554 Amg iter: 5 Amg level: 1 Rank:0 Datasize: 7549 Operation: Pre-Smoothing
+Compression Ratio rank 0: 6.07932 Amg iter: 5 Amg level: 1 Rank:0 Datasize: 7549 Operation: Residual
+Compression Ratio rank 0: 581.908 Amg iter: 5 Amg level: 2 Rank:0 Datasize: 9456 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.87101 Amg iter: 5 Amg level: 2 Rank:0 Datasize: 9456 Operation: Residual
+Compression Ratio rank 0: 637.008 Amg iter: 5 Amg level: 3 Rank:0 Datasize: 10431 Operation: Pre-Smoothing
+Compression Ratio rank 0: 6.39008 Amg iter: 5 Amg level: 3 Rank:0 Datasize: 10431 Operation: Residual
+Compression Ratio rank 0: 561.231 Amg iter: 5 Amg level: 4 Rank:0 Datasize: 9120 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.20362 Amg iter: 5 Amg level: 4 Rank:0 Datasize: 9120 Operation: Residual
+Compression Ratio rank 0: 453.846 Amg iter: 5 Amg level: 5 Rank:0 Datasize: 7375 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.81279 Amg iter: 5 Amg level: 5 Rank:0 Datasize: 7375 Operation: Residual
+Compression Ratio rank 0: 365.75 Amg iter: 5 Amg level: 6 Rank:0 Datasize: 5852 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.95198 Amg iter: 5 Amg level: 6 Rank:0 Datasize: 5852 Operation: Residual
+Compression Ratio rank 0: 278.438 Amg iter: 5 Amg level: 7 Rank:0 Datasize: 4455 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.80907 Amg iter: 5 Amg level: 7 Rank:0 Datasize: 4455 Operation: Residual
+Compression Ratio rank 0: 242.692 Amg iter: 5 Amg level: 8 Rank:0 Datasize: 3246 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.6471 Amg iter: 5 Amg level: 8 Rank:0 Datasize: 3246 Operation: Residual
+Compression Ratio rank 0: 173.234 Amg iter: 5 Amg level: 9 Rank:0 Datasize: 2317 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.99827 Amg iter: 5 Amg level: 9 Rank:0 Datasize: 2317 Operation: Residual
+Compression Ratio rank 0: 115.439 Amg iter: 5 Amg level: 10 Rank:0 Datasize: 1544 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.85879 Amg iter: 5 Amg level: 10 Rank:0 Datasize: 1544 Operation: Residual
+Compression Ratio rank 0: 74.9907 Amg iter: 5 Amg level: 11 Rank:0 Datasize: 1003 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.66225 Amg iter: 5 Amg level: 11 Rank:0 Datasize: 1003 Operation: Residual
+Compression Ratio rank 0: 45.2336 Amg iter: 5 Amg level: 12 Rank:0 Datasize: 605 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.76068 Amg iter: 5 Amg level: 12 Rank:0 Datasize: 605 Operation: Residual
+Compression Ratio rank 0: 27.3398 Amg iter: 5 Amg level: 13 Rank:0 Datasize: 352 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.98938 Amg iter: 5 Amg level: 13 Rank:0 Datasize: 352 Operation: Residual
+Compression Ratio rank 0: 14.2476 Amg iter: 5 Amg level: 14 Rank:0 Datasize: 187 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.87234 Amg iter: 5 Amg level: 14 Rank:0 Datasize: 187 Operation: Residual
+Compression Ratio rank 0: 6.03636 Amg iter: 5 Amg level: 15 Rank:0 Datasize: 83 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.40678 Amg iter: 5 Amg level: 15 Rank:0 Datasize: 83 Operation: Residual
+Compression Ratio rank 0: 1.96364 Amg iter: 5 Amg level: 16 Rank:0 Datasize: 27 Operation: Pre-Smoothing
+Compression Ratio rank 0: 0.797048 Amg iter: 5 Amg level: 16 Rank:0 Datasize: 27 Operation: Residual
+Compression Ratio rank 0: 0.457143 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 6 Operation: Interpolation
+Compression Ratio rank 0: 0.791209 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 27 Operation: Post-smoothing
+Compression Ratio rank 0: 0.662722 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 14 Operation: Interpolation
+Compression Ratio rank 0: 1.08674 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 83 Operation: Post-smoothing
+Compression Ratio rank 0: 0.791209 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 27 Operation: Interpolation
+Compression Ratio rank 0: 1.21626 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 187 Operation: Post-smoothing
+Compression Ratio rank 0: 0.852792 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 42 Operation: Interpolation
+Compression Ratio rank 0: 1.33523 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 352 Operation: Post-smoothing
+Compression Ratio rank 0: 1.00829 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 76 Operation: Interpolation
+Compression Ratio rank 0: 1.69408 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 605 Operation: Post-smoothing
+Compression Ratio rank 0: 1.11025 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 107 Operation: Interpolation
+Compression Ratio rank 0: 1.9633 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 1003 Operation: Post-smoothing
+Compression Ratio rank 0: 1.12415 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 206 Operation: Interpolation
+Compression Ratio rank 0: 2.56266 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 1544 Operation: Post-smoothing
+Compression Ratio rank 0: 1.16573 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 284 Operation: Interpolation
+Compression Ratio rank 0: 2.45088 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 2317 Operation: Post-smoothing
+Compression Ratio rank 0: 1.25126 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 404 Operation: Interpolation
+Compression Ratio rank 0: 2.5808 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 3246 Operation: Post-smoothing
+Compression Ratio rank 0: 1.30547 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 570 Operation: Interpolation
+Compression Ratio rank 0: 3.1621 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 4455 Operation: Post-smoothing
+Compression Ratio rank 0: 1.35905 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 784 Operation: Interpolation
+Compression Ratio rank 0: 3.15557 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 5852 Operation: Post-smoothing
+Compression Ratio rank 0: 1.41585 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 1061 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 2.89713 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 7375 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.04685 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 1419 Operation: Interpolation
+Compression Ratio rank 0: 2.88985 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 9120 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.04646 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 1889 Operation: Interpolation
+Compression Ratio rank 0: 2.97752 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 10431 Operation: Post-smoothing
+Compression Ratio rank 0: 1.69548 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 2511 Operation: Interpolation
+Compression Ratio rank 0: 2.89506 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 9456 Operation: Post-smoothing
+Compression Ratio rank 0: 1.76955 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 3154 Operation: Interpolation
+Compression Ratio rank 0: 3.17435 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 7549 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 2.20867 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 2879 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06096 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 6000 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06134 Amg iter: 5 Amg level: 17 Rank:0 Datasize: 6000 Operation: Residual-Norm
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06134 Amg iter: 6 Amg level: 0 Rank:0 Datasize: 6000 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06159 Amg iter: 6 Amg level: 0 Rank:0 Datasize: 6000 Operation: Residual
+Compression Ratio rank 0: 464.554 Amg iter: 6 Amg level: 1 Rank:0 Datasize: 7549 Operation: Pre-Smoothing
+Compression Ratio rank 0: 9.21734 Amg iter: 6 Amg level: 1 Rank:0 Datasize: 7549 Operation: Residual
+Compression Ratio rank 0: 581.908 Amg iter: 6 Amg level: 2 Rank:0 Datasize: 9456 Operation: Pre-Smoothing
+Compression Ratio rank 0: 7.67688 Amg iter: 6 Amg level: 2 Rank:0 Datasize: 9456 Operation: Residual
+Compression Ratio rank 0: 637.008 Amg iter: 6 Amg level: 3 Rank:0 Datasize: 10431 Operation: Pre-Smoothing
+Compression Ratio rank 0: 6.84898 Amg iter: 6 Amg level: 3 Rank:0 Datasize: 10431 Operation: Residual
+Compression Ratio rank 0: 561.231 Amg iter: 6 Amg level: 4 Rank:0 Datasize: 9120 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.98033 Amg iter: 6 Amg level: 4 Rank:0 Datasize: 9120 Operation: Residual
+Compression Ratio rank 0: 453.846 Amg iter: 6 Amg level: 5 Rank:0 Datasize: 7375 Operation: Pre-Smoothing
+Compression Ratio rank 0: 6.06933 Amg iter: 6 Amg level: 5 Rank:0 Datasize: 7375 Operation: Residual
+Compression Ratio rank 0: 365.75 Amg iter: 6 Amg level: 6 Rank:0 Datasize: 5852 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.10423 Amg iter: 6 Amg level: 6 Rank:0 Datasize: 5852 Operation: Residual
+Compression Ratio rank 0: 278.438 Amg iter: 6 Amg level: 7 Rank:0 Datasize: 4455 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.72178 Amg iter: 6 Amg level: 7 Rank:0 Datasize: 4455 Operation: Residual
+Compression Ratio rank 0: 242.692 Amg iter: 6 Amg level: 8 Rank:0 Datasize: 3246 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.22495 Amg iter: 6 Amg level: 8 Rank:0 Datasize: 3246 Operation: Residual
+Compression Ratio rank 0: 173.234 Amg iter: 6 Amg level: 9 Rank:0 Datasize: 2317 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.16899 Amg iter: 6 Amg level: 9 Rank:0 Datasize: 2317 Operation: Residual
+Compression Ratio rank 0: 115.439 Amg iter: 6 Amg level: 10 Rank:0 Datasize: 1544 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.36775 Amg iter: 6 Amg level: 10 Rank:0 Datasize: 1544 Operation: Residual
+Compression Ratio rank 0: 74.9907 Amg iter: 6 Amg level: 11 Rank:0 Datasize: 1003 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.14677 Amg iter: 6 Amg level: 11 Rank:0 Datasize: 1003 Operation: Residual
+Compression Ratio rank 0: 45.2336 Amg iter: 6 Amg level: 12 Rank:0 Datasize: 605 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.07107 Amg iter: 6 Amg level: 12 Rank:0 Datasize: 605 Operation: Residual
+Compression Ratio rank 0: 27.3398 Amg iter: 6 Amg level: 13 Rank:0 Datasize: 352 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.83585 Amg iter: 6 Amg level: 13 Rank:0 Datasize: 352 Operation: Residual
+Compression Ratio rank 0: 14.2476 Amg iter: 6 Amg level: 14 Rank:0 Datasize: 187 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.87704 Amg iter: 6 Amg level: 14 Rank:0 Datasize: 187 Operation: Residual
+Compression Ratio rank 0: 6.03636 Amg iter: 6 Amg level: 15 Rank:0 Datasize: 83 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.63145 Amg iter: 6 Amg level: 15 Rank:0 Datasize: 83 Operation: Residual
+Compression Ratio rank 0: 1.96364 Amg iter: 6 Amg level: 16 Rank:0 Datasize: 27 Operation: Pre-Smoothing
+Compression Ratio rank 0: 0.791209 Amg iter: 6 Amg level: 16 Rank:0 Datasize: 27 Operation: Residual
+Compression Ratio rank 0: 0.457143 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 6 Operation: Interpolation
+Compression Ratio rank 0: 0.791209 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 27 Operation: Post-smoothing
+Compression Ratio rank 0: 0.662722 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 14 Operation: Interpolation
+Compression Ratio rank 0: 1.1964 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 83 Operation: Post-smoothing
+Compression Ratio rank 0: 0.791209 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 27 Operation: Interpolation
+Compression Ratio rank 0: 1.6567 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 187 Operation: Post-smoothing
+Compression Ratio rank 0: 0.852792 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 42 Operation: Interpolation
+Compression Ratio rank 0: 1.63341 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 352 Operation: Post-smoothing
+Compression Ratio rank 0: 1.05009 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 76 Operation: Interpolation
+Compression Ratio rank 0: 1.9611 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 605 Operation: Post-smoothing
+Compression Ratio rank 0: 1.19386 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 107 Operation: Interpolation
+Compression Ratio rank 0: 1.91367 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 1003 Operation: Post-smoothing
+Compression Ratio rank 0: 1.22985 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 206 Operation: Interpolation
+Compression Ratio rank 0: 2.53219 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 1544 Operation: Post-smoothing
+Compression Ratio rank 0: 1.21758 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 284 Operation: Interpolation
+Compression Ratio rank 0: 2.80339 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 2317 Operation: Post-smoothing
+Compression Ratio rank 0: 1.40951 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 404 Operation: Interpolation
+Compression Ratio rank 0: 2.97901 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 3246 Operation: Post-smoothing
+Compression Ratio rank 0: 1.48341 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 570 Operation: Interpolation
+Compression Ratio rank 0: 3.0247 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 4455 Operation: Post-smoothing
+Compression Ratio rank 0: 1.49404 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 784 Operation: Interpolation
+Compression Ratio rank 0: 3.16111 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 5852 Operation: Post-smoothing
+Compression Ratio rank 0: 1.53685 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 1061 Operation: Interpolation
+Compression Ratio rank 0: 3.27541 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 7375 Operation: Post-smoothing
+Compression Ratio rank 0: 1.67954 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 1419 Operation: Interpolation
+Compression Ratio rank 0: 3.28604 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 9120 Operation: Post-smoothing
+Compression Ratio rank 0: 1.64332 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 1889 Operation: Interpolation
+Compression Ratio rank 0: 3.96729 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 10431 Operation: Post-smoothing
+Compression Ratio rank 0: 1.97522 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 2511 Operation: Interpolation
+Compression Ratio rank 0: 4.01827 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 9456 Operation: Post-smoothing
+Compression Ratio rank 0: 2.26866 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 3154 Operation: Interpolation
+Compression Ratio rank 0: 3.11588 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 7549 Operation: Post-smoothing
+Compression Ratio rank 0: 2.24112 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 2879 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06176 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 6000 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06145 Amg iter: 6 Amg level: 17 Rank:0 Datasize: 6000 Operation: Residual-Norm
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06145 Amg iter: 7 Amg level: 0 Rank:0 Datasize: 6000 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06152 Amg iter: 7 Amg level: 0 Rank:0 Datasize: 6000 Operation: Residual
+Compression Ratio rank 0: 464.554 Amg iter: 7 Amg level: 1 Rank:0 Datasize: 7549 Operation: Pre-Smoothing
+Compression Ratio rank 0: 11.6609 Amg iter: 7 Amg level: 1 Rank:0 Datasize: 7549 Operation: Residual
+Compression Ratio rank 0: 581.908 Amg iter: 7 Amg level: 2 Rank:0 Datasize: 9456 Operation: Pre-Smoothing
+Compression Ratio rank 0: 10.4227 Amg iter: 7 Amg level: 2 Rank:0 Datasize: 9456 Operation: Residual
+Compression Ratio rank 0: 637.008 Amg iter: 7 Amg level: 3 Rank:0 Datasize: 10431 Operation: Pre-Smoothing
+Compression Ratio rank 0: 8.76647 Amg iter: 7 Amg level: 3 Rank:0 Datasize: 10431 Operation: Residual
+Compression Ratio rank 0: 561.231 Amg iter: 7 Amg level: 4 Rank:0 Datasize: 9120 Operation: Pre-Smoothing
+Compression Ratio rank 0: 6.98516 Amg iter: 7 Amg level: 4 Rank:0 Datasize: 9120 Operation: Residual
+Compression Ratio rank 0: 453.846 Amg iter: 7 Amg level: 5 Rank:0 Datasize: 7375 Operation: Pre-Smoothing
+Compression Ratio rank 0: 6.25132 Amg iter: 7 Amg level: 5 Rank:0 Datasize: 7375 Operation: Residual
+Compression Ratio rank 0: 365.75 Amg iter: 7 Amg level: 6 Rank:0 Datasize: 5852 Operation: Pre-Smoothing
+Compression Ratio rank 0: 6.2214 Amg iter: 7 Amg level: 6 Rank:0 Datasize: 5852 Operation: Residual
+Compression Ratio rank 0: 278.438 Amg iter: 7 Amg level: 7 Rank:0 Datasize: 4455 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.34573 Amg iter: 7 Amg level: 7 Rank:0 Datasize: 4455 Operation: Residual
+Compression Ratio rank 0: 242.692 Amg iter: 7 Amg level: 8 Rank:0 Datasize: 3246 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.77837 Amg iter: 7 Amg level: 8 Rank:0 Datasize: 3246 Operation: Residual
+Compression Ratio rank 0: 173.234 Amg iter: 7 Amg level: 9 Rank:0 Datasize: 2317 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.86254 Amg iter: 7 Amg level: 9 Rank:0 Datasize: 2317 Operation: Residual
+Compression Ratio rank 0: 115.439 Amg iter: 7 Amg level: 10 Rank:0 Datasize: 1544 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.81818 Amg iter: 7 Amg level: 10 Rank:0 Datasize: 1544 Operation: Residual
+Compression Ratio rank 0: 74.9907 Amg iter: 7 Amg level: 11 Rank:0 Datasize: 1003 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.69089 Amg iter: 7 Amg level: 11 Rank:0 Datasize: 1003 Operation: Residual
+Compression Ratio rank 0: 45.2336 Amg iter: 7 Amg level: 12 Rank:0 Datasize: 605 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.06381 Amg iter: 7 Amg level: 12 Rank:0 Datasize: 605 Operation: Residual
+Compression Ratio rank 0: 27.3398 Amg iter: 7 Amg level: 13 Rank:0 Datasize: 352 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.04432 Amg iter: 7 Amg level: 13 Rank:0 Datasize: 352 Operation: Residual
+Compression Ratio rank 0: 14.2476 Amg iter: 7 Amg level: 14 Rank:0 Datasize: 187 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.50586 Amg iter: 7 Amg level: 14 Rank:0 Datasize: 187 Operation: Residual
+Compression Ratio rank 0: 6.03636 Amg iter: 7 Amg level: 15 Rank:0 Datasize: 83 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.71576 Amg iter: 7 Amg level: 15 Rank:0 Datasize: 83 Operation: Residual
+Compression Ratio rank 0: 1.96364 Amg iter: 7 Amg level: 16 Rank:0 Datasize: 27 Operation: Pre-Smoothing
+Compression Ratio rank 0: 0.853755 Amg iter: 7 Amg level: 16 Rank:0 Datasize: 27 Operation: Residual
+Compression Ratio rank 0: 0.457143 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 6 Operation: Interpolation
+Compression Ratio rank 0: 0.821293 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 27 Operation: Post-smoothing
+Compression Ratio rank 0: 0.662722 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 14 Operation: Interpolation
+Compression Ratio rank 0: 1.33602 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 83 Operation: Post-smoothing
+Compression Ratio rank 0: 0.8 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 27 Operation: Interpolation
+Compression Ratio rank 0: 1.66964 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 187 Operation: Post-smoothing
+Compression Ratio rank 0: 0.877285 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 42 Operation: Interpolation
+Compression Ratio rank 0: 1.75452 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 352 Operation: Post-smoothing
+Compression Ratio rank 0: 1.15152 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 76 Operation: Interpolation
+Compression Ratio rank 0: 1.88694 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 605 Operation: Post-smoothing
+Compression Ratio rank 0: 1.25513 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 107 Operation: Interpolation
+Compression Ratio rank 0: 2.05902 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 1003 Operation: Post-smoothing
+Compression Ratio rank 0: 1.26965 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 206 Operation: Interpolation
+Compression Ratio rank 0: 2.8759 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 1544 Operation: Post-smoothing
+Compression Ratio rank 0: 1.45734 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 284 Operation: Interpolation
+Compression Ratio rank 0: 3.09967 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 2317 Operation: Post-smoothing
+Compression Ratio rank 0: 1.41321 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 404 Operation: Interpolation
+Compression Ratio rank 0: 2.8767 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 3246 Operation: Post-smoothing
+Compression Ratio rank 0: 1.51344 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 570 Operation: Interpolation
+Compression Ratio rank 0: 3.42396 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 4455 Operation: Post-smoothing
+Compression Ratio rank 0: 1.78689 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 784 Operation: Interpolation
+Compression Ratio rank 0: 3.50209 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 5852 Operation: Post-smoothing
+Compression Ratio rank 0: 1.87166 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 1061 Operation: Interpolation
+Compression Ratio rank 0: 3.52681 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 7375 Operation: Post-smoothing
+Compression Ratio rank 0: 1.8546 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 1419 Operation: Interpolation
+Compression Ratio rank 0: 4.35816 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 9120 Operation: Post-smoothing
+Compression Ratio rank 0: 1.97465 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 1889 Operation: Interpolation
+Compression Ratio rank 0: 3.86871 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 10431 Operation: Post-smoothing
+Compression Ratio rank 0: 2.57671 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 2511 Operation: Interpolation
+Compression Ratio rank 0: 3.75015 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 9456 Operation: Post-smoothing
+Compression Ratio rank 0: 2.61526 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 3154 Operation: Interpolation
+Compression Ratio rank 0: 4.3002 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 7549 Operation: Post-smoothing
+Compression Ratio rank 0: 2.62085 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 2879 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06145 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 6000 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06105 Amg iter: 7 Amg level: 17 Rank:0 Datasize: 6000 Operation: Residual-Norm
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06105 Amg iter: 8 Amg level: 0 Rank:0 Datasize: 6000 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06143 Amg iter: 8 Amg level: 0 Rank:0 Datasize: 6000 Operation: Residual
+Compression Ratio rank 0: 464.554 Amg iter: 8 Amg level: 1 Rank:0 Datasize: 7549 Operation: Pre-Smoothing
+Compression Ratio rank 0: 14.3381 Amg iter: 8 Amg level: 1 Rank:0 Datasize: 7549 Operation: Residual
+Compression Ratio rank 0: 581.908 Amg iter: 8 Amg level: 2 Rank:0 Datasize: 9456 Operation: Pre-Smoothing
+Compression Ratio rank 0: 12.5245 Amg iter: 8 Amg level: 2 Rank:0 Datasize: 9456 Operation: Residual
+Compression Ratio rank 0: 637.008 Amg iter: 8 Amg level: 3 Rank:0 Datasize: 10431 Operation: Pre-Smoothing
+Compression Ratio rank 0: 10.194 Amg iter: 8 Amg level: 3 Rank:0 Datasize: 10431 Operation: Residual
+Compression Ratio rank 0: 561.231 Amg iter: 8 Amg level: 4 Rank:0 Datasize: 9120 Operation: Pre-Smoothing
+Compression Ratio rank 0: 8.6548 Amg iter: 8 Amg level: 4 Rank:0 Datasize: 9120 Operation: Residual
+Compression Ratio rank 0: 453.846 Amg iter: 8 Amg level: 5 Rank:0 Datasize: 7375 Operation: Pre-Smoothing
+Compression Ratio rank 0: 7.73263 Amg iter: 8 Amg level: 5 Rank:0 Datasize: 7375 Operation: Residual
+Compression Ratio rank 0: 365.75 Amg iter: 8 Amg level: 6 Rank:0 Datasize: 5852 Operation: Pre-Smoothing
+Compression Ratio rank 0: 6.28234 Amg iter: 8 Amg level: 6 Rank:0 Datasize: 5852 Operation: Residual
+Compression Ratio rank 0: 278.438 Amg iter: 8 Amg level: 7 Rank:0 Datasize: 4455 Operation: Pre-Smoothing
+Compression Ratio rank 0: 6.57443 Amg iter: 8 Amg level: 7 Rank:0 Datasize: 4455 Operation: Residual
+Compression Ratio rank 0: 242.692 Amg iter: 8 Amg level: 8 Rank:0 Datasize: 3246 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.5087 Amg iter: 8 Amg level: 8 Rank:0 Datasize: 3246 Operation: Residual
+Compression Ratio rank 0: 173.234 Amg iter: 8 Amg level: 9 Rank:0 Datasize: 2317 Operation: Pre-Smoothing
+Compression Ratio rank 0: 6.11951 Amg iter: 8 Amg level: 9 Rank:0 Datasize: 2317 Operation: Residual
+Compression Ratio rank 0: 115.439 Amg iter: 8 Amg level: 10 Rank:0 Datasize: 1544 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.62795 Amg iter: 8 Amg level: 10 Rank:0 Datasize: 1544 Operation: Residual
+Compression Ratio rank 0: 74.9907 Amg iter: 8 Amg level: 11 Rank:0 Datasize: 1003 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.85266 Amg iter: 8 Amg level: 11 Rank:0 Datasize: 1003 Operation: Residual
+Compression Ratio rank 0: 45.2336 Amg iter: 8 Amg level: 12 Rank:0 Datasize: 605 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.34081 Amg iter: 8 Amg level: 12 Rank:0 Datasize: 605 Operation: Residual
+Compression Ratio rank 0: 27.3398 Amg iter: 8 Amg level: 13 Rank:0 Datasize: 352 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.38055 Amg iter: 8 Amg level: 13 Rank:0 Datasize: 352 Operation: Residual
+Compression Ratio rank 0: 14.2476 Amg iter: 8 Amg level: 14 Rank:0 Datasize: 187 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.64311 Amg iter: 8 Amg level: 14 Rank:0 Datasize: 187 Operation: Residual
+Compression Ratio rank 0: 6.03636 Amg iter: 8 Amg level: 15 Rank:0 Datasize: 83 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.92464 Amg iter: 8 Amg level: 15 Rank:0 Datasize: 83 Operation: Residual
+Compression Ratio rank 0: 1.96364 Amg iter: 8 Amg level: 16 Rank:0 Datasize: 27 Operation: Pre-Smoothing
+Compression Ratio rank 0: 0.878049 Amg iter: 8 Amg level: 16 Rank:0 Datasize: 27 Operation: Residual
+Compression Ratio rank 0: 0.457143 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 6 Operation: Interpolation
+Compression Ratio rank 0: 0.827586 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 27 Operation: Post-smoothing
+Compression Ratio rank 0: 0.662722 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 14 Operation: Interpolation
+Compression Ratio rank 0: 1.47556 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 83 Operation: Post-smoothing
+Compression Ratio rank 0: 0.837209 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 27 Operation: Interpolation
+Compression Ratio rank 0: 2.14943 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 187 Operation: Post-smoothing
+Compression Ratio rank 0: 0.859335 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 42 Operation: Interpolation
+Compression Ratio rank 0: 2.06907 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 352 Operation: Post-smoothing
+Compression Ratio rank 0: 1.13858 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 76 Operation: Interpolation
+Compression Ratio rank 0: 2.29275 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 605 Operation: Post-smoothing
+Compression Ratio rank 0: 1.26068 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 107 Operation: Interpolation
+Compression Ratio rank 0: 3.25122 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 1003 Operation: Post-smoothing
+Compression Ratio rank 0: 1.31002 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 206 Operation: Interpolation
+Compression Ratio rank 0: 2.59441 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 1544 Operation: Post-smoothing
+Compression Ratio rank 0: 1.52997 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 284 Operation: Interpolation
+Compression Ratio rank 0: 3.03869 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 2317 Operation: Post-smoothing
+Compression Ratio rank 0: 1.54938 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 404 Operation: Interpolation
+Compression Ratio rank 0: 3.48517 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 3246 Operation: Post-smoothing
+Compression Ratio rank 0: 1.88352 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 570 Operation: Interpolation
+Compression Ratio rank 0: 3.66554 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 4455 Operation: Post-smoothing
+Compression Ratio rank 0: 1.71319 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 784 Operation: Interpolation
+Compression Ratio rank 0: 3.81021 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 5852 Operation: Post-smoothing
+Compression Ratio rank 0: 1.89761 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 1061 Operation: Interpolation
+Compression Ratio rank 0: 4.60003 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 7375 Operation: Post-smoothing
+Compression Ratio rank 0: 2.35372 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 1419 Operation: Interpolation
+Compression Ratio rank 0: 4.04323 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 9120 Operation: Post-smoothing
+Compression Ratio rank 0: 2.25082 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 1889 Operation: Interpolation
+Compression Ratio rank 0: 4.96921 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 10431 Operation: Post-smoothing
+Compression Ratio rank 0: 2.97953 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 2511 Operation: Interpolation
+Compression Ratio rank 0: 4.18685 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 9456 Operation: Post-smoothing
+Compression Ratio rank 0: 2.92783 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 3154 Operation: Interpolation
+Compression Ratio rank 0: 4.0205 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 7549 Operation: Post-smoothing
+Compression Ratio rank 0: 3.50563 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 2879 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06183 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 6000 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06145 Amg iter: 8 Amg level: 17 Rank:0 Datasize: 6000 Operation: Residual-Norm
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06145 Amg iter: 9 Amg level: 0 Rank:0 Datasize: 6000 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06117 Amg iter: 9 Amg level: 0 Rank:0 Datasize: 6000 Operation: Residual
+Compression Ratio rank 0: 464.554 Amg iter: 9 Amg level: 1 Rank:0 Datasize: 7549 Operation: Pre-Smoothing
+Compression Ratio rank 0: 17.5763 Amg iter: 9 Amg level: 1 Rank:0 Datasize: 7549 Operation: Residual
+Compression Ratio rank 0: 581.908 Amg iter: 9 Amg level: 2 Rank:0 Datasize: 9456 Operation: Pre-Smoothing
+Compression Ratio rank 0: 14.9679 Amg iter: 9 Amg level: 2 Rank:0 Datasize: 9456 Operation: Residual
+Compression Ratio rank 0: 637.008 Amg iter: 9 Amg level: 3 Rank:0 Datasize: 10431 Operation: Pre-Smoothing
+Compression Ratio rank 0: 11.6093 Amg iter: 9 Amg level: 3 Rank:0 Datasize: 10431 Operation: Residual
+Compression Ratio rank 0: 561.231 Amg iter: 9 Amg level: 4 Rank:0 Datasize: 9120 Operation: Pre-Smoothing
+Compression Ratio rank 0: 9.82891 Amg iter: 9 Amg level: 4 Rank:0 Datasize: 9120 Operation: Residual
+Compression Ratio rank 0: 453.846 Amg iter: 9 Amg level: 5 Rank:0 Datasize: 7375 Operation: Pre-Smoothing
+Compression Ratio rank 0: 8.66882 Amg iter: 9 Amg level: 5 Rank:0 Datasize: 7375 Operation: Residual
+Compression Ratio rank 0: 365.75 Amg iter: 9 Amg level: 6 Rank:0 Datasize: 5852 Operation: Pre-Smoothing
+Compression Ratio rank 0: 7.67727 Amg iter: 9 Amg level: 6 Rank:0 Datasize: 5852 Operation: Residual
+Compression Ratio rank 0: 278.438 Amg iter: 9 Amg level: 7 Rank:0 Datasize: 4455 Operation: Pre-Smoothing
+Compression Ratio rank 0: 7.11519 Amg iter: 9 Amg level: 7 Rank:0 Datasize: 4455 Operation: Residual
+Compression Ratio rank 0: 242.692 Amg iter: 9 Amg level: 8 Rank:0 Datasize: 3246 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.94233 Amg iter: 9 Amg level: 8 Rank:0 Datasize: 3246 Operation: Residual
+Compression Ratio rank 0: 173.234 Amg iter: 9 Amg level: 9 Rank:0 Datasize: 2317 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.94484 Amg iter: 9 Amg level: 9 Rank:0 Datasize: 2317 Operation: Residual
+Compression Ratio rank 0: 115.439 Amg iter: 9 Amg level: 10 Rank:0 Datasize: 1544 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.77736 Amg iter: 9 Amg level: 10 Rank:0 Datasize: 1544 Operation: Residual
+Compression Ratio rank 0: 74.9907 Amg iter: 9 Amg level: 11 Rank:0 Datasize: 1003 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.67599 Amg iter: 9 Amg level: 11 Rank:0 Datasize: 1003 Operation: Residual
+Compression Ratio rank 0: 45.2336 Amg iter: 9 Amg level: 12 Rank:0 Datasize: 605 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.50652 Amg iter: 9 Amg level: 12 Rank:0 Datasize: 605 Operation: Residual
+Compression Ratio rank 0: 27.3398 Amg iter: 9 Amg level: 13 Rank:0 Datasize: 352 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.85753 Amg iter: 9 Amg level: 13 Rank:0 Datasize: 352 Operation: Residual
+Compression Ratio rank 0: 14.2476 Amg iter: 9 Amg level: 14 Rank:0 Datasize: 187 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.52703 Amg iter: 9 Amg level: 14 Rank:0 Datasize: 187 Operation: Residual
+Compression Ratio rank 0: 6.03636 Amg iter: 9 Amg level: 15 Rank:0 Datasize: 83 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.58473 Amg iter: 9 Amg level: 15 Rank:0 Datasize: 83 Operation: Residual
+Compression Ratio rank 0: 1.96364 Amg iter: 9 Amg level: 16 Rank:0 Datasize: 27 Operation: Pre-Smoothing
+Compression Ratio rank 0: 0.93913 Amg iter: 9 Amg level: 16 Rank:0 Datasize: 27 Operation: Residual
+Compression Ratio rank 0: 0.457143 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 6 Operation: Interpolation
+Compression Ratio rank 0: 0.840467 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 27 Operation: Post-smoothing
+Compression Ratio rank 0: 0.662722 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 14 Operation: Interpolation
+Compression Ratio rank 0: 1.43723 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 83 Operation: Post-smoothing
+Compression Ratio rank 0: 0.802974 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 27 Operation: Interpolation
+Compression Ratio rank 0: 2.2163 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 187 Operation: Post-smoothing
+Compression Ratio rank 0: 0.938547 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 42 Operation: Interpolation
+Compression Ratio rank 0: 2.48106 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 352 Operation: Post-smoothing
+Compression Ratio rank 0: 1.12801 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 76 Operation: Interpolation
+Compression Ratio rank 0: 2.89128 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 605 Operation: Post-smoothing
+Compression Ratio rank 0: 1.27192 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 107 Operation: Interpolation
+Compression Ratio rank 0: 3.41011 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 1003 Operation: Post-smoothing
+Compression Ratio rank 0: 1.36991 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 206 Operation: Interpolation
+Compression Ratio rank 0: 3.23097 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 1544 Operation: Post-smoothing
+Compression Ratio rank 0: 1.41911 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 284 Operation: Interpolation
+Compression Ratio rank 0: 4.25723 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 2317 Operation: Post-smoothing
+Compression Ratio rank 0: 1.49768 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 404 Operation: Interpolation
+Compression Ratio rank 0: 3.84369 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 3246 Operation: Post-smoothing
+Compression Ratio rank 0: 2.05036 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 570 Operation: Interpolation
+Compression Ratio rank 0: 3.64492 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 4455 Operation: Post-smoothing
+Compression Ratio rank 0: 1.58184 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 784 Operation: Interpolation
+Compression Ratio rank 0: 4.05228 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 5852 Operation: Post-smoothing
+Compression Ratio rank 0: 2.03745 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 1061 Operation: Interpolation
+Compression Ratio rank 0: 4.8456 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 7375 Operation: Post-smoothing
+Compression Ratio rank 0: 2.32862 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 1419 Operation: Interpolation
+Compression Ratio rank 0: 4.44987 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 9120 Operation: Post-smoothing
+Compression Ratio rank 0: 2.8605 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 1889 Operation: Interpolation
+Compression Ratio rank 0: 4.6593 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 10431 Operation: Post-smoothing
+Compression Ratio rank 0: 2.5777 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 2511 Operation: Interpolation
+Compression Ratio rank 0: 4.73807 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 9456 Operation: Post-smoothing
+Compression Ratio rank 0: 3.9592 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 3154 Operation: Interpolation
+Compression Ratio rank 0: 5.33357 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 7549 Operation: Post-smoothing
+Compression Ratio rank 0: 3.26695 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 2879 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06138 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 6000 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06192 Amg iter: 9 Amg level: 17 Rank:0 Datasize: 6000 Operation: Residual-Norm
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06192 Amg iter: 10 Amg level: 0 Rank:0 Datasize: 6000 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06169 Amg iter: 10 Amg level: 0 Rank:0 Datasize: 6000 Operation: Residual
+Compression Ratio rank 0: 464.554 Amg iter: 10 Amg level: 1 Rank:0 Datasize: 7549 Operation: Pre-Smoothing
+Compression Ratio rank 0: 21.355 Amg iter: 10 Amg level: 1 Rank:0 Datasize: 7549 Operation: Residual
+Compression Ratio rank 0: 581.908 Amg iter: 10 Amg level: 2 Rank:0 Datasize: 9456 Operation: Pre-Smoothing
+Compression Ratio rank 0: 17.6706 Amg iter: 10 Amg level: 2 Rank:0 Datasize: 9456 Operation: Residual
+Compression Ratio rank 0: 637.008 Amg iter: 10 Amg level: 3 Rank:0 Datasize: 10431 Operation: Pre-Smoothing
+Compression Ratio rank 0: 13.2562 Amg iter: 10 Amg level: 3 Rank:0 Datasize: 10431 Operation: Residual
+Compression Ratio rank 0: 561.231 Amg iter: 10 Amg level: 4 Rank:0 Datasize: 9120 Operation: Pre-Smoothing
+Compression Ratio rank 0: 10.9681 Amg iter: 10 Amg level: 4 Rank:0 Datasize: 9120 Operation: Residual
+Compression Ratio rank 0: 453.846 Amg iter: 10 Amg level: 5 Rank:0 Datasize: 7375 Operation: Pre-Smoothing
+Compression Ratio rank 0: 8.35457 Amg iter: 10 Amg level: 5 Rank:0 Datasize: 7375 Operation: Residual
+Compression Ratio rank 0: 365.75 Amg iter: 10 Amg level: 6 Rank:0 Datasize: 5852 Operation: Pre-Smoothing
+Compression Ratio rank 0: 8.41712 Amg iter: 10 Amg level: 6 Rank:0 Datasize: 5852 Operation: Residual
+Compression Ratio rank 0: 278.438 Amg iter: 10 Amg level: 7 Rank:0 Datasize: 4455 Operation: Pre-Smoothing
+Compression Ratio rank 0: 6.91502 Amg iter: 10 Amg level: 7 Rank:0 Datasize: 4455 Operation: Residual
+Compression Ratio rank 0: 242.692 Amg iter: 10 Amg level: 8 Rank:0 Datasize: 3246 Operation: Pre-Smoothing
+Compression Ratio rank 0: 7.5052 Amg iter: 10 Amg level: 8 Rank:0 Datasize: 3246 Operation: Residual
+Compression Ratio rank 0: 173.234 Amg iter: 10 Amg level: 9 Rank:0 Datasize: 2317 Operation: Pre-Smoothing
+Compression Ratio rank 0: 6.27488 Amg iter: 10 Amg level: 9 Rank:0 Datasize: 2317 Operation: Residual
+Compression Ratio rank 0: 115.439 Amg iter: 10 Amg level: 10 Rank:0 Datasize: 1544 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.90353 Amg iter: 10 Amg level: 10 Rank:0 Datasize: 1544 Operation: Residual
+Compression Ratio rank 0: 74.9907 Amg iter: 10 Amg level: 11 Rank:0 Datasize: 1003 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.86979 Amg iter: 10 Amg level: 11 Rank:0 Datasize: 1003 Operation: Residual
+Compression Ratio rank 0: 45.2336 Amg iter: 10 Amg level: 12 Rank:0 Datasize: 605 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.2954 Amg iter: 10 Amg level: 12 Rank:0 Datasize: 605 Operation: Residual
+Compression Ratio rank 0: 27.3398 Amg iter: 10 Amg level: 13 Rank:0 Datasize: 352 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.17117 Amg iter: 10 Amg level: 13 Rank:0 Datasize: 352 Operation: Residual
+Compression Ratio rank 0: 14.2476 Amg iter: 10 Amg level: 14 Rank:0 Datasize: 187 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.75506 Amg iter: 10 Amg level: 14 Rank:0 Datasize: 187 Operation: Residual
+Compression Ratio rank 0: 6.03636 Amg iter: 10 Amg level: 15 Rank:0 Datasize: 83 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.04308 Amg iter: 10 Amg level: 15 Rank:0 Datasize: 83 Operation: Residual
+Compression Ratio rank 0: 1.96364 Amg iter: 10 Amg level: 16 Rank:0 Datasize: 27 Operation: Pre-Smoothing
+Compression Ratio rank 0: 0.903766 Amg iter: 10 Amg level: 16 Rank:0 Datasize: 27 Operation: Residual
+Compression Ratio rank 0: 0.457143 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 6 Operation: Interpolation
+Compression Ratio rank 0: 0.840467 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 27 Operation: Post-smoothing
+Compression Ratio rank 0: 0.662722 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 14 Operation: Interpolation
+Compression Ratio rank 0: 1.60775 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 83 Operation: Post-smoothing
+Compression Ratio rank 0: 0.860558 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 27 Operation: Interpolation
+Compression Ratio rank 0: 2.23617 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 187 Operation: Post-smoothing
+Compression Ratio rank 0: 0.886544 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 42 Operation: Interpolation
+Compression Ratio rank 0: 2.10936 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 352 Operation: Post-smoothing
+Compression Ratio rank 0: 1.1945 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 76 Operation: Interpolation
+Compression Ratio rank 0: 2.73446 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 605 Operation: Post-smoothing
+Compression Ratio rank 0: 1.33541 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 107 Operation: Interpolation
+Compression Ratio rank 0: 3.11612 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 1003 Operation: Post-smoothing
+Compression Ratio rank 0: 1.81898 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 206 Operation: Interpolation
+Compression Ratio rank 0: 3.55863 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 1544 Operation: Post-smoothing
+Compression Ratio rank 0: 1.59663 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 284 Operation: Interpolation
+Compression Ratio rank 0: 3.84564 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 2317 Operation: Post-smoothing
+Compression Ratio rank 0: 1.76035 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 404 Operation: Interpolation
+Compression Ratio rank 0: 4.76477 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 3246 Operation: Post-smoothing
+Compression Ratio rank 0: 2.15196 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 570 Operation: Interpolation
+Compression Ratio rank 0: 4.22625 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 4455 Operation: Post-smoothing
+Compression Ratio rank 0: 1.96245 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 784 Operation: Interpolation
+Compression Ratio rank 0: 4.33361 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 5852 Operation: Post-smoothing
+Compression Ratio rank 0: 2.18369 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 1061 Operation: Interpolation
+Compression Ratio rank 0: 4.56092 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 7375 Operation: Post-smoothing
+Compression Ratio rank 0: 2.44024 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 1419 Operation: Interpolation
+Compression Ratio rank 0: 4.75495 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 9120 Operation: Post-smoothing
+Compression Ratio rank 0: 2.72436 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 1889 Operation: Interpolation
+Compression Ratio rank 0: 5.76259 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 10431 Operation: Post-smoothing
+Compression Ratio rank 0: 3.68047 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 2511 Operation: Interpolation
+Compression Ratio rank 0: 6.06786 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 9456 Operation: Post-smoothing
+Compression Ratio rank 0: 4.5162 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 3154 Operation: Interpolation
+Compression Ratio rank 0: 5.91325 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 7549 Operation: Post-smoothing
+Compression Ratio rank 0: 3.6611 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 2879 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06117 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 6000 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06225 Amg iter: 10 Amg level: 17 Rank:0 Datasize: 6000 Operation: Residual-Norm
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06225 Amg iter: 11 Amg level: 0 Rank:0 Datasize: 6000 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06152 Amg iter: 11 Amg level: 0 Rank:0 Datasize: 6000 Operation: Residual
+Compression Ratio rank 0: 464.554 Amg iter: 11 Amg level: 1 Rank:0 Datasize: 7549 Operation: Pre-Smoothing
+Compression Ratio rank 0: 27.8818 Amg iter: 11 Amg level: 1 Rank:0 Datasize: 7549 Operation: Residual
+Compression Ratio rank 0: 581.908 Amg iter: 11 Amg level: 2 Rank:0 Datasize: 9456 Operation: Pre-Smoothing
+Compression Ratio rank 0: 21.4118 Amg iter: 11 Amg level: 2 Rank:0 Datasize: 9456 Operation: Residual
+Compression Ratio rank 0: 637.008 Amg iter: 11 Amg level: 3 Rank:0 Datasize: 10431 Operation: Pre-Smoothing
+Compression Ratio rank 0: 15.1092 Amg iter: 11 Amg level: 3 Rank:0 Datasize: 10431 Operation: Residual
+Compression Ratio rank 0: 561.231 Amg iter: 11 Amg level: 4 Rank:0 Datasize: 9120 Operation: Pre-Smoothing
+Compression Ratio rank 0: 10.8233 Amg iter: 11 Amg level: 4 Rank:0 Datasize: 9120 Operation: Residual
+Compression Ratio rank 0: 453.846 Amg iter: 11 Amg level: 5 Rank:0 Datasize: 7375 Operation: Pre-Smoothing
+Compression Ratio rank 0: 10.3111 Amg iter: 11 Amg level: 5 Rank:0 Datasize: 7375 Operation: Residual
+Compression Ratio rank 0: 365.75 Amg iter: 11 Amg level: 6 Rank:0 Datasize: 5852 Operation: Pre-Smoothing
+Compression Ratio rank 0: 9.1064 Amg iter: 11 Amg level: 6 Rank:0 Datasize: 5852 Operation: Residual
+Compression Ratio rank 0: 278.438 Amg iter: 11 Amg level: 7 Rank:0 Datasize: 4455 Operation: Pre-Smoothing
+Compression Ratio rank 0: 8.39774 Amg iter: 11 Amg level: 7 Rank:0 Datasize: 4455 Operation: Residual
+Compression Ratio rank 0: 242.692 Amg iter: 11 Amg level: 8 Rank:0 Datasize: 3246 Operation: Pre-Smoothing
+Compression Ratio rank 0: 8.01729 Amg iter: 11 Amg level: 8 Rank:0 Datasize: 3246 Operation: Residual
+Compression Ratio rank 0: 173.234 Amg iter: 11 Amg level: 9 Rank:0 Datasize: 2317 Operation: Pre-Smoothing
+Compression Ratio rank 0: 6.14793 Amg iter: 11 Amg level: 9 Rank:0 Datasize: 2317 Operation: Residual
+Compression Ratio rank 0: 115.439 Amg iter: 11 Amg level: 10 Rank:0 Datasize: 1544 Operation: Pre-Smoothing
+Compression Ratio rank 0: 7.29162 Amg iter: 11 Amg level: 10 Rank:0 Datasize: 1544 Operation: Residual
+Compression Ratio rank 0: 74.9907 Amg iter: 11 Amg level: 11 Rank:0 Datasize: 1003 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.61119 Amg iter: 11 Amg level: 11 Rank:0 Datasize: 1003 Operation: Residual
+Compression Ratio rank 0: 45.2336 Amg iter: 11 Amg level: 12 Rank:0 Datasize: 605 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.95394 Amg iter: 11 Amg level: 12 Rank:0 Datasize: 605 Operation: Residual
+Compression Ratio rank 0: 27.3398 Amg iter: 11 Amg level: 13 Rank:0 Datasize: 352 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.94951 Amg iter: 11 Amg level: 13 Rank:0 Datasize: 352 Operation: Residual
+Compression Ratio rank 0: 14.2476 Amg iter: 11 Amg level: 14 Rank:0 Datasize: 187 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.82264 Amg iter: 11 Amg level: 14 Rank:0 Datasize: 187 Operation: Residual
+Compression Ratio rank 0: 6.03636 Amg iter: 11 Amg level: 15 Rank:0 Datasize: 83 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.97619 Amg iter: 11 Amg level: 15 Rank:0 Datasize: 83 Operation: Residual
+Compression Ratio rank 0: 1.96364 Amg iter: 11 Amg level: 16 Rank:0 Datasize: 27 Operation: Pre-Smoothing
+Compression Ratio rank 0: 0.915254 Amg iter: 11 Amg level: 16 Rank:0 Datasize: 27 Operation: Residual
+Compression Ratio rank 0: 0.457143 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 6 Operation: Interpolation
+Compression Ratio rank 0: 0.981818 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 27 Operation: Post-smoothing
+Compression Ratio rank 0: 0.662722 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 14 Operation: Interpolation
+Compression Ratio rank 0: 1.79459 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 83 Operation: Post-smoothing
+Compression Ratio rank 0: 0.840467 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 27 Operation: Interpolation
+Compression Ratio rank 0: 2.32659 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 187 Operation: Post-smoothing
+Compression Ratio rank 0: 0.979592 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 42 Operation: Interpolation
+Compression Ratio rank 0: 2.89117 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 352 Operation: Post-smoothing
+Compression Ratio rank 0: 1.24846 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 76 Operation: Interpolation
+Compression Ratio rank 0: 2.90691 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 605 Operation: Post-smoothing
+Compression Ratio rank 0: 1.3375 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 107 Operation: Interpolation
+Compression Ratio rank 0: 3.47962 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 1003 Operation: Post-smoothing
+Compression Ratio rank 0: 1.94111 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 206 Operation: Interpolation
+Compression Ratio rank 0: 4.30233 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 1544 Operation: Post-smoothing
+Compression Ratio rank 0: 1.60339 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 284 Operation: Interpolation
+Compression Ratio rank 0: 4.09998 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 2317 Operation: Post-smoothing
+Compression Ratio rank 0: 1.83116 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 404 Operation: Interpolation
+Compression Ratio rank 0: 4.23 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 3246 Operation: Post-smoothing
+Compression Ratio rank 0: 2.05869 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 570 Operation: Interpolation
+Compression Ratio rank 0: 4.63519 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 4455 Operation: Post-smoothing
+Compression Ratio rank 0: 2.48003 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 784 Operation: Interpolation
+Compression Ratio rank 0: 4.60833 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 5852 Operation: Post-smoothing
+Compression Ratio rank 0: 2.39368 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 1061 Operation: Interpolation
+Compression Ratio rank 0: 5.56866 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 7375 Operation: Post-smoothing
+Compression Ratio rank 0: 3.19685 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 1419 Operation: Interpolation
+Compression Ratio rank 0: 5.84709 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 9120 Operation: Post-smoothing
+Compression Ratio rank 0: 3.02543 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 1889 Operation: Interpolation
+Compression Ratio rank 0: 6.28232 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 10431 Operation: Post-smoothing
+Compression Ratio rank 0: 3.50698 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 2511 Operation: Interpolation
+Compression Ratio rank 0: 6.53603 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 9456 Operation: Post-smoothing
+Compression Ratio rank 0: 4.01336 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 3154 Operation: Interpolation
+Compression Ratio rank 0: 6.45835 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 7549 Operation: Post-smoothing
+Compression Ratio rank 0: 3.98064 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 2879 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06192 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 6000 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06082 Amg iter: 11 Amg level: 17 Rank:0 Datasize: 6000 Operation: Residual-Norm
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06082 Amg iter: 12 Amg level: 0 Rank:0 Datasize: 6000 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06136 Amg iter: 12 Amg level: 0 Rank:0 Datasize: 6000 Operation: Residual
+Compression Ratio rank 0: 464.554 Amg iter: 12 Amg level: 1 Rank:0 Datasize: 7549 Operation: Pre-Smoothing
+Compression Ratio rank 0: 34.1584 Amg iter: 12 Amg level: 1 Rank:0 Datasize: 7549 Operation: Residual
+Compression Ratio rank 0: 581.908 Amg iter: 12 Amg level: 2 Rank:0 Datasize: 9456 Operation: Pre-Smoothing
+Compression Ratio rank 0: 26.0227 Amg iter: 12 Amg level: 2 Rank:0 Datasize: 9456 Operation: Residual
+Compression Ratio rank 0: 637.008 Amg iter: 12 Amg level: 3 Rank:0 Datasize: 10431 Operation: Pre-Smoothing
+Compression Ratio rank 0: 17.1881 Amg iter: 12 Amg level: 3 Rank:0 Datasize: 10431 Operation: Residual
+Compression Ratio rank 0: 561.231 Amg iter: 12 Amg level: 4 Rank:0 Datasize: 9120 Operation: Pre-Smoothing
+Compression Ratio rank 0: 13.3994 Amg iter: 12 Amg level: 4 Rank:0 Datasize: 9120 Operation: Residual
+Compression Ratio rank 0: 453.846 Amg iter: 12 Amg level: 5 Rank:0 Datasize: 7375 Operation: Pre-Smoothing
+Compression Ratio rank 0: 10.2698 Amg iter: 12 Amg level: 5 Rank:0 Datasize: 7375 Operation: Residual
+Compression Ratio rank 0: 365.75 Amg iter: 12 Amg level: 6 Rank:0 Datasize: 5852 Operation: Pre-Smoothing
+Compression Ratio rank 0: 8.83487 Amg iter: 12 Amg level: 6 Rank:0 Datasize: 5852 Operation: Residual
+Compression Ratio rank 0: 278.438 Amg iter: 12 Amg level: 7 Rank:0 Datasize: 4455 Operation: Pre-Smoothing
+Compression Ratio rank 0: 8.96829 Amg iter: 12 Amg level: 7 Rank:0 Datasize: 4455 Operation: Residual
+Compression Ratio rank 0: 242.692 Amg iter: 12 Amg level: 8 Rank:0 Datasize: 3246 Operation: Pre-Smoothing
+Compression Ratio rank 0: 8.4835 Amg iter: 12 Amg level: 8 Rank:0 Datasize: 3246 Operation: Residual
+Compression Ratio rank 0: 173.234 Amg iter: 12 Amg level: 9 Rank:0 Datasize: 2317 Operation: Pre-Smoothing
+Compression Ratio rank 0: 8.06264 Amg iter: 12 Amg level: 9 Rank:0 Datasize: 2317 Operation: Residual
+Compression Ratio rank 0: 115.439 Amg iter: 12 Amg level: 10 Rank:0 Datasize: 1544 Operation: Pre-Smoothing
+Compression Ratio rank 0: 7.76367 Amg iter: 12 Amg level: 10 Rank:0 Datasize: 1544 Operation: Residual
+Compression Ratio rank 0: 74.9907 Amg iter: 12 Amg level: 11 Rank:0 Datasize: 1003 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.87839 Amg iter: 12 Amg level: 11 Rank:0 Datasize: 1003 Operation: Residual
+Compression Ratio rank 0: 45.2336 Amg iter: 12 Amg level: 12 Rank:0 Datasize: 605 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.2954 Amg iter: 12 Amg level: 12 Rank:0 Datasize: 605 Operation: Residual
+Compression Ratio rank 0: 27.3398 Amg iter: 12 Amg level: 13 Rank:0 Datasize: 352 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.08708 Amg iter: 12 Amg level: 13 Rank:0 Datasize: 352 Operation: Residual
+Compression Ratio rank 0: 14.2476 Amg iter: 12 Amg level: 14 Rank:0 Datasize: 187 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.01006 Amg iter: 12 Amg level: 14 Rank:0 Datasize: 187 Operation: Residual
+Compression Ratio rank 0: 6.03636 Amg iter: 12 Amg level: 15 Rank:0 Datasize: 83 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.22819 Amg iter: 12 Amg level: 15 Rank:0 Datasize: 83 Operation: Residual
+Compression Ratio rank 0: 1.96364 Amg iter: 12 Amg level: 16 Rank:0 Datasize: 27 Operation: Pre-Smoothing
+Compression Ratio rank 0: 0.93913 Amg iter: 12 Amg level: 16 Rank:0 Datasize: 27 Operation: Residual
+Compression Ratio rank 0: 0.457143 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 6 Operation: Interpolation
+Compression Ratio rank 0: 0.840467 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 27 Operation: Post-smoothing
+Compression Ratio rank 0: 0.662722 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 14 Operation: Interpolation
+Compression Ratio rank 0: 1.61557 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 83 Operation: Post-smoothing
+Compression Ratio rank 0: 0.874494 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 27 Operation: Interpolation
+Compression Ratio rank 0: 2.04093 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 187 Operation: Post-smoothing
+Compression Ratio rank 0: 0.918033 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 42 Operation: Interpolation
+Compression Ratio rank 0: 2.74732 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 352 Operation: Post-smoothing
+Compression Ratio rank 0: 1.26141 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 76 Operation: Interpolation
+Compression Ratio rank 0: 3.01934 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 605 Operation: Post-smoothing
+Compression Ratio rank 0: 1.39869 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 107 Operation: Interpolation
+Compression Ratio rank 0: 4.08554 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 1003 Operation: Post-smoothing
+Compression Ratio rank 0: 1.90081 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 206 Operation: Interpolation
+Compression Ratio rank 0: 3.97426 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 1544 Operation: Post-smoothing
+Compression Ratio rank 0: 1.81906 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 284 Operation: Interpolation
+Compression Ratio rank 0: 4.33489 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 2317 Operation: Post-smoothing
+Compression Ratio rank 0: 1.66598 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 404 Operation: Interpolation
+Compression Ratio rank 0: 4.46646 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 3246 Operation: Post-smoothing
+Compression Ratio rank 0: 2.11405 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 570 Operation: Interpolation
+Compression Ratio rank 0: 4.87685 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 4455 Operation: Post-smoothing
+Compression Ratio rank 0: 2.35347 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 784 Operation: Interpolation
+Compression Ratio rank 0: 5.64865 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 5852 Operation: Post-smoothing
+Compression Ratio rank 0: 2.5277 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 1061 Operation: Interpolation
+Compression Ratio rank 0: 5.24398 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 7375 Operation: Post-smoothing
+Compression Ratio rank 0: 2.90481 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 1419 Operation: Interpolation
+Compression Ratio rank 0: 5.42051 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 9120 Operation: Post-smoothing
+Compression Ratio rank 0: 2.68753 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 1889 Operation: Interpolation
+Compression Ratio rank 0: 5.79339 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 10431 Operation: Post-smoothing
+Compression Ratio rank 0: 3.75406 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 2511 Operation: Interpolation
+Compression Ratio rank 0: 5.91971 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 9456 Operation: Post-smoothing
+Compression Ratio rank 0: 4.27299 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 3154 Operation: Interpolation
+Compression Ratio rank 0: 6.9472 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 7549 Operation: Post-smoothing
+Compression Ratio rank 0: 5.33642 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 2879 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06167 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 6000 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06171 Amg iter: 12 Amg level: 17 Rank:0 Datasize: 6000 Operation: Residual-Norm
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06171 Amg iter: 13 Amg level: 0 Rank:0 Datasize: 6000 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06101 Amg iter: 13 Amg level: 0 Rank:0 Datasize: 6000 Operation: Residual
+Compression Ratio rank 0: 464.554 Amg iter: 13 Amg level: 1 Rank:0 Datasize: 7549 Operation: Pre-Smoothing
+Compression Ratio rank 0: 45.5102 Amg iter: 13 Amg level: 1 Rank:0 Datasize: 7549 Operation: Residual
+Compression Ratio rank 0: 581.908 Amg iter: 13 Amg level: 2 Rank:0 Datasize: 9456 Operation: Pre-Smoothing
+Compression Ratio rank 0: 32.095 Amg iter: 13 Amg level: 2 Rank:0 Datasize: 9456 Operation: Residual
+Compression Ratio rank 0: 637.008 Amg iter: 13 Amg level: 3 Rank:0 Datasize: 10431 Operation: Pre-Smoothing
+Compression Ratio rank 0: 19.6672 Amg iter: 13 Amg level: 3 Rank:0 Datasize: 10431 Operation: Residual
+Compression Ratio rank 0: 561.231 Amg iter: 13 Amg level: 4 Rank:0 Datasize: 9120 Operation: Pre-Smoothing
+Compression Ratio rank 0: 14.9325 Amg iter: 13 Amg level: 4 Rank:0 Datasize: 9120 Operation: Residual
+Compression Ratio rank 0: 453.846 Amg iter: 13 Amg level: 5 Rank:0 Datasize: 7375 Operation: Pre-Smoothing
+Compression Ratio rank 0: 12.2738 Amg iter: 13 Amg level: 5 Rank:0 Datasize: 7375 Operation: Residual
+Compression Ratio rank 0: 365.75 Amg iter: 13 Amg level: 6 Rank:0 Datasize: 5852 Operation: Pre-Smoothing
+Compression Ratio rank 0: 10.5679 Amg iter: 13 Amg level: 6 Rank:0 Datasize: 5852 Operation: Residual
+Compression Ratio rank 0: 278.438 Amg iter: 13 Amg level: 7 Rank:0 Datasize: 4455 Operation: Pre-Smoothing
+Compression Ratio rank 0: 9.46614 Amg iter: 13 Amg level: 7 Rank:0 Datasize: 4455 Operation: Residual
+Compression Ratio rank 0: 242.692 Amg iter: 13 Amg level: 8 Rank:0 Datasize: 3246 Operation: Pre-Smoothing
+Compression Ratio rank 0: 8.96995 Amg iter: 13 Amg level: 8 Rank:0 Datasize: 3246 Operation: Residual
+Compression Ratio rank 0: 173.234 Amg iter: 13 Amg level: 9 Rank:0 Datasize: 2317 Operation: Pre-Smoothing
+Compression Ratio rank 0: 7.75565 Amg iter: 13 Amg level: 9 Rank:0 Datasize: 2317 Operation: Residual
+Compression Ratio rank 0: 115.439 Amg iter: 13 Amg level: 10 Rank:0 Datasize: 1544 Operation: Pre-Smoothing
+Compression Ratio rank 0: 8.22918 Amg iter: 13 Amg level: 10 Rank:0 Datasize: 1544 Operation: Residual
+Compression Ratio rank 0: 74.9907 Amg iter: 13 Amg level: 11 Rank:0 Datasize: 1003 Operation: Pre-Smoothing
+Compression Ratio rank 0: 7.45725 Amg iter: 13 Amg level: 11 Rank:0 Datasize: 1003 Operation: Residual
+Compression Ratio rank 0: 45.2336 Amg iter: 13 Amg level: 12 Rank:0 Datasize: 605 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.88889 Amg iter: 13 Amg level: 12 Rank:0 Datasize: 605 Operation: Residual
+Compression Ratio rank 0: 27.3398 Amg iter: 13 Amg level: 13 Rank:0 Datasize: 352 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.32565 Amg iter: 13 Amg level: 13 Rank:0 Datasize: 352 Operation: Residual
+Compression Ratio rank 0: 14.2476 Amg iter: 13 Amg level: 14 Rank:0 Datasize: 187 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.22414 Amg iter: 13 Amg level: 14 Rank:0 Datasize: 187 Operation: Residual
+Compression Ratio rank 0: 6.03636 Amg iter: 13 Amg level: 15 Rank:0 Datasize: 83 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.17705 Amg iter: 13 Amg level: 15 Rank:0 Datasize: 83 Operation: Residual
+Compression Ratio rank 0: 1.96364 Amg iter: 13 Amg level: 16 Rank:0 Datasize: 27 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.16129 Amg iter: 13 Amg level: 16 Rank:0 Datasize: 27 Operation: Residual
+Compression Ratio rank 0: 0.457143 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 6 Operation: Interpolation
+Compression Ratio rank 0: 1 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 27 Operation: Post-smoothing
+Compression Ratio rank 0: 0.662722 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 14 Operation: Interpolation
+Compression Ratio rank 0: 1.93586 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 83 Operation: Post-smoothing
+Compression Ratio rank 0: 0.815094 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 27 Operation: Interpolation
+Compression Ratio rank 0: 2.76015 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 187 Operation: Post-smoothing
+Compression Ratio rank 0: 1.08738 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 42 Operation: Interpolation
+Compression Ratio rank 0: 3.39686 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 352 Operation: Post-smoothing
+Compression Ratio rank 0: 1.2459 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 76 Operation: Interpolation
+Compression Ratio rank 0: 4.18685 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 605 Operation: Post-smoothing
+Compression Ratio rank 0: 1.48097 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 107 Operation: Interpolation
+Compression Ratio rank 0: 3.88948 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 1003 Operation: Post-smoothing
+Compression Ratio rank 0: 1.91405 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 206 Operation: Interpolation
+Compression Ratio rank 0: 4.19993 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 1544 Operation: Post-smoothing
+Compression Ratio rank 0: 2.09016 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 284 Operation: Interpolation
+Compression Ratio rank 0: 5.30813 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 2317 Operation: Post-smoothing
+Compression Ratio rank 0: 2.09734 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 404 Operation: Interpolation
+Compression Ratio rank 0: 4.86019 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 3246 Operation: Post-smoothing
+Compression Ratio rank 0: 2.77035 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 570 Operation: Interpolation
+Compression Ratio rank 0: 4.68454 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 4455 Operation: Post-smoothing
+Compression Ratio rank 0: 2.91044 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 784 Operation: Interpolation
+Compression Ratio rank 0: 5.19889 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 5852 Operation: Post-smoothing
+Compression Ratio rank 0: 2.68863 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 1061 Operation: Interpolation
+Compression Ratio rank 0: 5.53263 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 7375 Operation: Post-smoothing
+Compression Ratio rank 0: 2.54929 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 1419 Operation: Interpolation
+Compression Ratio rank 0: 6.66545 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 9120 Operation: Post-smoothing
+Compression Ratio rank 0: 3.54077 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 1889 Operation: Interpolation
+Compression Ratio rank 0: 6.11072 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 10431 Operation: Post-smoothing
+Compression Ratio rank 0: 4.01038 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 2511 Operation: Interpolation
+Compression Ratio rank 0: 6.36553 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 9456 Operation: Post-smoothing
+Compression Ratio rank 0: 3.85516 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 3154 Operation: Interpolation
+Compression Ratio rank 0: 6.30528 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 7549 Operation: Post-smoothing
+Compression Ratio rank 0: 5.79421 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 2879 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06162 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 6000 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06176 Amg iter: 13 Amg level: 17 Rank:0 Datasize: 6000 Operation: Residual-Norm
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06176 Amg iter: 14 Amg level: 0 Rank:0 Datasize: 6000 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06117 Amg iter: 14 Amg level: 0 Rank:0 Datasize: 6000 Operation: Residual
+Compression Ratio rank 0: 464.554 Amg iter: 14 Amg level: 1 Rank:0 Datasize: 7549 Operation: Pre-Smoothing
+Compression Ratio rank 0: 56.8128 Amg iter: 14 Amg level: 1 Rank:0 Datasize: 7549 Operation: Residual
+Compression Ratio rank 0: 581.908 Amg iter: 14 Amg level: 2 Rank:0 Datasize: 9456 Operation: Pre-Smoothing
+Compression Ratio rank 0: 38.1483 Amg iter: 14 Amg level: 2 Rank:0 Datasize: 9456 Operation: Residual
+Compression Ratio rank 0: 637.008 Amg iter: 14 Amg level: 3 Rank:0 Datasize: 10431 Operation: Pre-Smoothing
+Compression Ratio rank 0: 22.7008 Amg iter: 14 Amg level: 3 Rank:0 Datasize: 10431 Operation: Residual
+Compression Ratio rank 0: 561.231 Amg iter: 14 Amg level: 4 Rank:0 Datasize: 9120 Operation: Pre-Smoothing
+Compression Ratio rank 0: 16.563 Amg iter: 14 Amg level: 4 Rank:0 Datasize: 9120 Operation: Residual
+Compression Ratio rank 0: 453.846 Amg iter: 14 Amg level: 5 Rank:0 Datasize: 7375 Operation: Pre-Smoothing
+Compression Ratio rank 0: 13.2554 Amg iter: 14 Amg level: 5 Rank:0 Datasize: 7375 Operation: Residual
+Compression Ratio rank 0: 365.75 Amg iter: 14 Amg level: 6 Rank:0 Datasize: 5852 Operation: Pre-Smoothing
+Compression Ratio rank 0: 10.2151 Amg iter: 14 Amg level: 6 Rank:0 Datasize: 5852 Operation: Residual
+Compression Ratio rank 0: 278.438 Amg iter: 14 Amg level: 7 Rank:0 Datasize: 4455 Operation: Pre-Smoothing
+Compression Ratio rank 0: 10.2414 Amg iter: 14 Amg level: 7 Rank:0 Datasize: 4455 Operation: Residual
+Compression Ratio rank 0: 242.692 Amg iter: 14 Amg level: 8 Rank:0 Datasize: 3246 Operation: Pre-Smoothing
+Compression Ratio rank 0: 7.92916 Amg iter: 14 Amg level: 8 Rank:0 Datasize: 3246 Operation: Residual
+Compression Ratio rank 0: 173.234 Amg iter: 14 Amg level: 9 Rank:0 Datasize: 2317 Operation: Pre-Smoothing
+Compression Ratio rank 0: 7.37311 Amg iter: 14 Amg level: 9 Rank:0 Datasize: 2317 Operation: Residual
+Compression Ratio rank 0: 115.439 Amg iter: 14 Amg level: 10 Rank:0 Datasize: 1544 Operation: Pre-Smoothing
+Compression Ratio rank 0: 7.66729 Amg iter: 14 Amg level: 10 Rank:0 Datasize: 1544 Operation: Residual
+Compression Ratio rank 0: 74.9907 Amg iter: 14 Amg level: 11 Rank:0 Datasize: 1003 Operation: Pre-Smoothing
+Compression Ratio rank 0: 7.11979 Amg iter: 14 Amg level: 11 Rank:0 Datasize: 1003 Operation: Residual
+Compression Ratio rank 0: 45.2336 Amg iter: 14 Amg level: 12 Rank:0 Datasize: 605 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.62137 Amg iter: 14 Amg level: 12 Rank:0 Datasize: 605 Operation: Residual
+Compression Ratio rank 0: 27.3398 Amg iter: 14 Amg level: 13 Rank:0 Datasize: 352 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.85517 Amg iter: 14 Amg level: 13 Rank:0 Datasize: 352 Operation: Residual
+Compression Ratio rank 0: 14.2476 Amg iter: 14 Amg level: 14 Rank:0 Datasize: 187 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.94488 Amg iter: 14 Amg level: 14 Rank:0 Datasize: 187 Operation: Residual
+Compression Ratio rank 0: 6.03636 Amg iter: 14 Amg level: 15 Rank:0 Datasize: 83 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.16993 Amg iter: 14 Amg level: 15 Rank:0 Datasize: 83 Operation: Residual
+Compression Ratio rank 0: 1.96364 Amg iter: 14 Amg level: 16 Rank:0 Datasize: 27 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.03349 Amg iter: 14 Amg level: 16 Rank:0 Datasize: 27 Operation: Residual
+Compression Ratio rank 0: 0.457143 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 6 Operation: Interpolation
+Compression Ratio rank 0: 0.864 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 27 Operation: Post-smoothing
+Compression Ratio rank 0: 0.662722 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 14 Operation: Interpolation
+Compression Ratio rank 0: 1.58852 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 83 Operation: Post-smoothing
+Compression Ratio rank 0: 0.802974 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 27 Operation: Interpolation
+Compression Ratio rank 0: 2.36335 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 187 Operation: Post-smoothing
+Compression Ratio rank 0: 0.985337 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 42 Operation: Interpolation
+Compression Ratio rank 0: 3.4092 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 352 Operation: Post-smoothing
+Compression Ratio rank 0: 1.22581 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 76 Operation: Interpolation
+Compression Ratio rank 0: 3.50979 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 605 Operation: Post-smoothing
+Compression Ratio rank 0: 1.46325 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 107 Operation: Interpolation
+Compression Ratio rank 0: 3.77422 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 1003 Operation: Post-smoothing
+Compression Ratio rank 0: 1.90081 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 206 Operation: Interpolation
+Compression Ratio rank 0: 4.34776 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 1544 Operation: Post-smoothing
+Compression Ratio rank 0: 1.78898 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 284 Operation: Interpolation
+Compression Ratio rank 0: 4.69028 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 2317 Operation: Post-smoothing
+Compression Ratio rank 0: 2.09598 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 404 Operation: Interpolation
+Compression Ratio rank 0: 4.43367 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 3246 Operation: Post-smoothing
+Compression Ratio rank 0: 2.41525 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 570 Operation: Interpolation
+Compression Ratio rank 0: 6.08191 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 4455 Operation: Post-smoothing
+Compression Ratio rank 0: 2.47905 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 784 Operation: Interpolation
+Compression Ratio rank 0: 5.54823 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 5852 Operation: Post-smoothing
+Compression Ratio rank 0: 2.91985 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 1061 Operation: Interpolation
+Compression Ratio rank 0: 6.67345 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 7375 Operation: Post-smoothing
+Compression Ratio rank 0: 2.67232 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 1419 Operation: Interpolation
+Compression Ratio rank 0: 6.00247 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 9120 Operation: Post-smoothing
+Compression Ratio rank 0: 3.76952 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 1889 Operation: Interpolation
+Compression Ratio rank 0: 6.44984 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 10431 Operation: Post-smoothing
+Compression Ratio rank 0: 5.23261 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 2511 Operation: Interpolation
+Compression Ratio rank 0: 7.93788 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 9456 Operation: Post-smoothing
+Compression Ratio rank 0: 5.00139 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 3154 Operation: Interpolation
+Compression Ratio rank 0: 6.71171 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 7549 Operation: Post-smoothing
+Compression Ratio rank 0: 5.12392 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 2879 Operation: Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06188 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 6000 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06197 Amg iter: 14 Amg level: 17 Rank:0 Datasize: 6000 Operation: Residual-Norm
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06197 Amg iter: 15 Amg level: 0 Rank:0 Datasize: 6000 Operation: Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06171 Amg iter: 15 Amg level: 0 Rank:0 Datasize: 6000 Operation: Residual
+Compression Ratio rank 0: 464.554 Amg iter: 15 Amg level: 1 Rank:0 Datasize: 7549 Operation: Pre-Smoothing
+Compression Ratio rank 0: 72.9372 Amg iter: 15 Amg level: 1 Rank:0 Datasize: 7549 Operation: Residual
+Compression Ratio rank 0: 581.908 Amg iter: 15 Amg level: 2 Rank:0 Datasize: 9456 Operation: Pre-Smoothing
+Compression Ratio rank 0: 40.0678 Amg iter: 15 Amg level: 2 Rank:0 Datasize: 9456 Operation: Residual
+Compression Ratio rank 0: 637.008 Amg iter: 15 Amg level: 3 Rank:0 Datasize: 10431 Operation: Pre-Smoothing
+Compression Ratio rank 0: 23.0966 Amg iter: 15 Amg level: 3 Rank:0 Datasize: 10431 Operation: Residual
+Compression Ratio rank 0: 561.231 Amg iter: 15 Amg level: 4 Rank:0 Datasize: 9120 Operation: Pre-Smoothing
+Compression Ratio rank 0: 18.546 Amg iter: 15 Amg level: 4 Rank:0 Datasize: 9120 Operation: Residual
+Compression Ratio rank 0: 453.846 Amg iter: 15 Amg level: 5 Rank:0 Datasize: 7375 Operation: Pre-Smoothing
+Compression Ratio rank 0: 14.5106 Amg iter: 15 Amg level: 5 Rank:0 Datasize: 7375 Operation: Residual
+Compression Ratio rank 0: 365.75 Amg iter: 15 Amg level: 6 Rank:0 Datasize: 5852 Operation: Pre-Smoothing
+Compression Ratio rank 0: 12.1821 Amg iter: 15 Amg level: 6 Rank:0 Datasize: 5852 Operation: Residual
+Compression Ratio rank 0: 278.438 Amg iter: 15 Amg level: 7 Rank:0 Datasize: 4455 Operation: Pre-Smoothing
+Compression Ratio rank 0: 10.7027 Amg iter: 15 Amg level: 7 Rank:0 Datasize: 4455 Operation: Residual
+Compression Ratio rank 0: 242.692 Amg iter: 15 Amg level: 8 Rank:0 Datasize: 3246 Operation: Pre-Smoothing
+Compression Ratio rank 0: 9.00104 Amg iter: 15 Amg level: 8 Rank:0 Datasize: 3246 Operation: Residual
+Compression Ratio rank 0: 173.234 Amg iter: 15 Amg level: 9 Rank:0 Datasize: 2317 Operation: Pre-Smoothing
+Compression Ratio rank 0: 7.7654 Amg iter: 15 Amg level: 9 Rank:0 Datasize: 2317 Operation: Residual
+Compression Ratio rank 0: 115.439 Amg iter: 15 Amg level: 10 Rank:0 Datasize: 1544 Operation: Pre-Smoothing
+Compression Ratio rank 0: 9.02264 Amg iter: 15 Amg level: 10 Rank:0 Datasize: 1544 Operation: Residual
+Compression Ratio rank 0: 74.9907 Amg iter: 15 Amg level: 11 Rank:0 Datasize: 1003 Operation: Pre-Smoothing
+Compression Ratio rank 0: 6.81733 Amg iter: 15 Amg level: 11 Rank:0 Datasize: 1003 Operation: Residual
+Compression Ratio rank 0: 45.2336 Amg iter: 15 Amg level: 12 Rank:0 Datasize: 605 Operation: Pre-Smoothing
+Compression Ratio rank 0: 5.12169 Amg iter: 15 Amg level: 12 Rank:0 Datasize: 605 Operation: Residual
+Compression Ratio rank 0: 27.3398 Amg iter: 15 Amg level: 13 Rank:0 Datasize: 352 Operation: Pre-Smoothing
+Compression Ratio rank 0: 4.66998 Amg iter: 15 Amg level: 13 Rank:0 Datasize: 352 Operation: Residual
+Compression Ratio rank 0: 14.2476 Amg iter: 15 Amg level: 14 Rank:0 Datasize: 187 Operation: Pre-Smoothing
+Compression Ratio rank 0: 3.3618 Amg iter: 15 Amg level: 14 Rank:0 Datasize: 187 Operation: Residual
+Compression Ratio rank 0: 6.03636 Amg iter: 15 Amg level: 15 Rank:0 Datasize: 83 Operation: Pre-Smoothing
+Compression Ratio rank 0: 2.19868 Amg iter: 15 Amg level: 15 Rank:0 Datasize: 83 Operation: Residual
+Compression Ratio rank 0: 1.96364 Amg iter: 15 Amg level: 16 Rank:0 Datasize: 27 Operation: Pre-Smoothing
+Compression Ratio rank 0: 1.11917 Amg iter: 15 Amg level: 16 Rank:0 Datasize: 27 Operation: Residual
+Compression Ratio rank 0: 0.457143 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 6 Operation: Interpolation
+Compression Ratio rank 0: 0.955752 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 27 Operation: Post-smoothing
+Compression Ratio rank 0: 0.662722 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 14 Operation: Interpolation
+Compression Ratio rank 0: 1.64764 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 83 Operation: Post-smoothing
+Compression Ratio rank 0: 0.791209 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 27 Operation: Interpolation
+Compression Ratio rank 0: 2.32298 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 187 Operation: Post-smoothing
+Compression Ratio rank 0: 1.00299 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 42 Operation: Interpolation
+Compression Ratio rank 0: 3.44676 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 352 Operation: Post-smoothing
+Compression Ratio rank 0: 1.20396 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 76 Operation: Interpolation
+Compression Ratio rank 0: 3.70031 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 605 Operation: Post-smoothing
+Compression Ratio rank 0: 1.41722 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 107 Operation: Interpolation
+Compression Ratio rank 0: 4.8897 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 1003 Operation: Post-smoothing
+Compression Ratio rank 0: 2.03457 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 206 Operation: Interpolation
+Compression Ratio rank 0: 4.50638 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 1544 Operation: Post-smoothing
+Compression Ratio rank 0: 1.68421 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 284 Operation: Interpolation
+Compression Ratio rank 0: 4.82708 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 2317 Operation: Post-smoothing
+Compression Ratio rank 0: 2.83012 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 404 Operation: Interpolation
+Compression Ratio rank 0: 5.10277 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 3246 Operation: Post-smoothing
+Compression Ratio rank 0: 2.58065 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 570 Operation: Interpolation
+Compression Ratio rank 0: 6.38138 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 4455 Operation: Post-smoothing
+Compression Ratio rank 0: 2.29324 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 784 Operation: Interpolation
+Compression Ratio rank 0: 5.81204 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 5852 Operation: Post-smoothing
+Compression Ratio rank 0: 3.07425 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 1061 Operation: Interpolation
+Compression Ratio rank 0: 6.99964 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 7375 Operation: Post-smoothing
+Compression Ratio rank 0: 3.52985 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 1419 Operation: Interpolation
+Compression Ratio rank 0: 6.41745 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 9120 Operation: Post-smoothing
+Compression Ratio rank 0: 4.08985 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 1889 Operation: Interpolation
+Compression Ratio rank 0: 6.79157 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 10431 Operation: Post-smoothing
+Compression Ratio rank 0: 4.62218 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 2511 Operation: Interpolation
+Compression Ratio rank 0: 8.41562 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 9456 Operation: Post-smoothing
+Compression Ratio rank 0: 5.4438 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 3154 Operation: Interpolation
+Compression Ratio rank 0: 9.12128 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 7549 Operation: Post-smoothing
+Compression Ratio rank 0: 5.65341 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 2879 Operation: Interpolation
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.0623 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 6000 Operation: Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+Compression Ratio rank 0: 1.06145 Amg iter: 15 Amg level: 17 Rank:0 Datasize: 6000 Operation: Residual-Norm
+Total iterations is: 16
+Res[0] = 1.000000e+00
+Res[1] = 1.149882e-01
+Res[2] = 2.038885e-02
+Res[3] = 4.730254e-03
+Res[4] = 1.588981e-03
+Res[5] = 7.116437e-04
+Res[6] = 3.712114e-04
+Res[7] = 2.119118e-04
+Res[8] = 1.290385e-04
+Res[9] = 8.265455e-05
+Res[10] = 5.517410e-05
+Res[11] = 3.811682e-05
+Res[12] = 2.710601e-05
+Res[13] = 1.975682e-05
+Res[14] = 1.470742e-05
+Res[15] = 1.114995e-05
+Res[16] = 8.587899e-06
+Total iterations is: 16
+Raptor AMG Setup Time: 7.983460e+02
+Raptor AMG Solve Time: 4.873926e+02
