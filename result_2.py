@@ -11,6 +11,12 @@ cr=[]
 ops=[]
 levels=[]
 ds=[]
+eg="cr:120, iter:1, level:0, op:`Residual`"
+egs=eg.split(",")
+for i in egs:
+    val=i.split(":")[-1]
+    print("val:",val)
+print(egs)
 def get_compression_ratio(line):
     return 5
 
@@ -25,6 +31,7 @@ def get_datasize(line):
 
 def get_op(line):
     return "Smooth"
+
 
 with open("slurm-5000.output") as fh:
     for line in fh:
