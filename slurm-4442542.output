@@ -1,0 +1,106 @@
+-- Configuring done (6.2s)
+-- Generating done (8.5s)
+-- Build files have been written to: /home/bigyang/amg-compress/raptor-compress/build
+[  1%] Built target gtest
+[  2%] Built target gtest_main
+[  2%] Built target gmock
+[  3%] Built target gmock_main
+[ 26%] Built target raptor
+[ 37%] Built target test_tap_rap
+[ 37%] Built target test_par_add
+[ 37%] Built target test_par_strength
+[ 37%] Built target test_par_block_matrix
+[ 57%] Built target test_tap_spmv_laplacian
+[ 57%] Built target test_par_splitting
+[ 57%] Built target test_tap_comm
+[ 37%] Built target test_strength
+[ 57%] Built target test_spmv_laplacian
+[ 57%] Built target test_matrix
+[ 57%] Built target test_tap_spmv_aniso
+[ 57%] Built target test_par_interpolation
+[ 57%] Built target test_tap_splitting
+[ 57%] Built target test_rap
+[ 57%] Built target test_splitting
+[ 37%] Built target test_tap_spmv_random
+[ 57%] Built target test_repartition
+[ 37%] Built target test_interpolation
+[ 57%] Built target test_par_spmv_laplacian
+[ 37%] Built target test_ruge_stuben
+[ 57%] Built target test_par_spmv_aniso
+[ 57%] Built target test_par_vector
+[ 57%] Built target test_transpose
+[ 37%] Built target test_par_matrix
+[ 57%] Built target test_spmv_aniso
+[ 57%] Built target test_par_spmv_random
+[ 37%] Built target test_par_rap
+[ 37%] Built target test_par_comm
+[ 57%] Built target test_par_transpose
+[ 57%] Built target test_par_scale_aniso
+[ 57%] Built target test_spmv_random
+[ 57%] Built target test_par_block_conversion
+[ 58%] Built target test_tap_interpolation
+[ 59%] Built target test_prolongation
+[ 60%] Built target test_candidates
+[ 60%] Built target test_mis
+[ 61%] Built target test_tap_ruge_stuben
+[ 68%] Built target test_laplacian
+[ 68%] Built target test_par_mis
+[ 68%] Built target test_par_prolongation
+[ 68%] Built target test_tap_prolongation
+[ 68%] Built target test_tap_mis
+[ 72%] Built target test_stencil
+[ 68%] Built target test_tap_candidates
+[ 68%] Building CXX object examples/CMakeFiles/example.dir/example.cpp.o
+[ 85%] Built target test_smoothed_aggregation
+[ 68%] Built target test_par_ruge_stuben
+[ 68%] Built target test_par_bicgstab
+[ 68%] Built target test_aggregate
+[ 85%] Built target test_par_laplacian
+[ 85%] Built target test_cg
+[ 85%] Built target test_bicgstab
+[ 85%] Built target test_aniso
+[ 85%] Built target test_par_amg
+[ 85%] Built target test_tap_aggregate
+[ 85%] Built target benchmark_spmv
+[ 85%] Built target test_par_smoothed_aggregation
+[ 85%] Built target test_par_candidates
+[ 89%] Built target benchmark_solve
+[ 89%] Built target csr_example
+[ 89%] Built target benchmark_setup
+[ 85%] Built target test_par_aggregate
+[ 85%] Built target matop_example
+[ 85%] Built target test_par_aniso
+[ 85%] Built target test_matrix_market
+[ 85%] Built target test_par_matrix_market
+[ 88%] Built target coo_example
+[ 88%] Built target test_amg
+[ 85%] Built target test_par_cg
+[ 92%] Built target benchmark_tap_spmv
+[ 92%] Built target benchmark_amg
+[ 92%] Built target benchmark_reader
+[ 94%] Built target benchmark_tap_spgemm
+[ 97%] Built target profile_tap_rss
+[ 97%] Built target model_tap_steps
+[ 97%] Built target profile_tap_sas
+[ 97%] Built target profile_tap_amg
+[ 99%] Built target profile_tap_steps
+[ 99%] Built target benchmark_setup_sweeps
+[ 98%] Built target profile_tap_spgemm
+[100%] Linking CXX executable example
+[100%] Built target example
+  argv[1] = 1e-5
+  argv[2] = 1e-5
+  argv[3] = 1
+  argv[1] = 1e-5
+  argv[2] = 1e-5
+  argv[3] = 1
+N is>>>>>20000
+N is>>>>>20000
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 2082772 RUNNING AT node0028
+=   EXIT CODE: 9
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
