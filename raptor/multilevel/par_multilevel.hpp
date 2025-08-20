@@ -389,7 +389,7 @@ namespace raptor
                     //levels[level+1]->x.set_rand_values();
                     
                     // Relax
-                    c_info.op="Smoothing";
+                    c_info.op="Pre-Smoothing";
                     switch (relax_type)
                     {
                         case Jacobi:
@@ -411,10 +411,13 @@ namespace raptor
                     }
                     c_info.op="Residual";
 
-
+                    // tmp= Ax-b
+                    // tmp before this stores the original x
+                    // x has now become the new x after jacobi
+                    // the previous x(tmp) now becomes tmp = Ax-b which is the residual 
                     A->residual(x, b, tmp, tap_level);
                     c_info.op="Restriction";
-
+                    // P(transpose)*current residual(tmp) = b of another level (restriction)
                     P->mult_T(tmp, levels[level+1]->b, tap_level);
 
 
@@ -434,9 +437,9 @@ namespace raptor
                     }
 
                     c_info.op="Interpolation";
-
+                    // Interpolation P.x+x
                     P->mult_append(levels[level+1]->x, x, tap_level);
-                    c_info.op="Post smoothing";
+                    c_info.op="Post-smoothing";
 
                     switch (relax_type)
                     {
@@ -528,7 +531,8 @@ namespace raptor
                     }
                   
                     iter++;
-                    c_info.op="Residual";
+                    c_info.op="Residual-Norm";
+                    // After each cycle calcluate residual to know if the solution is satisfactory yet
                     levels[0]->A->residual(sol, rhs, resid);
                     if (fabs(b_norm) > zero_tol)
                     {
