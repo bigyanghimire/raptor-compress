@@ -1,0 +1,559 @@
+-- Configuring done (6.3s)
+-- Generating done (7.9s)
+-- Build files have been written to: /home/bigyang/amg-compress/raptor-compress/build
+[  1%] Built target gtest
+[  2%] Built target gtest_main
+[  2%] Built target gmock
+[ 20%] Built target gmock_main
+[ 26%] Built target raptor
+[ 41%] Built target test_par_rap
+[ 41%] Built target test_spmv_random
+[ 57%] Built target test_rap
+[ 57%] Built target test_tap_splitting
+[ 57%] Built target test_par_spmv_random
+[ 57%] Built target test_ruge_stuben
+[ 57%] Built target test_par_splitting
+[ 57%] Built target test_tap_spmv_aniso
+[ 41%] Built target test_spmv_laplacian
+[ 57%] Built target test_par_comm
+[ 41%] Built target test_interpolation
+[ 57%] Built target test_par_scale_aniso
+[ 41%] Built target test_par_block_matrix
+[ 57%] Built target test_par_vector
+[ 57%] Built target test_par_strength
+[ 57%] Built target test_repartition
+[ 41%] Built target test_par_add
+[ 41%] Built target test_matrix
+[ 57%] Built target test_tap_spmv_random
+[ 57%] Built target test_par_spmv_aniso
+[ 41%] Built target test_spmv_aniso
+[ 41%] Built target test_tap_comm
+[ 57%] Built target test_splitting
+[ 57%] Built target test_transpose
+[ 57%] Built target test_par_block_conversion
+[ 41%] Built target test_par_spmv_laplacian
+[ 41%] Built target test_par_transpose
+[ 41%] Built target test_par_matrix
+[ 41%] Built target test_tap_spmv_laplacian
+[ 41%] Built target test_par_interpolation
+[ 57%] Built target test_tap_rap
+[ 57%] Built target test_strength
+[ 58%] Built target test_tap_interpolation
+[ 60%] Built target test_par_ruge_stuben
+[ 60%] Built target test_candidates
+[ 61%] Built target test_prolongation
+[ 61%] Built target test_tap_ruge_stuben
+[ 72%] Built target test_stencil
+[ 72%] Built target test_par_bicgstab
+[ 72%] Built target test_tap_candidates
+[ 72%] Built target test_par_laplacian
+[ 72%] Built target test_tap_mis
+[ 72%] Built target test_par_aggregate
+[ 72%] Built target test_laplacian
+[ 72%] Built target test_tap_aggregate
+[ 72%] Built target test_par_prolongation
+[ 72%] Built target test_aggregate
+[ 72%] Building CXX object examples/CMakeFiles/example.dir/example.cpp.o
+[ 72%] Built target test_cg
+[ 85%] Built target test_par_cg
+[ 72%] Built target test_par_aniso
+[ 85%] Built target test_par_smoothed_aggregation
+[ 85%] Built target test_par_matrix_market
+[ 85%] Built target test_amg
+[ 85%] Built target test_par_candidates
+[ 72%] Built target test_smoothed_aggregation
+[ 85%] Built target test_tap_prolongation
+[ 84%] Built target test_par_amg
+[ 85%] Built target test_matrix_market
+[ 85%] Built target test_bicgstab
+[ 85%] Built target test_aniso
+[ 85%] Built target test_mis
+[ 85%] Built target test_par_mis
+[ 87%] Built target matop_example
+[ 87%] Built target benchmark_setup
+[ 87%] Built target coo_example
+[ 87%] Built target benchmark_spmv
+[ 88%] Built target csr_example
+[ 89%] Built target benchmark_solve
+[ 89%] Built target benchmark_amg
+[ 96%] Built target benchmark_reader
+[ 99%] Built target model_tap_steps
+[ 99%] Built target benchmark_tap_spmv
+[ 99%] Built target profile_tap_sas
+[ 99%] Built target benchmark_setup_sweeps
+[ 99%] Built target profile_tap_amg
+[ 96%] Built target benchmark_tap_spgemm
+[ 96%] Built target profile_tap_spgemm
+[ 96%] Built target profile_tap_steps
+[ 96%] Built target profile_tap_rss
+[100%] Linking CXX executable example
+[100%] Built target example
+  argv[1] = 1e-5
+  argv[2] = 1e-5
+  argv[3] = 1
+  argv[4] = 100
+  argv[1] = 1e-5
+  argv[2] = 1e-5
+  argv[3] = 1
+  argv[4] = 100
+N is>>>>>100
+N is>>>>>100
+Level	NumRows	NNZ
+-----	-------	---
+0	10000	88804
+1	6035	88395
+2	3455	82945
+3	1630	50000
+4	752	24714
+5	345	11423
+6	161	4707
+7	67	1455
+8	24	244
+cr:7.27273,iter:0,level:0,rank:0,datasize:100,operation:
+cr:7.27273,iter:0,level:0,rank:0,datasize:100,operation:Pre-Smoothing
+cr:0.932401,iter:0,level:0,rank:0,datasize:100,operation:Residual
+cr:9.23636,iter:0,level:1,rank:0,datasize:127,operation:Pre-Smoothing
+cr:1.01296,iter:0,level:1,rank:0,datasize:127,operation:Residual
+cr:11.0545,iter:0,level:2,rank:0,datasize:152,operation:Pre-Smoothing
+cr:0.954474,iter:0,level:2,rank:0,datasize:152,operation:Residual
+cr:12.0727,iter:0,level:3,rank:0,datasize:166,operation:Pre-Smoothing
+cr:0.958153,iter:0,level:3,rank:0,datasize:166,operation:Residual
+cr:9.67273,iter:0,level:4,rank:0,datasize:133,operation:Pre-Smoothing
+cr:0.948307,iter:0,level:4,rank:0,datasize:133,operation:Residual
+cr:8.21818,iter:0,level:5,rank:0,datasize:113,operation:Pre-Smoothing
+cr:0.982609,iter:0,level:5,rank:0,datasize:113,operation:Residual
+cr:5.16364,iter:0,level:6,rank:0,datasize:71,operation:Pre-Smoothing
+cr:0.907348,iter:0,level:6,rank:0,datasize:71,operation:Residual
+cr:2.25455,iter:0,level:7,rank:0,datasize:31,operation:Pre-Smoothing
+cr:0.813115,iter:0,level:7,rank:0,datasize:31,operation:Residual
+cr:0.457143,iter:0,level:8,rank:0,datasize:6,operation:Interpolation
+cr:0.813115,iter:0,level:8,rank:0,datasize:31,operation:Post-smoothing
+cr:0.662722,iter:0,level:8,rank:0,datasize:14,operation:Interpolation
+cr:0.907348,iter:0,level:8,rank:0,datasize:71,operation:Post-smoothing
+cr:0.627451,iter:0,level:8,rank:0,datasize:12,operation:Interpolation
+cr:0.990142,iter:0,level:8,rank:0,datasize:113,operation:Post-smoothing
+cr:0.771084,iter:0,level:8,rank:0,datasize:24,operation:Interpolation
+cr:0.975252,iter:0,level:8,rank:0,datasize:133,operation:Post-smoothing
+cr:0.746667,iter:0,level:8,rank:0,datasize:21,operation:Interpolation
+cr:0.992526,iter:0,level:8,rank:0,datasize:166,operation:Post-smoothing
+cr:0.815287,iter:0,level:8,rank:0,datasize:32,operation:Interpolation
+cr:0.979066,iter:0,level:8,rank:0,datasize:152,operation:Post-smoothing
+cr:0.898246,iter:0,level:8,rank:0,datasize:64,operation:Interpolation
+cr:0.989289,iter:0,level:8,rank:0,datasize:127,operation:Post-smoothing
+cr:0.899654,iter:0,level:8,rank:0,datasize:65,operation:Interpolation
+cr:0.932401,iter:0,level:8,rank:0,datasize:100,operation:Post-smoothing
+cr:0.932401,iter:0,level:8,rank:0,datasize:100,operation:Residual-Norm
+cr:0.932401,iter:1,level:0,rank:0,datasize:100,operation:Pre-Smoothing
+cr:0.932401,iter:1,level:0,rank:0,datasize:100,operation:Residual
+cr:9.23636,iter:1,level:1,rank:0,datasize:127,operation:Pre-Smoothing
+cr:1.03147,iter:1,level:1,rank:0,datasize:127,operation:Residual
+cr:11.0545,iter:1,level:2,rank:0,datasize:152,operation:Pre-Smoothing
+cr:0.954474,iter:1,level:2,rank:0,datasize:152,operation:Residual
+cr:12.0727,iter:1,level:3,rank:0,datasize:166,operation:Pre-Smoothing
+cr:0.958153,iter:1,level:3,rank:0,datasize:166,operation:Residual
+cr:9.67273,iter:1,level:4,rank:0,datasize:133,operation:Pre-Smoothing
+cr:0.948307,iter:1,level:4,rank:0,datasize:133,operation:Residual
+cr:8.21818,iter:1,level:5,rank:0,datasize:113,operation:Pre-Smoothing
+cr:1.01917,iter:1,level:5,rank:0,datasize:113,operation:Residual
+cr:5.16364,iter:1,level:6,rank:0,datasize:71,operation:Pre-Smoothing
+cr:0.907348,iter:1,level:6,rank:0,datasize:71,operation:Residual
+cr:2.25455,iter:1,level:7,rank:0,datasize:31,operation:Pre-Smoothing
+cr:0.813115,iter:1,level:7,rank:0,datasize:31,operation:Residual
+cr:0.457143,iter:1,level:8,rank:0,datasize:6,operation:Interpolation
+cr:0.813115,iter:1,level:8,rank:0,datasize:31,operation:Post-smoothing
+cr:0.662722,iter:1,level:8,rank:0,datasize:14,operation:Interpolation
+cr:0.907348,iter:1,level:8,rank:0,datasize:71,operation:Post-smoothing
+cr:0.627451,iter:1,level:8,rank:0,datasize:12,operation:Interpolation
+cr:0.9869,iter:1,level:8,rank:0,datasize:113,operation:Post-smoothing
+cr:0.771084,iter:1,level:8,rank:0,datasize:24,operation:Interpolation
+cr:0.948307,iter:1,level:8,rank:0,datasize:133,operation:Post-smoothing
+cr:0.746667,iter:1,level:8,rank:0,datasize:21,operation:Interpolation
+cr:0.981523,iter:1,level:8,rank:0,datasize:166,operation:Post-smoothing
+cr:0.815287,iter:1,level:8,rank:0,datasize:32,operation:Interpolation
+cr:0.954474,iter:1,level:8,rank:0,datasize:152,operation:Post-smoothing
+cr:0.898246,iter:1,level:8,rank:0,datasize:64,operation:Interpolation
+cr:1.01499,iter:1,level:8,rank:0,datasize:127,operation:Post-smoothing
+cr:0.899654,iter:1,level:8,rank:0,datasize:65,operation:Interpolation
+cr:0.932401,iter:1,level:8,rank:0,datasize:100,operation:Post-smoothing
+cr:0.932401,iter:1,level:8,rank:0,datasize:100,operation:Residual-Norm
+cr:0.932401,iter:2,level:0,rank:0,datasize:100,operation:Pre-Smoothing
+cr:0.932401,iter:2,level:0,rank:0,datasize:100,operation:Residual
+cr:9.23636,iter:2,level:1,rank:0,datasize:127,operation:Pre-Smoothing
+cr:1.06947,iter:2,level:1,rank:0,datasize:127,operation:Residual
+cr:11.0545,iter:2,level:2,rank:0,datasize:152,operation:Pre-Smoothing
+cr:0.954474,iter:2,level:2,rank:0,datasize:152,operation:Residual
+cr:12.0727,iter:2,level:3,rank:0,datasize:166,operation:Pre-Smoothing
+cr:0.958153,iter:2,level:3,rank:0,datasize:166,operation:Residual
+cr:9.67273,iter:2,level:4,rank:0,datasize:133,operation:Pre-Smoothing
+cr:1.08793,iter:2,level:4,rank:0,datasize:133,operation:Residual
+cr:8.21818,iter:2,level:5,rank:0,datasize:113,operation:Pre-Smoothing
+cr:1.04028,iter:2,level:5,rank:0,datasize:113,operation:Residual
+cr:5.16364,iter:2,level:6,rank:0,datasize:71,operation:Pre-Smoothing
+cr:0.926591,iter:2,level:6,rank:0,datasize:71,operation:Residual
+cr:2.25455,iter:2,level:7,rank:0,datasize:31,operation:Pre-Smoothing
+cr:0.813115,iter:2,level:7,rank:0,datasize:31,operation:Residual
+cr:0.457143,iter:2,level:8,rank:0,datasize:6,operation:Interpolation
+cr:0.813115,iter:2,level:8,rank:0,datasize:31,operation:Post-smoothing
+cr:0.662722,iter:2,level:8,rank:0,datasize:14,operation:Interpolation
+cr:0.911717,iter:2,level:8,rank:0,datasize:71,operation:Post-smoothing
+cr:0.627451,iter:2,level:8,rank:0,datasize:12,operation:Interpolation
+cr:1.01345,iter:2,level:8,rank:0,datasize:113,operation:Post-smoothing
+cr:0.771084,iter:2,level:8,rank:0,datasize:24,operation:Interpolation
+cr:0.948307,iter:2,level:8,rank:0,datasize:133,operation:Post-smoothing
+cr:0.746667,iter:2,level:8,rank:0,datasize:21,operation:Interpolation
+cr:0.958153,iter:2,level:8,rank:0,datasize:166,operation:Post-smoothing
+cr:0.815287,iter:2,level:8,rank:0,datasize:32,operation:Interpolation
+cr:0.954474,iter:2,level:8,rank:0,datasize:152,operation:Post-smoothing
+cr:0.898246,iter:2,level:8,rank:0,datasize:64,operation:Interpolation
+cr:1.02834,iter:2,level:8,rank:0,datasize:127,operation:Post-smoothing
+cr:0.899654,iter:2,level:8,rank:0,datasize:65,operation:Interpolation
+cr:0.932401,iter:2,level:8,rank:0,datasize:100,operation:Post-smoothing
+cr:0.932401,iter:2,level:8,rank:0,datasize:100,operation:Residual-Norm
+cr:0.932401,iter:3,level:0,rank:0,datasize:100,operation:Pre-Smoothing
+cr:0.932401,iter:3,level:0,rank:0,datasize:100,operation:Residual
+cr:9.23636,iter:3,level:1,rank:0,datasize:127,operation:Pre-Smoothing
+cr:1.13647,iter:3,level:1,rank:0,datasize:127,operation:Residual
+cr:11.0545,iter:3,level:2,rank:0,datasize:152,operation:Pre-Smoothing
+cr:1.02876,iter:3,level:2,rank:0,datasize:152,operation:Residual
+cr:12.0727,iter:3,level:3,rank:0,datasize:166,operation:Pre-Smoothing
+cr:0.986627,iter:3,level:3,rank:0,datasize:166,operation:Residual
+cr:9.67273,iter:3,level:4,rank:0,datasize:133,operation:Pre-Smoothing
+cr:1.09128,iter:3,level:4,rank:0,datasize:133,operation:Residual
+cr:8.21818,iter:3,level:5,rank:0,datasize:113,operation:Pre-Smoothing
+cr:1.07363,iter:3,level:5,rank:0,datasize:113,operation:Residual
+cr:5.16364,iter:3,level:6,rank:0,datasize:71,operation:Pre-Smoothing
+cr:0.977625,iter:3,level:6,rank:0,datasize:71,operation:Residual
+cr:2.25455,iter:3,level:7,rank:0,datasize:31,operation:Pre-Smoothing
+cr:0.813115,iter:3,level:7,rank:0,datasize:31,operation:Residual
+cr:0.457143,iter:3,level:8,rank:0,datasize:6,operation:Interpolation
+cr:0.813115,iter:3,level:8,rank:0,datasize:31,operation:Post-smoothing
+cr:0.662722,iter:3,level:8,rank:0,datasize:14,operation:Interpolation
+cr:0.917609,iter:3,level:8,rank:0,datasize:71,operation:Post-smoothing
+cr:0.627451,iter:3,level:8,rank:0,datasize:12,operation:Interpolation
+cr:1.03314,iter:3,level:8,rank:0,datasize:113,operation:Post-smoothing
+cr:0.771084,iter:3,level:8,rank:0,datasize:24,operation:Interpolation
+cr:1.07042,iter:3,level:8,rank:0,datasize:133,operation:Post-smoothing
+cr:0.746667,iter:3,level:8,rank:0,datasize:21,operation:Interpolation
+cr:0.958153,iter:3,level:8,rank:0,datasize:166,operation:Post-smoothing
+cr:0.815287,iter:3,level:8,rank:0,datasize:32,operation:Interpolation
+cr:0.954474,iter:3,level:8,rank:0,datasize:152,operation:Post-smoothing
+cr:0.898246,iter:3,level:8,rank:0,datasize:64,operation:Interpolation
+cr:1.04959,iter:3,level:8,rank:0,datasize:127,operation:Post-smoothing
+cr:0.899654,iter:3,level:8,rank:0,datasize:65,operation:Interpolation
+cr:0.932401,iter:3,level:8,rank:0,datasize:100,operation:Post-smoothing
+cr:0.932401,iter:3,level:8,rank:0,datasize:100,operation:Residual-Norm
+cr:0.932401,iter:4,level:0,rank:0,datasize:100,operation:Pre-Smoothing
+cr:0.932401,iter:4,level:0,rank:0,datasize:100,operation:Residual
+cr:9.23636,iter:4,level:1,rank:0,datasize:127,operation:Pre-Smoothing
+cr:1.28608,iter:4,level:1,rank:0,datasize:127,operation:Residual
+cr:11.0545,iter:4,level:2,rank:0,datasize:152,operation:Pre-Smoothing
+cr:1.34961,iter:4,level:2,rank:0,datasize:152,operation:Residual
+cr:12.0727,iter:4,level:3,rank:0,datasize:166,operation:Pre-Smoothing
+cr:1.0753,iter:4,level:3,rank:0,datasize:166,operation:Residual
+cr:9.67273,iter:4,level:4,rank:0,datasize:133,operation:Pre-Smoothing
+cr:1.20362,iter:4,level:4,rank:0,datasize:133,operation:Residual
+cr:8.21818,iter:4,level:5,rank:0,datasize:113,operation:Pre-Smoothing
+cr:1.11881,iter:4,level:5,rank:0,datasize:113,operation:Residual
+cr:5.16364,iter:4,level:6,rank:0,datasize:71,operation:Pre-Smoothing
+cr:0.987826,iter:4,level:6,rank:0,datasize:71,operation:Residual
+cr:2.25455,iter:4,level:7,rank:0,datasize:31,operation:Pre-Smoothing
+cr:0.813115,iter:4,level:7,rank:0,datasize:31,operation:Residual
+cr:0.457143,iter:4,level:8,rank:0,datasize:6,operation:Interpolation
+cr:0.813115,iter:4,level:8,rank:0,datasize:31,operation:Post-smoothing
+cr:0.662722,iter:4,level:8,rank:0,datasize:14,operation:Interpolation
+cr:0.945092,iter:4,level:8,rank:0,datasize:71,operation:Post-smoothing
+cr:0.627451,iter:4,level:8,rank:0,datasize:12,operation:Interpolation
+cr:1.07109,iter:4,level:8,rank:0,datasize:113,operation:Post-smoothing
+cr:0.771084,iter:4,level:8,rank:0,datasize:24,operation:Interpolation
+cr:1.10373,iter:4,level:8,rank:0,datasize:133,operation:Post-smoothing
+cr:0.746667,iter:4,level:8,rank:0,datasize:21,operation:Interpolation
+cr:0.958153,iter:4,level:8,rank:0,datasize:166,operation:Post-smoothing
+cr:0.815287,iter:4,level:8,rank:0,datasize:32,operation:Interpolation
+cr:0.954474,iter:4,level:8,rank:0,datasize:152,operation:Post-smoothing
+cr:0.898246,iter:4,level:8,rank:0,datasize:64,operation:Interpolation
+cr:1.06276,iter:4,level:8,rank:0,datasize:127,operation:Post-smoothing
+cr:0.899654,iter:4,level:8,rank:0,datasize:65,operation:Interpolation
+cr:0.932401,iter:4,level:8,rank:0,datasize:100,operation:Post-smoothing
+cr:0.932401,iter:4,level:8,rank:0,datasize:100,operation:Residual-Norm
+cr:0.932401,iter:5,level:0,rank:0,datasize:100,operation:Pre-Smoothing
+cr:0.932401,iter:5,level:0,rank:0,datasize:100,operation:Residual
+cr:9.23636,iter:5,level:1,rank:0,datasize:127,operation:Pre-Smoothing
+cr:1.58255,iter:5,level:1,rank:0,datasize:127,operation:Residual
+cr:11.0545,iter:5,level:2,rank:0,datasize:152,operation:Pre-Smoothing
+cr:1.52764,iter:5,level:2,rank:0,datasize:152,operation:Residual
+cr:12.0727,iter:5,level:3,rank:0,datasize:166,operation:Pre-Smoothing
+cr:1.45934,iter:5,level:3,rank:0,datasize:166,operation:Residual
+cr:9.67273,iter:5,level:4,rank:0,datasize:133,operation:Pre-Smoothing
+cr:1.2944,iter:5,level:4,rank:0,datasize:133,operation:Residual
+cr:8.21818,iter:5,level:5,rank:0,datasize:113,operation:Pre-Smoothing
+cr:1.2469,iter:5,level:5,rank:0,datasize:113,operation:Residual
+cr:5.16364,iter:5,level:6,rank:0,datasize:71,operation:Pre-Smoothing
+cr:1.0819,iter:5,level:6,rank:0,datasize:71,operation:Residual
+cr:2.25455,iter:5,level:7,rank:0,datasize:31,operation:Pre-Smoothing
+cr:0.813115,iter:5,level:7,rank:0,datasize:31,operation:Residual
+cr:0.457143,iter:5,level:8,rank:0,datasize:6,operation:Interpolation
+cr:0.813115,iter:5,level:8,rank:0,datasize:31,operation:Post-smoothing
+cr:0.662722,iter:5,level:8,rank:0,datasize:14,operation:Interpolation
+cr:1,iter:5,level:8,rank:0,datasize:71,operation:Post-smoothing
+cr:0.627451,iter:5,level:8,rank:0,datasize:12,operation:Interpolation
+cr:1.10513,iter:5,level:8,rank:0,datasize:113,operation:Post-smoothing
+cr:0.771084,iter:5,level:8,rank:0,datasize:24,operation:Interpolation
+cr:1.11181,iter:5,level:8,rank:0,datasize:133,operation:Post-smoothing
+cr:0.746667,iter:5,level:8,rank:0,datasize:21,operation:Interpolation
+cr:0.992526,iter:5,level:8,rank:0,datasize:166,operation:Post-smoothing
+cr:0.815287,iter:5,level:8,rank:0,datasize:32,operation:Interpolation
+cr:0.994276,iter:5,level:8,rank:0,datasize:152,operation:Post-smoothing
+cr:0.914286,iter:5,level:8,rank:0,datasize:64,operation:Interpolation
+cr:1.13647,iter:5,level:8,rank:0,datasize:127,operation:Post-smoothing
+cr:0.899654,iter:5,level:8,rank:0,datasize:65,operation:Interpolation
+cr:0.932401,iter:5,level:8,rank:0,datasize:100,operation:Post-smoothing
+cr:0.932401,iter:5,level:8,rank:0,datasize:100,operation:Residual-Norm
+cr:0.932401,iter:6,level:0,rank:0,datasize:100,operation:Pre-Smoothing
+cr:0.932401,iter:6,level:0,rank:0,datasize:100,operation:Residual
+cr:9.23636,iter:6,level:1,rank:0,datasize:127,operation:Pre-Smoothing
+cr:1.95385,iter:6,level:1,rank:0,datasize:127,operation:Residual
+cr:11.0545,iter:6,level:2,rank:0,datasize:152,operation:Pre-Smoothing
+cr:1.87077,iter:6,level:2,rank:0,datasize:152,operation:Residual
+cr:12.0727,iter:6,level:3,rank:0,datasize:166,operation:Pre-Smoothing
+cr:1.75198,iter:6,level:3,rank:0,datasize:166,operation:Residual
+cr:9.67273,iter:6,level:4,rank:0,datasize:133,operation:Pre-Smoothing
+cr:1.48189,iter:6,level:4,rank:0,datasize:133,operation:Residual
+cr:8.21818,iter:6,level:5,rank:0,datasize:113,operation:Pre-Smoothing
+cr:1.32746,iter:6,level:5,rank:0,datasize:113,operation:Residual
+cr:5.16364,iter:6,level:6,rank:0,datasize:71,operation:Pre-Smoothing
+cr:1.1498,iter:6,level:6,rank:0,datasize:71,operation:Residual
+cr:2.25455,iter:6,level:7,rank:0,datasize:31,operation:Pre-Smoothing
+cr:0.876325,iter:6,level:7,rank:0,datasize:31,operation:Residual
+cr:0.457143,iter:6,level:8,rank:0,datasize:6,operation:Interpolation
+cr:0.813115,iter:6,level:8,rank:0,datasize:31,operation:Post-smoothing
+cr:0.662722,iter:6,level:8,rank:0,datasize:14,operation:Interpolation
+cr:1.02158,iter:6,level:8,rank:0,datasize:71,operation:Post-smoothing
+cr:0.627451,iter:6,level:8,rank:0,datasize:12,operation:Interpolation
+cr:1.19419,iter:6,level:8,rank:0,datasize:113,operation:Post-smoothing
+cr:0.771084,iter:6,level:8,rank:0,datasize:24,operation:Interpolation
+cr:1.1875,iter:6,level:8,rank:0,datasize:133,operation:Post-smoothing
+cr:0.746667,iter:6,level:8,rank:0,datasize:21,operation:Interpolation
+cr:1.02628,iter:6,level:8,rank:0,datasize:166,operation:Post-smoothing
+cr:0.815287,iter:6,level:8,rank:0,datasize:32,operation:Interpolation
+cr:1.18634,iter:6,level:8,rank:0,datasize:152,operation:Post-smoothing
+cr:0.92922,iter:6,level:8,rank:0,datasize:64,operation:Interpolation
+cr:1.13774,iter:6,level:8,rank:0,datasize:127,operation:Post-smoothing
+cr:0.955882,iter:6,level:8,rank:0,datasize:65,operation:Interpolation
+cr:0.932401,iter:6,level:8,rank:0,datasize:100,operation:Post-smoothing
+cr:0.932401,iter:6,level:8,rank:0,datasize:100,operation:Residual-Norm
+cr:0.932401,iter:7,level:0,rank:0,datasize:100,operation:Pre-Smoothing
+cr:0.932401,iter:7,level:0,rank:0,datasize:100,operation:Residual
+cr:9.23636,iter:7,level:1,rank:0,datasize:127,operation:Pre-Smoothing
+cr:2.52109,iter:7,level:1,rank:0,datasize:127,operation:Residual
+cr:11.0545,iter:7,level:2,rank:0,datasize:152,operation:Pre-Smoothing
+cr:2.21494,iter:7,level:2,rank:0,datasize:152,operation:Residual
+cr:12.0727,iter:7,level:3,rank:0,datasize:166,operation:Pre-Smoothing
+cr:1.91908,iter:7,level:3,rank:0,datasize:166,operation:Residual
+cr:9.67273,iter:7,level:4,rank:0,datasize:133,operation:Pre-Smoothing
+cr:1.57864,iter:7,level:4,rank:0,datasize:133,operation:Residual
+cr:8.21818,iter:7,level:5,rank:0,datasize:113,operation:Pre-Smoothing
+cr:1.42138,iter:7,level:5,rank:0,datasize:113,operation:Residual
+cr:5.16364,iter:7,level:6,rank:0,datasize:71,operation:Pre-Smoothing
+cr:1.20085,iter:7,level:6,rank:0,datasize:71,operation:Residual
+cr:2.25455,iter:7,level:7,rank:0,datasize:31,operation:Pre-Smoothing
+cr:0.870175,iter:7,level:7,rank:0,datasize:31,operation:Residual
+cr:0.457143,iter:7,level:8,rank:0,datasize:6,operation:Interpolation
+cr:0.835017,iter:7,level:8,rank:0,datasize:31,operation:Post-smoothing
+cr:0.662722,iter:7,level:8,rank:0,datasize:14,operation:Interpolation
+cr:1.07985,iter:7,level:8,rank:0,datasize:71,operation:Post-smoothing
+cr:0.627451,iter:7,level:8,rank:0,datasize:12,operation:Interpolation
+cr:1.26434,iter:7,level:8,rank:0,datasize:113,operation:Post-smoothing
+cr:0.771084,iter:7,level:8,rank:0,datasize:24,operation:Interpolation
+cr:1.25324,iter:7,level:8,rank:0,datasize:133,operation:Post-smoothing
+cr:0.746667,iter:7,level:8,rank:0,datasize:21,operation:Interpolation
+cr:1.34413,iter:7,level:8,rank:0,datasize:166,operation:Post-smoothing
+cr:0.815287,iter:7,level:8,rank:0,datasize:32,operation:Interpolation
+cr:1.29776,iter:7,level:8,rank:0,datasize:152,operation:Post-smoothing
+cr:0.958801,iter:7,level:8,rank:0,datasize:64,operation:Interpolation
+cr:1.2796,iter:7,level:8,rank:0,datasize:127,operation:Post-smoothing
+cr:0.948905,iter:7,level:8,rank:0,datasize:65,operation:Interpolation
+cr:0.932401,iter:7,level:8,rank:0,datasize:100,operation:Post-smoothing
+cr:0.932401,iter:7,level:8,rank:0,datasize:100,operation:Residual-Norm
+cr:0.932401,iter:8,level:0,rank:0,datasize:100,operation:Pre-Smoothing
+cr:0.932401,iter:8,level:0,rank:0,datasize:100,operation:Residual
+cr:9.23636,iter:8,level:1,rank:0,datasize:127,operation:Pre-Smoothing
+cr:3.20505,iter:8,level:1,rank:0,datasize:127,operation:Residual
+cr:11.0545,iter:8,level:2,rank:0,datasize:152,operation:Pre-Smoothing
+cr:2.70824,iter:8,level:2,rank:0,datasize:152,operation:Residual
+cr:12.0727,iter:8,level:3,rank:0,datasize:166,operation:Pre-Smoothing
+cr:2.29758,iter:8,level:3,rank:0,datasize:166,operation:Residual
+cr:9.67273,iter:8,level:4,rank:0,datasize:133,operation:Pre-Smoothing
+cr:1.76451,iter:8,level:4,rank:0,datasize:133,operation:Residual
+cr:8.21818,iter:8,level:5,rank:0,datasize:113,operation:Pre-Smoothing
+cr:1.58042,iter:8,level:5,rank:0,datasize:113,operation:Residual
+cr:5.16364,iter:8,level:6,rank:0,datasize:71,operation:Pre-Smoothing
+cr:1.25942,iter:8,level:6,rank:0,datasize:71,operation:Residual
+cr:2.25455,iter:8,level:7,rank:0,datasize:31,operation:Pre-Smoothing
+cr:0.82392,iter:8,level:7,rank:0,datasize:31,operation:Residual
+cr:0.457143,iter:8,level:8,rank:0,datasize:6,operation:Interpolation
+cr:0.832215,iter:8,level:8,rank:0,datasize:31,operation:Post-smoothing
+cr:0.662722,iter:8,level:8,rank:0,datasize:14,operation:Interpolation
+cr:1.11373,iter:8,level:8,rank:0,datasize:71,operation:Post-smoothing
+cr:0.627451,iter:8,level:8,rank:0,datasize:12,operation:Interpolation
+cr:1.34524,iter:8,level:8,rank:0,datasize:113,operation:Post-smoothing
+cr:0.771084,iter:8,level:8,rank:0,datasize:24,operation:Interpolation
+cr:1.44369,iter:8,level:8,rank:0,datasize:133,operation:Post-smoothing
+cr:0.746667,iter:8,level:8,rank:0,datasize:21,operation:Interpolation
+cr:1.51945,iter:8,level:8,rank:0,datasize:166,operation:Post-smoothing
+cr:0.815287,iter:8,level:8,rank:0,datasize:32,operation:Interpolation
+cr:1.47215,iter:8,level:8,rank:0,datasize:152,operation:Post-smoothing
+cr:1.00392,iter:8,level:8,rank:0,datasize:64,operation:Interpolation
+cr:1.42098,iter:8,level:8,rank:0,datasize:127,operation:Post-smoothing
+cr:1.08559,iter:8,level:8,rank:0,datasize:65,operation:Interpolation
+cr:0.932401,iter:8,level:8,rank:0,datasize:100,operation:Post-smoothing
+cr:0.932401,iter:8,level:8,rank:0,datasize:100,operation:Residual-Norm
+cr:0.932401,iter:9,level:0,rank:0,datasize:100,operation:Pre-Smoothing
+cr:0.932401,iter:9,level:0,rank:0,datasize:100,operation:Residual
+cr:9.23636,iter:9,level:1,rank:0,datasize:127,operation:Pre-Smoothing
+cr:3.72161,iter:9,level:1,rank:0,datasize:127,operation:Residual
+cr:11.0545,iter:9,level:2,rank:0,datasize:152,operation:Pre-Smoothing
+cr:3.15844,iter:9,level:2,rank:0,datasize:152,operation:Residual
+cr:12.0727,iter:9,level:3,rank:0,datasize:166,operation:Pre-Smoothing
+cr:2.66667,iter:9,level:3,rank:0,datasize:166,operation:Residual
+cr:9.67273,iter:9,level:4,rank:0,datasize:133,operation:Pre-Smoothing
+cr:2.02667,iter:9,level:4,rank:0,datasize:133,operation:Residual
+cr:8.21818,iter:9,level:5,rank:0,datasize:113,operation:Pre-Smoothing
+cr:1.80439,iter:9,level:5,rank:0,datasize:113,operation:Residual
+cr:5.16364,iter:9,level:6,rank:0,datasize:71,operation:Pre-Smoothing
+cr:1.4677,iter:9,level:6,rank:0,datasize:71,operation:Residual
+cr:2.25455,iter:9,level:7,rank:0,datasize:31,operation:Pre-Smoothing
+cr:0.942966,iter:9,level:7,rank:0,datasize:31,operation:Residual
+cr:0.457143,iter:9,level:8,rank:0,datasize:6,operation:Interpolation
+cr:0.939394,iter:9,level:8,rank:0,datasize:31,operation:Post-smoothing
+cr:0.662722,iter:9,level:8,rank:0,datasize:14,operation:Interpolation
+cr:1.28507,iter:9,level:8,rank:0,datasize:71,operation:Post-smoothing
+cr:0.627451,iter:9,level:8,rank:0,datasize:12,operation:Interpolation
+cr:1.42812,iter:9,level:8,rank:0,datasize:113,operation:Post-smoothing
+cr:0.771084,iter:9,level:8,rank:0,datasize:24,operation:Interpolation
+cr:1.45753,iter:9,level:8,rank:0,datasize:133,operation:Post-smoothing
+cr:0.746667,iter:9,level:8,rank:0,datasize:21,operation:Interpolation
+cr:1.62745,iter:9,level:8,rank:0,datasize:166,operation:Post-smoothing
+cr:0.815287,iter:9,level:8,rank:0,datasize:32,operation:Interpolation
+cr:1.5958,iter:9,level:8,rank:0,datasize:152,operation:Post-smoothing
+cr:1.0449,iter:9,level:8,rank:0,datasize:64,operation:Interpolation
+cr:1.47674,iter:9,level:8,rank:0,datasize:127,operation:Post-smoothing
+cr:1.15813,iter:9,level:8,rank:0,datasize:65,operation:Interpolation
+cr:0.932401,iter:9,level:8,rank:0,datasize:100,operation:Post-smoothing
+cr:0.932401,iter:9,level:8,rank:0,datasize:100,operation:Residual-Norm
+cr:0.932401,iter:10,level:0,rank:0,datasize:100,operation:Pre-Smoothing
+cr:0.932401,iter:10,level:0,rank:0,datasize:100,operation:Residual
+cr:9.23636,iter:10,level:1,rank:0,datasize:127,operation:Pre-Smoothing
+cr:4.21577,iter:10,level:1,rank:0,datasize:127,operation:Residual
+cr:11.0545,iter:10,level:2,rank:0,datasize:152,operation:Pre-Smoothing
+cr:3.71865,iter:10,level:2,rank:0,datasize:152,operation:Residual
+cr:12.0727,iter:10,level:3,rank:0,datasize:166,operation:Pre-Smoothing
+cr:3.13948,iter:10,level:3,rank:0,datasize:166,operation:Residual
+cr:9.67273,iter:10,level:4,rank:0,datasize:133,operation:Pre-Smoothing
+cr:2.33333,iter:10,level:4,rank:0,datasize:133,operation:Residual
+cr:8.21818,iter:10,level:5,rank:0,datasize:113,operation:Pre-Smoothing
+cr:2.05455,iter:10,level:5,rank:0,datasize:113,operation:Residual
+cr:5.16364,iter:10,level:6,rank:0,datasize:71,operation:Pre-Smoothing
+cr:1.7006,iter:10,level:6,rank:0,datasize:71,operation:Residual
+cr:2.25455,iter:10,level:7,rank:0,datasize:31,operation:Pre-Smoothing
+cr:0.984127,iter:10,level:7,rank:0,datasize:31,operation:Residual
+cr:0.457143,iter:10,level:8,rank:0,datasize:6,operation:Interpolation
+cr:0.942966,iter:10,level:8,rank:0,datasize:31,operation:Post-smoothing
+cr:0.662722,iter:10,level:8,rank:0,datasize:14,operation:Interpolation
+cr:1.31178,iter:10,level:8,rank:0,datasize:71,operation:Post-smoothing
+cr:0.627451,iter:10,level:8,rank:0,datasize:12,operation:Interpolation
+cr:1.70245,iter:10,level:8,rank:0,datasize:113,operation:Post-smoothing
+cr:0.771084,iter:10,level:8,rank:0,datasize:24,operation:Interpolation
+cr:1.69697,iter:10,level:8,rank:0,datasize:133,operation:Post-smoothing
+cr:0.746667,iter:10,level:8,rank:0,datasize:21,operation:Interpolation
+cr:1.85994,iter:10,level:8,rank:0,datasize:166,operation:Post-smoothing
+cr:0.815287,iter:10,level:8,rank:0,datasize:32,operation:Interpolation
+cr:1.73714,iter:10,level:8,rank:0,datasize:152,operation:Post-smoothing
+cr:1.17701,iter:10,level:8,rank:0,datasize:64,operation:Interpolation
+cr:1.72203,iter:10,level:8,rank:0,datasize:127,operation:Post-smoothing
+cr:1.28395,iter:10,level:8,rank:0,datasize:65,operation:Interpolation
+cr:0.932401,iter:10,level:8,rank:0,datasize:100,operation:Post-smoothing
+cr:0.932401,iter:10,level:8,rank:0,datasize:100,operation:Residual-Norm
+cr:0.932401,iter:11,level:0,rank:0,datasize:100,operation:Pre-Smoothing
+cr:0.932401,iter:11,level:0,rank:0,datasize:100,operation:Residual
+cr:9.23636,iter:11,level:1,rank:0,datasize:127,operation:Pre-Smoothing
+cr:5.10553,iter:11,level:1,rank:0,datasize:127,operation:Residual
+cr:11.0545,iter:11,level:2,rank:0,datasize:152,operation:Pre-Smoothing
+cr:4.22222,iter:11,level:2,rank:0,datasize:152,operation:Residual
+cr:12.0727,iter:11,level:3,rank:0,datasize:166,operation:Pre-Smoothing
+cr:3.81609,iter:11,level:3,rank:0,datasize:166,operation:Residual
+cr:9.67273,iter:11,level:4,rank:0,datasize:133,operation:Pre-Smoothing
+cr:2.68687,iter:11,level:4,rank:0,datasize:133,operation:Residual
+cr:8.21818,iter:11,level:5,rank:0,datasize:113,operation:Pre-Smoothing
+cr:2.34805,iter:11,level:5,rank:0,datasize:113,operation:Residual
+cr:5.16364,iter:11,level:6,rank:0,datasize:71,operation:Pre-Smoothing
+cr:1.89967,iter:11,level:6,rank:0,datasize:71,operation:Residual
+cr:2.25455,iter:11,level:7,rank:0,datasize:31,operation:Pre-Smoothing
+cr:1.04202,iter:11,level:7,rank:0,datasize:31,operation:Residual
+cr:0.457143,iter:11,level:8,rank:0,datasize:6,operation:Interpolation
+cr:1.05983,iter:11,level:8,rank:0,datasize:31,operation:Post-smoothing
+cr:0.662722,iter:11,level:8,rank:0,datasize:14,operation:Interpolation
+cr:1.43434,iter:11,level:8,rank:0,datasize:71,operation:Post-smoothing
+cr:0.627451,iter:11,level:8,rank:0,datasize:12,operation:Interpolation
+cr:1.82258,iter:11,level:8,rank:0,datasize:113,operation:Post-smoothing
+cr:0.771084,iter:11,level:8,rank:0,datasize:24,operation:Interpolation
+cr:1.86667,iter:11,level:8,rank:0,datasize:133,operation:Post-smoothing
+cr:0.746667,iter:11,level:8,rank:0,datasize:21,operation:Interpolation
+cr:2.03681,iter:11,level:8,rank:0,datasize:166,operation:Post-smoothing
+cr:0.870748,iter:11,level:8,rank:0,datasize:32,operation:Interpolation
+cr:1.92405,iter:11,level:8,rank:0,datasize:152,operation:Post-smoothing
+cr:1.2549,iter:11,level:8,rank:0,datasize:64,operation:Interpolation
+cr:1.84727,iter:11,level:8,rank:0,datasize:127,operation:Post-smoothing
+cr:1.3577,iter:11,level:8,rank:0,datasize:65,operation:Interpolation
+cr:0.932401,iter:11,level:8,rank:0,datasize:100,operation:Post-smoothing
+cr:0.932401,iter:11,level:8,rank:0,datasize:100,operation:Residual-Norm
+cr:0.932401,iter:12,level:0,rank:0,datasize:100,operation:Pre-Smoothing
+cr:0.932401,iter:12,level:0,rank:0,datasize:100,operation:Residual
+cr:9.23636,iter:12,level:1,rank:0,datasize:127,operation:Pre-Smoothing
+cr:5.49189,iter:12,level:1,rank:0,datasize:127,operation:Residual
+cr:11.0545,iter:12,level:2,rank:0,datasize:152,operation:Pre-Smoothing
+cr:5.10924,iter:12,level:2,rank:0,datasize:152,operation:Residual
+cr:12.0727,iter:12,level:3,rank:0,datasize:166,operation:Pre-Smoothing
+cr:4.50169,iter:12,level:3,rank:0,datasize:166,operation:Residual
+cr:9.67273,iter:12,level:4,rank:0,datasize:133,operation:Pre-Smoothing
+cr:3.2638,iter:12,level:4,rank:0,datasize:133,operation:Residual
+cr:8.21818,iter:12,level:5,rank:0,datasize:113,operation:Pre-Smoothing
+cr:2.83386,iter:12,level:5,rank:0,datasize:113,operation:Residual
+cr:5.16364,iter:12,level:6,rank:0,datasize:71,operation:Pre-Smoothing
+cr:2.08059,iter:12,level:6,rank:0,datasize:71,operation:Residual
+cr:2.25455,iter:12,level:7,rank:0,datasize:31,operation:Pre-Smoothing
+cr:1.08772,iter:12,level:7,rank:0,datasize:31,operation:Residual
+cr:0.457143,iter:12,level:8,rank:0,datasize:6,operation:Interpolation
+cr:1.02058,iter:12,level:8,rank:0,datasize:31,operation:Post-smoothing
+cr:0.662722,iter:12,level:8,rank:0,datasize:14,operation:Interpolation
+cr:1.80317,iter:12,level:8,rank:0,datasize:71,operation:Post-smoothing
+cr:0.627451,iter:12,level:8,rank:0,datasize:12,operation:Interpolation
+cr:2.07816,iter:12,level:8,rank:0,datasize:113,operation:Post-smoothing
+cr:0.771084,iter:12,level:8,rank:0,datasize:24,operation:Interpolation
+cr:2.08627,iter:12,level:8,rank:0,datasize:133,operation:Post-smoothing
+cr:0.746667,iter:12,level:8,rank:0,datasize:21,operation:Interpolation
+cr:2.39279,iter:12,level:8,rank:0,datasize:166,operation:Post-smoothing
+cr:0.876712,iter:12,level:8,rank:0,datasize:32,operation:Interpolation
+cr:2.1637,iter:12,level:8,rank:0,datasize:152,operation:Post-smoothing
+cr:1.32987,iter:12,level:8,rank:0,datasize:64,operation:Interpolation
+cr:2.13895,iter:12,level:8,rank:0,datasize:127,operation:Post-smoothing
+cr:1.58537,iter:12,level:8,rank:0,datasize:65,operation:Interpolation
+cr:0.932401,iter:12,level:8,rank:0,datasize:100,operation:Post-smoothing
+cr:0.932401,iter:12,level:8,rank:0,datasize:100,operation:Residual-Norm
+Total iterations is: 13
+Res[0] = 1.000000e+00
+Res[1] = 1.145311e-01
+Res[2] = 2.055307e-02
+Res[3] = 4.827951e-03
+Res[4] = 1.557690e-03
+Res[5] = 6.623047e-04
+Res[6] = 3.272929e-04
+Res[7] = 1.759863e-04
+Res[8] = 1.004073e-04
+Res[9] = 5.987537e-05
+Res[10] = 3.682572e-05
+Res[11] = 2.320852e-05
+Res[12] = 1.485359e-05
+Res[13] = 9.677770e-06
+Raptor AMG Setup Time: 3.311089e-01
+Raptor AMG Solve Time: 4.148988e-01
+Total iterations is: 13
