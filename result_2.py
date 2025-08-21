@@ -36,7 +36,7 @@ def get_op(line):
     return "Smooth"
 
 
-with open("slurm-200.output") as fh:
+with open("slurm-5000.output") as fh:
     for line in fh:
         if line.startswith("cr"):
             vals=line.split(",")
