@@ -11,12 +11,15 @@ cr=[]
 ops=[]
 levels=[]
 ds=[]
-eg="cr:120, iter:1, level:0, op:`Residual`"
-egs=eg.split(",")
-for i in egs:
-    val=i.split(":")[-1]
-    print("val:",val)
-print(egs)
+ranks=[]
+# eg="cr:120, iter:1, level:0, op:`Residual`"
+# eg="cr:15.2381,iter:0,level:0,rank:0,datasize:200,operation:Pre-Smoothing"
+
+# egs=eg.split(",")
+# for i in egs:
+#     val=i.split(":")[-1]
+#     print("val:",val)
+# print(egs)
 def get_compression_ratio(line):
     return 5
 
@@ -33,50 +36,45 @@ def get_op(line):
     return "Smooth"
 
 
-with open("slurm-5000.output") as fh:
+with open("slurm-200.output") as fh:
     for line in fh:
-        if line.startswith("Compression"):
-            pattern = (
-                r"Compression Ratio rank 0:\s*([\d.]+).*?"
-                r"Amg iter:\s*(\d+).*?"
-                r"Amg level:\s*(\d+).*?"
-                r"Datasize:\s*(\d+).*?"
-                r"Operation:\s*(\w+)"
-            )
+        if line.startswith("cr"):
+            vals=line.split(",")
+            print(vals)
+            ratio=vals[0].split(":")[-1]
+            iter=vals[1].split(":")[-1]
+            level=vals[2].split(":")[-1]
+            rank=vals[3].split(":")[-1]
+            datasize=vals[4].split(":")[-1]
+            operation=(vals[5].split(":")[-1]).rstrip()
 
-            match = re.search(pattern, line)
-            if match:
-                compression_ratio = float(match.group(1))
-                amg_iter = int(match.group(2))
-                amg_level = int(match.group(3))
-                datasize = int(match.group(4))
-                operation = match.group(5)
+            # print(ratio)
+            # print(iter)
+            # print(level)
+            # print(rank)
+            # print(datasize)
+            # print(operation)
 
-                print("Compression Ratio:", compression_ratio)
-                print("AMG Iter:", amg_iter)
-                print("AMG Level:", amg_level)
-                print("Datasize:", datasize)
-                print("Operation:", operation)
-                it.append(amg_iter)
-                cr.append(compression_ratio)
-                ops.append(operation)
-                levels.append(amg_level)
-                ds.append(datasize)
-            # print(line)
-            # ratio=get_compression_ratio(line)
-            # iter=get_iteration(line)
-            # level=get_level(line)
-            # size=get_datasize(line)
-            # op=get_op(line)
-            # it.append(iter)
-            # cr.append(ratio)
-            # ops.append(op)
+            cr.append(float(ratio))
+            it.append(float(iter))
+            levels.append(float(level))
+            ranks.append(float(rank))
+            ds.append(float(datasize))
+            ops.append(operation)
 
+# print(it)
+# print(cr)
+print("operations:",cr)
+# print(levels)
+# print(ds)
 
+df={"Iteration":it, "Ratio":cr, "Method":ops}
+data=pd.DataFrame.from_dict(df)
+sns.lineplot(x="Iteration", y="Ratio",
+             hue="Method",
+             data=data)
+plt.yscale('log')
+plt.savefig("result.png")
+plt.show()
 
-print(it)
-print(cr)
-print(ops)
-print(levels)
-print(ds)
 
