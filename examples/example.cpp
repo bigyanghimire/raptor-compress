@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
     // Problems size and type
     int dim = 2;
-    int n = 5000;
+    int n = std::stoi(argv[4]);;
     std::cout<<"N is>>>>>"<<n<<std::endl;
     std::vector<int> grid;
     grid.resize(dim, n);
