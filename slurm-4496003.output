@@ -1,0 +1,1436 @@
+-- Configuring done (6.2s)
+-- Generating done (16.4s)
+-- Build files have been written to: /home/bigyang/amg-compress/raptor-compress/build
+[  1%] Built target gtest
+[  2%] Built target gtest_main
+[  2%] Built target gmock
+[  4%] Built target gmock_main
+[ 26%] Built target raptor
+[ 41%] Built target test_tap_spmv_aniso
+[ 41%] Built target test_spmv_laplacian
+[ 57%] Built target test_spmv_aniso
+[ 57%] Built target test_tap_comm
+[ 57%] Built target test_par_block_matrix
+[ 57%] Built target test_par_vector
+[ 57%] Built target test_par_spmv_aniso
+[ 57%] Built target test_transpose
+[ 57%] Built target test_rap
+[ 57%] Built target test_par_splitting
+[ 41%] Built target test_par_rap
+[ 57%] Built target test_interpolation
+[ 41%] Built target test_tap_spmv_random
+[ 57%] Built target test_tap_rap
+[ 41%] Built target test_ruge_stuben
+[ 57%] Built target test_tap_splitting
+[ 41%] Built target test_repartition
+[ 41%] Built target test_par_interpolation
+[ 41%] Built target test_par_matrix
+[ 41%] Built target test_par_spmv_laplacian
+[ 57%] Built target test_par_add
+[ 57%] Built target test_par_spmv_random
+[ 41%] Built target test_splitting
+[ 41%] Built target test_tap_spmv_laplacian
+[ 57%] Built target test_par_comm
+[ 41%] Built target test_strength
+[ 57%] Built target test_par_strength
+[ 41%] Built target test_par_block_conversion
+[ 49%] Built target test_matrix
+[ 41%] Built target test_par_scale_aniso
+[ 41%] Built target test_par_transpose
+[ 57%] Built target test_spmv_random
+[ 58%] Built target test_tap_interpolation
+[ 59%] Built target test_par_ruge_stuben
+[ 65%] Built target test_candidates
+[ 65%] Built target test_par_aniso
+[ 65%] Built target test_par_bicgstab
+[ 65%] Built target test_par_smoothed_aggregation
+[ 65%] Built target test_laplacian
+[ 65%] Built target test_prolongation
+[ 65%] Built target example
+[ 65%] Built target test_tap_candidates
+[ 65%] Built target test_stencil
+[ 83%] Built target test_par_mis
+[ 83%] Built target test_tap_prolongation
+[ 83%] Built target benchmark_spmv
+[ 83%] Built target test_aniso
+[ 83%] Built target test_mis
+[ 83%] Built target test_matrix_market
+[ 83%] Built target test_par_prolongation
+[ 83%] Built target test_tap_ruge_stuben
+[ 83%] Built target test_tap_aggregate
+[ 83%] Built target test_par_laplacian
+[ 83%] Built target test_tap_mis
+[ 83%] Built target test_par_matrix_market
+[ 83%] Built target test_par_candidates
+[ 88%] Built target test_par_amg
+[ 83%] Built target test_amg
+[ 83%] Built target test_cg
+[ 88%] Built target test_aggregate
+[ 88%] Built target test_par_aggregate
+[ 83%] Built target test_par_cg
+[ 88%] Built target matop_example
+[ 88%] Built target benchmark_setup
+[ 88%] Built target test_smoothed_aggregation
+[ 88%] Built target test_bicgstab
+[ 88%] Built target coo_example
+[ 90%] Built target benchmark_tap_spgemm
+[ 93%] Built target benchmark_tap_spmv
+[ 93%] Built target benchmark_reader
+[ 93%] Built target benchmark_amg
+[ 94%] Built target csr_example
+[ 96%] Built target profile_tap_rss
+[ 96%] Built target profile_tap_sas
+[ 96%] Built target benchmark_solve
+[ 94%] Built target profile_tap_spgemm
+[ 98%] Built target benchmark_setup_sweeps
+[ 98%] Built target profile_tap_steps
+[100%] Built target profile_tap_amg
+[100%] Built target model_tap_steps
+  argv[1] = 1e-5
+  argv[2] = 1e-5
+  argv[3] = 1
+  argv[4] = 3000
+  argv[1] = 1e-5
+  argv[2] = 1e-5
+  argv[3] = 1
+  argv[4] = 3000
+N is>>>>>3000
+N is>>>>>3000
+Level	NumRows	NNZ
+-----	-------	---
+0	9000000	80964004
+1	5474784	81897932
+2	3220863	80464623
+3	1550075	51982891
+4	750232	29131194
+5	356228	15068996
+6	167644	7435606
+7	78221	3554417
+8	35870	1634830
+9	15892	709070
+10	6687	283941
+11	2677	104097
+12	1007	33654
+13	355	9437
+14	116	2032
+15	39	405
+cr:224.299,iter:0,level:0,rank:0,datasize:3000,operation:
+cr:224.299,iter:0,level:0,rank:0,datasize:3000,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.04416,iter:0,level:0,rank:0,datasize:3000,operation:Residual
+cr:280.299,iter:0,level:1,rank:0,datasize:3749,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.04527,iter:0,level:1,rank:0,datasize:3749,operation:Residual
+cr:294.312,iter:0,level:2,rank:0,datasize:4709,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+cr:1.04447,iter:0,level:2,rank:0,datasize:4709,operation:Residual
+SZ is downgraded to lossless mode.
+cr:326.25,iter:0,level:3,rank:0,datasize:5220,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+cr:1.04473,iter:0,level:3,rank:0,datasize:5220,operation:Residual
+SZ is downgraded to lossless mode.
+cr:282.812,iter:0,level:4,rank:0,datasize:4525,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+cr:1.04404,iter:0,level:4,rank:0,datasize:4525,operation:Residual
+SZ is downgraded to lossless mode.
+cr:280.449,iter:0,level:5,rank:0,datasize:3751,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+cr:1.04339,iter:0,level:5,rank:0,datasize:3751,operation:Residual
+SZ is downgraded to lossless mode.
+cr:217.346,iter:0,level:6,rank:0,datasize:2907,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+cr:1.04301,iter:0,level:6,rank:0,datasize:2907,operation:Residual
+SZ is downgraded to lossless mode.
+cr:166.953,iter:0,level:7,rank:0,datasize:2233,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+cr:1.04181,iter:0,level:7,rank:0,datasize:2233,operation:Residual
+SZ is downgraded to lossless mode.
+cr:123.215,iter:0,level:8,rank:0,datasize:1648,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.03967,iter:0,level:8,rank:0,datasize:1648,operation:Residual
+cr:86.5047,iter:0,level:9,rank:0,datasize:1157,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.03651,iter:0,level:9,rank:0,datasize:1157,operation:Residual
+cr:59.3645,iter:0,level:10,rank:0,datasize:794,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+cr:1.03201,iter:0,level:10,rank:0,datasize:794,operation:Residual
+SZ is downgraded to lossless mode.
+cr:38.2913,iter:0,level:11,rank:0,datasize:493,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.0207,iter:0,level:11,rank:0,datasize:493,operation:Residual
+cr:23.4563,iter:0,level:12,rank:0,datasize:302,operation:Pre-Smoothing
+cr:1.01385,iter:0,level:12,rank:0,datasize:302,operation:Residual
+cr:11.2,iter:0,level:13,rank:0,datasize:154,operation:Pre-Smoothing
+cr:0.980892,iter:0,level:13,rank:0,datasize:154,operation:Residual
+cr:3.78182,iter:0,level:14,rank:0,datasize:52,operation:Pre-Smoothing
+cr:0.877637,iter:0,level:14,rank:0,datasize:52,operation:Residual
+cr:0.55814,iter:0,level:15,rank:0,datasize:9,operation:Interpolation
+cr:0.877637,iter:0,level:15,rank:0,datasize:52,operation:Post-smoothing
+cr:0.746667,iter:0,level:15,rank:0,datasize:21,operation:Interpolation
+cr:0.979332,iter:0,level:15,rank:0,datasize:154,operation:Post-smoothing
+cr:0.836158,iter:0,level:15,rank:0,datasize:37,operation:Interpolation
+cr:1.04228,iter:0,level:15,rank:0,datasize:302,operation:Post-smoothing
+cr:0.893773,iter:0,level:15,rank:0,datasize:61,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.06479,iter:0,level:15,rank:0,datasize:493,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:0.964613,iter:0,level:15,rank:0,datasize:92,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.07297,iter:0,level:15,rank:0,datasize:794,operation:Post-smoothing
+cr:1.00415,iter:0,level:15,rank:0,datasize:121,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.07741,iter:0,level:15,rank:0,datasize:1157,operation:Post-smoothing
+cr:1.02062,iter:0,level:15,rank:0,datasize:198,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.07668,iter:0,level:15,rank:0,datasize:1648,operation:Post-smoothing
+cr:1.0318,iter:0,level:15,rank:0,datasize:288,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.07576,iter:0,level:15,rank:0,datasize:2233,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.04516,iter:0,level:15,rank:0,datasize:379,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.07492,iter:0,level:15,rank:0,datasize:2907,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05306,iter:0,level:15,rank:0,datasize:521,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.07475,iter:0,level:15,rank:0,datasize:3751,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05762,iter:0,level:15,rank:0,datasize:686,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.07132,iter:0,level:15,rank:0,datasize:4525,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.0596,iter:0,level:15,rank:0,datasize:920,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06833,iter:0,level:15,rank:0,datasize:5220,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06142,iter:0,level:15,rank:0,datasize:1255,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06538,iter:0,level:15,rank:0,datasize:4709,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.06101,iter:0,level:15,rank:0,datasize:1526,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06076,iter:0,level:15,rank:0,datasize:3749,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05569,iter:0,level:15,rank:0,datasize:1462,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.05033,iter:0,level:15,rank:0,datasize:3000,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05093,iter:0,level:15,rank:0,datasize:3000,operation:Residual-Norm
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05093,iter:1,level:0,rank:0,datasize:3000,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.0507,iter:1,level:0,rank:0,datasize:3000,operation:Residual
+cr:280.299,iter:1,level:1,rank:0,datasize:3749,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+cr:1.04422,iter:1,level:1,rank:0,datasize:3749,operation:Residual
+SZ is downgraded to lossless mode.
+cr:294.312,iter:1,level:2,rank:0,datasize:4709,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.04502,iter:1,level:2,rank:0,datasize:4709,operation:Residual
+cr:326.25,iter:1,level:3,rank:0,datasize:5220,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+cr:1.04523,iter:1,level:3,rank:0,datasize:5220,operation:Residual
+SZ is downgraded to lossless mode.
+cr:282.812,iter:1,level:4,rank:0,datasize:4525,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+cr:1.04395,iter:1,level:4,rank:0,datasize:4525,operation:Residual
+SZ is downgraded to lossless mode.
+cr:280.449,iter:1,level:5,rank:0,datasize:3751,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.04365,iter:1,level:5,rank:0,datasize:3751,operation:Residual
+cr:217.346,iter:1,level:6,rank:0,datasize:2907,operation:Pre-Smoothing
+cr:1.69789,iter:1,level:6,rank:0,datasize:2907,operation:Residual
+SZ is downgraded to lossless mode.
+cr:166.953,iter:1,level:7,rank:0,datasize:2233,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.04157,iter:1,level:7,rank:0,datasize:2233,operation:Residual
+cr:123.215,iter:1,level:8,rank:0,datasize:1648,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.0404,iter:1,level:8,rank:0,datasize:1648,operation:Residual
+cr:86.5047,iter:1,level:9,rank:0,datasize:1157,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+cr:1.03674,iter:1,level:9,rank:0,datasize:1157,operation:Residual
+SZ is downgraded to lossless mode.
+cr:59.3645,iter:1,level:10,rank:0,datasize:794,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.03083,iter:1,level:10,rank:0,datasize:794,operation:Residual
+cr:38.2913,iter:1,level:11,rank:0,datasize:493,operation:Pre-Smoothing
+cr:1.07349,iter:1,level:11,rank:0,datasize:493,operation:Residual
+cr:23.4563,iter:1,level:12,rank:0,datasize:302,operation:Pre-Smoothing
+cr:1.01427,iter:1,level:12,rank:0,datasize:302,operation:Residual
+cr:11.2,iter:1,level:13,rank:0,datasize:154,operation:Pre-Smoothing
+cr:0.978554,iter:1,level:13,rank:0,datasize:154,operation:Residual
+cr:3.78182,iter:1,level:14,rank:0,datasize:52,operation:Pre-Smoothing
+cr:0.877637,iter:1,level:14,rank:0,datasize:52,operation:Residual
+cr:0.55814,iter:1,level:15,rank:0,datasize:9,operation:Interpolation
+cr:0.877637,iter:1,level:15,rank:0,datasize:52,operation:Post-smoothing
+cr:0.746667,iter:1,level:15,rank:0,datasize:21,operation:Interpolation
+cr:0.9856,iter:1,level:15,rank:0,datasize:154,operation:Post-smoothing
+cr:0.836158,iter:1,level:15,rank:0,datasize:37,operation:Interpolation
+cr:1.0338,iter:1,level:15,rank:0,datasize:302,operation:Post-smoothing
+cr:0.893773,iter:1,level:15,rank:0,datasize:61,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05286,iter:1,level:15,rank:0,datasize:493,operation:Post-smoothing
+cr:0.957087,iter:1,level:15,rank:0,datasize:92,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.06256,iter:1,level:15,rank:0,datasize:794,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.02651,iter:1,level:15,rank:0,datasize:121,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06759,iter:1,level:15,rank:0,datasize:1157,operation:Post-smoothing
+cr:1.00827,iter:1,level:15,rank:0,datasize:198,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.07039,iter:1,level:15,rank:0,datasize:1648,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.02582,iter:1,level:15,rank:0,datasize:288,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.07028,iter:1,level:15,rank:0,datasize:2233,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.03978,iter:1,level:15,rank:0,datasize:379,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06954,iter:1,level:15,rank:0,datasize:2907,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.04829,iter:1,level:15,rank:0,datasize:521,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06866,iter:1,level:15,rank:0,datasize:3751,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05356,iter:1,level:15,rank:0,datasize:686,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06706,iter:1,level:15,rank:0,datasize:4525,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05641,iter:1,level:15,rank:0,datasize:920,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06656,iter:1,level:15,rank:0,datasize:5220,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05985,iter:1,level:15,rank:0,datasize:1255,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.06517,iter:1,level:15,rank:0,datasize:4709,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06064,iter:1,level:15,rank:0,datasize:1526,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.06249,iter:1,level:15,rank:0,datasize:3749,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05684,iter:1,level:15,rank:0,datasize:1462,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.0555,iter:1,level:15,rank:0,datasize:3000,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05504,iter:1,level:15,rank:0,datasize:3000,operation:Residual-Norm
+SZ is downgraded to lossless mode.
+cr:1.05504,iter:2,level:0,rank:0,datasize:3000,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05457,iter:2,level:0,rank:0,datasize:3000,operation:Residual
+cr:280.299,iter:2,level:1,rank:0,datasize:3749,operation:Pre-Smoothing
+cr:1.71844,iter:2,level:1,rank:0,datasize:3749,operation:Residual
+cr:294.312,iter:2,level:2,rank:0,datasize:4709,operation:Pre-Smoothing
+cr:2.04273,iter:2,level:2,rank:0,datasize:4709,operation:Residual
+cr:326.25,iter:2,level:3,rank:0,datasize:5220,operation:Pre-Smoothing
+cr:2.03439,iter:2,level:3,rank:0,datasize:5220,operation:Residual
+cr:282.812,iter:2,level:4,rank:0,datasize:4525,operation:Pre-Smoothing
+cr:1.98009,iter:2,level:4,rank:0,datasize:4525,operation:Residual
+cr:280.449,iter:2,level:5,rank:0,datasize:3751,operation:Pre-Smoothing
+cr:1.95913,iter:2,level:5,rank:0,datasize:3751,operation:Residual
+cr:217.346,iter:2,level:6,rank:0,datasize:2907,operation:Pre-Smoothing
+cr:1.89058,iter:2,level:6,rank:0,datasize:2907,operation:Residual
+cr:166.953,iter:2,level:7,rank:0,datasize:2233,operation:Pre-Smoothing
+cr:2.18761,iter:2,level:7,rank:0,datasize:2233,operation:Residual
+cr:123.215,iter:2,level:8,rank:0,datasize:1648,operation:Pre-Smoothing
+cr:1.85586,iter:2,level:8,rank:0,datasize:1648,operation:Residual
+cr:86.5047,iter:2,level:9,rank:0,datasize:1157,operation:Pre-Smoothing
+cr:1.97146,iter:2,level:9,rank:0,datasize:1157,operation:Residual
+cr:59.3645,iter:2,level:10,rank:0,datasize:794,operation:Pre-Smoothing
+cr:1.59198,iter:2,level:10,rank:0,datasize:794,operation:Residual
+cr:38.2913,iter:2,level:11,rank:0,datasize:493,operation:Pre-Smoothing
+cr:1.50592,iter:2,level:11,rank:0,datasize:493,operation:Residual
+cr:23.4563,iter:2,level:12,rank:0,datasize:302,operation:Pre-Smoothing
+cr:1.21407,iter:2,level:12,rank:0,datasize:302,operation:Residual
+cr:11.2,iter:2,level:13,rank:0,datasize:154,operation:Pre-Smoothing
+cr:0.995958,iter:2,level:13,rank:0,datasize:154,operation:Residual
+cr:3.78182,iter:2,level:14,rank:0,datasize:52,operation:Pre-Smoothing
+cr:0.877637,iter:2,level:14,rank:0,datasize:52,operation:Residual
+cr:0.55814,iter:2,level:15,rank:0,datasize:9,operation:Interpolation
+cr:0.877637,iter:2,level:15,rank:0,datasize:52,operation:Post-smoothing
+cr:0.746667,iter:2,level:15,rank:0,datasize:21,operation:Interpolation
+cr:0.979332,iter:2,level:15,rank:0,datasize:154,operation:Post-smoothing
+cr:0.836158,iter:2,level:15,rank:0,datasize:37,operation:Interpolation
+cr:1.0294,iter:2,level:15,rank:0,datasize:302,operation:Post-smoothing
+cr:0.893773,iter:2,level:15,rank:0,datasize:61,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.05201,iter:2,level:15,rank:0,datasize:493,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:0.965879,iter:2,level:15,rank:0,datasize:92,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.06043,iter:2,level:15,rank:0,datasize:794,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.02869,iter:2,level:15,rank:0,datasize:121,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06624,iter:2,level:15,rank:0,datasize:1157,operation:Post-smoothing
+cr:1.00635,iter:2,level:15,rank:0,datasize:198,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06762,iter:2,level:15,rank:0,datasize:1648,operation:Post-smoothing
+cr:1.02309,iter:2,level:15,rank:0,datasize:288,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.06753,iter:2,level:15,rank:0,datasize:2233,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.03517,iter:2,level:15,rank:0,datasize:379,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06684,iter:2,level:15,rank:0,datasize:2907,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.04435,iter:2,level:15,rank:0,datasize:521,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06491,iter:2,level:15,rank:0,datasize:3751,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.04813,iter:2,level:15,rank:0,datasize:686,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06339,iter:2,level:15,rank:0,datasize:4525,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05083,iter:2,level:15,rank:0,datasize:920,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06098,iter:2,level:15,rank:0,datasize:5220,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05329,iter:2,level:15,rank:0,datasize:1255,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.05918,iter:2,level:15,rank:0,datasize:4709,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05323,iter:2,level:15,rank:0,datasize:1526,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05673,iter:2,level:15,rank:0,datasize:3749,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.04963,iter:2,level:15,rank:0,datasize:1462,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.05666,iter:2,level:15,rank:0,datasize:3000,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.0582,iter:2,level:15,rank:0,datasize:3000,operation:Residual-Norm
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.0582,iter:3,level:0,rank:0,datasize:3000,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+cr:1.05746,iter:3,level:0,rank:0,datasize:3000,operation:Residual
+SZ is downgraded to lossless mode.
+cr:280.299,iter:3,level:1,rank:0,datasize:3749,operation:Pre-Smoothing
+cr:3.19302,iter:3,level:1,rank:0,datasize:3749,operation:Residual
+cr:294.312,iter:3,level:2,rank:0,datasize:4709,operation:Pre-Smoothing
+cr:3.49106,iter:3,level:2,rank:0,datasize:4709,operation:Residual
+cr:326.25,iter:3,level:3,rank:0,datasize:5220,operation:Pre-Smoothing
+cr:2.58752,iter:3,level:3,rank:0,datasize:5220,operation:Residual
+cr:282.812,iter:3,level:4,rank:0,datasize:4525,operation:Pre-Smoothing
+cr:3.08505,iter:3,level:4,rank:0,datasize:4525,operation:Residual
+cr:280.449,iter:3,level:5,rank:0,datasize:3751,operation:Pre-Smoothing
+cr:2.60035,iter:3,level:5,rank:0,datasize:3751,operation:Residual
+cr:217.346,iter:3,level:6,rank:0,datasize:2907,operation:Pre-Smoothing
+cr:2.4273,iter:3,level:6,rank:0,datasize:2907,operation:Residual
+cr:166.953,iter:3,level:7,rank:0,datasize:2233,operation:Pre-Smoothing
+cr:2.33975,iter:3,level:7,rank:0,datasize:2233,operation:Residual
+cr:123.215,iter:3,level:8,rank:0,datasize:1648,operation:Pre-Smoothing
+cr:2.35681,iter:3,level:8,rank:0,datasize:1648,operation:Residual
+cr:86.5047,iter:3,level:9,rank:0,datasize:1157,operation:Pre-Smoothing
+cr:2.05369,iter:3,level:9,rank:0,datasize:1157,operation:Residual
+cr:59.3645,iter:3,level:10,rank:0,datasize:794,operation:Pre-Smoothing
+cr:2.00886,iter:3,level:10,rank:0,datasize:794,operation:Residual
+cr:38.2913,iter:3,level:11,rank:0,datasize:493,operation:Pre-Smoothing
+cr:1.83186,iter:3,level:11,rank:0,datasize:493,operation:Residual
+cr:23.4563,iter:3,level:12,rank:0,datasize:302,operation:Pre-Smoothing
+cr:1.41039,iter:3,level:12,rank:0,datasize:302,operation:Residual
+cr:11.2,iter:3,level:13,rank:0,datasize:154,operation:Pre-Smoothing
+cr:1.27404,iter:3,level:13,rank:0,datasize:154,operation:Residual
+cr:3.78182,iter:3,level:14,rank:0,datasize:52,operation:Pre-Smoothing
+cr:0.877637,iter:3,level:14,rank:0,datasize:52,operation:Residual
+cr:0.55814,iter:3,level:15,rank:0,datasize:9,operation:Interpolation
+cr:0.877637,iter:3,level:15,rank:0,datasize:52,operation:Post-smoothing
+cr:0.746667,iter:3,level:15,rank:0,datasize:21,operation:Interpolation
+cr:1.00818,iter:3,level:15,rank:0,datasize:154,operation:Post-smoothing
+cr:0.836158,iter:3,level:15,rank:0,datasize:37,operation:Interpolation
+cr:1.09818,iter:3,level:15,rank:0,datasize:302,operation:Post-smoothing
+cr:0.893773,iter:3,level:15,rank:0,datasize:61,operation:Interpolation
+cr:1.1819,iter:3,level:15,rank:0,datasize:493,operation:Post-smoothing
+cr:1.01798,iter:3,level:15,rank:0,datasize:92,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05761,iter:3,level:15,rank:0,datasize:794,operation:Post-smoothing
+cr:1.06608,iter:3,level:15,rank:0,datasize:121,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06208,iter:3,level:15,rank:0,datasize:1157,operation:Post-smoothing
+cr:1.00699,iter:3,level:15,rank:0,datasize:198,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06288,iter:3,level:15,rank:0,datasize:1648,operation:Post-smoothing
+cr:1.01812,iter:3,level:15,rank:0,datasize:288,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.06245,iter:3,level:15,rank:0,datasize:2233,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.03094,iter:3,level:15,rank:0,datasize:379,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.06129,iter:3,level:15,rank:0,datasize:2907,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.03811,iter:3,level:15,rank:0,datasize:521,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.0599,iter:3,level:15,rank:0,datasize:3751,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.04216,iter:3,level:15,rank:0,datasize:686,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05656,iter:3,level:15,rank:0,datasize:4525,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.04575,iter:3,level:15,rank:0,datasize:920,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05516,iter:3,level:15,rank:0,datasize:5220,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.04692,iter:3,level:15,rank:0,datasize:1255,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05344,iter:3,level:15,rank:0,datasize:4709,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.04844,iter:3,level:15,rank:0,datasize:1526,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.05191,iter:3,level:15,rank:0,datasize:3749,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.04569,iter:3,level:15,rank:0,datasize:1462,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.05923,iter:3,level:15,rank:0,datasize:3000,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05867,iter:3,level:15,rank:0,datasize:3000,operation:Residual-Norm
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05867,iter:4,level:0,rank:0,datasize:3000,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05899,iter:4,level:0,rank:0,datasize:3000,operation:Residual
+cr:280.299,iter:4,level:1,rank:0,datasize:3749,operation:Pre-Smoothing
+cr:4.63412,iter:4,level:1,rank:0,datasize:3749,operation:Residual
+cr:294.312,iter:4,level:2,rank:0,datasize:4709,operation:Pre-Smoothing
+cr:4.02092,iter:4,level:2,rank:0,datasize:4709,operation:Residual
+cr:326.25,iter:4,level:3,rank:0,datasize:5220,operation:Pre-Smoothing
+cr:3.81823,iter:4,level:3,rank:0,datasize:5220,operation:Residual
+cr:282.812,iter:4,level:4,rank:0,datasize:4525,operation:Pre-Smoothing
+cr:3.40258,iter:4,level:4,rank:0,datasize:4525,operation:Residual
+cr:280.449,iter:4,level:5,rank:0,datasize:3751,operation:Pre-Smoothing
+cr:2.9489,iter:4,level:5,rank:0,datasize:3751,operation:Residual
+cr:217.346,iter:4,level:6,rank:0,datasize:2907,operation:Pre-Smoothing
+cr:2.95615,iter:4,level:6,rank:0,datasize:2907,operation:Residual
+cr:166.953,iter:4,level:7,rank:0,datasize:2233,operation:Pre-Smoothing
+cr:2.81545,iter:4,level:7,rank:0,datasize:2233,operation:Residual
+cr:123.215,iter:4,level:8,rank:0,datasize:1648,operation:Pre-Smoothing
+cr:2.88616,iter:4,level:8,rank:0,datasize:1648,operation:Residual
+cr:86.5047,iter:4,level:9,rank:0,datasize:1157,operation:Pre-Smoothing
+cr:3.08533,iter:4,level:9,rank:0,datasize:1157,operation:Residual
+cr:59.3645,iter:4,level:10,rank:0,datasize:794,operation:Pre-Smoothing
+cr:2.46106,iter:4,level:10,rank:0,datasize:794,operation:Residual
+cr:38.2913,iter:4,level:11,rank:0,datasize:493,operation:Pre-Smoothing
+cr:2.01019,iter:4,level:11,rank:0,datasize:493,operation:Residual
+cr:23.4563,iter:4,level:12,rank:0,datasize:302,operation:Pre-Smoothing
+cr:1.85989,iter:4,level:12,rank:0,datasize:302,operation:Residual
+cr:11.2,iter:4,level:13,rank:0,datasize:154,operation:Pre-Smoothing
+cr:1.54193,iter:4,level:13,rank:0,datasize:154,operation:Residual
+cr:3.78182,iter:4,level:14,rank:0,datasize:52,operation:Pre-Smoothing
+cr:1.01711,iter:4,level:14,rank:0,datasize:52,operation:Residual
+cr:0.55814,iter:4,level:15,rank:0,datasize:9,operation:Interpolation
+cr:0.910284,iter:4,level:15,rank:0,datasize:52,operation:Post-smoothing
+cr:0.746667,iter:4,level:15,rank:0,datasize:21,operation:Interpolation
+cr:1.26359,iter:4,level:15,rank:0,datasize:154,operation:Post-smoothing
+cr:0.836158,iter:4,level:15,rank:0,datasize:37,operation:Interpolation
+cr:1.22205,iter:4,level:15,rank:0,datasize:302,operation:Post-smoothing
+cr:0.893773,iter:4,level:15,rank:0,datasize:61,operation:Interpolation
+cr:1.25525,iter:4,level:15,rank:0,datasize:493,operation:Post-smoothing
+cr:1.04545,iter:4,level:15,rank:0,datasize:92,operation:Interpolation
+cr:1.41976,iter:4,level:15,rank:0,datasize:794,operation:Post-smoothing
+cr:1.06257,iter:4,level:15,rank:0,datasize:121,operation:Interpolation
+cr:1.5327,iter:4,level:15,rank:0,datasize:1157,operation:Post-smoothing
+cr:1.0226,iter:4,level:15,rank:0,datasize:198,operation:Interpolation
+cr:1.60683,iter:4,level:15,rank:0,datasize:1648,operation:Post-smoothing
+cr:1.03877,iter:4,level:15,rank:0,datasize:288,operation:Interpolation
+cr:1.73825,iter:4,level:15,rank:0,datasize:2233,operation:Post-smoothing
+cr:1.08054,iter:4,level:15,rank:0,datasize:379,operation:Interpolation
+cr:1.81305,iter:4,level:15,rank:0,datasize:2907,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.03168,iter:4,level:15,rank:0,datasize:521,operation:Interpolation
+cr:1.85728,iter:4,level:15,rank:0,datasize:3751,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.03782,iter:SZ is downgraded to lossless mode.
+4,level:15,rank:0,datasize:686,operation:Interpolation
+cr:1.81955,iter:4,level:15,rank:0,datasize:4525,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.04043,iter:4,level:15,rank:0,datasize:920,operation:Interpolation
+cr:1.87753,iter:4,level:15,rank:0,datasize:5220,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.0429,iter:4,level:15,rank:0,datasize:1255,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.90311,iter:4,level:15,rank:0,datasize:4709,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.04449,iter:4,level:15,rank:0,datasize:1526,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.75044,iter:4,level:15,rank:0,datasize:3749,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.04373,iter:4,level:15,rank:0,datasize:1462,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05853,iter:4,level:15,rank:0,datasize:3000,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.0597,iter:4,level:15,rank:0,datasize:3000,operation:Residual-Norm
+SZ is downgraded to lossless mode.
+cr:1.0597,iter:5,level:0,rank:0,datasize:3000,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05923,iter:5,level:0,rank:0,datasize:3000,operation:Residual
+SZ is downgraded to lossless mode.
+cr:280.299,iter:5,level:1,rank:0,datasize:3749,operation:Pre-Smoothing
+cr:5.15149,iter:5,level:1,rank:0,datasize:3749,operation:Residual
+cr:294.312,iter:5,level:2,rank:0,datasize:4709,operation:Pre-Smoothing
+cr:4.82294,iter:5,level:2,rank:0,datasize:4709,operation:Residual
+cr:326.25,iter:5,level:3,rank:0,datasize:5220,operation:Pre-Smoothing
+cr:4.94963,iter:5,level:3,rank:0,datasize:5220,operation:Residual
+cr:282.812,iter:5,level:4,rank:0,datasize:4525,operation:Pre-Smoothing
+cr:4.24633,iter:5,level:4,rank:0,datasize:4525,operation:Residual
+cr:280.449,iter:5,level:5,rank:0,datasize:3751,operation:Pre-Smoothing
+cr:4.36671,iter:5,level:5,rank:0,datasize:3751,operation:Residual
+cr:217.346,iter:5,level:6,rank:0,datasize:2907,operation:Pre-Smoothing
+cr:3.46329,iter:5,level:6,rank:0,datasize:2907,operation:Residual
+cr:166.953,iter:5,level:7,rank:0,datasize:2233,operation:Pre-Smoothing
+cr:3.37502,iter:5,level:7,rank:0,datasize:2233,operation:Residual
+cr:123.215,iter:5,level:8,rank:0,datasize:1648,operation:Pre-Smoothing
+cr:3.21483,iter:5,level:8,rank:0,datasize:1648,operation:Residual
+cr:86.5047,iter:5,level:9,rank:0,datasize:1157,operation:Pre-Smoothing
+cr:3.54229,iter:5,level:9,rank:0,datasize:1157,operation:Residual
+cr:59.3645,iter:5,level:10,rank:0,datasize:794,operation:Pre-Smoothing
+cr:2.37547,iter:5,level:10,rank:0,datasize:794,operation:Residual
+cr:38.2913,iter:5,level:11,rank:0,datasize:493,operation:Pre-Smoothing
+cr:3.21173,iter:5,level:11,rank:0,datasize:493,operation:Residual
+cr:23.4563,iter:5,level:12,rank:0,datasize:302,operation:Pre-Smoothing
+cr:2.39921,iter:5,level:12,rank:0,datasize:302,operation:Residual
+cr:11.2,iter:5,level:13,rank:0,datasize:154,operation:Pre-Smoothing
+cr:1.67164,iter:5,level:13,rank:0,datasize:154,operation:Residual
+cr:3.78182,iter:5,level:14,rank:0,datasize:52,operation:Pre-Smoothing
+cr:1.10933,iter:5,level:14,rank:0,datasize:52,operation:Residual
+cr:0.55814,iter:5,level:15,rank:0,datasize:9,operation:Interpolation
+cr:0.945455,iter:5,level:15,rank:0,datasize:52,operation:Post-smoothing
+cr:0.746667,iter:5,level:15,rank:0,datasize:21,operation:Interpolation
+cr:1.45455,iter:5,level:15,rank:0,datasize:154,operation:Post-smoothing
+cr:0.836158,iter:5,level:15,rank:0,datasize:37,operation:Interpolation
+cr:1.44671,iter:5,level:15,rank:0,datasize:302,operation:Post-smoothing
+cr:0.908752,iter:5,level:15,rank:0,datasize:61,operation:Interpolation
+cr:1.51227,iter:5,level:15,rank:0,datasize:493,operation:Post-smoothing
+cr:1.04993,iter:5,level:15,rank:0,datasize:92,operation:Interpolation
+cr:1.67909,iter:5,level:15,rank:0,datasize:794,operation:Post-smoothing
+cr:1.12558,iter:5,level:15,rank:0,datasize:121,operation:Interpolation
+cr:1.77863,iter:5,level:15,rank:0,datasize:1157,operation:Post-smoothing
+cr:1.06452,iter:5,level:15,rank:0,datasize:198,operation:Interpolation
+cr:1.92551,iter:5,level:15,rank:0,datasize:1648,operation:Post-smoothing
+cr:1.13947,iter:5,level:15,rank:0,datasize:288,operation:Interpolation
+cr:2.00787,iter:5,level:15,rank:0,datasize:2233,operation:Post-smoothing
+cr:1.14675,iter:5,level:15,rank:0,datasize:379,operation:Interpolation
+cr:2.07051,iter:5,level:15,rank:0,datasize:2907,operation:Post-smoothing
+cr:1.14254,iter:5,level:15,rank:0,datasize:521,operation:Interpolation
+cr:2.15235,iter:5,level:15,rank:0,datasize:3751,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.03236,iter:5,level:15,rank:0,datasize:686,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:2.18335,iter:5,level:15,rank:0,datasize:4525,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.03604,iter:5,level:15,rank:0,datasize:920,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:2.23065,iter:5,level:15,rank:0,datasize:5220,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.03923,iter:5,level:15,rank:0,datasize:1255,operation:Interpolation
+cr:2.28025,iter:5,level:15,rank:0,datasize:4709,operation:Post-smoothing
+cr:1.51897,iter:5,level:15,rank:0,datasize:1526,operation:Interpolation
+cr:2.4121,iter:5,level:15,rank:0,datasize:3749,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.71546,iter:5,level:15,rank:0,datasize:1462,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.06026,iter:5,level:15,rank:0,datasize:3000,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.0597,iter:5,level:15,rank:0,datasize:3000,operation:Residual-Norm
+SZ is downgraded to lossless mode.
+cr:1.0597,iter:6,level:0,rank:0,datasize:3000,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05988,iter:6,level:0,rank:0,datasize:3000,operation:Residual
+cr:280.299,iter:6,level:1,rank:0,datasize:3749,operation:Pre-Smoothing
+cr:8.54473,iter:6,level:1,rank:0,datasize:3749,operation:Residual
+cr:294.312,iter:6,level:2,rank:0,datasize:4709,operation:Pre-Smoothing
+cr:6.76945,iter:6,level:2,rank:0,datasize:4709,operation:Residual
+cr:326.25,iter:6,level:3,rank:0,datasize:5220,operation:Pre-Smoothing
+cr:5.93688,iter:6,level:3,rank:0,datasize:5220,operation:Residual
+cr:282.812,iter:6,level:4,rank:0,datasize:4525,operation:Pre-Smoothing
+cr:5.10794,iter:6,level:4,rank:0,datasize:4525,operation:Residual
+cr:280.449,iter:6,level:5,rank:0,datasize:3751,operation:Pre-Smoothing
+cr:4.50841,iter:6,level:5,rank:0,datasize:3751,operation:Residual
+cr:217.346,iter:6,level:6,rank:0,datasize:2907,operation:Pre-Smoothing
+cr:4.09797,iter:6,level:6,rank:0,datasize:2907,operation:Residual
+cr:166.953,iter:6,level:7,rank:0,datasize:2233,operation:Pre-Smoothing
+cr:3.79439,iter:6,level:7,rank:0,datasize:2233,operation:Residual
+cr:123.215,iter:6,level:8,rank:0,datasize:1648,operation:Pre-Smoothing
+cr:3.59825,iter:6,level:8,rank:0,datasize:1648,operation:Residual
+cr:86.5047,iter:6,level:9,rank:0,datasize:1157,operation:Pre-Smoothing
+cr:3.89398,iter:6,level:9,rank:0,datasize:1157,operation:Residual
+cr:59.3645,iter:6,level:10,rank:0,datasize:794,operation:Pre-Smoothing
+cr:3.12752,iter:6,level:10,rank:0,datasize:794,operation:Residual
+cr:38.2913,iter:6,level:11,rank:0,datasize:493,operation:Pre-Smoothing
+cr:3.61172,iter:6,level:11,rank:0,datasize:493,operation:Residual
+cr:23.4563,iter:6,level:12,rank:0,datasize:302,operation:Pre-Smoothing
+cr:2.41842,iter:6,level:12,rank:0,datasize:302,operation:Residual
+cr:11.2,iter:6,level:13,rank:0,datasize:154,operation:Pre-Smoothing
+cr:1.81443,iter:6,level:13,rank:0,datasize:154,operation:Residual
+cr:3.78182,iter:6,level:14,rank:0,datasize:52,operation:Pre-Smoothing
+cr:1.33762,iter:6,level:14,rank:0,datasize:52,operation:Residual
+cr:0.55814,iter:6,level:15,rank:0,datasize:9,operation:Interpolation
+cr:1.04261,iter:6,level:15,rank:0,datasize:52,operation:Post-smoothing
+cr:0.746667,iter:6,level:15,rank:0,datasize:21,operation:Interpolation
+cr:1.60208,iter:6,level:15,rank:0,datasize:154,operation:Post-smoothing
+cr:0.836158,iter:6,level:15,rank:0,datasize:37,operation:Interpolation
+cr:1.65593,iter:6,level:15,rank:0,datasize:302,operation:Post-smoothing
+cr:0.956863,iter:6,level:15,rank:0,datasize:61,operation:Interpolation
+cr:1.96219,iter:6,level:15,rank:0,datasize:493,operation:Post-smoothing
+cr:1.07289,iter:6,level:15,rank:0,datasize:92,operation:Interpolation
+cr:2.20479,iter:6,level:15,rank:0,datasize:794,operation:Post-smoothing
+cr:1.20849,iter:6,level:15,rank:0,datasize:121,operation:Interpolation
+cr:2.40291,iter:6,level:15,rank:0,datasize:1157,operation:Post-smoothing
+cr:1.06095,iter:6,level:15,rank:0,datasize:198,operation:Interpolation
+cr:2.22627,iter:6,level:15,rank:0,datasize:1648,operation:Post-smoothing
+cr:1.07463,iter:6,level:15,rank:0,datasize:288,operation:Interpolation
+cr:2.65873,iter:6,level:15,rank:0,datasize:2233,operation:Post-smoothing
+cr:1.20413,iter:6,level:15,rank:0,datasize:379,operation:Interpolation
+cr:2.17998,iter:6,level:15,rank:0,datasize:2907,operation:Post-smoothing
+cr:1.18645,iter:6,level:15,rank:0,datasize:521,operation:Interpolation
+cr:2.83201,iter:6,level:15,rank:0,datasize:3751,operation:Post-smoothing
+cr:1.30294,iter:6,level:15,rank:0,datasize:686,operation:Interpolation
+cr:2.56865,iter:6,level:15,rank:0,datasize:4525,operation:Post-smoothing
+cr:1.49746,iter:6,level:15,rank:0,datasize:920,operation:Interpolation
+cr:2.65683,iter:6,level:15,rank:0,datasize:5220,operation:Post-smoothing
+cr:1.49471,iter:6,level:15,rank:0,datasize:1255,operation:Interpolation
+cr:2.61158,iter:6,level:15,rank:0,datasize:4709,operation:Post-smoothing
+cr:1.7017,iter:6,level:15,rank:0,datasize:1526,operation:Interpolation
+cr:2.97186,iter:6,level:15,rank:0,datasize:3749,operation:Post-smoothing
+cr:1.74854,iter:6,level:15,rank:0,datasize:1462,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.06082,iter:6,level:15,rank:0,datasize:3000,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05942,iter:6,level:15,rank:0,datasize:3000,operation:Residual-Norm
+SZ is downgraded to lossless mode.
+cr:1.05942,iter:7,level:0,rank:0,datasize:3000,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06002,iter:7,level:0,rank:0,datasize:3000,operation:Residual
+cr:280.299,iter:7,level:1,rank:0,datasize:3749,operation:Pre-Smoothing
+cr:10.5494,iter:7,level:1,rank:0,datasize:3749,operation:Residual
+cr:294.312,iter:7,level:2,rank:0,datasize:4709,operation:Pre-Smoothing
+cr:8.22892,iter:7,level:2,rank:0,datasize:4709,operation:Residual
+cr:326.25,iter:7,level:3,rank:0,datasize:5220,operation:Pre-Smoothing
+cr:6.96232,iter:7,level:3,rank:0,datasize:5220,operation:Residual
+cr:282.812,iter:7,level:4,rank:0,datasize:4525,operation:Pre-Smoothing
+cr:5.92957,iter:7,level:4,rank:0,datasize:4525,operation:Residual
+cr:280.449,iter:7,level:5,rank:0,datasize:3751,operation:Pre-Smoothing
+cr:5.24799,iter:7,level:5,rank:0,datasize:3751,operation:Residual
+cr:217.346,iter:7,level:6,rank:0,datasize:2907,operation:Pre-Smoothing
+cr:4.77732,iter:7,level:6,rank:0,datasize:2907,operation:Residual
+cr:166.953,iter:7,level:7,rank:0,datasize:2233,operation:Pre-Smoothing
+cr:4.22417,iter:7,level:7,rank:0,datasize:2233,operation:Residual
+cr:123.215,iter:7,level:8,rank:0,datasize:1648,operation:Pre-Smoothing
+cr:4.77681,iter:7,level:8,rank:0,datasize:1648,operation:Residual
+cr:86.5047,iter:7,level:9,rank:0,datasize:1157,operation:Pre-Smoothing
+cr:4.33131,iter:7,level:9,rank:0,datasize:1157,operation:Residual
+cr:59.3645,iter:7,level:10,rank:0,datasize:794,operation:Pre-Smoothing
+cr:4.23185,iter:7,level:10,rank:0,datasize:794,operation:Residual
+cr:38.2913,iter:7,level:11,rank:0,datasize:493,operation:Pre-Smoothing
+cr:3.45662,iter:7,level:11,rank:0,datasize:493,operation:Residual
+cr:23.4563,iter:7,level:12,rank:0,datasize:302,operation:Pre-Smoothing
+cr:2.51929,iter:7,level:12,rank:0,datasize:302,operation:Residual
+cr:11.2,iter:7,level:13,rank:0,datasize:154,operation:Pre-Smoothing
+cr:1.9871,iter:7,level:13,rank:0,datasize:154,operation:Residual
+cr:3.78182,iter:7,level:14,rank:0,datasize:52,operation:Pre-Smoothing
+cr:1.2568,iter:7,level:14,rank:0,datasize:52,operation:Residual
+cr:0.55814,iter:7,level:15,rank:0,datasize:9,operation:Interpolation
+cr:1.2058,iter:7,level:15,rank:0,datasize:52,operation:Post-smoothing
+cr:0.746667,iter:7,level:15,rank:0,datasize:21,operation:Interpolation
+cr:1.67391,iter:7,level:15,rank:0,datasize:154,operation:Post-smoothing
+cr:0.873156,iter:7,level:15,rank:0,datasize:37,operation:Interpolation
+cr:2.40398,iter:7,level:15,rank:0,datasize:302,operation:Post-smoothing
+cr:0.987854,iter:7,level:15,rank:0,datasize:61,operation:Interpolation
+cr:1.95829,iter:7,level:15,rank:0,datasize:493,operation:Post-smoothing
+cr:1.16272,iter:7,level:15,rank:0,datasize:92,operation:Interpolation
+cr:2.21093,iter:7,level:15,rank:0,datasize:794,operation:Post-smoothing
+cr:1.18627,iter:7,level:15,rank:0,datasize:121,operation:Interpolation
+cr:2.36002,iter:7,level:15,rank:0,datasize:1157,operation:Post-smoothing
+cr:1.27331,iter:7,level:15,rank:0,datasize:198,operation:Interpolation
+cr:2.06711,iter:7,level:15,rank:0,datasize:1648,operation:Post-smoothing
+cr:1.21969,iter:7,level:15,rank:0,datasize:288,operation:Interpolation
+cr:3.0135,iter:7,level:15,rank:0,datasize:2233,operation:Post-smoothing
+cr:1.27128,iter:7,level:15,rank:0,datasize:379,operation:Interpolation
+cr:2.67803,iter:7,level:15,rank:0,datasize:2907,operation:Post-smoothing
+cr:1.28167,iter:7,level:15,rank:0,datasize:521,operation:Interpolation
+cr:2.77903,iter:7,level:15,rank:0,datasize:3751,operation:Post-smoothing
+cr:1.44688,iter:7,level:15,rank:0,datasize:686,operation:Interpolation
+cr:2.90716,iter:7,level:15,rank:0,datasize:4525,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.034,iter:7,level:15,rank:0,datasize:920,operation:Interpolation
+cr:3.08192,iter:7,level:15,rank:0,datasize:5220,operation:Post-smoothing
+cr:1.72835,iter:7,level:15,rank:0,datasize:1255,operation:Interpolation
+cr:3.63559,iter:7,level:15,rank:0,datasize:4709,operation:Post-smoothing
+cr:2.30166,iter:7,level:15,rank:0,datasize:1526,operation:Interpolation
+cr:3.38778,iter:7,level:15,rank:0,datasize:3749,operation:Post-smoothing
+cr:2.00514,iter:7,level:15,rank:0,datasize:1462,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.06007,iter:7,level:15,rank:0,datasize:3000,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06115,iter:7,level:15,rank:0,datasize:3000,operation:Residual-Norm
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06115,iter:8,level:0,rank:0,datasize:3000,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05998,iter:8,level:0,rank:0,datasize:3000,operation:Residual
+cr:280.299,iter:8,level:1,rank:0,datasize:3749,operation:Pre-Smoothing
+cr:13.3416,iter:8,level:1,rank:0,datasize:3749,operation:Residual
+cr:294.312,iter:8,level:2,rank:0,datasize:4709,operation:Pre-Smoothing
+cr:10.0432,iter:8,level:2,rank:0,datasize:4709,operation:Residual
+cr:326.25,iter:8,level:3,rank:0,datasize:5220,operation:Pre-Smoothing
+cr:9.34228,iter:8,level:3,rank:0,datasize:5220,operation:Residual
+cr:282.812,iter:8,level:4,rank:0,datasize:4525,operation:Pre-Smoothing
+cr:6.94818,iter:8,level:4,rank:0,datasize:4525,operation:Residual
+cr:280.449,iter:8,level:5,rank:0,datasize:3751,operation:Pre-Smoothing
+cr:5.83813,iter:8,level:5,rank:0,datasize:3751,operation:Residual
+cr:217.346,iter:8,level:6,rank:0,datasize:2907,operation:Pre-Smoothing
+cr:5.96767,iter:8,level:6,rank:0,datasize:2907,operation:Residual
+cr:166.953,iter:8,level:7,rank:0,datasize:2233,operation:Pre-Smoothing
+cr:4.69118,iter:8,level:7,rank:0,datasize:2233,operation:Residual
+cr:123.215,iter:8,level:8,rank:0,datasize:1648,operation:Pre-Smoothing
+cr:4.56984,iter:8,level:8,rank:0,datasize:1648,operation:Residual
+cr:86.5047,iter:8,level:9,rank:0,datasize:1157,operation:Pre-Smoothing
+cr:4.13584,iter:8,level:9,rank:0,datasize:1157,operation:Residual
+cr:59.3645,iter:8,level:10,rank:0,datasize:794,operation:Pre-Smoothing
+cr:4.6029,iter:8,level:10,rank:0,datasize:794,operation:Residual
+cr:38.2913,iter:8,level:11,rank:0,datasize:493,operation:Pre-Smoothing
+cr:3.73839,iter:8,level:11,rank:0,datasize:493,operation:Residual
+cr:23.4563,iter:8,level:12,rank:0,datasize:302,operation:Pre-Smoothing
+cr:2.67553,iter:8,level:12,rank:0,datasize:302,operation:Residual
+cr:11.2,iter:8,level:13,rank:0,datasize:154,operation:Pre-Smoothing
+cr:2.15762,iter:8,level:13,rank:0,datasize:154,operation:Residual
+cr:3.78182,iter:8,level:14,rank:0,datasize:52,operation:Pre-Smoothing
+cr:1.43448,iter:8,level:14,rank:0,datasize:52,operation:Residual
+cr:0.55814,iter:8,level:15,rank:0,datasize:9,operation:Interpolation
+cr:1.35505,iter:8,level:15,rank:0,datasize:52,operation:Post-smoothing
+cr:0.746667,iter:8,level:15,rank:0,datasize:21,operation:Interpolation
+cr:1.88668,iter:8,level:15,rank:0,datasize:154,operation:Post-smoothing
+cr:0.888889,iter:8,level:15,rank:0,datasize:37,operation:Interpolation
+cr:2.57569,iter:8,level:15,rank:0,datasize:302,operation:Post-smoothing
+cr:1.03609,iter:8,level:15,rank:0,datasize:61,operation:Interpolation
+cr:1.85687,iter:8,level:15,rank:0,datasize:493,operation:Post-smoothing
+cr:1.1518,iter:8,level:15,rank:0,datasize:92,operation:Interpolation
+cr:2.4235,iter:8,level:15,rank:0,datasize:794,operation:Post-smoothing
+cr:1.3315,iter:8,level:15,rank:0,datasize:121,operation:Interpolation
+cr:2.5647,iter:8,level:15,rank:0,datasize:1157,operation:Post-smoothing
+cr:1.3401,iter:8,level:15,rank:0,datasize:198,operation:Interpolation
+cr:2.27782,iter:8,level:15,rank:0,datasize:1648,operation:Post-smoothing
+cr:1.34344,iter:8,level:15,rank:0,datasize:288,operation:Interpolation
+cr:2.60218,iter:8,level:15,rank:0,datasize:2233,operation:Post-smoothing
+cr:1.36392,iter:8,level:15,rank:0,datasize:379,operation:Interpolation
+cr:2.90011,iter:8,level:15,rank:0,datasize:2907,operation:Post-smoothing
+cr:1.36298,iter:8,level:15,rank:0,datasize:521,operation:Interpolation
+cr:3.06673,iter:8,level:15,rank:0,datasize:3751,operation:Post-smoothing
+cr:1.66202,iter:8,level:15,rank:0,datasize:686,operation:Interpolation
+cr:3.25833,iter:8,level:15,rank:0,datasize:4525,operation:Post-smoothing
+cr:1.65059,iter:8,level:15,rank:0,datasize:920,operation:Interpolation
+cr:3.95006,iter:8,level:15,rank:0,datasize:5220,operation:Post-smoothing
+cr:1.87839,iter:8,level:15,rank:0,datasize:1255,operation:Interpolation
+cr:3.33705,iter:8,level:15,rank:0,datasize:4709,operation:Post-smoothing
+cr:2.24123,iter:8,level:15,rank:0,datasize:1526,operation:Interpolation
+cr:3.85997,iter:8,level:15,rank:0,datasize:3749,operation:Post-smoothing
+cr:2.31421,iter:8,level:15,rank:0,datasize:1462,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.0604,iter:8,level:15,rank:0,datasize:3000,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06059,iter:8,level:15,rank:0,datasize:3000,operation:Residual-Norm
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06059,iter:9,level:0,rank:0,datasize:3000,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06068,iter:9,level:0,rank:0,datasize:3000,operation:Residual
+cr:280.299,iter:9,level:1,rank:0,datasize:3749,operation:Pre-Smoothing
+cr:16.1682,iter:9,level:1,rank:0,datasize:3749,operation:Residual
+cr:294.312,iter:9,level:2,rank:0,datasize:4709,operation:Pre-Smoothing
+cr:13.6443,iter:9,level:2,rank:0,datasize:4709,operation:Residual
+cr:326.25,iter:9,level:3,rank:0,datasize:5220,operation:Pre-Smoothing
+cr:9.75018,iter:9,level:3,rank:0,datasize:5220,operation:Residual
+cr:282.812,iter:9,level:4,rank:0,datasize:4525,operation:Pre-Smoothing
+cr:7.74995,iter:9,level:4,rank:0,datasize:4525,operation:Residual
+cr:280.449,iter:9,level:5,rank:0,datasize:3751,operation:Pre-Smoothing
+cr:7.79834,iter:9,level:5,rank:0,datasize:3751,operation:Residual
+cr:217.346,iter:9,level:6,rank:0,datasize:2907,operation:Pre-Smoothing
+cr:5.9861,iter:9,level:6,rank:0,datasize:2907,operation:Residual
+cr:166.953,iter:9,level:7,rank:0,datasize:2233,operation:Pre-Smoothing
+cr:5.25257,iter:9,level:7,rank:0,datasize:2233,operation:Residual
+cr:123.215,iter:9,level:8,rank:0,datasize:1648,operation:Pre-Smoothing
+cr:4.78374,iter:9,level:8,rank:0,datasize:1648,operation:Residual
+cr:86.5047,iter:9,level:9,rank:0,datasize:1157,operation:Pre-Smoothing
+cr:3.8793,iter:9,level:9,rank:0,datasize:1157,operation:Residual
+cr:59.3645,iter:9,level:10,rank:0,datasize:794,operation:Pre-Smoothing
+cr:3.66956,iter:9,level:10,rank:0,datasize:794,operation:Residual
+cr:38.2913,iter:9,level:11,rank:0,datasize:493,operation:Pre-Smoothing
+cr:3.6451,iter:9,level:11,rank:0,datasize:493,operation:Residual
+cr:23.4563,iter:9,level:12,rank:0,datasize:302,operation:Pre-Smoothing
+cr:3.31413,iter:9,level:12,rank:0,datasize:302,operation:Residual
+cr:11.2,iter:9,level:13,rank:0,datasize:154,operation:Pre-Smoothing
+cr:2.38298,iter:9,level:13,rank:0,datasize:154,operation:Residual
+cr:3.78182,iter:9,level:14,rank:0,datasize:52,operation:Pre-Smoothing
+cr:1.48043,iter:9,level:14,rank:0,datasize:52,operation:Residual
+cr:0.55814,iter:9,level:15,rank:0,datasize:9,operation:Interpolation
+cr:1.36842,iter:9,level:15,rank:0,datasize:52,operation:Post-smoothing
+cr:0.746667,iter:9,level:15,rank:0,datasize:21,operation:Interpolation
+cr:2.08108,iter:9,level:15,rank:0,datasize:154,operation:Post-smoothing
+cr:0.878338,iter:9,level:15,rank:0,datasize:37,operation:Interpolation
+cr:2.30095,iter:9,level:15,rank:0,datasize:302,operation:Post-smoothing
+cr:1.0991,iter:9,level:15,rank:0,datasize:61,operation:Interpolation
+cr:2.44969,iter:9,level:15,rank:0,datasize:493,operation:Post-smoothing
+cr:1.26244,iter:9,level:15,rank:0,datasize:92,operation:Interpolation
+cr:2.72735,iter:9,level:15,rank:0,datasize:794,operation:Post-smoothing
+cr:1.3224,iter:9,level:15,rank:0,datasize:121,operation:Interpolation
+cr:2.91161,iter:9,level:15,rank:0,datasize:1157,operation:Post-smoothing
+cr:1.27536,iter:9,level:15,rank:0,datasize:198,operation:Interpolation
+cr:3.5308,iter:9,level:15,rank:0,datasize:1648,operation:Post-smoothing
+cr:1.44361,iter:9,level:15,rank:0,datasize:288,operation:Interpolation
+cr:3.19685,iter:9,level:15,rank:0,datasize:2233,operation:Post-smoothing
+cr:1.45072,iter:9,level:15,rank:0,datasize:379,operation:Interpolation
+cr:2.84303,iter:9,level:15,rank:0,datasize:2907,operation:Post-smoothing
+cr:1.54599,iter:9,level:15,rank:0,datasize:521,operation:Interpolation
+cr:3.39726,iter:9,level:15,rank:0,datasize:3751,operation:Post-smoothing
+cr:1.90688,iter:9,level:15,rank:0,datasize:686,operation:Interpolation
+cr:3.57849,iter:9,level:15,rank:0,datasize:4525,operation:Post-smoothing
+cr:1.78208,iter:9,level:15,rank:0,datasize:920,operation:Interpolation
+cr:3.73357,iter:9,level:15,rank:0,datasize:5220,operation:Post-smoothing
+cr:2.44163,iter:9,level:15,rank:0,datasize:1255,operation:Interpolation
+cr:3.70059,iter:9,level:15,rank:0,datasize:4709,operation:Post-smoothing
+cr:2.50113,iter:9,level:15,rank:0,datasize:1526,operation:Interpolation
+cr:4.38865,iter:9,level:15,rank:0,datasize:3749,operation:Post-smoothing
+cr:2.52941,iter:9,level:15,rank:0,datasize:1462,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.0603,iter:9,level:15,rank:0,datasize:3000,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.0604,iter:9,level:15,rank:0,datasize:3000,operation:Residual-Norm
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.0604,iter:10,level:0,rank:0,datasize:3000,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06073,iter:10,level:0,rank:0,datasize:3000,operation:Residual
+cr:280.299,iter:10,level:1,rank:0,datasize:3749,operation:Pre-Smoothing
+cr:20.6699,iter:10,level:1,rank:0,datasize:3749,operation:Residual
+cr:294.312,iter:10,level:2,rank:0,datasize:4709,operation:Pre-Smoothing
+cr:16.5228,iter:10,level:2,rank:0,datasize:4709,operation:Residual
+cr:326.25,iter:10,level:3,rank:0,datasize:5220,operation:Pre-Smoothing
+cr:10.8299,iter:10,level:3,rank:0,datasize:5220,operation:Residual
+cr:282.812,iter:10,level:4,rank:0,datasize:4525,operation:Pre-Smoothing
+cr:10.0695,iter:10,level:4,rank:0,datasize:4525,operation:Residual
+cr:280.449,iter:10,level:5,rank:0,datasize:3751,operation:Pre-Smoothing
+cr:7.19099,iter:10,level:5,rank:0,datasize:3751,operation:Residual
+cr:217.346,iter:10,level:6,rank:0,datasize:2907,operation:Pre-Smoothing
+cr:7.55065,iter:10,level:6,rank:0,datasize:2907,operation:Residual
+cr:166.953,iter:10,level:7,rank:0,datasize:2233,operation:Pre-Smoothing
+cr:6.65822,iter:10,level:7,rank:0,datasize:2233,operation:Residual
+cr:123.215,iter:10,level:8,rank:0,datasize:1648,operation:Pre-Smoothing
+cr:5.43894,iter:10,level:8,rank:0,datasize:1648,operation:Residual
+cr:86.5047,iter:10,level:9,rank:0,datasize:1157,operation:Pre-Smoothing
+cr:5.13937,iter:10,level:9,rank:0,datasize:1157,operation:Residual
+cr:59.3645,iter:10,level:10,rank:0,datasize:794,operation:Pre-Smoothing
+cr:5.41517,iter:10,level:10,rank:0,datasize:794,operation:Residual
+cr:38.2913,iter:10,level:11,rank:0,datasize:493,operation:Pre-Smoothing
+cr:4.21368,iter:10,level:11,rank:0,datasize:493,operation:Residual
+cr:23.4563,iter:10,level:12,rank:0,datasize:302,operation:Pre-Smoothing
+cr:4.0605,iter:10,level:12,rank:0,datasize:302,operation:Residual
+cr:11.2,iter:10,level:13,rank:0,datasize:154,operation:Pre-Smoothing
+cr:2.464,iter:10,level:13,rank:0,datasize:154,operation:Residual
+cr:3.78182,iter:10,level:14,rank:0,datasize:52,operation:Pre-Smoothing
+cr:1.59387,iter:10,level:14,rank:0,datasize:52,operation:Residual
+cr:0.55814,iter:10,level:15,rank:0,datasize:9,operation:Interpolation
+cr:1.51273,iter:10,level:15,rank:0,datasize:52,operation:Post-smoothing
+cr:0.781395,iter:10,level:15,rank:0,datasize:21,operation:Interpolation
+cr:2.18828,iter:10,level:15,rank:0,datasize:154,operation:Post-smoothing
+cr:0.939683,iter:10,level:15,rank:0,datasize:37,operation:Interpolation
+cr:2.68444,iter:10,level:15,rank:0,datasize:302,operation:Post-smoothing
+cr:1.08204,iter:10,level:15,rank:0,datasize:61,operation:Interpolation
+cr:2.58793,iter:10,level:15,rank:0,datasize:493,operation:Post-smoothing
+cr:1.28897,iter:10,level:15,rank:0,datasize:92,operation:Interpolation
+cr:2.89781,iter:10,level:15,rank:0,datasize:794,operation:Post-smoothing
+cr:1.39481,iter:10,level:15,rank:0,datasize:121,operation:Interpolation
+cr:2.50027,iter:10,level:15,rank:0,datasize:1157,operation:Post-smoothing
+cr:1.30693,iter:10,level:15,rank:0,datasize:198,operation:Interpolation
+cr:3.87651,iter:10,level:15,rank:0,datasize:1648,operation:Post-smoothing
+cr:1.5309,iter:10,level:15,rank:0,datasize:288,operation:Interpolation
+cr:3.52556,iter:10,level:15,rank:0,datasize:2233,operation:Post-smoothing
+cr:1.57343,iter:10,level:15,rank:0,datasize:379,operation:Interpolation
+cr:3.51937,iter:10,level:15,rank:0,datasize:2907,operation:Post-smoothing
+cr:1.50307,iter:10,level:15,rank:0,datasize:521,operation:Interpolation
+cr:3.32794,iter:10,level:15,rank:0,datasize:3751,operation:Post-smoothing
+cr:1.86223,iter:10,level:15,rank:0,datasize:686,operation:Interpolation
+cr:4.44063,iter:10,level:15,rank:0,datasize:4525,operation:Post-smoothing
+cr:2.22155,iter:10,level:15,rank:0,datasize:920,operation:Interpolation
+cr:4.86486,iter:10,level:15,rank:0,datasize:5220,operation:Post-smoothing
+cr:2.39561,iter:10,level:15,rank:0,datasize:1255,operation:Interpolation
+cr:4.13569,iter:10,level:15,rank:0,datasize:4709,operation:Post-smoothing
+cr:2.34094,iter:10,level:15,rank:0,datasize:1526,operation:Interpolation
+cr:4.92399,iter:10,level:15,rank:0,datasize:3749,operation:Post-smoothing
+cr:3.30956,iter:10,level:15,rank:0,datasize:1462,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.06016,iter:10,level:15,rank:0,datasize:3000,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06068,iter:10,level:15,rank:0,datasize:3000,operation:Residual-Norm
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06068,iter:11,level:0,rank:0,datasize:3000,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+cr:1.06068,iter:11,level:0,rank:0,datasize:3000,operation:Residual
+SZ is downgraded to lossless mode.
+cr:280.299,iter:11,level:1,rank:0,datasize:3749,operation:Pre-Smoothing
+cr:22.3821,iter:11,level:1,rank:0,datasize:3749,operation:Residual
+cr:294.312,iter:11,level:2,rank:0,datasize:4709,operation:Pre-Smoothing
+cr:16.7655,iter:11,level:2,rank:0,datasize:4709,operation:Residual
+cr:326.25,iter:11,level:3,rank:0,datasize:5220,operation:Pre-Smoothing
+cr:14.3112,iter:11,level:3,rank:0,datasize:5220,operation:Residual
+cr:282.812,iter:11,level:4,rank:0,datasize:4525,operation:Pre-Smoothing
+cr:9.78378,iter:11,level:4,rank:0,datasize:4525,operation:Residual
+cr:280.449,iter:11,level:5,rank:0,datasize:3751,operation:Pre-Smoothing
+cr:8.37277,iter:11,level:5,rank:0,datasize:3751,operation:Residual
+cr:217.346,iter:11,level:6,rank:0,datasize:2907,operation:Pre-Smoothing
+cr:6.34197,iter:11,level:6,rank:0,datasize:2907,operation:Residual
+cr:166.953,iter:11,level:7,rank:0,datasize:2233,operation:Pre-Smoothing
+cr:6.24397,iter:11,level:7,rank:0,datasize:2233,operation:Residual
+cr:123.215,iter:11,level:8,rank:0,datasize:1648,operation:Pre-Smoothing
+cr:6.85239,iter:11,level:8,rank:0,datasize:1648,operation:Residual
+cr:86.5047,iter:11,level:9,rank:0,datasize:1157,operation:Pre-Smoothing
+cr:4.15626,iter:11,level:9,rank:0,datasize:1157,operation:Residual
+cr:59.3645,iter:11,level:10,rank:0,datasize:794,operation:Pre-Smoothing
+cr:5.09791,iter:11,level:10,rank:0,datasize:794,operation:Residual
+cr:38.2913,iter:11,level:11,rank:0,datasize:493,operation:Pre-Smoothing
+cr:4.51775,iter:11,level:11,rank:0,datasize:493,operation:Residual
+cr:23.4563,iter:11,level:12,rank:0,datasize:302,operation:Pre-Smoothing
+cr:3.85942,iter:11,level:12,rank:0,datasize:302,operation:Residual
+cr:11.2,iter:11,level:13,rank:0,datasize:154,operation:Pre-Smoothing
+cr:2.72566,iter:11,level:13,rank:0,datasize:154,operation:Residual
+cr:3.78182,iter:11,level:14,rank:0,datasize:52,operation:Pre-Smoothing
+cr:1.7931,iter:11,level:14,rank:0,datasize:52,operation:Residual
+cr:0.55814,iter:11,level:15,rank:0,datasize:9,operation:Interpolation
+cr:1.4964,iter:11,level:15,rank:0,datasize:52,operation:Post-smoothing
+cr:0.918033,iter:11,level:15,rank:0,datasize:21,operation:Interpolation
+cr:2.36923,iter:11,level:15,rank:0,datasize:154,operation:Post-smoothing
+cr:0.983389,iter:11,level:15,rank:0,datasize:37,operation:Interpolation
+cr:3.17895,iter:11,level:15,rank:0,datasize:302,operation:Post-smoothing
+cr:1.15366,iter:11,level:15,rank:0,datasize:61,operation:Interpolation
+cr:3.28941,iter:11,level:15,rank:0,datasize:493,operation:Post-smoothing
+cr:1.30265,iter:11,level:15,rank:0,datasize:92,operation:Interpolation
+cr:4.1762,iter:11,level:15,rank:0,datasize:794,operation:Post-smoothing
+cr:1.37305,iter:11,level:15,rank:0,datasize:121,operation:Interpolation
+cr:3.41172,iter:11,level:15,rank:0,datasize:1157,operation:Post-smoothing
+cr:1.74834,iter:11,level:15,rank:0,datasize:198,operation:Interpolation
+cr:3.65309,iter:11,level:15,rank:0,datasize:1648,operation:Post-smoothing
+cr:1.66836,iter:11,level:15,rank:0,datasize:288,operation:Interpolation
+cr:3.90983,iter:11,level:15,rank:0,datasize:2233,operation:Post-smoothing
+cr:1.91777,iter:11,level:15,rank:0,datasize:379,operation:Interpolation
+cr:3.88766,iter:11,level:15,rank:0,datasize:2907,operation:Post-smoothing
+cr:1.9359,iter:11,level:15,rank:0,datasize:521,operation:Interpolation
+cr:4.09945,iter:11,level:15,rank:0,datasize:3751,operation:Post-smoothing
+cr:1.99854,iter:11,level:15,rank:0,datasize:686,operation:Interpolation
+cr:4.27997,iter:11,level:15,rank:0,datasize:4525,operation:Post-smoothing
+cr:2.12901,iter:11,level:15,rank:0,datasize:920,operation:Interpolation
+cr:5.21218,iter:11,level:15,rank:0,datasize:5220,operation:Post-smoothing
+cr:2.56253,iter:11,level:15,rank:0,datasize:1255,operation:Interpolation
+cr:3.98182,iter:11,level:15,rank:0,datasize:4709,operation:Post-smoothing
+cr:3.10715,iter:11,level:15,rank:0,datasize:1526,operation:Interpolation
+cr:4.43144,iter:11,level:15,rank:0,datasize:3749,operation:Post-smoothing
+cr:3.07385,iter:11,level:15,rank:0,datasize:1462,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.06021,iter:11,level:15,rank:0,datasize:3000,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06049,iter:11,level:15,rank:0,datasize:3000,operation:Residual-Norm
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06049,iter:12,level:0,rank:0,datasize:3000,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06007,iter:12,level:0,rank:0,datasize:3000,operation:Residual
+cr:280.299,iter:12,level:1,rank:0,datasize:3749,operation:Pre-Smoothing
+cr:32.2495,iter:12,level:1,rank:0,datasize:3749,operation:Residual
+cr:294.312,iter:12,level:2,rank:0,datasize:4709,operation:Pre-Smoothing
+cr:24.5901,iter:12,level:2,rank:0,datasize:4709,operation:Residual
+cr:326.25,iter:12,level:3,rank:0,datasize:5220,operation:Pre-Smoothing
+cr:16.136,iter:12,level:3,rank:0,datasize:5220,operation:Residual
+cr:282.812,iter:12,level:4,rank:0,datasize:4525,operation:Pre-Smoothing
+cr:10.9432,iter:12,level:4,rank:0,datasize:4525,operation:Residual
+cr:280.449,iter:12,level:5,rank:0,datasize:3751,operation:Pre-Smoothing
+cr:10.2451,iter:12,level:5,rank:0,datasize:3751,operation:Residual
+cr:217.346,iter:12,level:6,rank:0,datasize:2907,operation:Pre-Smoothing
+cr:6.93795,iter:12,level:6,rank:0,datasize:2907,operation:Residual
+cr:166.953,iter:12,level:7,rank:0,datasize:2233,operation:Pre-Smoothing
+cr:7.0165,iter:12,level:7,rank:0,datasize:2233,operation:Residual
+cr:123.215,iter:12,level:8,rank:0,datasize:1648,operation:Pre-Smoothing
+cr:6.50419,iter:12,level:8,rank:0,datasize:1648,operation:Residual
+cr:86.5047,iter:12,level:9,rank:0,datasize:1157,operation:Pre-Smoothing
+cr:4.32726,iter:12,level:9,rank:0,datasize:1157,operation:Residual
+cr:59.3645,iter:12,level:10,rank:0,datasize:794,operation:Pre-Smoothing
+cr:6.14908,iter:12,level:10,rank:0,datasize:794,operation:Residual
+cr:38.2913,iter:12,level:11,rank:0,datasize:493,operation:Pre-Smoothing
+cr:4.65643,iter:12,level:11,rank:0,datasize:493,operation:Residual
+cr:23.4563,iter:12,level:12,rank:0,datasize:302,operation:Pre-Smoothing
+cr:4.49071,iter:12,level:12,rank:0,datasize:302,operation:Residual
+cr:11.2,iter:12,level:13,rank:0,datasize:154,operation:Pre-Smoothing
+cr:2.88525,iter:12,level:13,rank:0,datasize:154,operation:Residual
+cr:3.78182,iter:12,level:14,rank:0,datasize:52,operation:Pre-Smoothing
+cr:1.52381,iter:12,level:14,rank:0,datasize:52,operation:Residual
+cr:0.55814,iter:12,level:15,rank:0,datasize:9,operation:Interpolation
+cr:1.47518,iter:12,level:15,rank:0,datasize:52,operation:Post-smoothing
+cr:0.756757,iter:12,level:15,rank:0,datasize:21,operation:Interpolation
+cr:2.27306,iter:12,level:15,rank:0,datasize:154,operation:Post-smoothing
+cr:0.976898,iter:12,level:15,rank:0,datasize:37,operation:Interpolation
+cr:2.56476,iter:12,level:15,rank:0,datasize:302,operation:Post-smoothing
+cr:1.16468,iter:12,level:15,rank:0,datasize:61,operation:Interpolation
+cr:3.2949,iter:12,level:15,rank:0,datasize:493,operation:Post-smoothing
+cr:1.32136,iter:12,level:15,rank:0,datasize:92,operation:Interpolation
+cr:2.76896,iter:12,level:15,rank:0,datasize:794,operation:Post-smoothing
+cr:1.5125,iter:12,level:15,rank:0,datasize:121,operation:Interpolation
+cr:2.79976,iter:12,level:15,rank:0,datasize:1157,operation:Post-smoothing
+cr:1.59517,iter:12,level:15,rank:0,datasize:198,operation:Interpolation
+cr:3.62996,iter:12,level:15,rank:0,datasize:1648,operation:Post-smoothing
+cr:1.45915,iter:12,level:15,rank:0,datasize:288,operation:Interpolation
+cr:4.00269,iter:12,level:15,rank:0,datasize:2233,operation:Post-smoothing
+cr:1.72175,iter:12,level:15,rank:0,datasize:379,operation:Interpolation
+cr:4.01381,iter:12,level:15,rank:0,datasize:2907,operation:Post-smoothing
+cr:2.03218,iter:12,level:15,rank:0,datasize:521,operation:Interpolation
+cr:4.20221,iter:12,level:15,rank:0,datasize:3751,operation:Post-smoothing
+cr:2.47653,iter:12,level:15,rank:0,datasize:686,operation:Interpolation
+cr:5.21013,iter:12,level:15,rank:0,datasize:4525,operation:Post-smoothing
+cr:2.33133,iter:12,level:15,rank:0,datasize:920,operation:Interpolation
+cr:5.677,iter:12,level:15,rank:0,datasize:5220,operation:Post-smoothing
+cr:2.80134,iter:12,level:15,rank:0,datasize:1255,operation:Interpolation
+cr:4.87916,iter:12,level:15,rank:0,datasize:4709,operation:Post-smoothing
+cr:3.32915,iter:12,level:15,rank:0,datasize:1526,operation:Interpolation
+cr:4.75988,iter:12,level:15,rank:0,datasize:3749,operation:Post-smoothing
+cr:4.06252,iter:12,level:15,rank:0,datasize:1462,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.06087,iter:12,level:15,rank:0,datasize:3000,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06073,iter:12,level:15,rank:0,datasize:3000,operation:Residual-Norm
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06073,iter:13,level:0,rank:0,datasize:3000,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06105,iter:13,level:0,rank:0,datasize:3000,operation:Residual
+cr:280.299,iter:13,level:1,rank:0,datasize:3749,operation:Pre-Smoothing
+cr:35.3263,iter:13,level:1,rank:0,datasize:3749,operation:Residual
+cr:294.312,iter:13,level:2,rank:0,datasize:4709,operation:Pre-Smoothing
+cr:29.7802,iter:13,level:2,rank:0,datasize:4709,operation:Residual
+cr:326.25,iter:13,level:3,rank:0,datasize:5220,operation:Pre-Smoothing
+cr:18.4615,iter:13,level:3,rank:0,datasize:5220,operation:Residual
+cr:282.812,iter:13,level:4,rank:0,datasize:4525,operation:Pre-Smoothing
+cr:13.8804,iter:13,level:4,rank:0,datasize:4525,operation:Residual
+cr:280.449,iter:13,level:5,rank:0,datasize:3751,operation:Pre-Smoothing
+cr:10.9839,iter:13,level:5,rank:0,datasize:3751,operation:Residual
+cr:217.346,iter:13,level:6,rank:0,datasize:2907,operation:Pre-Smoothing
+cr:8.41694,iter:13,level:6,rank:0,datasize:2907,operation:Residual
+cr:166.953,iter:13,level:7,rank:0,datasize:2233,operation:Pre-Smoothing
+cr:8.40659,iter:13,level:7,rank:0,datasize:2233,operation:Residual
+cr:123.215,iter:13,level:8,rank:0,datasize:1648,operation:Pre-Smoothing
+cr:6.74029,iter:13,level:8,rank:0,datasize:1648,operation:Residual
+cr:86.5047,iter:13,level:9,rank:0,datasize:1157,operation:Pre-Smoothing
+cr:4.64659,iter:13,level:9,rank:0,datasize:1157,operation:Residual
+cr:59.3645,iter:13,level:10,rank:0,datasize:794,operation:Pre-Smoothing
+cr:5.6765,iter:13,level:10,rank:0,datasize:794,operation:Residual
+cr:38.2913,iter:13,level:11,rank:0,datasize:493,operation:Pre-Smoothing
+cr:5.683,iter:13,level:11,rank:0,datasize:493,operation:Residual
+cr:23.4563,iter:13,level:12,rank:0,datasize:302,operation:Pre-Smoothing
+cr:4.24605,iter:13,level:12,rank:0,datasize:302,operation:Residual
+cr:11.2,iter:13,level:13,rank:0,datasize:154,operation:Pre-Smoothing
+cr:3.08772,iter:13,level:13,rank:0,datasize:154,operation:Residual
+cr:3.78182,iter:13,level:14,rank:0,datasize:52,operation:Pre-Smoothing
+cr:1.625,iter:13,level:14,rank:0,datasize:52,operation:Residual
+cr:0.55814,iter:13,level:15,rank:0,datasize:9,operation:Interpolation
+cr:1.664,iter:13,level:15,rank:0,datasize:52,operation:Post-smoothing
+cr:0.815534,iter:13,level:15,rank:0,datasize:21,operation:Interpolation
+cr:2.76854,iter:13,level:15,rank:0,datasize:154,operation:Post-smoothing
+cr:1.04594,iter:13,level:15,rank:0,datasize:37,operation:Interpolation
+cr:2.7643,iter:13,level:15,rank:0,datasize:302,operation:Post-smoothing
+cr:1.16468,iter:13,level:15,rank:0,datasize:61,operation:Interpolation
+cr:4.09979,iter:13,level:15,rank:0,datasize:493,operation:Post-smoothing
+cr:1.37828,iter:13,level:15,rank:0,datasize:92,operation:Interpolation
+cr:3.63803,iter:13,level:15,rank:0,datasize:794,operation:Post-smoothing
+cr:1.61603,iter:13,level:15,rank:0,datasize:121,operation:Interpolation
+cr:3.43834,iter:13,level:15,rank:0,datasize:1157,operation:Post-smoothing
+cr:1.86572,iter:13,level:15,rank:0,datasize:198,operation:Interpolation
+cr:3.64501,iter:13,level:15,rank:0,datasize:1648,operation:Post-smoothing
+cr:2.1196,iter:13,level:15,rank:0,datasize:288,operation:Interpolation
+cr:4.89693,iter:13,level:15,rank:0,datasize:2233,operation:Post-smoothing
+cr:2.08815,iter:13,level:15,rank:0,datasize:379,operation:Interpolation
+cr:4.90116,iter:13,level:15,rank:0,datasize:2907,operation:Post-smoothing
+cr:2.2018,iter:13,level:15,rank:0,datasize:521,operation:Interpolation
+cr:5.4127,iter:13,level:15,rank:0,datasize:3751,operation:Post-smoothing
+cr:2.39442,iter:13,level:15,rank:0,datasize:686,operation:Interpolation
+cr:5.64919,iter:13,level:15,rank:0,datasize:4525,operation:Post-smoothing
+cr:2.58973,iter:13,level:15,rank:0,datasize:920,operation:Interpolation
+cr:5.22523,iter:13,level:15,rank:0,datasize:5220,operation:Post-smoothing
+cr:2.97481,iter:13,level:15,rank:0,datasize:1255,operation:Interpolation
+cr:6.25469,iter:13,level:15,rank:0,datasize:4709,operation:Post-smoothing
+cr:3.64854,iter:13,level:15,rank:0,datasize:1526,operation:Interpolation
+cr:5.19432,iter:13,level:15,rank:0,datasize:3749,operation:Post-smoothing
+cr:3.31801,iter:13,level:15,rank:0,datasize:1462,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.06124,iter:13,level:15,rank:0,datasize:3000,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06035,iter:13,level:15,rank:0,datasize:3000,operation:Residual-Norm
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06035,iter:14,level:0,rank:0,datasize:3000,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06073,iter:14,level:0,rank:0,datasize:3000,operation:Residual
+cr:280.299,iter:14,level:1,rank:0,datasize:3749,operation:Pre-Smoothing
+cr:51.7997,iter:14,level:1,rank:0,datasize:3749,operation:Residual
+cr:294.312,iter:14,level:2,rank:0,datasize:4709,operation:Pre-Smoothing
+cr:30.4052,iter:14,level:2,rank:0,datasize:4709,operation:Residual
+cr:326.25,iter:14,level:3,rank:0,datasize:5220,operation:Pre-Smoothing
+cr:21.2953,iter:14,level:3,rank:0,datasize:5220,operation:Residual
+cr:282.812,iter:14,level:4,rank:0,datasize:4525,operation:Pre-Smoothing
+cr:15.1718,iter:14,level:4,rank:0,datasize:4525,operation:Residual
+cr:280.449,iter:14,level:5,rank:0,datasize:3751,operation:Pre-Smoothing
+cr:12.2382,iter:14,level:5,rank:0,datasize:3751,operation:Residual
+cr:217.346,iter:14,level:6,rank:0,datasize:2907,operation:Pre-Smoothing
+cr:9.83756,iter:14,level:6,rank:0,datasize:2907,operation:Residual
+cr:166.953,iter:14,level:7,rank:0,datasize:2233,operation:Pre-Smoothing
+cr:8.96337,iter:14,level:7,rank:0,datasize:2233,operation:Residual
+cr:123.215,iter:14,level:8,rank:0,datasize:1648,operation:Pre-Smoothing
+cr:8.03902,iter:14,level:8,rank:0,datasize:1648,operation:Residual
+cr:86.5047,iter:14,level:9,rank:0,datasize:1157,operation:Pre-Smoothing
+cr:5.82872,iter:14,level:9,rank:0,datasize:1157,operation:Residual
+cr:59.3645,iter:14,level:10,rank:0,datasize:794,operation:Pre-Smoothing
+cr:6.60978,iter:14,level:10,rank:0,datasize:794,operation:Residual
+cr:38.2913,iter:14,level:11,rank:0,datasize:493,operation:Pre-Smoothing
+cr:4.79805,iter:14,level:11,rank:0,datasize:493,operation:Residual
+cr:23.4563,iter:14,level:12,rank:0,datasize:302,operation:Pre-Smoothing
+cr:5.00207,iter:14,level:12,rank:0,datasize:302,operation:Residual
+cr:11.2,iter:14,level:13,rank:0,datasize:154,operation:Pre-Smoothing
+cr:3.34783,iter:14,level:13,rank:0,datasize:154,operation:Residual
+cr:3.78182,iter:14,level:14,rank:0,datasize:52,operation:Pre-Smoothing
+cr:1.75527,iter:14,level:14,rank:0,datasize:52,operation:Residual
+cr:0.55814,iter:14,level:15,rank:0,datasize:9,operation:Interpolation
+cr:1.51273,iter:14,level:15,rank:0,datasize:52,operation:Post-smoothing
+cr:0.8,iter:14,level:15,rank:0,datasize:21,operation:Interpolation
+cr:2.59368,iter:14,level:15,rank:0,datasize:154,operation:Post-smoothing
+cr:1.01718,iter:14,level:15,rank:0,datasize:37,operation:Interpolation
+cr:3.62219,iter:14,level:15,rank:0,datasize:302,operation:Post-smoothing
+cr:1.17874,iter:14,level:15,rank:0,datasize:61,operation:Interpolation
+cr:3.63838,iter:14,level:15,rank:0,datasize:493,operation:Post-smoothing
+cr:1.39394,iter:14,level:15,rank:0,datasize:92,operation:Interpolation
+cr:4.20662,iter:14,level:15,rank:0,datasize:794,operation:Post-smoothing
+cr:1.65188,iter:14,level:15,rank:0,datasize:121,operation:Interpolation
+cr:3.26721,iter:14,level:15,rank:0,datasize:1157,operation:Post-smoothing
+cr:1.9388,iter:14,level:15,rank:0,datasize:198,operation:Interpolation
+cr:3.7809,iter:14,level:15,rank:0,datasize:1648,operation:Post-smoothing
+cr:2.16541,iter:14,level:15,rank:0,datasize:288,operation:Interpolation
+cr:3.76322,iter:14,level:15,rank:0,datasize:2233,operation:Post-smoothing
+cr:1.72273,iter:14,level:15,rank:0,datasize:379,operation:Interpolation
+cr:4.63359,iter:14,level:15,rank:0,datasize:2907,operation:Post-smoothing
+cr:2.06849,iter:14,level:15,rank:0,datasize:521,operation:Interpolation
+cr:4.81747,iter:14,level:15,rank:0,datasize:3751,operation:Post-smoothing
+cr:2.24,iter:14,level:15,rank:0,datasize:686,operation:Interpolation
+cr:5.15229,iter:14,level:15,rank:0,datasize:4525,operation:Post-smoothing
+cr:2.72997,iter:14,level:15,rank:0,datasize:920,operation:Interpolation
+cr:5.53846,iter:14,level:15,rank:0,datasize:5220,operation:Post-smoothing
+cr:2.95207,iter:14,level:15,rank:0,datasize:1255,operation:Interpolation
+cr:6.81723,iter:14,level:15,rank:0,datasize:4709,operation:Post-smoothing
+cr:3.29234,iter:14,level:15,rank:0,datasize:1526,operation:Interpolation
+cr:4.98952,iter:14,level:15,rank:0,datasize:3749,operation:Post-smoothing
+cr:3.90518,iter:14,level:15,rank:0,datasize:1462,operation:Interpolation
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06045,iter:14,level:15,rank:0,datasize:3000,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+cr:1.06021,iter:14,level:15,rank:0,datasize:3000,operation:Residual-Norm
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06021,iter:15,level:0,rank:0,datasize:3000,operation:Pre-Smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.05956,iter:15,level:0,rank:0,datasize:3000,operation:Residual
+cr:280.299,iter:15,level:1,rank:0,datasize:3749,operation:Pre-Smoothing
+cr:63.9488,iter:15,level:1,rank:0,datasize:3749,operation:Residual
+cr:294.312,iter:15,level:2,rank:0,datasize:4709,operation:Pre-Smoothing
+cr:34.9786,iter:15,level:2,rank:0,datasize:4709,operation:Residual
+cr:326.25,iter:15,level:3,rank:0,datasize:5220,operation:Pre-Smoothing
+cr:21.198,iter:15,level:3,rank:0,datasize:5220,operation:Residual
+cr:282.812,iter:15,level:4,rank:0,datasize:4525,operation:Pre-Smoothing
+cr:16.7904,iter:15,level:4,rank:0,datasize:4525,operation:Residual
+cr:280.449,iter:15,level:5,rank:0,datasize:3751,operation:Pre-Smoothing
+cr:13.4746,iter:15,level:5,rank:0,datasize:3751,operation:Residual
+cr:217.346,iter:15,level:6,rank:0,datasize:2907,operation:Pre-Smoothing
+cr:10.9234,iter:15,level:6,rank:0,datasize:2907,operation:Residual
+cr:166.953,iter:15,level:7,rank:0,datasize:2233,operation:Pre-Smoothing
+cr:8.54737,iter:15,level:7,rank:0,datasize:2233,operation:Residual
+cr:123.215,iter:15,level:8,rank:0,datasize:1648,operation:Pre-Smoothing
+cr:8.52781,iter:15,level:8,rank:0,datasize:1648,operation:Residual
+cr:86.5047,iter:15,level:9,rank:0,datasize:1157,operation:Pre-Smoothing
+cr:5.68201,iter:15,level:9,rank:0,datasize:1157,operation:Residual
+cr:59.3645,iter:15,level:10,rank:0,datasize:794,operation:Pre-Smoothing
+cr:5.64622,iter:15,level:10,rank:0,datasize:794,operation:Residual
+cr:38.2913,iter:15,level:11,rank:0,datasize:493,operation:Pre-Smoothing
+cr:5.4626,iter:15,level:11,rank:0,datasize:493,operation:Residual
+cr:23.4563,iter:15,level:12,rank:0,datasize:302,operation:Pre-Smoothing
+cr:5.29825,iter:15,level:12,rank:0,datasize:302,operation:Residual
+cr:11.2,iter:15,level:13,rank:0,datasize:154,operation:Pre-Smoothing
+cr:3.46067,iter:15,level:13,rank:0,datasize:154,operation:Residual
+cr:3.78182,iter:15,level:14,rank:0,datasize:52,operation:Pre-Smoothing
+cr:1.71901,iter:15,level:14,rank:0,datasize:52,operation:Residual
+cr:0.55814,iter:15,level:15,rank:0,datasize:9,operation:Interpolation
+cr:1.47518,iter:15,level:15,rank:0,datasize:52,operation:Post-smoothing
+cr:0.746667,iter:15,level:15,rank:0,datasize:21,operation:Interpolation
+cr:2.48889,iter:15,level:15,rank:0,datasize:154,operation:Post-smoothing
+cr:0.973684,iter:15,level:15,rank:0,datasize:37,operation:Interpolation
+cr:3.71121,iter:15,level:15,rank:0,datasize:302,operation:Post-smoothing
+cr:1.20494,iter:15,level:15,rank:0,datasize:61,operation:Interpolation
+cr:3.45359,iter:15,level:15,rank:0,datasize:493,operation:Post-smoothing
+cr:1.35793,iter:15,level:15,rank:0,datasize:92,operation:Interpolation
+cr:3.01328,iter:15,level:15,rank:0,datasize:794,operation:Post-smoothing
+cr:1.53651,iter:15,level:15,rank:0,datasize:121,operation:Interpolation
+cr:4.09015,iter:15,level:15,rank:0,datasize:1157,operation:Post-smoothing
+cr:2.02558,iter:15,level:15,rank:0,datasize:198,operation:Interpolation
+cr:5.23382,iter:15,level:15,rank:0,datasize:1648,operation:Post-smoothing
+cr:2.41257,iter:15,level:15,rank:0,datasize:288,operation:Interpolation
+cr:4.74349,iter:15,level:15,rank:0,datasize:2233,operation:Post-smoothing
+cr:2.63882,iter:15,level:15,rank:0,datasize:379,operation:Interpolation
+cr:4.91878,iter:15,level:15,rank:0,datasize:2907,operation:Post-smoothing
+cr:2.62965,iter:15,level:15,rank:0,datasize:521,operation:Interpolation
+cr:5.23791,iter:15,level:15,rank:0,datasize:3751,operation:Post-smoothing
+cr:2.68493,iter:15,level:15,rank:0,datasize:686,operation:Interpolation
+cr:5.5225,iter:15,level:15,rank:0,datasize:4525,operation:Post-smoothing
+cr:3.00408,iter:15,level:15,rank:0,datasize:920,operation:Interpolation
+cr:5.83729,iter:15,level:15,rank:0,datasize:5220,operation:Post-smoothing
+cr:2.82499,iter:15,level:15,rank:0,datasize:1255,operation:Interpolation
+cr:5.9504,iter:15,level:15,rank:0,datasize:4709,operation:Post-smoothing
+cr:5.20597,iter:15,level:15,rank:0,datasize:1526,operation:Interpolation
+cr:5.98404,iter:15,level:15,rank:0,datasize:3749,operation:Post-smoothing
+cr:5.28513,iter:15,level:15,rank:0,datasize:1462,operation:Interpolation
+SZ is downgraded to lossless mode.
+cr:1.06045,iter:15,level:15,rank:0,datasize:3000,operation:Post-smoothing
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+SZ is downgraded to lossless mode.
+cr:1.06105,iter:15,level:15,rank:0,datasize:3000,operation:Residual-Norm
+Total iterations is: 16
+Res[0] = 1.000000e+00
+Res[1] = 1.150049e-01
+Res[2] = 2.040832e-02
+Res[3] = 4.739535e-03
+Res[4] = 1.592174e-03
+Res[5] = 7.126211e-04
+Res[6] = 3.714814e-04
+Res[7] = 2.119244e-04
+Res[8] = 1.289371e-04
+Res[9] = 8.250229e-05
+Res[10] = 5.500629e-05
+Res[11] = 3.795176e-05
+Res[12] = 2.695331e-05
+Res[13] = 1.962030e-05
+Res[14] = 1.458707e-05
+Res[15] = 1.104495e-05
+Res[16] = 8.497582e-06
+Raptor AMG Setup Time: 2.046477e+02
+Raptor AMG Solve Time: 1.210006e+02
+Total iterations is: 16
