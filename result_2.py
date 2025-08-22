@@ -20,23 +20,8 @@ ranks=[]
 #     val=i.split(":")[-1]
 #     print("val:",val)
 # print(egs)
-def get_compression_ratio(line):
-    return 5
 
-def get_iteration(line):
-    return 5
-
-def get_level(line):
-    return 5
-
-def get_datasize(line):
-    return 5
-
-def get_op(line):
-    return "Smooth"
-
-
-with open("slurm-5000.output") as fh:
+with open("slurm-6000.output") as fh:
     for line in fh:
         if line.startswith("cr"):
             vals=line.split(",")
@@ -74,7 +59,7 @@ sns.lineplot(x="Iteration", y="Ratio",
              hue="Method",
              data=data)
 plt.yscale('log')
-plt.savefig("result.png")
+plt.savefig("result_6000.png")
 plt.show()
 
 
