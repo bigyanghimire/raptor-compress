@@ -1,0 +1,98 @@
+-- Configuring done (2.5s)
+-- Generating done (5.1s)
+-- Build files have been written to: /home/bigyang/amg-compress/raptor-compress/build
+[  1%] Built target gtest
+[ 13%] Built target gmock
+[ 16%] Built target gtest_main
+[ 25%] Built target raptor
+[ 26%] Built target gmock_main
+[ 31%] Built target test_par_transpose
+[ 31%] Built target test_tap_comm
+[ 31%] Built target test_strength
+[ 31%] Built target test_par_rap
+[ 31%] Built target test_tap_rap
+[ 57%] Built target test_ruge_stuben
+[ 56%] Built target test_interpolation
+[ 56%] Built target test_matrix
+[ 56%] Built target test_par_block_matrix
+[ 56%] Built target test_par_strength
+[ 56%] Built target test_par_spmv_aniso
+[ 56%] Built target test_tap_spmv_random
+[ 56%] Built target test_splitting
+[ 56%] Built target test_par_comm
+[ 56%] Built target test_par_block_conversion
+[ 56%] Built target test_par_vector
+[ 57%] Built target test_par_interpolation
+[ 56%] Built target test_tap_spmv_laplacian
+[ 56%] Built target test_spmv_laplacian
+[ 56%] Built target test_par_add
+[ 56%] Built target test_tap_spmv_aniso
+[ 56%] Built target test_spmv_aniso
+[ 56%] Built target test_repartition
+[ 56%] Built target test_par_scale_aniso
+[ 56%] Built target test_spmv_random
+[ 56%] Built target test_tap_splitting
+[ 56%] Built target test_par_spmv_laplacian
+[ 56%] Built target test_transpose
+[ 56%] Built target test_rap
+[ 56%] Built target test_par_matrix
+[ 56%] Built target test_par_splitting
+[ 56%] Built target test_par_spmv_random
+[ 58%] Built target test_tap_interpolation
+[ 59%] Built target test_prolongation
+[ 59%] Built target test_aggregate
+[ 61%] Built target test_candidates
+[ 61%] Built target test_par_ruge_stuben
+[ 65%] Built target test_tap_candidates
+[ 65%] Built target test_par_candidates
+[ 65%] Built target test_mis
+[ 65%] Built target test_par_bicgstab
+[ 83%] Built target matop_example
+[ 65%] Built target test_smoothed_aggregation
+[ 65%] Built target test_par_laplacian
+[ 83%] Built target test_stencil
+[ 83%] Built target test_matrix_market
+[ 83%] Built target benchmark_spmv
+[ 83%] Built target test_par_matrix_market
+[ 83%] Built target test_tap_aggregate
+[ 83%] Built target test_laplacian
+[ 83%] Built target test_par_smoothed_aggregation
+[ 83%] Built target test_tap_mis
+[ 83%] Built target test_aniso
+[ 83%] Built target test_cg
+[ 83%] Built target test_par_cg
+[ 83%] Built target test_bicgstab
+[ 83%] Built target test_par_mis
+[ 83%] Built target test_tap_prolongation
+[ 83%] Built target test_par_aggregate
+[ 83%] Built target test_par_amg
+[ 83%] Built target test_par_prolongation
+[ 86%] Built target test_amg
+[ 86%] Built target example
+[ 86%] Built target test_par_aniso
+[ 89%] Built target coo_example
+[ 90%] Built target csr_example
+[ 90%] Built target benchmark_solve
+[ 89%] Built target test_tap_ruge_stuben
+[ 89%] Built target benchmark_setup
+[ 95%] Built target benchmark_amg
+[ 95%] Built target benchmark_reader
+[ 95%] Built target benchmark_setup_sweeps
+[ 95%] Built target benchmark_tap_spgemm
+[ 95%] Built target profile_tap_rss
+[ 95%] Built target profile_tap_spgemm
+[ 98%] Built target model_tap_steps
+[ 98%] Built target profile_tap_amg
+[ 99%] Built target benchmark_tap_spmv
+[ 99%] Built target profile_tap_steps
+[100%] Built target profile_tap_sas
+  argv[1] = 1e-5
+  argv[2] = 1e-5
+  argv[3] = 1
+  argv[4] = 6000
+  argv[1] = 1e-5
+  argv[2] = 1e-5
+  argv[3] = 1
+  argv[4] = 6000
+N is>>>>>6000
+N is>>>>>6000
