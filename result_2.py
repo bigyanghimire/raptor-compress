@@ -21,7 +21,7 @@ ranks=[]
 #     print("val:",val)
 # print(egs)
 
-with open("slurm-100.output") as fh:
+with open("slurm-7000.output") as fh:
     for line in fh:
         if line.startswith("cr"):
             vals=line.split(",")
@@ -59,7 +59,7 @@ sns.lineplot(x="Iteration", y="Ratio",
              hue="Method",
              data=data)
 plt.yscale('log')
-plt.savefig("result_100.png")
+plt.savefig("result_7000.png")
 plt.show()
 
 
