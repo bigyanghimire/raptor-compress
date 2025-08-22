@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     ParVector b;
 
     // Timers
-    double time_setup, time_solve, time_base;
+    double time_setup, time_solve, time_base, time_matrix_setup;
 
     // Problems size and type
     int dim = 2;
@@ -45,8 +45,12 @@ int main(int argc, char *argv[])
     double eps = 0.001;
     double theta = M_PI / 8.0;
     double *stencil = NULL;
+    time_matrix_setup = MPI_Wtime();
+    std::cout<<"TIme matrix setup before"<<time_matrix_setup<<std::endl;
     stencil = diffusion_stencil_2d(eps, theta);
     A = par_stencil_grid(stencil, grid.data(), dim);
+    std::cout<<"TIme matrix setup after"<<time_matrix_setup<<std::endl;
+    time_matrix_setup = MPI_Wtime() - time_matrix_setup;
     delete[] stencil;
     // SZ
     // std::cout << "The grid size is" << grid.size() << std::endl;
@@ -116,6 +120,8 @@ int main(int argc, char *argv[])
     time_solve = MPI_Wtime() - time_base;
 
     MPI_Reduce(&time_setup, &time_base, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
+    if (rank == 0)
+        printf("Raptor AMG Matrix Grid Time: %e\n", time_matrix_setup);
     if (rank == 0)
         printf("Raptor AMG Setup Time: %e\n", time_base);
     MPI_Reduce(&time_solve, &time_base, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
