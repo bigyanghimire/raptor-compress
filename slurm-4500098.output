@@ -1,0 +1,164 @@
+-- Configuring done (2.6s)
+-- Generating done (4.0s)
+-- Build files have been written to: /home/bigyang/amg-compress/raptor-compress/build
+[  1%] Built target gtest
+[ 18%] Built target gtest_main
+[ 19%] Built target gmock
+[ 25%] Built target raptor
+[ 26%] Built target gmock_main
+[ 35%] Built target test_par_spmv_random
+[ 35%] Built target test_strength
+[ 35%] Built target test_par_matrix
+[ 35%] Built target test_par_block_matrix
+[ 35%] Built target test_par_transpose
+[ 35%] Built target test_spmv_aniso
+[ 35%] Built target test_par_strength
+[ 35%] Built target test_par_rap
+[ 35%] Built target test_par_spmv_aniso
+[ 57%] Built target test_par_comm
+[ 56%] Built target test_tap_spmv_laplacian
+[ 56%] Built target test_tap_splitting
+[ 56%] Built target test_spmv_random
+[ 56%] Built target test_interpolation
+[ 57%] Built target test_par_interpolation
+[ 56%] Built target test_tap_rap
+[ 56%] Built target test_transpose
+[ 56%] Built target test_tap_comm
+[ 56%] Built target test_par_vector
+[ 56%] Built target test_tap_spmv_aniso
+[ 56%] Built target test_splitting
+[ 56%] Built target test_repartition
+[ 56%] Built target test_ruge_stuben
+[ 56%] Built target test_par_spmv_laplacian
+[ 56%] Built target test_par_scale_aniso
+[ 56%] Built target test_par_block_conversion
+[ 56%] Built target test_spmv_laplacian
+[ 56%] Built target test_rap
+[ 56%] Built target test_par_splitting
+[ 56%] Built target test_matrix
+[ 56%] Built target test_par_add
+[ 56%] Built target test_tap_spmv_random
+[ 58%] Built target test_tap_interpolation
+[ 58%] Built target test_prolongation
+[ 65%] Built target test_tap_ruge_stuben
+[ 65%] Building CXX object examples/CMakeFiles/example.dir/example.cpp.o
+[ 65%] Built target test_par_bicgstab
+[ 65%] Built target test_candidates
+[ 65%] Built target test_smoothed_aggregation
+[ 65%] Built target test_tap_mis
+[ 65%] Built target test_par_ruge_stuben
+[ 65%] Built target test_aggregate
+[ 65%] Built target test_tap_candidates
+[ 65%] Built target test_par_mis
+[ 78%] Built target test_par_cg
+[ 78%] Built target test_aniso
+[ 78%] Built target test_matrix_market
+[ 78%] Built target test_par_smoothed_aggregation
+[ 78%] Built target test_stencil
+[ 78%] Built target test_par_prolongation
+[ 78%] Built target test_par_aggregate
+[ 78%] Built target test_tap_aggregate
+[ 78%] Built target test_par_candidates
+[ 78%] Built target test_par_aniso
+[ 78%] Built target test_tap_prolongation
+[ 78%] Built target test_par_amg
+[ 78%] Built target test_laplacian
+[ 86%] Built target test_cg
+[ 86%] Built target benchmark_setup
+[ 86%] Built target benchmark_spmv
+[ 85%] Built target test_bicgstab
+[ 85%] Built target test_amg
+[ 85%] Built target matop_example
+[ 85%] Built target test_mis
+[ 85%] Built target test_par_laplacian
+[ 85%] Built target test_par_matrix_market
+[ 87%] Built target coo_example
+[ 89%] Built target benchmark_tap_spmv
+[ 89%] Built target profile_tap_rss
+[ 89%] Built target benchmark_amg
+[ 91%] Built target benchmark_solve
+[ 95%] Built target csr_example
+[ 95%] Built target benchmark_setup_sweeps
+[ 99%] Built target profile_tap_spgemm
+[ 99%] Built target profile_tap_steps
+[ 99%] Built target model_tap_steps
+[ 99%] Built target profile_tap_sas
+[ 99%] Built target profile_tap_amg
+[ 95%] Built target benchmark_tap_spgemm
+[ 95%] Built target benchmark_reader
+  argv[1] = 1e-7
+  argv[2] = 1e-7
+  argv[3] = 81
+  argv[4] = 1000
+  argv[1] = 1e-7
+  argv[2] = 1e-7
+  argv[3] = 81
+  argv[4] = 1000
+N is>>>>>1000
+TIme matrix setup before136.824
+N is>>>>>1000
+TIme matrix setup before136.824
+TIme matrix setup after136.824
+TIme matrix setup after136.824
+Level	NumRows	NNZ
+-----	-------	---
+0	1000000	8988004
+1	607850	9074634
+2	357208	8901730
+3	171695	5725399
+4	82896	3185636
+5	39309	1638303
+6	18420	794346
+7	8532	371980
+8	3899	167211
+9	1691	67169
+10	713	25719
+11	272	7890
+12	102	2060
+13	34	362
+Total iterations is: 40
+Res[0] = 1.000000e+00
+Res[1] = 1.150964e-01
+Res[2] = 2.043495e-02
+Res[3] = 4.745861e-03
+Res[4] = 1.589105e-03
+Res[5] = 7.064559e-04
+Res[6] = 3.655353e-04
+Total iterations is: 40
+Res[7] = 2.070393e-04
+Res[8] = 1.251797e-04
+Res[9] = 7.969500e-05
+Res[10] = 5.293569e-05
+Res[11] = 3.643003e-05
+Res[12] = 2.582997e-05
+Res[13] = 1.878085e-05
+Res[14] = 1.394871e-05
+Res[15] = 1.054767e-05
+Res[16] = 8.098333e-06
+Res[17] = 6.298986e-06
+Res[18] = 4.954197e-06
+Res[19] = 3.934052e-06
+Res[20] = 3.150115e-06
+Res[21] = 2.540880e-06
+Res[22] = 2.062734e-06
+Res[23] = 1.684210e-06
+Res[24] = 1.382250e-06
+Res[25] = 1.139719e-06
+Res[26] = 9.437254e-07
+Res[27] = 7.844641e-07
+Res[28] = 6.544008e-07
+Res[29] = 5.476958e-07
+Res[30] = 4.597857e-07
+Res[31] = 3.870790e-07
+Res[32] = 3.267300e-07
+Res[33] = 2.764709e-07
+Res[34] = 2.344840e-07
+Res[35] = 1.993052e-07
+Res[36] = 1.697499e-07
+Res[37] = 1.448550e-07
+Res[38] = 1.238347e-07
+Res[39] = 1.060453e-07
+Res[40] = 9.095760e-08
+Raptor AMG Matrix Grid Time: 2.845209e+00
+Raptor AMG Setup Time: 2.387463e+01
+Raptor AMG Solve Time: 3.414816e+01
