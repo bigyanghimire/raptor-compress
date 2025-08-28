@@ -1,0 +1,111 @@
+-- Configuring done (2.4s)
+-- Generating done (5.5s)
+-- Build files have been written to: /home/bigyang/amg-compress/raptor-compress/build
+[  1%] Built target gtest
+[  2%] Built target gtest_main
+[  2%] Built target gmock
+[  3%] Built target gmock_main
+[ 26%] Built target raptor
+[ 29%] Built target test_par_comm
+[ 29%] Built target test_par_rap
+[ 57%] Built target test_tap_spmv_aniso
+[ 57%] Built target test_spmv_random
+[ 57%] Built target test_ruge_stuben
+[ 58%] Built target test_par_spmv_laplacian
+[ 58%] Built target test_tap_interpolation
+[ 57%] Built target test_tap_spmv_random
+[ 57%] Built target test_par_spmv_random
+[ 57%] Built target test_par_splitting
+[ 57%] Built target test_par_add
+[ 57%] Built target test_par_matrix
+[ 57%] Built target test_par_vector
+[ 57%] Built target test_spmv_laplacian
+[ 57%] Built target test_par_block_conversion
+[ 57%] Built target test_tap_comm
+[ 57%] Built target test_matrix
+[ 57%] Built target test_interpolation
+[ 57%] Built target test_spmv_aniso
+[ 57%] Built target test_par_transpose
+[ 57%] Built target test_transpose
+[ 57%] Built target test_tap_spmv_laplacian
+[ 57%] Built target test_par_strength
+[ 57%] Built target test_tap_splitting
+[ 57%] Built target test_par_block_matrix
+[ 57%] Built target test_splitting
+[ 57%] Built target test_repartition
+[ 57%] Built target test_par_spmv_aniso
+[ 57%] Built target test_par_interpolation
+[ 57%] Built target test_par_scale_aniso
+[ 57%] Built target test_strength
+[ 57%] Built target test_rap
+[ 57%] Built target test_tap_rap
+[ 60%] Built target test_aggregate
+[ 60%] Built target test_par_ruge_stuben
+[ 64%] Built target test_prolongation
+[ 64%] Building CXX object examples/CMakeFiles/example.dir/example.cpp.o
+[ 64%] Built target test_tap_candidates
+[ 64%] Built target test_tap_ruge_stuben
+[ 64%] Built target test_candidates
+[ 64%] Built target test_par_mis
+[ 64%] Built target test_mis
+[ 68%] Built target test_par_candidates
+[ 68%] Built target test_par_matrix_market
+[ 68%] Built target benchmark_spmv
+[ 68%] Built target test_par_bicgstab
+[ 68%] Built target test_smoothed_aggregation
+[ 85%] Built target matop_example
+[ 85%] Built target test_par_prolongation
+[ 85%] Built target test_bicgstab
+[ 85%] Built target test_stencil
+[ 85%] Built target test_tap_mis
+[ 85%] Built target test_cg
+[ 85%] Built target test_par_laplacian
+[ 85%] Built target test_par_amg
+[ 85%] Built target test_par_aggregate
+[ 85%] Built target test_matrix_market
+[ 85%] Built target test_par_smoothed_aggregation
+[ 85%] Built target test_tap_aggregate
+[ 85%] Built target test_amg
+[ 85%] Built target test_par_cg
+[ 85%] Built target test_par_aniso
+[ 85%] Built target test_laplacian
+[ 85%] Built target test_tap_prolongation
+[ 89%] Built target test_aniso
+[ 89%] Built target benchmark_setup
+[ 89%] Built target csr_example
+[ 89%] Built target coo_example
+[ 93%] Built target profile_tap_spgemm
+[ 93%] Built target benchmark_reader
+[ 92%] Built target benchmark_solve
+[ 92%] Built target benchmark_tap_spgemm
+[ 92%] Built target benchmark_tap_spmv
+[ 94%] Built target benchmark_amg
+[ 95%] Built target profile_tap_sas
+[ 95%] Built target benchmark_setup_sweeps
+[ 97%] Built target profile_tap_amg
+[ 97%] Built target profile_tap_rss
+[ 98%] Built target profile_tap_steps
+[ 99%] Built target model_tap_steps
+  argv[1] = 1e-7
+  argv[2] = 1e-7
+  argv[3] = 1
+  argv[4] = 22000
+  argv[1] = 1e-7
+  argv[2] = 1e-7
+  argv[3] = 1
+  argv[4] = 22000
+N is>>>>>22000
+TIme matrix setup beforeN is>>>>>220002549.32
+
+TIme matrix setup before2549.32
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 4101018 RUNNING AT nodelm07
+=   EXIT CODE: 134
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+YOUR APPLICATION TERMINATED WITH THE EXIT STRING: Aborted (signal 6)
+This typically refers to a problem with your application.
+Please see the FAQ page for debugging suggestions

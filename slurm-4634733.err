@@ -1,0 +1,898 @@
+Spack has been updated! You should run "spack clean -a" before continuing
+CMake Warning at raptor/CMakeLists.txt:20 (add_library):
+  Cannot generate a safe runtime search path for target raptor because files
+  in some directories may conflict with libraries in implicit directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/tests/CMakeLists.txt:1 (add_executable):
+  Cannot generate a safe runtime search path for target test_strength because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/tests/CMakeLists.txt:6 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_strength
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/core/tests/CMakeLists.txt:2 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_comm because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/core/tests/CMakeLists.txt:8 (add_executable):
+  Cannot generate a safe runtime search path for target test_tap_comm because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/core/tests/CMakeLists.txt:14 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_matrix
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/core/tests/CMakeLists.txt:20 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_vector
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/core/tests/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_transpose
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/core/tests/CMakeLists.txt:32 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_block_matrix
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/core/tests/CMakeLists.txt:38 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_par_block_conversion because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/core/tests/CMakeLists.txt:46 (add_executable):
+  Cannot generate a safe runtime search path for target test_matrix because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/core/tests/CMakeLists.txt:50 (add_executable):
+  Cannot generate a safe runtime search path for target test_transpose
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/util/tests/CMakeLists.txt:1 (add_executable):
+  Cannot generate a safe runtime search path for target test_spmv_laplacian
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/util/tests/CMakeLists.txt:5 (add_executable):
+  Cannot generate a safe runtime search path for target test_spmv_aniso
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/util/tests/CMakeLists.txt:9 (add_executable):
+  Cannot generate a safe runtime search path for target test_spmv_random
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/util/tests/CMakeLists.txt:14 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_add because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/util/tests/CMakeLists.txt:19 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_par_spmv_laplacian because files in some directories may conflict with
+  libraries in implicit directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/util/tests/CMakeLists.txt:27 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_spmv_aniso
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/util/tests/CMakeLists.txt:35 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_spmv_random
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/util/tests/CMakeLists.txt:43 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_tap_spmv_laplacian because files in some directories may conflict with
+  libraries in implicit directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/util/tests/CMakeLists.txt:50 (add_executable):
+  Cannot generate a safe runtime search path for target test_tap_spmv_aniso
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/util/tests/CMakeLists.txt:57 (add_executable):
+  Cannot generate a safe runtime search path for target test_tap_spmv_random
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/util/tests/CMakeLists.txt:63 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_scale_aniso
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/util/tests/CMakeLists.txt:70 (add_executable):
+  Cannot generate a safe runtime search path for target test_repartition
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/ruge_stuben/tests/CMakeLists.txt:1 (add_executable):
+  Cannot generate a safe runtime search path for target test_rap because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/ruge_stuben/tests/CMakeLists.txt:5 (add_executable):
+  Cannot generate a safe runtime search path for target test_splitting
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/ruge_stuben/tests/CMakeLists.txt:9 (add_executable):
+  Cannot generate a safe runtime search path for target test_interpolation
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/ruge_stuben/tests/CMakeLists.txt:13 (add_executable):
+  Cannot generate a safe runtime search path for target test_ruge_stuben
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/ruge_stuben/tests/CMakeLists.txt:18 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_rap because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/ruge_stuben/tests/CMakeLists.txt:22 (add_executable):
+  Cannot generate a safe runtime search path for target test_tap_rap because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/ruge_stuben/tests/CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_splitting
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/ruge_stuben/tests/CMakeLists.txt:30 (add_executable):
+  Cannot generate a safe runtime search path for target test_tap_splitting
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/ruge_stuben/tests/CMakeLists.txt:34 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_par_interpolation because files in some directories may conflict with
+  libraries in implicit directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/ruge_stuben/tests/CMakeLists.txt:38 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_tap_interpolation because files in some directories may conflict with
+  libraries in implicit directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/ruge_stuben/tests/CMakeLists.txt:42 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_ruge_stuben
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/ruge_stuben/tests/CMakeLists.txt:46 (add_executable):
+  Cannot generate a safe runtime search path for target test_tap_ruge_stuben
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/aggregation/tests/CMakeLists.txt:1 (add_executable):
+  Cannot generate a safe runtime search path for target test_mis because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/aggregation/tests/CMakeLists.txt:5 (add_executable):
+  Cannot generate a safe runtime search path for target test_aggregate
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/aggregation/tests/CMakeLists.txt:9 (add_executable):
+  Cannot generate a safe runtime search path for target test_candidates
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/aggregation/tests/CMakeLists.txt:13 (add_executable):
+  Cannot generate a safe runtime search path for target test_prolongation
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/aggregation/tests/CMakeLists.txt:17 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_smoothed_aggregation because files in some directories may conflict
+  with libraries in implicit directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/aggregation/tests/CMakeLists.txt:22 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_mis because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/aggregation/tests/CMakeLists.txt:28 (add_executable):
+  Cannot generate a safe runtime search path for target test_tap_mis because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/aggregation/tests/CMakeLists.txt:32 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_aggregate
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/aggregation/tests/CMakeLists.txt:38 (add_executable):
+  Cannot generate a safe runtime search path for target test_tap_aggregate
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/aggregation/tests/CMakeLists.txt:42 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_candidates
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/aggregation/tests/CMakeLists.txt:48 (add_executable):
+  Cannot generate a safe runtime search path for target test_tap_candidates
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/aggregation/tests/CMakeLists.txt:52 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_prolongation
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/aggregation/tests/CMakeLists.txt:58 (add_executable):
+  Cannot generate a safe runtime search path for target test_tap_prolongation
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/aggregation/tests/CMakeLists.txt:62 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_par_smoothed_aggregation because files in some directories may
+  conflict with libraries in implicit directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/multilevel/tests/CMakeLists.txt:1 (add_executable):
+  Cannot generate a safe runtime search path for target test_amg because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/multilevel/tests/CMakeLists.txt:6 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_amg because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/gallery/tests/CMakeLists.txt:1 (add_executable):
+  Cannot generate a safe runtime search path for target test_stencil because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/gallery/tests/CMakeLists.txt:5 (add_executable):
+  Cannot generate a safe runtime search path for target test_laplacian
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/gallery/tests/CMakeLists.txt:9 (add_executable):
+  Cannot generate a safe runtime search path for target test_aniso because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/gallery/tests/CMakeLists.txt:13 (add_executable):
+  Cannot generate a safe runtime search path for target test_matrix_market
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/gallery/tests/CMakeLists.txt:19 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_laplacian
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/gallery/tests/CMakeLists.txt:24 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_aniso
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/gallery/tests/CMakeLists.txt:29 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_par_matrix_market because files in some directories may conflict with
+  libraries in implicit directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/krylov/tests/CMakeLists.txt:1 (add_executable):
+  Cannot generate a safe runtime search path for target test_cg because files
+  in some directories may conflict with libraries in implicit directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/krylov/tests/CMakeLists.txt:5 (add_executable):
+  Cannot generate a safe runtime search path for target test_bicgstab because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/krylov/tests/CMakeLists.txt:10 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_cg because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at raptor/krylov/tests/CMakeLists.txt:14 (add_executable):
+  Cannot generate a safe runtime search path for target test_par_bicgstab
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at examples/CMakeLists.txt:3 (add_executable):
+  Cannot generate a safe runtime search path for target benchmark_spmv
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at examples/CMakeLists.txt:21 (add_executable):
+  Cannot generate a safe runtime search path for target example because files
+  in some directories may conflict with libraries in implicit directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at examples/CMakeLists.txt:24 (add_executable):
+  Cannot generate a safe runtime search path for target matop_example because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at examples/CMakeLists.txt:27 (add_executable):
+  Cannot generate a safe runtime search path for target benchmark_setup
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at examples/CMakeLists.txt:30 (add_executable):
+  Cannot generate a safe runtime search path for target coo_example because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at examples/CMakeLists.txt:33 (add_executable):
+  Cannot generate a safe runtime search path for target csr_example because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at examples/CMakeLists.txt:36 (add_executable):
+  Cannot generate a safe runtime search path for target benchmark_solve
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at examples/CMakeLists.txt:39 (add_executable):
+  Cannot generate a safe runtime search path for target benchmark_reader
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at examples/CMakeLists.txt:42 (add_executable):
+  Cannot generate a safe runtime search path for target benchmark_tap_spmv
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at examples/CMakeLists.txt:45 (add_executable):
+  Cannot generate a safe runtime search path for target benchmark_tap_spgemm
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at examples/CMakeLists.txt:48 (add_executable):
+  Cannot generate a safe runtime search path for target profile_tap_spgemm
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at examples/CMakeLists.txt:51 (add_executable):
+  Cannot generate a safe runtime search path for target benchmark_amg because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at examples/CMakeLists.txt:54 (add_executable):
+  Cannot generate a safe runtime search path for target
+  benchmark_setup_sweeps because files in some directories may conflict with
+  libraries in implicit directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at examples/CMakeLists.txt:57 (add_executable):
+  Cannot generate a safe runtime search path for target profile_tap_rss
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at examples/CMakeLists.txt:60 (add_executable):
+  Cannot generate a safe runtime search path for target profile_tap_sas
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at examples/CMakeLists.txt:63 (add_executable):
+  Cannot generate a safe runtime search path for target profile_tap_amg
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at examples/CMakeLists.txt:66 (add_executable):
+  Cannot generate a safe runtime search path for target profile_tap_steps
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at examples/CMakeLists.txt:69 (add_executable):
+  Cannot generate a safe runtime search path for target model_tap_steps
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libgomp.so.1] in /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/gcc-12.3.0-gte3dhuw5dryttvxvjbbxdqxuz2panwt/lib64 may be hidden by files in:
+      /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.2.0/anaconda3-2023.09-0-3mhml42fa64byxqyd5fig5tbih625dp2/lib
+
+  Some of these libraries may not be found correctly.
+
+
+/home/bigyang/amg-compress/raptor-compress/examples/example.cpp: In function 'int main(int, char**)':
+/home/bigyang/amg-compress/raptor-compress/examples/example.cpp:32:94: error: expected unqualified-id before ';' token
+   32 |     double time_setup, time_solve, time_base,time_matrix_setup_start, time_matrix_setup_end, ;
+      |                                                                                              ^
+gmake[2]: *** [examples/CMakeFiles/example.dir/build.make:76: examples/CMakeFiles/example.dir/example.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:2561: examples/CMakeFiles/example.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
+slurmstepd: error: *** STEP 4634733.0 ON node0074 CANCELLED AT 2025-08-27T18:42:04 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 4634733 ON node0074 CANCELLED AT 2025-08-27T18:42:04 DUE TO TIME LIMIT ***

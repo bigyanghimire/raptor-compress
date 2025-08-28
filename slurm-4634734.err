@@ -1,0 +1,17 @@
+Spack has been updated! You should run "spack clean -a" before continuing
+CMake Error at /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.3.0/cmake-3.27.9-ajaol5ur22vwa7wtgfyqabkwffvlnjgg/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:230 (message):
+  Could NOT find MPI (missing: MPI_C_FOUND) (found version "4.0")
+Call Stack (most recent call first):
+  /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.3.0/cmake-3.27.9-ajaol5ur22vwa7wtgfyqabkwffvlnjgg/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:600 (_FPHSA_FAILURE_MESSAGE)
+  /software/slurm/spackages/linux-rocky8-x86_64/gcc-12.3.0/cmake-3.27.9-ajaol5ur22vwa7wtgfyqabkwffvlnjgg/share/cmake-3.27/Modules/FindMPI.cmake:1837 (find_package_handle_standard_args)
+  CMakeLists.txt:46 (find_package)
+
+
+terminate called after throwing an instance of 'std::length_error'
+  what():  vector::reserve
+terminate called after throwing an instance of 'std::length_error'
+  what():  vector::reserve
+[proxy:0:1@nodelm08.palmetto.clemson.edu] HYD_pmcd_pmip_control_cmd_cb (proxy/pmip_cb.c:480): assert (!closed) failed
+[proxy:0:1@nodelm08.palmetto.clemson.edu] HYDT_dmxu_poll_wait_for_event (lib/tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@nodelm08.palmetto.clemson.edu] main (proxy/pmip.c:127): demux engine error waiting for event
+srun: error: nodelm08: task 1: Exited with exit code 7
