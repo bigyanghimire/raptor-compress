@@ -90,6 +90,7 @@ namespace raptor
         double *dA_values, *dX, *dB;
 
         if(unified_m==1){
+            std::cout<<"Using Unified memory"<<std::endl;
             CHECK_CUDA(cudaMallocManaged((void **)&dA_rows,
                                 (A_num_rows + 1) * sizeof(int)));
             CHECK_CUDA(cudaMallocManaged((void **)&dA_columns, A_nnz * sizeof(int)));
@@ -97,6 +98,7 @@ namespace raptor
             CHECK_CUDA(cudaMallocManaged((void **)&dX, A_num_cols * sizeof(double)));
             CHECK_CUDA(cudaMallocManaged((void **)&dB, A_num_rows * sizeof(double)));
         }else{
+        std::cout<<"Not using Unified memory"<<std::endl;
 
         CHECK_CUDA(cudaMalloc((void **)&dA_rows,
                               (A_num_rows + 1) * sizeof(int)));
