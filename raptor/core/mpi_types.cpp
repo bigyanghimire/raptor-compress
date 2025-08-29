@@ -6,7 +6,7 @@ double mat_t = 0.0;
 double vec_t = 0.0;
 double total_t = 0.0;
 double new_comm_t = 0.0;
-
+int gpu_mode=0;
 #include <mpi.h>
 #include "mpi_types.hpp"
 

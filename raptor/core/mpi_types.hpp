@@ -14,6 +14,7 @@ extern double* current_t;
 extern double mat_t;
 extern double vec_t;
 extern double total_t;
+extern int gpu_mode;
 
 extern void init_profile();
 extern void reset_profile();

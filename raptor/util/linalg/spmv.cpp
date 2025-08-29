@@ -5,6 +5,7 @@
 #include "raptor/kernels/kernel.cuh"
 #include <iostream>
 #include <mpi.h>
+#include <mpi_types.hpp>
 using namespace raptor;
 
 // Declare Private Methods
@@ -87,11 +88,15 @@ void print_error(const double *hB, const double *hC, int num_elements)
 // Optimized CSR and BSR standard SpMVs
 void CSR_spmv(const CSRMatrix *A, const double *x, double *b)
 {
-    #if defined(USING_CUDA)
-    printf("on GPU>>>>\n");
+    if (gpu_mode == 1)
+    {
+        printf("on GPU>>>>\n");
         spmv_gpu(A, x, b);
-    # else
-    printf("on CPU>>>>\n");
+    }
+    else
+    {
+        printf("on CPU>>>>\n");
+
         int start, end;
         double val;
         for (int i = 0; i < A->n_rows; i++)
@@ -105,8 +110,7 @@ void CSR_spmv(const CSRMatrix *A, const double *x, double *b)
             }
             b[i] = val;
         }
-    #endif
-
+    }
     // char *compute_type = "gpu";
     // int rank, num_procs;
     // MPI_Comm_rank(MPI_COMM_WORLD, &rank);
@@ -122,7 +126,6 @@ void CSR_spmv(const CSRMatrix *A, const double *x, double *b)
 
 
     // }
-
 }
 void CSR_residual(const CSRMatrix* A, const double* x, 
         const double* b, double* r)

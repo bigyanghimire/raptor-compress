@@ -52,6 +52,7 @@ void check_solution_accuracy(const ParVector &b, const ParVector &c, int rank, i
 // This is a basic use case.
 int main(int argc, char *argv[])
 {
+    gpu_mode=atoi(argv[2]);
     // set rank and number of processors
     int rank, num_procs;
     MPI_Init(&argc, &argv);
@@ -81,6 +82,7 @@ int main(int argc, char *argv[])
     {
         printf("No n specified in command line. Using default n = %d\n", n);
     }
+    std::cout<<"GPU mode is"<<gpu_mode<<"And dimension is"<<n<<std::endl;
 
     std::vector<int> grid;
     grid.resize(dim, n);
@@ -107,7 +109,7 @@ int main(int argc, char *argv[])
     double strong_threshold = 0.25;
 
     // Create a multilevel object
-    ParMultilevel *ml;
+    Multilevel *ml;
     double total_time = MPI_Wtime();
     // Setup Raptor Hierarchy
     MPI_Barrier(MPI_COMM_WORLD);
