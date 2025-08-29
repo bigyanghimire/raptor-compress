@@ -2,6 +2,7 @@
 #include <iostream>
 #include "raptor/core/matrix.hpp"
 #include <cusparse.h>
+#include "raptor/core/mpi_types.hpp"
 namespace raptor
 
 {
