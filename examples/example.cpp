@@ -109,7 +109,7 @@ int main(int argc, char *argv[])
     double strong_threshold = 0.25;
 
     // Create a multilevel object
-    Multilevel *ml;
+    ParMultilevel *ml;
     double total_time = MPI_Wtime();
     // Setup Raptor Hierarchy
     MPI_Barrier(MPI_COMM_WORLD);
