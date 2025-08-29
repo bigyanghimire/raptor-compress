@@ -53,6 +53,7 @@ void check_solution_accuracy(const ParVector &b, const ParVector &c, int rank, i
 int main(int argc, char *argv[])
 {
     gpu_mode=atoi(argv[2]);
+    unified_m=atoi(argv[3]);
     // set rank and number of processors
     int rank, num_procs;
     MPI_Init(&argc, &argv);

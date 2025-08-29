@@ -88,41 +88,33 @@ namespace raptor
             *dA_columns;
         double *dA_values, *dX, *dB;
 
-        CHECK_CUDA(cudaMallocManaged((void **)&dA_rows,
-                              (A_num_rows + 1) * sizeof(int)));
-        CHECK_CUDA(cudaMallocManaged((void **)&dA_columns, A_nnz * sizeof(int)));
-        CHECK_CUDA(cudaMallocManaged((void **)&dA_values, A_nnz * sizeof(double)));
-        CHECK_CUDA(cudaMallocManaged((void **)&dX, A_num_cols * sizeof(double)));
-        CHECK_CUDA(cudaMallocManaged((void **)&dB, A_num_rows * sizeof(double)));
-        // CHECK_CUDA(cudaMemcpy(dA_rows, hA_rows,
-        //                       (A_num_rows + 1) * sizeof(int),
-        //                       cudaMemcpyHostToDevice));
-        // CHECK_CUDA(cudaMemcpy(dA_columns, hA_columns, A_nnz * sizeof(int),
-        //                       cudaMemcpyHostToDevice));
-        // CHECK_CUDA(cudaMemcpy(dA_values, hA_values, A_nnz * sizeof(double),
-        //                       cudaMemcpyHostToDevice));
-        // CHECK_CUDA(cudaMemcpy(dX, hX, A_num_cols * sizeof(double),
-        //                       cudaMemcpyHostToDevice));
-        // CHECK_CUDA(cudaMemcpy(dB, b, A_num_rows * sizeof(double),
-        //                       cudaMemcpyHostToDevice));
+        if(unified_m==1){
+            CHECK_CUDA(cudaMallocManaged((void **)&dA_rows,
+                                (A_num_rows + 1) * sizeof(int)));
+            CHECK_CUDA(cudaMallocManaged((void **)&dA_columns, A_nnz * sizeof(int)));
+            CHECK_CUDA(cudaMallocManaged((void **)&dA_values, A_nnz * sizeof(double)));
+            CHECK_CUDA(cudaMallocManaged((void **)&dX, A_num_cols * sizeof(double)));
+            CHECK_CUDA(cudaMallocManaged((void **)&dB, A_num_rows * sizeof(double)));
+        }else{
 
-        // CHECK_CUDA(cudaMalloc((void **)&dA_rows,
-        //                       (A_num_rows + 1) * sizeof(int)));
-        // CHECK_CUDA(cudaMalloc((void **)&dA_columns, A_nnz * sizeof(int)));
-        // CHECK_CUDA(cudaMalloc((void **)&dA_values, A_nnz * sizeof(double)));
-        // CHECK_CUDA(cudaMalloc((void **)&dX, A_num_cols * sizeof(double)));
-        // CHECK_CUDA(cudaMalloc((void **)&dB, A_num_rows * sizeof(double)));
-        // CHECK_CUDA(cudaMemcpy(dA_rows, hA_rows,
-        //                       (A_num_rows + 1) * sizeof(int),
-        //                       cudaMemcpyHostToDevice));
-        // CHECK_CUDA(cudaMemcpy(dA_columns, hA_columns, A_nnz * sizeof(int),
-        //                       cudaMemcpyHostToDevice));
-        // CHECK_CUDA(cudaMemcpy(dA_values, hA_values, A_nnz * sizeof(double),
-        //                       cudaMemcpyHostToDevice));
-        // CHECK_CUDA(cudaMemcpy(dX, hX, A_num_cols * sizeof(double),
-        //                       cudaMemcpyHostToDevice));
-        // CHECK_CUDA(cudaMemcpy(dB, b, A_num_rows * sizeof(double),
-        //                       cudaMemcpyHostToDevice));
+        CHECK_CUDA(cudaMalloc((void **)&dA_rows,
+                              (A_num_rows + 1) * sizeof(int)));
+        CHECK_CUDA(cudaMalloc((void **)&dA_columns, A_nnz * sizeof(int)));
+        CHECK_CUDA(cudaMalloc((void **)&dA_values, A_nnz * sizeof(double)));
+        CHECK_CUDA(cudaMalloc((void **)&dX, A_num_cols * sizeof(double)));
+        CHECK_CUDA(cudaMalloc((void **)&dB, A_num_rows * sizeof(double)));
+        CHECK_CUDA(cudaMemcpy(dA_rows, hA_rows,
+                              (A_num_rows + 1) * sizeof(int),
+                              cudaMemcpyHostToDevice));
+        CHECK_CUDA(cudaMemcpy(dA_columns, hA_columns, A_nnz * sizeof(int),
+                              cudaMemcpyHostToDevice));
+        CHECK_CUDA(cudaMemcpy(dA_values, hA_values, A_nnz * sizeof(double),
+                              cudaMemcpyHostToDevice));
+        CHECK_CUDA(cudaMemcpy(dX, hX, A_num_cols * sizeof(double),
+                              cudaMemcpyHostToDevice));
+        CHECK_CUDA(cudaMemcpy(dB, b, A_num_rows * sizeof(double),
+                              cudaMemcpyHostToDevice));
+        }
         // //-----------------------------------------------------  CUSPARSE APIs
 
         cusparseHandle_t handle = NULL;
