@@ -325,8 +325,7 @@ SZ is downgraded to lossless mode.
 cr:1.07225,iter:1,level:18,rank:0,datasize:922,operation:Post-smoothing
 cr:1.00073,iter:1,level:18,rank:0,datasize:172,operation:Interpolation
 SZ is downgraded to lossless mode.
-cr:1.07462,iter:1,level:18,rank:0,datasize:SZ is downgraded to lossless mode.
-1559,operation:Post-smoothing
+cr:1.07462,iter:1,level:18,rank:0,datasize:1559,operation:Post-smoothing
 cr:1.02773,iter:1,level:18,rank:0,datasize:278,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
@@ -477,8 +476,7 @@ SZ is downgraded to lossless mode.
 cr:1.07887,iter:2,level:18,rank:0,datasize:2517,operation:Post-smoothing
 cr:1.05127,iter:2,level:18,rank:0,datasize:446,operation:Interpolation
 SZ is downgraded to lossless mode.
-cr:1.07803,iter:2,level:18,rank:0,datasize:SZ is downgraded to lossless mode.
-3946,operation:Post-smoothing
+cr:1.07803,iter:2,level:18,rank:0,datasize:3946,operation:Post-smoothing
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
 cr:1.05905,iter:2,level:18,rank:0,datasize:630,operation:Interpolation
@@ -761,8 +759,7 @@ cr:0.861244,iter:4,level:18,rank:0,datasize:45,operation:Interpolation
 cr:1.03088,iter:4,level:18,rank:0,datasize:313,operation:Post-smoothing
 cr:0.879668,iter:4,level:18,rank:0,datasize:53,operation:Interpolation
 SZ is downgraded to lossless mode.
-cr:1.05323,iter:4,level:18,rank:0SZ is downgraded to lossless mode.
-,datasize:559,operation:Post-smoothing
+cr:1.05323,iter:4,level:18,rank:0,datasize:559,operation:Post-smoothing
 cr:0.947826,iter:4,level:18,rank:0,datasize:109,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
@@ -1407,8 +1404,7 @@ SZ is downgraded to lossless mode.
 cr:1.04429,iter:8,level:18,rank:0,datasize:4524,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
-cr:SZ is downgraded to lossless mode.
-1.04615,iter:8,level:18,rank:0,datasize:26089,operation:Post-smoothing
+cr:1.04615,iter:8,level:18,rank:0,datasize:26089,operation:Post-smoothing
 SZ is downgraded to lossless mode.
 cr:1.04551,iter:8,level:18,rank:0,datasize:6309,operation:Interpolation
 SZ is downgraded to lossless mode.
@@ -1631,8 +1627,7 @@ cr:0.861244,iter:10,level:18,rank:0,datasize:45,operation:Interpolation
 cr:1.00361,iter:10,level:18,rank:0,datasize:313,operation:Post-smoothing
 cr:0.879668,iter:10,level:18,rank:0,datasize:53,operation:Interpolation
 SZ is downgraded to lossless mode.
-cr:1.02311,iter:SZ is downgraded to lossless mode.
-10,level:18,rank:0,datasize:559,operation:Post-smoothing
+cr:1.02311,iter:10,level:18,rank:0,datasize:559,operation:Post-smoothing
 cr:0.984199,iter:10,level:18,rank:0,datasize:109,operation:Interpolation
 SZ is downgraded to lossless mode.
 cr:1.03407,iter:10,level:18,rank:0,datasize:922,operation:Post-smoothing
@@ -2006,8 +2001,7 @@ cr:888.489,iter:13,level:6,rank:0,datasize:14549,operation:Pre-Smoothing
 cr:1.73919,iter:13,level:6,rank:0,datasize:14549,operation:Residual
 cr:683.237,iter:13,level:7,rank:0,datasize:11188,operation:Pre-Smoothing
 SZ is downgraded to lossless mode.
-cr:SZ is downgraded to lossless mode.
-1.0357,iter:13,level:7,rank:0,datasize:11188,operation:Residual
+cr:1.0357,iter:13,level:7,rank:0,datasize:11188,operation:Residual
 cr:501.538,iter:13,level:8,rank:0,datasize:8150,operation:Pre-Smoothing
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
@@ -2473,8 +2467,7 @@ SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
 cr:1.03842,iter:16,level:18,rank:0,datasize:2517,operation:Post-smoothing
 SZ is downgraded to lossless mode.
-cr:SZ is downgraded to lossless mode.
-1.01191,iter:16,level:18,rank:0,datasize:446,operation:Interpolation
+cr:1.01191,iter:16,level:18,rank:0,datasize:446,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
 cr:1.04061,iter:16,level:18,rank:0,datasize:3946,operation:Post-smoothing
@@ -2494,8 +2487,7 @@ SZ is downgraded to lossless mode.
 cr:1.03701,iter:16,level:18,rank:0,datasize:1471,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
-cr:1.04357SZ is downgraded to lossless mode.
-,iter:16,level:18,rank:0,datasize:11188,operation:Post-smoothing
+cr:1.04357,iter:16,level:18,rank:0,datasize:11188,operation:Post-smoothing
 SZ is downgraded to lossless mode.
 cr:1.04068,iter:16,level:18,rank:0,datasize:1893,operation:Interpolation
 SZ is downgraded to lossless mode.
@@ -2759,8 +2751,7 @@ SZ is downgraded to lossless mode.
 cr:1.03719,iter:18,level:18,rank:0,datasize:1893,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
-cr:1.0429SZ is downgraded to lossless mode.
-,iter:18,level:18,rank:0,datasize:14549,operation:Post-smoothing
+cr:1.0429,iter:18,level:18,rank:0,datasize:14549,operation:Post-smoothing
 SZ is downgraded to lossless mode.
 cr:1.03965,iter:18,level:18,rank:0,datasize:2586,operation:Interpolation
 SZ is downgraded to lossless mode.
@@ -3102,8 +3093,7 @@ SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
 cr:1.03378,iter:21,level:18,rank:0,datasize:2517,operation:Post-smoothing
 SZ is downgraded to lossless mode.
-cr:SZ is downgraded to lossless mode.
-1.00905,iter:21,level:18,rank:0,datasize:446,operation:Interpolation
+cr:1.00905,iter:21,level:18,rank:0,datasize:446,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
 cr:1.03689,iter:21,level:18,rank:0,datasize:3946,operation:Post-smoothing
@@ -3334,8 +3324,7 @@ SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
 cr:1.03378,iter:23,level:18,rank:0,datasize:2517,operation:Post-smoothing
 SZ is downgraded to lossless mode.
-cr:1.00734,iter:23,level:SZ is downgraded to lossless mode.
-18,rank:0,datasize:446,operation:Interpolation
+cr:1.00734,iter:23,level:18,rank:0,datasize:446,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
 cr:1.03549,iter:23,level:18,rank:0,datasize:3946,operation:Post-smoothing
@@ -3431,8 +3420,7 @@ cr:0.861244,iter:24,level:18,rank:0,datasize:45,operation:Interpolation
 cr:1.0109,iter:24,level:18,rank:0,datasize:313,operation:Post-smoothing
 cr:0.879668,iter:24,level:18,rank:0,datasize:53,operation:Interpolation
 SZ is downgraded to lossless mode.
-cr:1.01268SZ is downgraded to lossless mode.
-,iter:24,level:18,rank:0,datasize:559,operation:Post-smoothing
+cr:1.01268,iter:24,level:18,rank:0,datasize:559,operation:Post-smoothing
 cr:1.01869,iter:24,level:18,rank:0,datasize:109,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
@@ -3661,8 +3649,7 @@ SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
 cr:1.03156,iter:26,level:18,rank:0,datasize:2517,operation:Post-smoothing
 SZ is downgraded to lossless mode.
-cr:1.00649,iter:26,level:18,rank:0,datasize:SZ is downgraded to lossless mode.
-446,operation:Interpolation
+cr:1.00649,iter:26,level:18,rank:0,datasize:446,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
 cr:1.03369,iter:26,level:18,rank:0,datasize:3946,operation:Post-smoothing
@@ -4078,8 +4065,7 @@ SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
 cr:1.02897,iter:30,level:18,rank:0,datasize:2517,operation:Post-smoothing
 SZ is downgraded to lossless mode.
-cr:1.00253,iter:30SZ is downgraded to lossless mode.
-,level:18,rank:0,datasize:446,operation:Interpolation
+cr:1.00253,iter:30,level:18,rank:0,datasize:446,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
 cr:1.03174,iter:30,level:18,rank:0,datasize:3946,operation:Post-smoothing
@@ -4368,8 +4354,7 @@ SZ is downgraded to lossless mode.
 cr:1.02217,iter:33,level:18,rank:0,datasize:922,operation:Post-smoothing
 cr:0.959554,iter:33,level:18,rank:0,datasize:172,operation:Interpolation
 SZ is downgraded to lossless mode.
-cr:1.02557,iter:SZ is downgraded to lossless mode.
-33,level:18,rank:0,datasize:1559,operation:Post-smoothing
+cr:1.02557,iter:33,level:18,rank:0,datasize:1559,operation:Post-smoothing
 cr:0.984071,iter:33,level:18,rank:0,datasize:278,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
