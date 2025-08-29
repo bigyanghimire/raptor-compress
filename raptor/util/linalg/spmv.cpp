@@ -5,7 +5,7 @@
 #include "raptor/kernels/kernel.cuh"
 #include <iostream>
 #include <mpi.h>
-#include <mpi_types.hpp>
+#include "core/mpi_types.hpp"
 using namespace raptor;
 
 // Declare Private Methods
