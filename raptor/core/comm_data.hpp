@@ -894,8 +894,11 @@ bool is_all_zero(const T* data, size_t size) {
             if(c_info.compression_on==1){
                  size_t datasize = (end - start) * block_size;
                 size_t cmpSize;
+                int time_start,time_total;
+                time_start = MPI_Wtime();
                 char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
                 T* dec_data=decompress_data<T>( datasize, cmpSize, cmpData);
+                time_total=MPI_Wtime()-time_start;
                 // double max_err = 0.0;
                 // for (size_t i = 0; i < datasize; i++)
                 // {
@@ -914,6 +917,9 @@ bool is_all_zero(const T* data, size_t size) {
                 //     std::cout << "Smoke test failed" << std::endl;
                 // }
                 size_t original_bytes = datasize * sizeof(T);  // actual size in bytes
+                if(rank==0){
+                std::cout<<"Total time is: "<< total_time<<"and ratio is: "<<static_cast<double>(original_bytes/time_total)<<std::endl;
+                }
                 double ratio = static_cast<double>(original_bytes) / cmpSize;
                 if(rank==0){
                 std::cout << "cr:" << ratio << ",iter:" << c_info.amg_iter << ",level:" << c_info.amg_level << ",rank:" << rank << ",datasize:" << datasize << ",operation:" << c_info.op << std::endl;
