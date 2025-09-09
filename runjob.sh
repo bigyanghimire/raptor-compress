@@ -25,4 +25,8 @@ ulimit -c unlimited
 
 # Run your application
 # mpirun -n 2 build/examples/example 1e-7 1e-7 1 $1
+# $1 is amg tolerance
+# $2 is compression error tol
+# $3 is yes/no compression
+# $4 is size of grid
 mpirun -n 2 build/examples/example $1 $2 $3 $4
