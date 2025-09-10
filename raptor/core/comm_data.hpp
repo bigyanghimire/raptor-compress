@@ -894,7 +894,7 @@ bool is_all_zero(const T* data, size_t size) {
             if(c_info.compression_on==1){
                  size_t datasize = (end - start) * block_size;
                 size_t cmpSize;
-                int time_start,time_total;
+                double time_start,time_total;
                 time_start = MPI_Wtime();
                 char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
                 T* dec_data=decompress_data<T>( datasize, cmpSize, cmpData);
