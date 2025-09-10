@@ -918,7 +918,7 @@ bool is_all_zero(const T* data, size_t size) {
                 // }
                 size_t original_bytes = datasize * sizeof(T);  // actual size in bytes
                 if(rank==0){
-                std::cout<<"Time:" << time_total<<",bytes:"<<original_bytes<<",gbandwidth:" << static_cast<double>(original_bytes*8/time_total*1000000000)<<std::endl;
+                std::cout<<"Time:" << time_total<<",bytes:"<<original_bytes<<",gbps:" << static_cast<double>((original_bytes*8)/(time_total*1000000000))<<std::endl;
                 }
                 double ratio = static_cast<double>(original_bytes) / cmpSize;
                 if(rank==0){
