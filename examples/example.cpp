@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     ParVector b;
 
     // Timers
-    double time_setup, time_solve, time_base,time_matrix_setup_start, time_matrix_setup_end, ;
+    double time_setup, time_solve, time_base,time_matrix_setup_start, time_matrix_setup_end ;
 
     // Problems size and type
     int dim = 2;
