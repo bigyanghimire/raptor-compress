@@ -957,8 +957,7 @@ SZ is downgraded to lossless mode.
 Time:0.0103322,bytes:22464,bandwidth:2.17417e+06
 cr:1.06268,iter:4,level:16,rank:0,datasize:2808,operation:Post-smoothing
 SZ is downgraded to lossless mode.
-Time:0.00758116,bytes:3768,bandwidth:SZ is downgraded to lossless mode.
-497021
+Time:0.00758116,bytes:3768,bandwidth:497021
 cr:1.04002,iter:4,level:16,rank:0,datasize:471,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
@@ -1365,8 +1364,7 @@ Time:0.00740761,bytes:6584,bandwidth:888816
 cr:1.03473,iter:6,level:16,rank:0,datasize:823,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
-Time:0.0126849,bytes:SZ is downgraded to lossless mode.
-49304,bandwidth:3.88681e+06
+Time:0.0126849,bytes:49304,bandwidth:3.88681e+06
 cr:1.04675,iter:6,level:16,rank:0,datasize:6163,operation:Post-smoothing
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
@@ -1546,8 +1544,7 @@ Time:0.00996309,bytes:30080,bandwidth:3.01914e+06
 cr:1.04473,iter:SZ is downgraded to lossless mode.
 7,level:16,rank:0,datasize:3760,operation:Post-smoothing
 SZ is downgraded to lossless mode.
-Time:SZ is downgraded to lossless mode.
-0.00631844,bytes:4936,bandwidth:781205
+Time:0.00631844,bytes:4936,bandwidth:781205
 cr:1.02684,iter:7,level:16,rank:0,datasize:617,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
@@ -2076,8 +2073,7 @@ cr:0.993576,iter:10,level:16,rank:0,datasize:290,operation:Post-smoothing
 Time:0.000389225,bytes:440,bandwidth:1.13045e+06
 cr:0.883534,iter:10,level:16,rank:0,datasize:55,operation:Interpolation
 SZ is downgraded to lossless mode.
-Time:SZ is downgraded to lossless mode.
-0.00182305,bytes:4040,bandwidth:2.21607e+06
+Time:0.00182305,bytes:4040,bandwidth:2.21607e+06
 cr:1.01815,iter:10,level:16,rank:0,datasize:505,operation:Post-smoothing
 Time:0.000894904,bytes:728,bandwidth:813495
 cr:0.933333,iter:10,level:16,rank:0,datasize:91,operation:Interpolation
@@ -2232,8 +2228,7 @@ SZ is downgraded to lossless mode.
 Time:0.000320872,bytes:4040,bandwidth:1.25907e+07
 cr:39.2233,iter:11,level:12,rank:0,datasize:505,operation:Pre-Smoothing
 SZ is downgraded to lossless mode.
-Time:0.0011493SZ is downgraded to lossless mode.
-,bytes:4040,bandwidth:3.51517e+06
+Time:0.0011493,bytes:4040,bandwidth:3.51517e+06
 cr:1.00899,iter:11,level:12,rank:0,datasize:505,operation:Residual
 Time:0.000300287,bytes:2320,bandwidth:7.72594e+06
 cr:22.5243,iter:11,level:13,rank:0,datasize:290,operation:Pre-Smoothing
@@ -2633,8 +2628,7 @@ cr:0.9752,iter:13,level:16,rank:0,datasize:290,operation:Post-smoothing
 Time:0.000265363,bytes:440,bandwidth:1.65811e+06
 cr:0.883534,iter:13,level:16,rank:0,datasize:55,operation:Interpolation
 SZ is downgraded to lossless mode.
-Time:0.00142826,bytes:4040,bandwidth:SZ is downgraded to lossless mode.
-2.82863e+06
+Time:0.00142826,bytes:4040,bandwidth:2.82863e+06
 cr:1.01661,iter:13,level:16,rank:0,datasize:505,operation:Post-smoothing
 Time:0.000590116,bytes:728,bandwidth:1.23366e+06
 cr:0.940568,iter:13,level:16,rank:0,datasize:91,operation:Interpolation
@@ -2845,8 +2839,7 @@ Time:0.00477445,bytes:22464,bandwidth:4.70504e+06
 cr:1.03995,iter:14,level:16,rank:0,datasize:2808,operation:Post-smoothing
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
-Time:SZ is downgraded to lossless mode.
-0.00256716,bytes:3768,bandwidth:1.46777e+06
+Time:0.00256716,bytes:3768,bandwidth:1.46777e+06
 cr:1.01454,iter:14,level:16,rank:0,datasize:471,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
@@ -2873,8 +2866,7 @@ SZ is downgraded to lossless mode.
 Time:0.00433232,bytes:9280,bandwidth:2.14204e+06
 cr:1.03618,iter:14,level:16,rank:0,datasize:1160,operation:Interpolation
 SZ is downgraded to lossless mode.
-Time:0.0100111SZ is downgraded to lossless mode.
-,bytes:61032,bandwidth:6.09641e+06
+Time:0.0100111,bytes:61032,bandwidth:6.09641e+06
 cr:1.04326,iter:14,level:16,rank:0,datasize:7629,operation:Post-smoothing
 SZ is downgraded to lossless mode.
 Time:0.00402554,bytes:12120,bandwidth:3.01078e+06
@@ -3183,8 +3175,7 @@ cr:0.9752,iter:16,level:16,rank:0,datasize:290,operation:Post-smoothing
 Time:0.000200538,bytes:440,bandwidth:2.1941e+06
 cr:0.883534,iter:16,level:16,rank:0,datasize:55,operation:Interpolation
 SZ is downgraded to lossless mode.
-Time:SZ is downgraded to lossless mode.
-0.00117522,bytes:4040,bandwidth:3.43765e+06
+Time:0.00117522,bytes:4040,bandwidth:3.43765e+06
 cr:1.01051,iter:16,level:16,rank:0,datasize:505,operation:Post-smoothing
 Time:0.000464646,bytes:728,bandwidth:1.56678e+06
 cr:0.960422,iter:16,level:16,rank:0,datasize:91,operation:Interpolation
@@ -4047,8 +4038,7 @@ cr:1.02427,iter:21,level:10,rank:0,datasize:1303,operation:Residual
 Time:0.000365462,bytes:6616,bandwidth:1.81031e+07
 cr:61.8318,iter:21,level:11,rank:0,datasize:827,operation:Pre-Smoothing
 SZ is downgraded to lossless mode.
-Time:0.00101882,bytes:6616,bandwidth:6.49376e+06SZ is downgraded to lossless mode.
-
+Time:0.00101882,bytes:6616,bandwidth:6.49376e+06
 cr:1.01989,iter:21,level:11,rank:0,datasize:827,operation:Residual
 Time:0.000307795,bytes:4040,bandwidth:1.31256e+07
 cr:39.2233,iter:21,level:12,rank:0,datasize:505,operation:Pre-Smoothing
@@ -4099,8 +4089,7 @@ cr:1.02831,iter:21,level:16,rank:0,datasize:1303,operation:Post-smoothing
 Time:0.000944327,bytes:1744,bandwidth:1.84682e+06
 cr:0.967814,iter:21,level:16,rank:0,datasize:218,operation:Interpolation
 SZ is downgraded to lossless mode.
-Time:0.002724,bytes:15480,bandwidth:SZ is downgraded to lossless mode.
-5.68281e+06
+Time:0.002724,bytes:15480,bandwidth:5.68281e+06
 cr:1.03303,iter:21,level:16,rank:0,datasize:1935,operation:Post-smoothing
 Time:0.00123526,bytes:2672,bandwidth:2.16311e+06
 cr:1.00112,iter:21,level:16,rank:0,datasize:334,operation:Interpolation
@@ -4272,8 +4261,7 @@ cr:1.02872,iter:22,level:16,rank:0,datasize:1303,operation:Post-smoothing
 Time:0.000884149,bytes:1744,bandwidth:1.97252e+06
 cr:0.967814,iter:22,level:16,rank:0,datasize:218,operation:Interpolation
 SZ is downgraded to lossless mode.
-Time:SZ is downgraded to lossless mode.
-0.00257471,bytes:15480,bandwidth:6.01232e+06
+Time:0.00257471,bytes:15480,bandwidth:6.01232e+06
 cr:1.03172,iter:22,level:16,rank:0,datasize:1935,operation:Post-smoothing
 Time:0.00119721,bytes:2672,bandwidth:2.23185e+06
 cr:0.998505,iter:22,level:16,rank:0,datasize:334,operation:Interpolation
@@ -4282,8 +4270,7 @@ Time:0.00291116,bytes:22464,bandwidth:7.71651e+06
 cr:1.03444,iter:22,level:16,rank:0,datasize:2808,operation:Post-smoothing
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
-Time:0.00141294,bytes:3768,bandwidth:2.66677e+06SZ is downgraded to lossless mode.
-
+Time:0.00141294,bytes:3768,bandwidth:2.66677e+06
 cr:1.01154,iter:22,level:16,rank:0,datasize:471,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
@@ -4797,12 +4784,10 @@ Time:0.00136447,bytes:4936,bandwidth:3.61752e+06
 cr:1.01647,iter:25,level:16,rank:0,datasize:617,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
-Time:0.00474162SZ is downgraded to lossless mode.
-,bytes:38856,bandwidth:8.19467e+06
+Time:0.00474162,bytes:38856,bandwidth:8.19467e+06
 cr:1.03575,iter:25,level:16,rank:0,datasize:4857,operation:Post-smoothing
 SZ is downgraded to lossless mode.
-Time:SZ is downgraded to lossless mode.
-0.00179217,bytes:6584,bandwidth:3.67376e+06
+Time:0.00179217,bytes:6584,bandwidth:3.67376e+06
 cr:1.02252,iter:25,level:16,rank:0,datasize:823,operation:Interpolation
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
@@ -5080,8 +5065,7 @@ cr:1.12676,iter:27,level:16,rank:0,datasize:290,operation:Post-smoothing
 Time:0.000141408,bytes:440,bandwidth:3.11156e+06
 cr:0.883534,iter:27,level:16,rank:0,datasize:55,operation:Interpolation
 SZ is downgraded to lossless mode.
-Time:0.000943755SZ is downgraded to lossless mode.
-,bytes:4040,bandwidth:4.28077e+06
+Time:0.000943755,bytes:4040,bandwidth:4.28077e+06
 cr:1.00824,iter:27,level:16,rank:0,datasize:505,operation:Post-smoothing
 Time:0.000280906,bytes:728,bandwidth:2.59161e+06
 cr:0.987788,iter:27,level:16,rank:0,datasize:91,operation:Interpolation
@@ -5748,8 +5732,7 @@ Time:0.00443218,bytes:38856,bandwidth:8.76679e+06
 cr:1.03096,iter:31,level:16,rank:0,datasize:4857,operation:Post-smoothing
 SZ is downgraded to lossless mode.
 SZ is downgraded to lossless mode.
-Time:SZ is downgraded to lossless mode.
-0.00136779,bytes:6584,bandwidth:4.81362e+06
+Time:0.00136779,bytes:6584,bandwidth:4.81362e+06
 cr:1.01872,iter:31,level:16,rank:0,datasize:823,operation:Interpolation
 Time:0.00549527,bytes:49304,bandwidth:8.97208e+06
 cr:1.84238,iter:31,level:16,rank:0,datasize:6163,operation:Post-smoothing
@@ -6333,8 +6316,7 @@ cr:1.027,iter:35,level:16,rank:0,datasize:1935,operation:Post-smoothing
 Time:0.000929746,bytes:2672,bandwidth:2.8739e+06
 cr:0.989996,iter:35,level:16,rank:0,datasize:334,operation:Interpolation
 SZ is downgraded to lossless mode.
-Time:0.00188003,bytes:SZ is downgraded to lossless mode.
-22464,bandwidth:1.19487e+07
+Time:0.00188003,bytes:22464,bandwidth:1.19487e+07
 cr:1.02909,iter:35,level:16,rank:0,datasize:2808,operation:Post-smoothing
 SZ is downgraded to lossless mode.
 Time:0.000914241,bytes:3768,bandwidth:4.12145e+06
@@ -6763,8 +6745,7 @@ cr:1.07966,iter:38,level:16,rank:0,datasize:471,operation:Interpolation
 Time:0.00282805,bytes:30080,bandwidth:1.06363e+07
 cr:2.07506,iter:38,level:16,rank:0,datasize:3760,operation:Post-smoothing
 SZ is downgraded to lossless mode.
-Time:SZ is downgraded to lossless mode.
-0.000906803,bytes:4936,bandwidth:5.4433e+06
+Time:0.000906803,bytes:4936,bandwidth:5.4433e+06
 cr:1.0121,iter:38,level:16,rank:0,datasize:617,operation:Interpolation
 Time:0.00460922,bytes:38856,bandwidth:8.43007e+06
 cr:2.22888,iter:38,level:16,rank:0,datasize:4857,operation:Post-smoothing

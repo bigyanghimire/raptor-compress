@@ -897,8 +897,8 @@ bool is_all_zero(const T* data, size_t size) {
                 double time_start,time_total;
                 time_start = MPI_Wtime();
                 char *cmpData = compress_data<T>(&buf[start * block_size], datasize, cmpSize);
-                T* dec_data=decompress_data<T>( datasize, cmpSize, cmpData);
                 time_total=MPI_Wtime()-time_start;
+                T* dec_data=decompress_data<T>( datasize, cmpSize, cmpData);
                 // double max_err = 0.0;
                 // for (size_t i = 0; i < datasize; i++)
                 // {
@@ -918,7 +918,7 @@ bool is_all_zero(const T* data, size_t size) {
                 // }
                 size_t original_bytes = datasize * sizeof(T);  // actual size in bytes
                 if(rank==0){
-                std::cout<<"Time:" << time_total<<",bytes:"<<original_bytes<<",bandwidth:" << static_cast<double>(original_bytes/time_total)<<std::endl;
+                std::cout<<"Time:" << time_total<<",bytes:"<<original_bytes<<",bandwidth:" << static_cast<double>(original_bytes*8/time_total*1000000000)<<std::endl;
                 }
                 double ratio = static_cast<double>(original_bytes) / cmpSize;
                 if(rank==0){
